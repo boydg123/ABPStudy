@@ -75,7 +75,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.Application", "zero
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.EntityFramework", "zero\Derrick.EntityFramework\Derrick.EntityFramework.csproj", "{2EC5A5E9-D34C-478F-95BE-B0654FAD894E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.WebApi", "Derrick.WebApi\Derrick.WebApi.csproj", "{6EF82365-0DE1-44BD-9ADF-53795815F978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.WebApi", "zero\Derrick.WebApi\Derrick.WebApi.csproj", "{6EF82365-0DE1-44BD-9ADF-53795815F978}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -98,14 +98,14 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dlls\DLLS\System\System.Web.Http.dll</HintPath>
+      <HintPath>..\..\dlls\DLLS\System\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.Owin">
       <HintPath>..\dlls\DLLS\System\System.Web.Http.Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dlls\DLLS\System\System.Web.Http.WebHost.dll</HintPath>
+      <HintPath>..\..\dlls\DLLS\System\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -128,39 +128,39 @@
     <Content Include="WebApi\Scripts\Swagger-Custom.js" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Abp.AutoMapper\Abp.AutoMapper.csproj">
+    <ProjectReference Include="..\..\src\Abp.AutoMapper\Abp.AutoMapper.csproj">
       <Project>{fe2ca909-ca90-4fc5-af20-010cad3fe64d}</Project>
       <Name>Abp.AutoMapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Abp.Web.Api\Abp.Web.Api.csproj">
+    <ProjectReference Include="..\..\src\Abp.Web.Api\Abp.Web.Api.csproj">
       <Project>{9fd73611-d9ed-47ab-a364-9d26baacc59f}</Project>
       <Name>Abp.Web.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Abp.Web.Common\Abp.Web.Common.csproj">
+    <ProjectReference Include="..\..\src\Abp.Web.Common\Abp.Web.Common.csproj">
       <Project>{707e867a-31d3-41f5-bb87-9b5ac95cc8a5}</Project>
       <Name>Abp.Web.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Abp.Web\Abp.Web.csproj">
+    <ProjectReference Include="..\..\src\Abp.Web\Abp.Web.csproj">
       <Project>{db264d99-a5fc-4ad3-b5f2-2b668396c797}</Project>
       <Name>Abp.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Abp\Abp.csproj">
+    <ProjectReference Include="..\..\src\Abp\Abp.csproj">
       <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
       <Name>Abp</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zeromodule\Abp.Zero.Owin\Abp.Zero.Owin.csproj">
+    <ProjectReference Include="..\..\zeromodule\Abp.Zero.Owin\Abp.Zero.Owin.csproj">
       <Project>{86741ba5-cf38-4795-95d6-710a3d41664b}</Project>
       <Name>Abp.Zero.Owin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zeromodule\Abp.Zero\Abp.Zero.csproj">
+    <ProjectReference Include="..\..\zeromodule\Abp.Zero\Abp.Zero.csproj">
       <Project>{2d8e4a9f-c105-4d2f-9e93-5db677ec658f}</Project>
       <Name>Abp.Zero</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zero\Derrick.Application\Derrick.Application.csproj">
+    <ProjectReference Include="..\Derrick.Application\Derrick.Application.csproj">
       <Project>{ca06841d-1361-4863-8064-0ecc25bbb18a}</Project>
       <Name>Derrick.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\zero\DerrickCore\Derrick.Core.csproj">
+    <ProjectReference Include="..\DerrickCore\Derrick.Core.csproj">
       <Project>{63503879-cb90-4645-8460-0f533feeaf50}</Project>
       <Name>Derrick.Core</Name>
     </ProjectReference>
