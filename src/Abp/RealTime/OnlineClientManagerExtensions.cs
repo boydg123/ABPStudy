@@ -1,0 +1,62 @@
+﻿using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
+using JetBrains.Annotations;
+
+namespace Abp.RealTime
+{
+    /// <summary>
+    /// Extension methods for <see cref="IOnlineClientManager"/>.
+    /// <see cref="IOnlineClientManager"/>的扩扩展
+    /// </summary>
+    public static class OnlineClientManagerExtensions
+    {
+        /// <summary>
+        /// Determines whether the specified user is online or not.
+        /// 确定指定的用户是否联机
+        /// </summary>
+        /// <param name="onlineClientManager">The online client manager. / 客户端管理类</param>
+        /// <param name="user">User. / 用户</param>
+        public static bool IsOnline(
+            [NotNull] this IOnlineClientManager onlineClientManager,
+            [NotNull] UserIdentifier user)
+        {
+            return onlineClientManager.GetAllByUserId(user).Any();
+        }
+
+        /// <summary>
+        /// 获取指定用户的是有客户端
+        /// </summary>
+        /// <param name="onlineClientManager">客户端管理类</param>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
+        [NotNull]
+        public static IReadOnlyList<IOnlineClient> GetAllByUserId(
+            [NotNull] this IOnlineClientManager onlineClientManager, 
+            [NotNull] IUserIdentifier user)
+        {
+            Check.NotNull(onlineClientManager, nameof(onlineClientManager));
+            Check.NotNull(user, nameof(user));
+
+            return onlineClientManager.GetAllClients()
+                 .Where(c => (c.UserId == user.UserId && c.TenantId == user.TenantId))
+                 .ToImmutableList();
+        }
+
+        /// <summary>
+        /// 移除指定用户所有客户端
+        /// </summary>
+        /// <param name="onlineClientManager">客户端管理类</param>
+        /// <param name="client">用户</param>
+        /// <returns></returns>
+        public static bool Remove(
+            [NotNull] this IOnlineClientManager onlineClientManager,
+            [NotNull] IOnlineClient client)
+        {
+            Check.NotNull(onlineClientManager, nameof(onlineClientManager));
+            Check.NotNull(client, nameof(client));
+
+            return onlineClientManager.Remove(client.ConnectionId);
+        }
+    }
+}

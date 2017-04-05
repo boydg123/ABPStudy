@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abp.Web.Mvc</RootNamespace>
+    <AssemblyName>Abp.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\dlls\DLLS\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\dlls\DLLS\Castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dlls\DLLS\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dlls\DLLS\Mvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dlls\DLLS\Mvc\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Services\Dto\ComboboxItemDtoExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\Mvc\AbpWebMvcModule.cs" />
+    <Compile Include="Web\Mvc\Auditing\AbpAuditFilterData.cs" />
+    <Compile Include="Web\Mvc\Auditing\AbpMvcAuditFilter.cs" />
+    <Compile Include="Web\Mvc\Authorization\AbpMvcAuthorizeAttribute.cs" />
+    <Compile Include="Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs" />
+    <Compile Include="Web\Mvc\Configuration\AbpMvcConfiguration.cs" />
+    <Compile Include="Web\Mvc\Configuration\AbpMvcConfigurationExtensions.cs" />
+    <Compile Include="Web\Mvc\Configuration\IAbpMvcConfiguration.cs" />
+    <Compile Include="Web\Mvc\Controllers\AbpAppViewController.cs" />
+    <Compile Include="Web\Mvc\Controllers\AbpController.cs" />
+    <Compile Include="Web\Mvc\Controllers\AbpScriptsController.cs" />
+    <Compile Include="Web\Mvc\Controllers\AbpUserConfigurationController.cs" />
+    <Compile Include="Web\Mvc\Controllers\ControllerConventionalRegistrar.cs" />
+    <Compile Include="Web\Mvc\Controllers\Localization\AbpLocalizationController.cs" />
+    <Compile Include="Web\Mvc\Controllers\Results\AbpJsonResult.cs" />
+    <Compile Include="Web\Mvc\Controllers\WindsorControllerFactory.cs" />
+    <Compile Include="Web\Mvc\Extensions\ActionDescriptorExtensions.cs" />
+    <Compile Include="Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs" />
+    <Compile Include="Web\Mvc\Helpers\MethodInfoHelper.cs" />
+    <Compile Include="Web\Mvc\ModelBinding\Binders\AbpMvcDateTimeBinder.cs" />
+    <Compile Include="Web\Mvc\Models\ModelStateExtensions.cs" />
+    <Compile Include="Web\Mvc\Resources\Embedded\Handlers\EmbeddedResourceHttpHandler.cs" />
+    <Compile Include="Web\Mvc\Resources\Embedded\Handlers\EmbeddedResourceRouteHandler.cs" />
+    <Compile Include="Web\Mvc\Resources\WebResourceHelper.cs" />
+    <Compile Include="Web\Mvc\Security\AntiForgery\AbpAntiForgeryMvcFilter.cs" />
+    <Compile Include="Web\Mvc\Security\AntiForgery\AbpMvcAntiForgeryTokenManager.cs" />
+    <Compile Include="Web\Mvc\Uow\AbpMvcUowFilter.cs" />
+    <Compile Include="Web\Mvc\Validation\AbpMvcValidationFilter.cs" />
+    <Compile Include="Web\Mvc\Validation\MvcActionInvocationValidator.cs" />
+    <Compile Include="Web\Mvc\Views\AbpWebViewPage.cs" />
+    <Compile Include="Web\Mvc\Views\AbpWebViewPageOfTModel.cs" />
+    <Compile Include="Web\Security\AntiForgery\AbpAntiForgeryManagerMvcExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abp.Web.Common\Abp.Web.Common.csproj">
+      <Project>{707e867a-31d3-41f5-bb87-9b5ac95cc8a5}</Project>
+      <Name>Abp.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abp.Web\Abp.Web.csproj">
+      <Project>{db264d99-a5fc-4ad3-b5f2-2b668396c797}</Project>
+      <Name>Abp.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abp\Abp.csproj">
+      <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
+      <Name>Abp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

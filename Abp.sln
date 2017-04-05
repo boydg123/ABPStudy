@@ -1,0 +1,305 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{2CE622A1-01FA-4BF0-9FBB-41AFB4FB5915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLLS", "dlls\DLLS\DLLS.csproj", "{B35320A8-FB2C-424D-BE97-4FADDC863CB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15E54977-3D7A-40AA-A374-871BF6810633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp", "src\Abp\Abp.csproj", "{C862331E-05D2-45E3-96D8-C4DEA82B1EA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.AutoMapper", "src\Abp.AutoMapper\Abp.AutoMapper.csproj", "{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Castle.Log4Net", "src\Abp.Castle.Log4Net\Abp.Castle.Log4Net.csproj", "{8A3022C9-4ED7-49EA-B671-07FFC984F093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.EntityFramework.Common", "src\Abp.EntityFramework.Common\Abp.EntityFramework.Common.csproj", "{5EB4D28F-276C-4294-A338-690384D0AA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.EntityFramework", "src\Abp.EntityFramework\Abp.EntityFramework.csproj", "{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.EntityFramework.GraphDiff", "src\Abp.EntityFramework.GraphDiff\Abp.EntityFramework.GraphDiff.csproj", "{0A046393-02DD-43E7-A7CA-8724999B7118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.FluentMigrator", "src\Abp.FluentMigrator\Abp.FluentMigrator.csproj", "{6CC48BB0-2B81-4613-83E6-27828FF7E72E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.HangFire", "src\Abp.HangFire\Abp.HangFire.csproj", "{77EFF84E-7CA3-4021-80AA-700608048241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.MemoryDb", "src\Abp.MemoryDb\Abp.MemoryDb.csproj", "{ABB17A51-110F-4D84-BBFA-CADC61C1134D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.MongoDB", "src\Abp.MongoDB\Abp.MongoDB.csproj", "{D42F6334-6393-4441-A05C-28047C836CD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Owin", "src\Abp.Owin\Abp.Owin.csproj", "{2DFCBD18-5248-4791-BDE1-453E62814EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Quartz", "src\Abp.Quartz\Abp.Quartz.csproj", "{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.RedisCache", "src\Abp.RedisCache\Abp.RedisCache.csproj", "{4A863FA6-29AD-4367-82C8-4250E1633498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.RedisCache.ProtoBuf", "src\Abp.RedisCache.ProtoBuf\Abp.RedisCache.ProtoBuf.csproj", "{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.TestBase", "src\Abp.TestBase\Abp.TestBase.csproj", "{87FB14FC-0E6E-4560-9D59-53EDF9962CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web", "src\Abp.Web\Abp.Web.csproj", "{DB264D99-A5FC-4AD3-B5F2-2B668396C797}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.Common", "src\Abp.Web.Common\Abp.Web.Common.csproj", "{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.Api", "src\Abp.Web.Api\Abp.Web.Api.csproj", "{9FD73611-D9ED-47AB-A364-9D26BAACC59F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.Api.OData", "src\Abp.Web.Api.OData\Abp.Web.Api.OData.csproj", "{824AD79F-CAD3-4C23-BB67-01D55AD98F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.Mvc", "src\Abp.Web.Mvc\Abp.Web.Mvc.csproj", "{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.Resources", "src\Abp.Web.Resources\Abp.Web.Resources.csproj", "{366BBE54-4200-4D9F-A982-88FEFE6F6A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.SignalR", "src\Abp.Web.SignalR\Abp.Web.SignalR.csproj", "{9B23BFA1-A678-471A-8F96-2F2DDB454C5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "srctest", "srctest", "{5379F371-87D1-4ECA-809D-F5C1B1839F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABP.Test", "srctest\ABP.Test\ABP.Test.csproj", "{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1", "srctest\Test1\Test1.csproj", "{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B35320A8-FB2C-424D-BE97-4FADDC863CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35320A8-FB2C-424D-BE97-4FADDC863CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35320A8-FB2C-424D-BE97-4FADDC863CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35320A8-FB2C-424D-BE97-4FADDC863CB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C862331E-05D2-45E3-96D8-C4DEA82B1EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C862331E-05D2-45E3-96D8-C4DEA82B1EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C862331E-05D2-45E3-96D8-C4DEA82B1EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C862331E-05D2-45E3-96D8-C4DEA82B1EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3022C9-4ED7-49EA-B671-07FFC984F093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3022C9-4ED7-49EA-B671-07FFC984F093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3022C9-4ED7-49EA-B671-07FFC984F093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3022C9-4ED7-49EA-B671-07FFC984F093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB4D28F-276C-4294-A338-690384D0AA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB4D28F-276C-4294-A338-690384D0AA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB4D28F-276C-4294-A338-690384D0AA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB4D28F-276C-4294-A338-690384D0AA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A046393-02DD-43E7-A7CA-8724999B7118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A046393-02DD-43E7-A7CA-8724999B7118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A046393-02DD-43E7-A7CA-8724999B7118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A046393-02DD-43E7-A7CA-8724999B7118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC48BB0-2B81-4613-83E6-27828FF7E72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC48BB0-2B81-4613-83E6-27828FF7E72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC48BB0-2B81-4613-83E6-27828FF7E72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC48BB0-2B81-4613-83E6-27828FF7E72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EFF84E-7CA3-4021-80AA-700608048241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EFF84E-7CA3-4021-80AA-700608048241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EFF84E-7CA3-4021-80AA-700608048241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EFF84E-7CA3-4021-80AA-700608048241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB17A51-110F-4D84-BBFA-CADC61C1134D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB17A51-110F-4D84-BBFA-CADC61C1134D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB17A51-110F-4D84-BBFA-CADC61C1134D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB17A51-110F-4D84-BBFA-CADC61C1134D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42F6334-6393-4441-A05C-28047C836CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42F6334-6393-4441-A05C-28047C836CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42F6334-6393-4441-A05C-28047C836CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42F6334-6393-4441-A05C-28047C836CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DFCBD18-5248-4791-BDE1-453E62814EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DFCBD18-5248-4791-BDE1-453E62814EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DFCBD18-5248-4791-BDE1-453E62814EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DFCBD18-5248-4791-BDE1-453E62814EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A863FA6-29AD-4367-82C8-4250E1633498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A863FA6-29AD-4367-82C8-4250E1633498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A863FA6-29AD-4367-82C8-4250E1633498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A863FA6-29AD-4367-82C8-4250E1633498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FB14FC-0E6E-4560-9D59-53EDF9962CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FB14FC-0E6E-4560-9D59-53EDF9962CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FB14FC-0E6E-4560-9D59-53EDF9962CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FB14FC-0E6E-4560-9D59-53EDF9962CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB264D99-A5FC-4AD3-B5F2-2B668396C797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB264D99-A5FC-4AD3-B5F2-2B668396C797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB264D99-A5FC-4AD3-B5F2-2B668396C797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB264D99-A5FC-4AD3-B5F2-2B668396C797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD73611-D9ED-47AB-A364-9D26BAACC59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD73611-D9ED-47AB-A364-9D26BAACC59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD73611-D9ED-47AB-A364-9D26BAACC59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD73611-D9ED-47AB-A364-9D26BAACC59F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824AD79F-CAD3-4C23-BB67-01D55AD98F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824AD79F-CAD3-4C23-BB67-01D55AD98F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824AD79F-CAD3-4C23-BB67-01D55AD98F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824AD79F-CAD3-4C23-BB67-01D55AD98F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366BBE54-4200-4D9F-A982-88FEFE6F6A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366BBE54-4200-4D9F-A982-88FEFE6F6A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366BBE54-4200-4D9F-A982-88FEFE6F6A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366BBE54-4200-4D9F-A982-88FEFE6F6A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B35320A8-FB2C-424D-BE97-4FADDC863CB6} = {2CE622A1-01FA-4BF0-9FBB-41AFB4FB5915}
+		{C862331E-05D2-45E3-96D8-C4DEA82B1EA8} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{FE2CA909-CA90-4FC5-AF20-010CAD3FE64D} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{8A3022C9-4ED7-49EA-B671-07FFC984F093} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{5EB4D28F-276C-4294-A338-690384D0AA0F} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{0A046393-02DD-43E7-A7CA-8724999B7118} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{6CC48BB0-2B81-4613-83E6-27828FF7E72E} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{77EFF84E-7CA3-4021-80AA-700608048241} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{ABB17A51-110F-4D84-BBFA-CADC61C1134D} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{D42F6334-6393-4441-A05C-28047C836CD2} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{2DFCBD18-5248-4791-BDE1-453E62814EC2} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{71E552AD-B5CF-4A38-9AB0-FC74C5A632CA} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{4A863FA6-29AD-4367-82C8-4250E1633498} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{F48BCEF8-2D85-4C47-9DBF-B1FC95EFE983} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{87FB14FC-0E6E-4560-9D59-53EDF9962CDF} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{DB264D99-A5FC-4AD3-B5F2-2B668396C797} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{707E867A-31D3-41F5-BB87-9B5AC95CC8A5} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{9FD73611-D9ED-47AB-A364-9D26BAACC59F} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{824AD79F-CAD3-4C23-BB67-01D55AD98F86} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{69CD9BE7-AEA7-43A4-A7E0-6DDE8CC31D77} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{366BBE54-4200-4D9F-A982-88FEFE6F6A26} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B} = {15E54977-3D7A-40AA-A374-871BF6810633}
+		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B} = {5379F371-87D1-4ECA-809D-F5C1B1839F05}
+		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0} = {5379F371-87D1-4ECA-809D-F5C1B1839F05}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 26
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://akmii.xicp.net:8090/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = dlls\\DLLS\\DLLS.csproj
+		SccProjectTopLevelParentUniqueName1 = Abp.sln
+		SccProjectName1 = dlls/DLLS
+		SccLocalPath1 = dlls\\DLLS
+		SccProjectUniqueName2 = src\\Abp.AutoMapper\\Abp.AutoMapper.csproj
+		SccProjectTopLevelParentUniqueName2 = Abp.sln
+		SccProjectName2 = src/Abp.AutoMapper
+		SccLocalPath2 = src\\Abp.AutoMapper
+		SccProjectUniqueName3 = src\\Abp.Castle.Log4Net\\Abp.Castle.Log4Net.csproj
+		SccProjectTopLevelParentUniqueName3 = Abp.sln
+		SccProjectName3 = src/Abp.Castle.Log4Net
+		SccLocalPath3 = src\\Abp.Castle.Log4Net
+		SccProjectUniqueName4 = src\\Abp.EntityFramework.Common\\Abp.EntityFramework.Common.csproj
+		SccProjectTopLevelParentUniqueName4 = Abp.sln
+		SccProjectName4 = src/Abp.EntityFramework.Common
+		SccLocalPath4 = src\\Abp.EntityFramework.Common
+		SccProjectUniqueName5 = src\\Abp.EntityFramework.GraphDiff\\Abp.EntityFramework.GraphDiff.csproj
+		SccProjectTopLevelParentUniqueName5 = Abp.sln
+		SccProjectName5 = src/Abp.EntityFramework.GraphDiff
+		SccLocalPath5 = src\\Abp.EntityFramework.GraphDiff
+		SccProjectUniqueName6 = src\\Abp.EntityFramework\\Abp.EntityFramework.csproj
+		SccProjectTopLevelParentUniqueName6 = Abp.sln
+		SccProjectName6 = src/Abp.EntityFramework
+		SccLocalPath6 = src\\Abp.EntityFramework
+		SccProjectUniqueName7 = src\\Abp.FluentMigrator\\Abp.FluentMigrator.csproj
+		SccProjectTopLevelParentUniqueName7 = Abp.sln
+		SccProjectName7 = src/Abp.FluentMigrator
+		SccLocalPath7 = src\\Abp.FluentMigrator
+		SccProjectUniqueName8 = src\\Abp.HangFire\\Abp.HangFire.csproj
+		SccProjectTopLevelParentUniqueName8 = Abp.sln
+		SccProjectName8 = src/Abp.HangFire
+		SccLocalPath8 = src\\Abp.HangFire
+		SccProjectUniqueName9 = src\\Abp.MemoryDb\\Abp.MemoryDb.csproj
+		SccProjectTopLevelParentUniqueName9 = Abp.sln
+		SccProjectName9 = src/Abp.MemoryDb
+		SccLocalPath9 = src\\Abp.MemoryDb
+		SccProjectUniqueName10 = src\\Abp.MongoDB\\Abp.MongoDB.csproj
+		SccProjectTopLevelParentUniqueName10 = Abp.sln
+		SccProjectName10 = src/Abp.MongoDB
+		SccLocalPath10 = src\\Abp.MongoDB
+		SccProjectUniqueName11 = src\\Abp.Owin\\Abp.Owin.csproj
+		SccProjectTopLevelParentUniqueName11 = Abp.sln
+		SccProjectName11 = src/Abp.Owin
+		SccLocalPath11 = src\\Abp.Owin
+		SccProjectUniqueName12 = src\\Abp.Quartz\\Abp.Quartz.csproj
+		SccProjectTopLevelParentUniqueName12 = Abp.sln
+		SccProjectName12 = src/Abp.Quartz
+		SccLocalPath12 = src\\Abp.Quartz
+		SccProjectUniqueName13 = src\\Abp.RedisCache.ProtoBuf\\Abp.RedisCache.ProtoBuf.csproj
+		SccProjectTopLevelParentUniqueName13 = Abp.sln
+		SccProjectName13 = src/Abp.RedisCache.ProtoBuf
+		SccLocalPath13 = src\\Abp.RedisCache.ProtoBuf
+		SccProjectUniqueName14 = src\\Abp.RedisCache\\Abp.RedisCache.csproj
+		SccProjectTopLevelParentUniqueName14 = Abp.sln
+		SccProjectName14 = src/Abp.RedisCache
+		SccLocalPath14 = src\\Abp.RedisCache
+		SccProjectUniqueName15 = src\\Abp.TestBase\\Abp.TestBase.csproj
+		SccProjectTopLevelParentUniqueName15 = Abp.sln
+		SccProjectName15 = src/Abp.TestBase
+		SccLocalPath15 = src\\Abp.TestBase
+		SccProjectUniqueName16 = src\\Abp.Web.Api.OData\\Abp.Web.Api.OData.csproj
+		SccProjectTopLevelParentUniqueName16 = Abp.sln
+		SccProjectName16 = src/Abp.Web.Api.OData
+		SccLocalPath16 = src\\Abp.Web.Api.OData
+		SccProjectUniqueName17 = src\\Abp.Web.Api\\Abp.Web.Api.csproj
+		SccProjectTopLevelParentUniqueName17 = Abp.sln
+		SccProjectName17 = src/Abp.Web.Api
+		SccLocalPath17 = src\\Abp.Web.Api
+		SccProjectUniqueName18 = src\\Abp.Web.Common\\Abp.Web.Common.csproj
+		SccProjectTopLevelParentUniqueName18 = Abp.sln
+		SccProjectName18 = src/Abp.Web.Common
+		SccLocalPath18 = src\\Abp.Web.Common
+		SccProjectUniqueName19 = src\\Abp.Web.Mvc\\Abp.Web.Mvc.csproj
+		SccProjectTopLevelParentUniqueName19 = Abp.sln
+		SccProjectName19 = src/Abp.Web.Mvc
+		SccLocalPath19 = src\\Abp.Web.Mvc
+		SccProjectUniqueName20 = src\\Abp.Web.SignalR\\Abp.Web.SignalR.csproj
+		SccProjectTopLevelParentUniqueName20 = Abp.sln
+		SccProjectName20 = src/Abp.Web.SignalR
+		SccLocalPath20 = src\\Abp.Web.SignalR
+		SccProjectUniqueName21 = src\\Abp.Web\\Abp.Web.csproj
+		SccProjectTopLevelParentUniqueName21 = Abp.sln
+		SccProjectName21 = src/Abp.Web
+		SccLocalPath21 = src\\Abp.Web
+		SccProjectUniqueName22 = src\\Abp\\Abp.csproj
+		SccProjectTopLevelParentUniqueName22 = Abp.sln
+		SccProjectName22 = src/Abp
+		SccLocalPath22 = src\\Abp
+		SccProjectUniqueName23 = srctest\\ABP.Test\\ABP.Test.csproj
+		SccProjectTopLevelParentUniqueName23 = Abp.sln
+		SccProjectName23 = srctest/ABP.Test
+		SccLocalPath23 = srctest\\ABP.Test
+		SccProjectUniqueName24 = src\\Abp.Web.Resources\\Abp.Web.Resources.csproj
+		SccProjectTopLevelParentUniqueName24 = Abp.sln
+		SccProjectName24 = src/Abp.Web.Resources
+		SccLocalPath24 = src\\Abp.Web.Resources
+		SccProjectUniqueName25 = srctest\\Test1\\Test1.csproj
+		SccProjectTopLevelParentUniqueName25 = Abp.sln
+		SccProjectName25 = srctest/Test1
+		SccLocalPath25 = srctest\\Test1
+	EndGlobalSection
+EndGlobal

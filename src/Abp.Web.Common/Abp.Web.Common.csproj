@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{707E867A-31D3-41F5-BB87-9B5AC95CC8A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abp.Web.Common</RootNamespace>
+    <AssemblyName>Abp.Web.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\dlls\DLLS\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Startup\AbpWebConfigurationExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\AbpWebCommonModule.cs" />
+    <Compile Include="Web\AbpWebConsts.cs" />
+    <Compile Include="Web\Api\Modeling\ActionApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\Modeling\ApplicationApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\Modeling\ControllerApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\Modeling\IApiDescriptionModelProvider.cs" />
+    <Compile Include="Web\Api\Modeling\ModuleApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\Modeling\ParameterApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\Modeling\ReturnValueApiDescriptionModel.cs" />
+    <Compile Include="Web\Api\ProxyScripting\ApiProxyGenerationOptions.cs" />
+    <Compile Include="Web\Api\ProxyScripting\ApiProxyScriptManager.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Configuration\ApiProxyScriptingConfiguration.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Configuration\IApiProxyScriptingConfiguration.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Generators\IProxyScriptGenerator.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Generators\JQuery\JQueryProxyScriptGenerator.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Generators\ParameterBindingSources.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Generators\ProxyScriptingHelper.cs" />
+    <Compile Include="Web\Api\ProxyScripting\Generators\ProxyScriptingJsFuncHelper.cs" />
+    <Compile Include="Web\Api\ProxyScripting\IApiProxyScriptManager.cs" />
+    <Compile Include="Web\Authorization\AuthorizationScriptManager.cs" />
+    <Compile Include="Web\Authorization\IAuthorizationScriptManager.cs" />
+    <Compile Include="Web\Configuration\AbpUserConfigurationBuilder.cs" />
+    <Compile Include="Web\Configuration\AbpWebCommonModuleConfiguration.cs" />
+    <Compile Include="Web\Configuration\IAbpWebCommonModuleConfiguration.cs" />
+    <Compile Include="Web\Features\FeaturesScriptManager.cs" />
+    <Compile Include="Web\Features\IFeaturesScriptManager.cs" />
+    <Compile Include="Web\HttpVerb.cs" />
+    <Compile Include="Web\HttpVerbHelper.cs" />
+    <Compile Include="Web\Localization\ILocalizationScriptManager.cs" />
+    <Compile Include="Web\Localization\LocalizationScriptManager.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpLocalizationSourceDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpMultiTenancyConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpMultiTenancySidesConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpStringValueDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserAntiForgeryConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserAuthConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserClockConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserConfigurationDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserCurrentCultureConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserFeatureConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserIanaTimeZoneConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserLocalizationConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserNavConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserSecurityConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserSessionConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserSettingConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserTimeZoneConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserTimingConfigDto.cs" />
+    <Compile Include="Web\Models\AbpUserConfiguration\AbpUserWindowsTimeZoneConfigDto.cs" />
+    <Compile Include="Web\Models\AjaxResponse.cs" />
+    <Compile Include="Web\Models\AjaxResponseBase.cs" />
+    <Compile Include="Web\Models\AjaxResponseOfTResult.cs" />
+    <Compile Include="Web\Models\DefaultErrorInfoConverter.cs" />
+    <Compile Include="Web\Models\ErrorInfo.cs" />
+    <Compile Include="Web\Models\ErrorInfoBuilder.cs" />
+    <Compile Include="Web\Models\IErrorInfoBuilder.cs" />
+    <Compile Include="Web\Models\IExceptionToErrorInfoConverter.cs" />
+    <Compile Include="Web\Models\ValidationErrorInfo.cs" />
+    <Compile Include="Web\MultiTenancy\IMultiTenancyScriptManager.cs" />
+    <Compile Include="Web\MultiTenancy\MultiTenancyScriptManager.cs" />
+    <Compile Include="Web\Mvc\Models\ErrorViewModel.cs" />
+    <Compile Include="Web\Navigation\INavigationScriptManager.cs" />
+    <Compile Include="Web\Navigation\NavigationScriptManager.cs" />
+    <Compile Include="Web\Security\AntiForgery\AbpAntiForgeryConfiguration.cs" />
+    <Compile Include="Web\Security\AntiForgery\AbpAntiForgeryManager.cs" />
+    <Compile Include="Web\Security\AntiForgery\IAbpAntiForgeryConfiguration.cs" />
+    <Compile Include="Web\Security\AntiForgery\IAbpAntiForgeryManager.cs" />
+    <Compile Include="Web\Security\AntiForgery\IAbpAntiForgeryValidator.cs" />
+    <Compile Include="Web\Security\ISecurityScriptManager.cs" />
+    <Compile Include="Web\Security\SecurityScriptManager.cs" />
+    <Compile Include="Web\Sessions\ISessionScriptManager.cs" />
+    <Compile Include="Web\Sessions\SessionScriptManager.cs" />
+    <Compile Include="Web\Settings\ISettingScriptManager.cs" />
+    <Compile Include="Web\Settings\SettingScriptManager.cs" />
+    <Compile Include="Web\Timing\ITimingScriptManager.cs" />
+    <Compile Include="Web\Timing\TimingScriptManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-ca-ES.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-de.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-es.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-fr.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-it.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-lt.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-lv.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-pt-BR.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-ru.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-tr.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-uk.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb-zh-CN.xml" />
+    <Content Include="Web\Localization\AbpWebXmlSource\AbpWeb.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abp\Abp.csproj">
+      <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
+      <Name>Abp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

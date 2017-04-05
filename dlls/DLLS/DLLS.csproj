@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B35320A8-FB2C-424D-BE97-4FADDC863CB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DLLS</RootNamespace>
+    <AssemblyName>DLLS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Antlr3.Runtime.dll" />
+    <Content Include="AutoMapper\AutoMapper.dll" />
+    <Content Include="Castle\Castle.Core.dll" />
+    <Content Include="Castle\Castle.Facilities.Logging.dll" />
+    <Content Include="Castle\Castle.Windsor.dll" />
+    <Content Include="Effort.dll" />
+    <Content Include="EntityFramework\EntityFramework.dll" />
+    <Content Include="EntityFramework\EntityFramework.DynamicFilters.dll" />
+    <Content Include="EntityFramework\EntityFramework.PowerShell.dll" />
+    <Content Include="EntityFramework\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="EntityFramework\EntityFramework.SqlServer.dll" />
+    <Content Include="EPPlus.dll" />
+    <Content Include="FluentMigrator.dll" />
+    <Content Include="Hangfire\Hangfire.Core.dll" />
+    <Content Include="Hangfire\Hangfire.Core.resources.dll" />
+    <Content Include="Hangfire\Hangfire.SqlServer.dll" />
+    <Content Include="ICSharpCode.SharpZipLib.dll" />
+    <Content Include="log4net.dll" />
+    <Content Include="Microsoft\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="Microsoft\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="Microsoft\Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="Microsoft\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="Microsoft\Microsoft.IdentityModel.Protocol.Extensions.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.OpenIdConnect.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="Microsoft\Microsoft.Owin.Security.WsFederation.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.TestFramework.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" />
+    <Content Include="Microsoft\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" />
+    <Content Include="Microsoft\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Mongodb\MongoDB.Bson.dll" />
+    <Content Include="Mongodb\MongoDB.Driver.Core.dll" />
+    <Content Include="Mongodb\MongoDB.Driver.dll" />
+    <Content Include="Mongodb\MongoDB.Driver.Legacy.dll" />
+    <Content Include="Mvc\System.Web.Helpers.dll" />
+    <Content Include="Mvc\System.Web.Mvc.dll" />
+    <Content Include="Mvc\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Mvc\System.Web.WebPages.dll" />
+    <Content Include="Mvc\System.Web.WebPages.Razor.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="Nito\Nito.AsyncEx.Concurrent.dll" />
+    <Content Include="Nito\Nito.AsyncEx.dll" />
+    <Content Include="Nito\Nito.AsyncEx.Enlightenment.dll" />
+    <Content Include="NMemory.dll" />
+    <Content Include="NSubstitute.dll" />
+    <Content Include="OData\Microsoft.OData.Edm.dll" />
+    <Content Include="OData\System.Web.OData.dll" />
+    <Content Include="Owin.dll" />
+    <Content Include="protobuf-net.dll" />
+    <Content Include="QuartzNet\Quartz.dll" />
+    <Content Include="Recaptcha.Web.dll" />
+    <Content Include="Redis\StackExchange.Redis.dll" />
+    <Content Include="RefactorThis.GraphDiff.dll" />
+    <Content Include="SharpZipLib.Silverlight3.dll" />
+    <Content Include="SharpZipLib.Silverlight4.dll" />
+    <Content Include="Shouldly.dll" />
+    <Content Include="StackExchange.Redis.dll" />
+    <Content Include="Swashbuckle.Core.dll" />
+    <Content Include="System.Collections.Immutable.dll" />
+    <Content Include="System\System.Collections.Immutable.dll" />
+    <Content Include="System\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="System\System.Linq.Dynamic.dll" />
+    <Content Include="System\System.Net.Http.Formatting.dll" />
+    <Content Include="System\System.Web.Helpers.dll" />
+    <Content Include="System\System.Web.Http.dll" />
+    <Content Include="System\System.Web.Http.Owin.dll" />
+    <Content Include="System\System.Web.Http.WebHost.dll" />
+    <Content Include="System\System.Web.Mvc.dll" />
+    <Content Include="System\System.Web.Optimization.dll" />
+    <Content Include="System\System.Web.Razor.dll" />
+    <Content Include="System\System.Web.WebPages.Deployment.dll" />
+    <Content Include="System\System.Web.WebPages.dll" />
+    <Content Include="System\System.Web.WebPages.Razor.dll" />
+    <Content Include="Test\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" />
+    <Content Include="Test\Microsoft.VisualStudio.TestPlatform.TestFramework.dll" />
+    <Content Include="Test\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll" />
+    <Content Include="WebGrease.dll" />
+    <Content Include="Xunit\xunit.abstractions.dll" />
+    <Content Include="Xunit\xunit.assert.dll" />
+    <Content Include="Xunit\xunit.core.dll" />
+    <Content Include="Xunit\xunit.execution.desktop.dll" />
+    <Content Include="Xunit\xunit.execution.dotnet.dll" />
+    <Content Include="Xunit\xunit.runner.tdnet.dll" />
+    <Content Include="Xunit\xunit.runner.utility.desktop.dll" />
+    <Content Include="Xunit\xunit.runner.utility.dotnet.dll" />
+    <Content Include="Xunit\xunit.runner.utility.net452.dll" />
+    <Content Include="Xunit\xunit.runner.visualstudio.testadapter.dll" />
+    <Content Include="Xunit\xunit.runner.visualstudio.uwp.dll" />
+    <Content Include="Xunit\xunit.runner.visualstudio.win81.dll" />
+    <Content Include="Xunit\xunit.runner.visualstudio.wpa81.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

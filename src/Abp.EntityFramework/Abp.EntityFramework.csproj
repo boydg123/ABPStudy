@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{874EC66D-1295-4F65-ACA4-CBFA7BE5EC5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abp.EntityFramework</RootNamespace>
+    <AssemblyName>Abp.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\dlls\DLLS\Castle\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\dlls\DLLS\Castle\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\dlls\DLLS\EntityFramework\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.DynamicFilters">
+      <HintPath>..\..\dlls\DLLS\EntityFramework\EntityFramework.DynamicFilters.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\dlls\DLLS\EntityFramework\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\dlls\DLLS\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFramework\AbpDbContext.cs" />
+    <Compile Include="EntityFramework\AbpEntityFrameworkModule.cs" />
+    <Compile Include="EntityFramework\DbContextHelper.cs" />
+    <Compile Include="EntityFramework\DbContextTypeMatcher.cs" />
+    <Compile Include="EntityFramework\DefaultDbContextResolver.cs" />
+    <Compile Include="EntityFramework\Extensions\QueryableExtensions.cs" />
+    <Compile Include="EntityFramework\IDbContextProvider.cs" />
+    <Compile Include="EntityFramework\IDbContextResolver.cs" />
+    <Compile Include="EntityFramework\Linq\EfAsyncQueryableExecuter.cs" />
+    <Compile Include="EntityFramework\Repositories\EfAutoRepositoryTypes.cs" />
+    <Compile Include="EntityFramework\Repositories\EfRepositoryBaseOfTEntity.cs" />
+    <Compile Include="EntityFramework\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs" />
+    <Compile Include="EntityFramework\Repositories\EfRepositoryExtensions.cs" />
+    <Compile Include="EntityFramework\Repositories\EntityFrameworkGenericRepositoryRegistrar.cs" />
+    <Compile Include="EntityFramework\Repositories\IEntityFrameworkGenericRepositoryRegistrar.cs" />
+    <Compile Include="EntityFramework\Repositories\IRepositoryWithDbContext.cs" />
+    <Compile Include="EntityFramework\SimpleDbContextProvider.cs" />
+    <Compile Include="EntityFramework\Uow\EfDynamicFiltersUnitOfWorkFilterExecuter.cs" />
+    <Compile Include="EntityFramework\Uow\EfUnitOfWork.cs" />
+    <Compile Include="EntityFramework\Uow\IEfUnitOfWorkFilterExecuter.cs" />
+    <Compile Include="EntityFramework\Uow\UnitOfWorkDbContextProvider.cs" />
+    <Compile Include="EntityFramework\Uow\UnitOfWorkExtensions.cs" />
+    <Compile Include="EntityFramework\Utils\DateTimePropertyInfoHelper.cs" />
+    <Compile Include="EntityFramework\Utils\EntityDateTimePropertiesInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abp.EntityFramework.Common\Abp.EntityFramework.Common.csproj">
+      <Project>{5eb4d28f-276c-4294-a338-690384d0aa0f}</Project>
+      <Name>Abp.EntityFramework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abp\Abp.csproj">
+      <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
+      <Name>Abp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
