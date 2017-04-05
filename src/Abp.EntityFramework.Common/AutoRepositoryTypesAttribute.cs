@@ -7,7 +7,7 @@ namespace Abp.EntityFramework
     /// 用于定义实体的自动仓储类型，这可以被数据库上下文类型使用
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class AutoRepositoryTypesAttribute : Attribute
+    public class AutoRepositoryTypesAttribute : Attribute 
     {
         /// <summary>
         /// 仓储接口

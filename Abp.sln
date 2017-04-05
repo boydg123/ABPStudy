@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{2CE622A1-01FA-4BF0-9FBB-41AFB4FB5915}"
 EndProject
@@ -56,8 +56,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "srctest", "srctest", "{5379F371-87D1-4ECA-809D-F5C1B1839F05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABP.Test", "srctest\ABP.Test\ABP.Test.csproj", "{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1", "srctest\Test1\Test1.csproj", "{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,10 +159,6 @@ Global
 		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -194,112 +188,5 @@ Global
 		{366BBE54-4200-4D9F-A982-88FEFE6F6A26} = {15E54977-3D7A-40AA-A374-871BF6810633}
 		{9B23BFA1-A678-471A-8F96-2F2DDB454C5B} = {15E54977-3D7A-40AA-A374-871BF6810633}
 		{1D45496C-D1BD-4528-BAA4-5C12F2A3BA3B} = {5379F371-87D1-4ECA-809D-F5C1B1839F05}
-		{6A9C982C-01C1-493F-A0B8-2CFA823E38B0} = {5379F371-87D1-4ECA-809D-F5C1B1839F05}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 26
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://akmii.xicp.net:8090/tfs/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = dlls\\DLLS\\DLLS.csproj
-		SccProjectTopLevelParentUniqueName1 = Abp.sln
-		SccProjectName1 = dlls/DLLS
-		SccLocalPath1 = dlls\\DLLS
-		SccProjectUniqueName2 = src\\Abp.AutoMapper\\Abp.AutoMapper.csproj
-		SccProjectTopLevelParentUniqueName2 = Abp.sln
-		SccProjectName2 = src/Abp.AutoMapper
-		SccLocalPath2 = src\\Abp.AutoMapper
-		SccProjectUniqueName3 = src\\Abp.Castle.Log4Net\\Abp.Castle.Log4Net.csproj
-		SccProjectTopLevelParentUniqueName3 = Abp.sln
-		SccProjectName3 = src/Abp.Castle.Log4Net
-		SccLocalPath3 = src\\Abp.Castle.Log4Net
-		SccProjectUniqueName4 = src\\Abp.EntityFramework.Common\\Abp.EntityFramework.Common.csproj
-		SccProjectTopLevelParentUniqueName4 = Abp.sln
-		SccProjectName4 = src/Abp.EntityFramework.Common
-		SccLocalPath4 = src\\Abp.EntityFramework.Common
-		SccProjectUniqueName5 = src\\Abp.EntityFramework.GraphDiff\\Abp.EntityFramework.GraphDiff.csproj
-		SccProjectTopLevelParentUniqueName5 = Abp.sln
-		SccProjectName5 = src/Abp.EntityFramework.GraphDiff
-		SccLocalPath5 = src\\Abp.EntityFramework.GraphDiff
-		SccProjectUniqueName6 = src\\Abp.EntityFramework\\Abp.EntityFramework.csproj
-		SccProjectTopLevelParentUniqueName6 = Abp.sln
-		SccProjectName6 = src/Abp.EntityFramework
-		SccLocalPath6 = src\\Abp.EntityFramework
-		SccProjectUniqueName7 = src\\Abp.FluentMigrator\\Abp.FluentMigrator.csproj
-		SccProjectTopLevelParentUniqueName7 = Abp.sln
-		SccProjectName7 = src/Abp.FluentMigrator
-		SccLocalPath7 = src\\Abp.FluentMigrator
-		SccProjectUniqueName8 = src\\Abp.HangFire\\Abp.HangFire.csproj
-		SccProjectTopLevelParentUniqueName8 = Abp.sln
-		SccProjectName8 = src/Abp.HangFire
-		SccLocalPath8 = src\\Abp.HangFire
-		SccProjectUniqueName9 = src\\Abp.MemoryDb\\Abp.MemoryDb.csproj
-		SccProjectTopLevelParentUniqueName9 = Abp.sln
-		SccProjectName9 = src/Abp.MemoryDb
-		SccLocalPath9 = src\\Abp.MemoryDb
-		SccProjectUniqueName10 = src\\Abp.MongoDB\\Abp.MongoDB.csproj
-		SccProjectTopLevelParentUniqueName10 = Abp.sln
-		SccProjectName10 = src/Abp.MongoDB
-		SccLocalPath10 = src\\Abp.MongoDB
-		SccProjectUniqueName11 = src\\Abp.Owin\\Abp.Owin.csproj
-		SccProjectTopLevelParentUniqueName11 = Abp.sln
-		SccProjectName11 = src/Abp.Owin
-		SccLocalPath11 = src\\Abp.Owin
-		SccProjectUniqueName12 = src\\Abp.Quartz\\Abp.Quartz.csproj
-		SccProjectTopLevelParentUniqueName12 = Abp.sln
-		SccProjectName12 = src/Abp.Quartz
-		SccLocalPath12 = src\\Abp.Quartz
-		SccProjectUniqueName13 = src\\Abp.RedisCache.ProtoBuf\\Abp.RedisCache.ProtoBuf.csproj
-		SccProjectTopLevelParentUniqueName13 = Abp.sln
-		SccProjectName13 = src/Abp.RedisCache.ProtoBuf
-		SccLocalPath13 = src\\Abp.RedisCache.ProtoBuf
-		SccProjectUniqueName14 = src\\Abp.RedisCache\\Abp.RedisCache.csproj
-		SccProjectTopLevelParentUniqueName14 = Abp.sln
-		SccProjectName14 = src/Abp.RedisCache
-		SccLocalPath14 = src\\Abp.RedisCache
-		SccProjectUniqueName15 = src\\Abp.TestBase\\Abp.TestBase.csproj
-		SccProjectTopLevelParentUniqueName15 = Abp.sln
-		SccProjectName15 = src/Abp.TestBase
-		SccLocalPath15 = src\\Abp.TestBase
-		SccProjectUniqueName16 = src\\Abp.Web.Api.OData\\Abp.Web.Api.OData.csproj
-		SccProjectTopLevelParentUniqueName16 = Abp.sln
-		SccProjectName16 = src/Abp.Web.Api.OData
-		SccLocalPath16 = src\\Abp.Web.Api.OData
-		SccProjectUniqueName17 = src\\Abp.Web.Api\\Abp.Web.Api.csproj
-		SccProjectTopLevelParentUniqueName17 = Abp.sln
-		SccProjectName17 = src/Abp.Web.Api
-		SccLocalPath17 = src\\Abp.Web.Api
-		SccProjectUniqueName18 = src\\Abp.Web.Common\\Abp.Web.Common.csproj
-		SccProjectTopLevelParentUniqueName18 = Abp.sln
-		SccProjectName18 = src/Abp.Web.Common
-		SccLocalPath18 = src\\Abp.Web.Common
-		SccProjectUniqueName19 = src\\Abp.Web.Mvc\\Abp.Web.Mvc.csproj
-		SccProjectTopLevelParentUniqueName19 = Abp.sln
-		SccProjectName19 = src/Abp.Web.Mvc
-		SccLocalPath19 = src\\Abp.Web.Mvc
-		SccProjectUniqueName20 = src\\Abp.Web.SignalR\\Abp.Web.SignalR.csproj
-		SccProjectTopLevelParentUniqueName20 = Abp.sln
-		SccProjectName20 = src/Abp.Web.SignalR
-		SccLocalPath20 = src\\Abp.Web.SignalR
-		SccProjectUniqueName21 = src\\Abp.Web\\Abp.Web.csproj
-		SccProjectTopLevelParentUniqueName21 = Abp.sln
-		SccProjectName21 = src/Abp.Web
-		SccLocalPath21 = src\\Abp.Web
-		SccProjectUniqueName22 = src\\Abp\\Abp.csproj
-		SccProjectTopLevelParentUniqueName22 = Abp.sln
-		SccProjectName22 = src/Abp
-		SccLocalPath22 = src\\Abp
-		SccProjectUniqueName23 = srctest\\ABP.Test\\ABP.Test.csproj
-		SccProjectTopLevelParentUniqueName23 = Abp.sln
-		SccProjectName23 = srctest/ABP.Test
-		SccLocalPath23 = srctest\\ABP.Test
-		SccProjectUniqueName24 = src\\Abp.Web.Resources\\Abp.Web.Resources.csproj
-		SccProjectTopLevelParentUniqueName24 = Abp.sln
-		SccProjectName24 = src/Abp.Web.Resources
-		SccLocalPath24 = src\\Abp.Web.Resources
-		SccProjectUniqueName25 = srctest\\Test1\\Test1.csproj
-		SccProjectTopLevelParentUniqueName25 = Abp.sln
-		SccProjectName25 = srctest/Test1
-		SccLocalPath25 = srctest\\Test1
 	EndGlobalSection
 EndGlobal
