@@ -1,2 +1,4 @@
 # ABPStudy
-For Derrick stydy ABP
+为自己学习ABP使用，基本的DLL都应用本地资源。
+翻译部分项目。
+全部测试用例重写。
