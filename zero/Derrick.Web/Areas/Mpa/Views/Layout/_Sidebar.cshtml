@@ -1,0 +1,84 @@
+﻿@using Abp.Collections.Extensions
+@using Derrick.Web.Views
+@model Derrick.Web.Areas.Mpa.Models.Layout.SidebarViewModel
+@{
+    var calculateMenuUrl = new Func<string, string>((url) =>
+    {
+        if (string.IsNullOrEmpty(url))
+        {
+            return ApplicationPath;
+        }
+        
+        if (UrlChecker.IsRooted(url))
+        {
+            return url;
+        }
+
+        return ApplicationPath + url;
+    });
+}
+<div class="page-sidebar navbar-collapse collapse">
+    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+        @for (var i = 0; i < Model.Menu.Items.Count; i++)
+        {
+            var menuItem = Model.Menu.Items[i];
+            var isActive = Model.CurrentPageName == menuItem.Name ||
+                           (!menuItem.Items.IsNullOrEmpty() && menuItem.Items.Any(item => item.Name == Model.CurrentPageName));
+            <li class="@(i==0 ? "start" : "") @(isActive ? "active" : "")">
+                @if (menuItem.Items.IsNullOrEmpty())
+                {
+                    <a href="@calculateMenuUrl(menuItem.Url)">
+                        <i class="@menuItem.Icon"></i>
+                        <span class="title">@menuItem.DisplayName</span>
+                    </a>
+                }
+                else
+                {
+                    <a href="javascript:;" class="auto">
+                        <i class="@menuItem.Icon"></i>
+                        <span class="title">@menuItem.DisplayName</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        @foreach (var childMenuItem in menuItem.Items)
+                        {
+                            <li class="@(Model.CurrentPageName == childMenuItem.Name ? "active" : "")">
+                                @if (childMenuItem.Items.IsNullOrEmpty())
+                                {
+                                    <a href="@calculateMenuUrl(childMenuItem.Url)">
+                                        <span><i class="sub-menu-icon @childMenuItem.Icon"></i> @childMenuItem.DisplayName</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="javascript:;" class="auto">
+                                        <i class="@childMenuItem.Icon"></i>
+                                        <span class="title">@childMenuItem.DisplayName</span>
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        @foreach (var secondLevelChildMenuItem in childMenuItem.Items)
+                                        {
+                                            <li class="@(Model.CurrentPageName == secondLevelChildMenuItem.Name ? "active" : "")">
+                                                <a href="@calculateMenuUrl(secondLevelChildMenuItem.Url)">
+                                                    <span><i class="sub-menu-icon @secondLevelChildMenuItem.Icon"></i> @secondLevelChildMenuItem.DisplayName</span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+
+</div>	

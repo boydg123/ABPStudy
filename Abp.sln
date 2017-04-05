@@ -81,6 +81,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{F86BB0BC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.Migrator", "zero\Tools\Derrick.Migrator\Derrick.Migrator.csproj", "{012500CA-6843-48F4-AA96-623B435B2223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Derrick.Web", "zero\Derrick.Web\Derrick.Web.csproj", "{38E13CC0-3054-4EAA-B329-D802E991EC62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,10 @@ Global
 		{012500CA-6843-48F4-AA96-623B435B2223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012500CA-6843-48F4-AA96-623B435B2223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012500CA-6843-48F4-AA96-623B435B2223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E13CC0-3054-4EAA-B329-D802E991EC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E13CC0-3054-4EAA-B329-D802E991EC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E13CC0-3054-4EAA-B329-D802E991EC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E13CC0-3054-4EAA-B329-D802E991EC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,5 +264,6 @@ Global
 		{6EF82365-0DE1-44BD-9ADF-53795815F978} = {FF5CC851-2364-40BE-AE29-2FF0B70DF73B}
 		{F86BB0BC-E880-4070-A278-3E897271FA9A} = {FF5CC851-2364-40BE-AE29-2FF0B70DF73B}
 		{012500CA-6843-48F4-AA96-623B435B2223} = {F86BB0BC-E880-4070-A278-3E897271FA9A}
+		{38E13CC0-3054-4EAA-B329-D802E991EC62} = {FF5CC851-2364-40BE-AE29-2FF0B70DF73B}
 	EndGlobalSection
 EndGlobal
