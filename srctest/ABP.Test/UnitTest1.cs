@@ -1,16 +1,14 @@
 ﻿using System;
-using Xunit;
-using Shouldly;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test1
+namespace ABP.Test
 {
+    [TestClass]
     public class UnitTest1
     {
-        [Fact]
+        [TestMethod]
         public void TestMethod1()
         {
-            var a = 1;
-            a.ShouldBe(1);
         }
     }
 }
