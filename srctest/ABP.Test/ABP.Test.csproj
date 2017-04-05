@@ -49,35 +49,21 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Transactions" />
-    <Reference Include="xunit.abstractions">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.abstractions.dll</HintPath>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.assert">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.assert.dll</HintPath>
+    <Reference Include="xunit.assert, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.assert.2.2.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.core">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.core.dll</HintPath>
+    <Reference Include="xunit.core, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.extensibility.core.2.2.0\lib\netstandard1.1\xunit.core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.execution.desktop">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.execution.desktop.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.execution.dotnet">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.execution.dotnet.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.runner.tdnet">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.runner.tdnet.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.runner.utility.desktop">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.runner.utility.desktop.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.runner.utility.dotnet">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.runner.utility.dotnet.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.runner.utility.net452">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.runner.utility.net452.dll</HintPath>
-    </Reference>
-    <Reference Include="xunit.runner.visualstudio.testadapter">
-      <HintPath>..\..\dlls\DLLS\Xunit\xunit.runner.visualstudio.testadapter.dll</HintPath>
+    <Reference Include="xunit.execution.desktop, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\xunit.extensibility.execution.2.2.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -141,6 +127,9 @@
       <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
       <Name>Abp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
