@@ -87,6 +87,7 @@
     <Compile Include="Application\Navigation\Menu_Tests.cs" />
     <Compile Include="Application\Navigation\NavigationTestCase.cs" />
     <Compile Include="Auditing\AuditingHelper_Tests.cs" />
+    <Compile Include="Authorization\AuthorizationHelper_Tests.cs" />
     <Compile Include="Dependency\Circular_Constructor_Dependency_Tests.cs" />
     <Compile Include="Dependency\Circular_Property_Dependency_Tests.cs" />
     <Compile Include="Dependency\DisposableDependencyObjectWrapper_Tests.cs" />

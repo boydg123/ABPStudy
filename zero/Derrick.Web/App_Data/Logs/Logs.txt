@@ -1,0 +1,160 @@
+﻿DEBUG 2017-04-06 00:36:01,403 [9124 ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-04-06 00:36:01,464 [9124 ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-04-06 00:36:01,474 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,478 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,478 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,479 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,479 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,479 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,479 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,480 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,480 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,481 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,484 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,485 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,485 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,486 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,486 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,486 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,486 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,487 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,487 [9124 ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:01,493 [9124 ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-04-06 00:36:01,967 [9124 ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-04-06 00:36:01,967 [9124 ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-04-06 00:36:01,967 [9124 ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-04-06 00:36:01,967 [9124 ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-04-06 00:36:03,382 [9124 ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-04-06 00:36:11,046 [9124 ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-04-06 00:36:11,048 [9124 ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-04-06 00:36:11,048 [9124 ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-04-06 00:36:11,049 [9124 ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-04-06 00:36:11,049 [9124 ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-04-06 00:36:11,198 [9124 ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-04-06 00:36:13,131 [9124 ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-04-06 00:36:13,532 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-04-06 00:36:13,533 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-04-06 00:36:13,538 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-04-06 00:36:13,538 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-04-06 00:36:13,538 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-04-06 00:36:13,538 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-04-06 00:36:13,538 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-04-06 00:36:13,539 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-04-06 00:36:13,540 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-04-06 00:36:13,541 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-04-06 00:36:13,542 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-04-06 00:36:13,542 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-04-06 00:36:13,542 [9124 ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+FATAL 2017-04-06 00:36:14,274 [9124 ] Abp.AbpBootstrapper                      - System.IO.FileNotFoundException: 未能加载文件或程序集“System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”
+   在 AutoMapper.Mappers.NameValueCollectionMapper.IsMatch(TypePair context)
+   在 AutoMapper.MapperConfiguration.<>c__DisplayClass46_0.<CoveredByObjectMap>b__0(IObjectMapper m)
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 AutoMapper.MapperConfiguration.CoveredByObjectMap(TypePair typePair)
+   在 AutoMapper.MapperConfiguration.GetTypeMap(TypePair initialTypes)
+   在 AutoMapper.MapperConfiguration.ResolveTypeMap(TypePair typePair)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.MapExpression(TypeMapRegistry typeMapRegistry, IConfigurationProvider configurationProvider, TypePair typePair, Expression sourceParameter, Expression contextParameter, PropertyMap propertyMap, Expression destinationParameter)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreatePropertyMapFunc(PropertyMap propertyMap)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.TryPropertyMap(PropertyMap propertyMap)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreateAssignmentFunc(Expression destinationFunc, Boolean constructorMapping)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreateMapperLambda()
+   在 AutoMapper.TypeMap.Seal(TypeMapRegistry typeMapRegistry, IConfigurationProvider configurationProvider)
+   在 AutoMapper.MapperConfiguration.Seal()
+   在 AutoMapper.MapperConfiguration..ctor(MapperConfigurationExpression configurationExpression, IEnumerable`1 mappers)
+   在 AutoMapper.Mapper.Initialize(Action`1 config)
+   在 Abp.AutoMapper.AbpAutoMapperModule.CreateMappings() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp.AutoMapper\AutoMapper\AbpAutoMapperModule.cs:行号 79
+   在 Abp.AutoMapper.AbpAutoMapperModule.PostInitialize() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp.AutoMapper\AutoMapper\AbpAutoMapperModule.cs:行号 58
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+日志: Appbase = file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\ABP学习\DerrickABP\ABPStudy\zero\Derrick.Web\bin
+调用程序集: AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\ABP学习\DerrickABP\ABPStudy\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized/System.Collections.Specialized.EXE。
+
+System.IO.FileNotFoundException: 未能加载文件或程序集“System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”
+   在 AutoMapper.Mappers.NameValueCollectionMapper.IsMatch(TypePair context)
+   在 AutoMapper.MapperConfiguration.<>c__DisplayClass46_0.<CoveredByObjectMap>b__0(IObjectMapper m)
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 AutoMapper.MapperConfiguration.CoveredByObjectMap(TypePair typePair)
+   在 AutoMapper.MapperConfiguration.GetTypeMap(TypePair initialTypes)
+   在 AutoMapper.MapperConfiguration.ResolveTypeMap(TypePair typePair)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.MapExpression(TypeMapRegistry typeMapRegistry, IConfigurationProvider configurationProvider, TypePair typePair, Expression sourceParameter, Expression contextParameter, PropertyMap propertyMap, Expression destinationParameter)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreatePropertyMapFunc(PropertyMap propertyMap)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.TryPropertyMap(PropertyMap propertyMap)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreateAssignmentFunc(Expression destinationFunc, Boolean constructorMapping)
+   在 AutoMapper.Execution.TypeMapPlanBuilder.CreateMapperLambda()
+   在 AutoMapper.TypeMap.Seal(TypeMapRegistry typeMapRegistry, IConfigurationProvider configurationProvider)
+   在 AutoMapper.MapperConfiguration.Seal()
+   在 AutoMapper.MapperConfiguration..ctor(MapperConfigurationExpression configurationExpression, IEnumerable`1 mappers)
+   在 AutoMapper.Mapper.Initialize(Action`1 config)
+   在 Abp.AutoMapper.AbpAutoMapperModule.CreateMappings() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp.AutoMapper\AutoMapper\AbpAutoMapperModule.cs:行号 79
+   在 Abp.AutoMapper.AbpAutoMapperModule.PostInitialize() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp.AutoMapper\AutoMapper\AbpAutoMapperModule.cs:行号 58
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\ABP学习\DerrickABP\ABPStudy\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+日志: Appbase = file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\ABP学习\DerrickABP\ABPStudy\zero\Derrick.Web\bin
+调用程序集: AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\ABP学习\DerrickABP\ABPStudy\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: System.Collections.Specialized, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized/System.Collections.Specialized.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/vs/4653cb57/110dcae/System.Collections.Specialized/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized.EXE。
+日志: 尝试下载新的 URL file:///D:/ABP学习/DerrickABP/ABPStudy/zero/Derrick.Web/bin/System.Collections.Specialized/System.Collections.Specialized.EXE。
+

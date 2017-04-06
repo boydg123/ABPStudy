@@ -14,7 +14,7 @@ namespace Abp.Authorization
     /// <summary>
     /// 授权帮助类
     /// </summary>
-    internal class AuthorizationHelper : IAuthorizationHelper, ITransientDependency
+    public class AuthorizationHelper : IAuthorizationHelper, ITransientDependency
     {
         /// <summary>
         /// ABP Session的引用
