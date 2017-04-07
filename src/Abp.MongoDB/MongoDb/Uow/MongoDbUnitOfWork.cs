@@ -8,18 +8,22 @@ namespace Abp.MongoDb.Uow
 {
     /// <summary>
     /// Implements Unit of work for MongoDB.
+    /// MongoDB工作单元实现
     /// </summary>
     public class MongoDbUnitOfWork : UnitOfWorkBase, ITransientDependency
     {
         /// <summary>
-        /// Gets a reference to MongoDB Database.
+        /// 获取一哥MongoDB数据库引用
         /// </summary>
         public MongoDatabase Database { get; private set; }
 
+        /// <summary>
+        /// ABP MongoDB模块配置
+        /// </summary>
         private readonly IAbpMongoDbModuleConfiguration _configuration;
 
         /// <summary>
-        /// Constructor.
+        /// 构造函数.
         /// </summary>
         public MongoDbUnitOfWork(
             IAbpMongoDbModuleConfiguration configuration, 
@@ -34,6 +38,9 @@ namespace Abp.MongoDb.Uow
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// 开启工作单元
+        /// </summary>
         #pragma warning disable
         protected override void BeginUow()
         {
@@ -44,11 +51,18 @@ namespace Abp.MongoDb.Uow
         }
         #pragma warning restore
 
+        /// <summary>
+        /// 保存所有的更改
+        /// </summary>
         public override void SaveChanges()
         {
 
         }
 
+        /// <summary>
+        /// 异步保存所有更改
+        /// </summary>
+        /// <returns></returns>
         #pragma warning disable 1998
         public override async Task SaveChangesAsync()
         {
@@ -56,16 +70,27 @@ namespace Abp.MongoDb.Uow
         }
         #pragma warning restore 1998
 
+        /// <summary>
+        /// 完成工作单元
+        /// </summary>
         protected override void CompleteUow()
         {
 
         }
 
+        /// <summary>
+        /// 异步完成工作单元
+        /// </summary>
+        /// <returns></returns>
         #pragma warning disable 1998
         protected override async Task CompleteUowAsync()
         {
 
         }
+
+        /// <summary>
+        /// 释放工作单元
+        /// </summary>
         #pragma warning restore 1998
         protected override void DisposeUow()
         {
