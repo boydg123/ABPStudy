@@ -7,9 +7,19 @@ using Quartz;
 
 namespace Abp.Quartz.Quartz
 {
+    /// <summary>
+    /// Quartz作业调度管理器
+    /// </summary>
     public class QuartzScheduleJobManager : BackgroundWorkerBase, IQuartzScheduleJobManager
     {
+        /// <summary>
+        /// 后台作业配置
+        /// </summary>
         private readonly IBackgroundJobConfiguration _backgroundJobConfiguration;
+
+        /// <summary>
+        /// ABP Quartz配置
+        /// </summary>
         private readonly IAbpQuartzConfiguration _quartzConfiguration;
 
         public QuartzScheduleJobManager(
