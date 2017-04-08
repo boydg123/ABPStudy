@@ -7,7 +7,7 @@ namespace Abp.Authorization
     /// Used to store and manipulate dictionary of permissions.
     /// 用于存储和操作权限权限的字典
     /// </summary>
-    public class PermissionDictionary : Dictionary<string, Permission>
+    internal class PermissionDictionary : Dictionary<string, Permission>
     {
         /// <summary>
         /// Adds all child permissions of current permissions recursively.
