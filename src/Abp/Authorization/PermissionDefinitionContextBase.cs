@@ -8,17 +8,17 @@ namespace Abp.Authorization
     /// <summary>
     /// 权限定义上下文基类
     /// </summary>
-    internal abstract class PermissionDefinitionContextBase : IPermissionDefinitionContext
+    public abstract class PermissionDefinitionContextBase : IPermissionDefinitionContext
     {
         /// <summary>
         /// 用于存储和操作权限的字典
         /// </summary>
-        protected readonly PermissionDictionary Permissions;
+        public readonly PermissionDictionary Permissions;
 
         /// <summary>
         /// 构造函数
         /// </summary>
-        protected PermissionDefinitionContextBase()
+        public PermissionDefinitionContextBase()
         {
             Permissions = new PermissionDictionary();
         }
