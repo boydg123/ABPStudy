@@ -6,7 +6,7 @@ namespace Abp.Configuration.Startup
     /// <summary>
     /// 用于配置授权
     /// </summary>
-    internal class AuthorizationConfiguration : IAuthorizationConfiguration
+    public class AuthorizationConfiguration : IAuthorizationConfiguration
     {
         /// <summary>
         /// 授权提供者

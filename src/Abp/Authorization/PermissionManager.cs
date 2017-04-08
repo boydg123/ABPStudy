@@ -14,7 +14,7 @@ namespace Abp.Authorization
     /// Permission manager.
     /// 权限管理器
     /// </summary>
-    internal class PermissionManager : PermissionDefinitionContextBase, IPermissionManager, ISingletonDependency
+    public class PermissionManager : PermissionDefinitionContextBase, IPermissionManager, ISingletonDependency
     {
         /// <summary>
         /// ABP Session引用
