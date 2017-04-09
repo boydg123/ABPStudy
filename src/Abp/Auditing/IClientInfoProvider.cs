@@ -1,7 +1,7 @@
 ﻿namespace Abp.Auditing
 {
     /// <summary>
-    /// 客户段信息提供者
+    /// 客户端信息提供者
     /// </summary>
     public interface IClientInfoProvider
     {
