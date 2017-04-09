@@ -93,6 +93,9 @@
     <Compile Include="BackgroundJobs\InMemeryBackgroundJobsStore_Tests.cs" />
     <Compile Include="Collections\Extensions\ListExtensions_Tests.cs" />
     <Compile Include="Collections\TypeList_Tests.cs" />
+    <Compile Include="Configuration\DictionaryBasedConfig_Tests.cs" />
+    <Compile Include="Configuration\MyChangableSession.cs" />
+    <Compile Include="Configuration\SettingManaer_Tests.cs" />
     <Compile Include="Dependency\Circular_Constructor_Dependency_Tests.cs" />
     <Compile Include="Dependency\Circular_Property_Dependency_Tests.cs" />
     <Compile Include="Dependency\DisposableDependencyObjectWrapper_Tests.cs" />

@@ -8,7 +8,7 @@ namespace Abp.Runtime.Caching.Configuration
     /// <summary>
     /// 缓存配置
     /// </summary>
-    internal class CachingConfiguration : ICachingConfiguration
+    public class CachingConfiguration : ICachingConfiguration
     {
         /// <summary>
         /// 获取ABP配置对象
