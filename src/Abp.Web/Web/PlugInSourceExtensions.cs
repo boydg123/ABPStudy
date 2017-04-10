@@ -6,8 +6,15 @@ using Abp.PlugIns;
 
 namespace Abp.Web
 {
+    /// <summary>
+    /// 插件源列表
+    /// </summary>
     public static class PlugInSourceListExtensions
     {
+        /// <summary>
+        /// 添加至编译管理器
+        /// </summary>
+        /// <param name="plugInSourceList">插件源列表</param>
         public static void AddToBuildManager(this PlugInSourceList plugInSourceList)
         {
             var plugInAssemblies = plugInSourceList

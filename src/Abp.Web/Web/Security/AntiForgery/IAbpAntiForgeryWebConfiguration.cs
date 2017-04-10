@@ -16,7 +16,7 @@ namespace Abp.Web.Security.AntiForgery
 
         /// <summary>
         /// A list of ignored HTTP verbs for Anti Forgery token validation.Default list: Get, Head, Options, Trace.
-        /// 
+        /// 用于防伪令牌验证的Http请求忽略列表。默认列表：Get,Head,Options,Trace
         /// </summary>
         HashSet<HttpVerb> IgnoredHttpVerbs { get; }
     }

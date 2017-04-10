@@ -15,11 +15,14 @@ namespace Abp.Web
 {
     /// <summary>
     /// This module is used to use ABP in ASP.NET web applications.
+    /// 此模块用于在ASP.NET Web应用程序中使用ABP
     /// </summary>
     [DependsOn(typeof(AbpWebCommonModule))]    
     public class AbpWebModule : AbpModule
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// 这是应用启动调用的第一个事件，这里面的代码，会在依赖注入注册之前运行
+        /// </summary>
         public override void PreInitialize()
         {
             IocManager.Register<IAbpAntiForgeryWebConfiguration, AbpAntiForgeryWebConfiguration>();
@@ -32,12 +35,17 @@ namespace Abp.Web
             AddIgnoredTypes();
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 初始化
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());            
         }
 
+        /// <summary>
+        /// 添加忽略类型
+        /// </summary>
         private void AddIgnoredTypes()
         {
             var ignoredTypes = new[]
