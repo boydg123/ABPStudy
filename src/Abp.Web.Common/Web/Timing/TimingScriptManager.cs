@@ -12,16 +12,27 @@ namespace Abp.Web.Timing
 {
     /// <summary>
     /// This class is used to build timing script.
+    /// 此类用于生成时间脚本
     /// </summary>
     public class TimingScriptManager : ITimingScriptManager, ITransientDependency
     {
+        /// <summary>
+        /// 设置管理器
+        /// </summary>
         private readonly ISettingManager _settingManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="settingManager">设置管理器</param>
         public TimingScriptManager(ISettingManager settingManager)
         {
             _settingManager = settingManager;
         }
 
+        /// <summary>
+        /// 获取包含所有功能信息的Javascript脚本
+        /// </summary>
         public async Task<string> GetScriptAsync()
         {
             var script = new StringBuilder();
@@ -41,6 +52,9 @@ namespace Abp.Web.Timing
             return script.ToString();
         }
 
+        /// <summary>
+        /// 获取用户时区的脚本
+        /// </summary>
         private async Task<string> GetUsersTimezoneScriptsAsync()
         {
             var timezoneId = await _settingManager.GetSettingValueAsync(TimingSettingNames.TimeZone);

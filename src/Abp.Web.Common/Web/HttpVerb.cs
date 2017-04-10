@@ -4,6 +4,7 @@ namespace Abp.Web
 {
     /// <summary>
     /// Represents an HTTP verb.
+    /// 表示HTTP的请求动作
     /// </summary>
     [Flags]
     public enum HttpVerb

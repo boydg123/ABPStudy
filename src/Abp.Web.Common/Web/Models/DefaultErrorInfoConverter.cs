@@ -13,13 +13,29 @@ using Abp.Web.Configuration;
 namespace Abp.Web.Models
 {
     //TODO@Halil: I did not like constructing ErrorInfo this way. It works wlll but I think we should change it later...
+    /// <summary>
+    /// 异常转换错误信息转换器默认实现
+    /// </summary>
     internal class DefaultErrorInfoConverter : IExceptionToErrorInfoConverter
     {
+        /// <summary>
+        /// ABP Web Common模块配置
+        /// </summary>
         private readonly IAbpWebCommonModuleConfiguration _configuration;
+
+        /// <summary>
+        /// 本地化管理器
+        /// </summary>
         private readonly ILocalizationManager _localizationManager;
 
+        /// <summary>
+        /// 下一个转换器
+        /// </summary>
         public IExceptionToErrorInfoConverter Next { set; private get; }
 
+        /// <summary>
+        /// 是否发送所有异常至客户端
+        /// </summary>
         private bool SendAllExceptionsToClients
         {
             get
@@ -28,6 +44,11 @@ namespace Abp.Web.Models
             }
         }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="configuration">ABP Web Common模块配置</param>
+        /// <param name="localizationManager">本地化管理器</param>
         public DefaultErrorInfoConverter(
             IAbpWebCommonModuleConfiguration configuration, 
             ILocalizationManager localizationManager)
@@ -36,6 +57,11 @@ namespace Abp.Web.Models
             _localizationManager = localizationManager;
         }
 
+        /// <summary>
+        /// 将异常对象转换至错误信息对象
+        /// </summary>
+        /// <param name="exception">异常对象</param>
+        /// <returns>错误信息对象</returns>
         public ErrorInfo Convert(Exception exception)
         {
             var errorInfo = CreateErrorInfoWithoutCode(exception);
@@ -48,6 +74,11 @@ namespace Abp.Web.Models
             return errorInfo;
         }
 
+        /// <summary>
+        /// 创建错误信息不使用错误码
+        /// </summary>
+        /// <param name="exception">异常对象</param>
+        /// <returns></returns>
         private ErrorInfo CreateErrorInfoWithoutCode(Exception exception)
         {
             if (SendAllExceptionsToClients)
@@ -102,6 +133,11 @@ namespace Abp.Web.Models
             return new ErrorInfo(L("InternalServerError"));
         }
 
+        /// <summary>
+        /// 使用给定的异常对象创建详细的错误信息
+        /// </summary>
+        /// <param name="exception"></param>
+        /// <returns></returns>
         private ErrorInfo CreateDetailedErrorInfoFromException(Exception exception)
         {
             var detailBuilder = new StringBuilder();
@@ -118,6 +154,11 @@ namespace Abp.Web.Models
             return errorInfo;
         }
 
+        /// <summary>
+        /// 添加异常消息至详细信息
+        /// </summary>
+        /// <param name="exception">异常对象</param>
+        /// <param name="detailBuilder"></param>
         private void AddExceptionToDetails(Exception exception, StringBuilder detailBuilder)
         {
             //Exception Message
@@ -171,6 +212,11 @@ namespace Abp.Web.Models
             }
         }
 
+        /// <summary>
+        /// 获取验证的错误信息集合
+        /// </summary>
+        /// <param name="validationException">验证异常</param>
+        /// <returns></returns>
         private ValidationErrorInfo[] GetValidationErrorInfos(AbpValidationException validationException)
         {
             var validationErrorInfos = new List<ValidationErrorInfo>();
@@ -190,6 +236,11 @@ namespace Abp.Web.Models
             return validationErrorInfos.ToArray();
         }
 
+        /// <summary>
+        /// 获取验证错误叙述
+        /// </summary>
+        /// <param name="validationException">验证异常</param>
+        /// <returns></returns>
         private string GetValidationErrorNarrative(AbpValidationException validationException)
         {
             var detailBuilder = new StringBuilder();

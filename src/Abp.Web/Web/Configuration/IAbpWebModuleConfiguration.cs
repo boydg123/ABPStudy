@@ -7,8 +7,14 @@ namespace Abp.Web.Configuration
     /// </summary>
     public interface IAbpWebModuleConfiguration
     {
+        /// <summary>
+        /// ABP Web防伪配置
+        /// </summary>
         IAbpAntiForgeryWebConfiguration AntiForgery { get; }
 
+        /// <summary>
+        /// ABP Web本地化配置
+        /// </summary>
         IAbpWebLocalizationConfiguration Localization { get; }
     }
 }

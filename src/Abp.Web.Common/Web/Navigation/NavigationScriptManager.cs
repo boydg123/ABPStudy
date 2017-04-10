@@ -7,18 +7,35 @@ using Abp.Runtime.Session;
 
 namespace Abp.Web.Navigation
 {
+    /// <summary>
+    /// 导航脚本管理器默认实现
+    /// </summary>
     internal class NavigationScriptManager : INavigationScriptManager, ITransientDependency
     {
+        /// <summary>
+        /// ABP Session
+        /// </summary>
         public IAbpSession AbpSession { get; set; }
 
+        /// <summary>
+        /// 用户导航管理器
+        /// </summary>
         private readonly IUserNavigationManager _userNavigationManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="userNavigationManager">用户导航管理器</param>
         public NavigationScriptManager(IUserNavigationManager userNavigationManager)
         {
             _userNavigationManager = userNavigationManager;
             AbpSession = NullAbpSession.Instance;
         }
 
+        /// <summary>
+        /// 获取导航脚本
+        /// </summary>
+        /// <returns></returns>
         public async Task<string> GetScriptAsync()
         {
             var userMenus = await _userNavigationManager.GetMenusAsync(AbpSession.ToUserIdentifier());
@@ -45,6 +62,11 @@ namespace Abp.Web.Navigation
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 追加菜单
+        /// </summary>
+        /// <param name="sb"></param>
+        /// <param name="menu">用户菜单</param>
         private static void AppendMenu(StringBuilder sb, UserMenu menu)
         {
             sb.AppendLine("        '" + menu.Name + "': {");
@@ -84,6 +106,12 @@ namespace Abp.Web.Navigation
             sb.AppendLine("            }");
         }
 
+        /// <summary>
+        /// 追加菜单项
+        /// </summary>
+        /// <param name="indentLength"></param>
+        /// <param name="sb"></param>
+        /// <param name="menuItem">菜单项</param>
         private static void AppendMenuItem(int indentLength, StringBuilder sb, UserMenuItem menuItem)
         {
             sb.AppendLine("{");

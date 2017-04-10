@@ -7,10 +7,19 @@ using Abp.Web.Api.Modeling;
 
 namespace Abp.Web.Api.ProxyScripting.Generators
 {
+    /// <summary>
+    /// 代理脚本JS方法帮助类
+    /// </summary>
     internal static class ProxyScriptingJsFuncHelper
     {
         private const string ValidJsVariableNameChars = "abcdefghijklmnopqrstuxwvyzABCDEFGHIJKLMNOPQRSTUXWVYZ0123456789_";
 
+        /// <summary>
+        /// 规范化的JS变量名
+        /// </summary>
+        /// <param name="name">名称</param>
+        /// <param name="additionalChars">额外字符串</param>
+        /// <returns></returns>
         public static string NormalizeJsVariableName(string name, string additionalChars = "")
         {
             var validChars = ValidJsVariableNameChars + additionalChars;
@@ -36,6 +45,11 @@ namespace Abp.Web.Api.ProxyScripting.Generators
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 在JS方法中获取参数名
+        /// </summary>
+        /// <param name="parameterInfo">参数名对象</param>
+        /// <returns></returns>
         public static string GetParamNameInJsFunc(ParameterApiDescriptionModel parameterInfo)
         {
             return parameterInfo.Name == parameterInfo.NameOnMethod
@@ -43,6 +57,12 @@ namespace Abp.Web.Api.ProxyScripting.Generators
                        : NormalizeJsVariableName(parameterInfo.NameOnMethod.ToCamelCase()) + "." + NormalizeJsVariableName(parameterInfo.Name.ToCamelCase(), ".");
         }
 
+        /// <summary>
+        /// 创建JS原义对象
+        /// </summary>
+        /// <param name="parameters">参数列表</param>
+        /// <param name="indent">缩进</param>
+        /// <returns></returns>
         public static string CreateJsObjectLiteral(ParameterApiDescriptionModel[] parameters, int indent = 0)
         {
             var sb = new StringBuilder();
@@ -59,6 +79,12 @@ namespace Abp.Web.Api.ProxyScripting.Generators
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 为JS方法参数列表
+        /// </summary>
+        /// <param name="action">参数模型</param>
+        /// <param name="ajaxParametersName">ajax参数名称</param>
+        /// <returns></returns>
         public static string GenerateJsFuncParameterList(ActionApiDescriptionModel action, string ajaxParametersName)
         {
             var methodParamNames = action.Parameters.Select(p => p.NameOnMethod).Distinct().ToList();

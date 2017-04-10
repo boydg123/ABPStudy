@@ -9,18 +9,26 @@ using Abp.Runtime.Session;
 namespace Abp.Web.Authorization
 {
     /// <summary>
-    /// 
+    /// 授权脚本管理器(用于构建授权脚本)
     /// </summary>
     public class AuthorizationScriptManager : IAuthorizationScriptManager, ITransientDependency
     {
-        /// <inheritdoc/>
         public IAbpSession AbpSession { get; set; }
 
+        /// <summary>
+        /// 权限管理器
+        /// </summary>
         private readonly IPermissionManager _permissionManager;
 
+        /// <summary>
+        /// 权限检查器
+        /// </summary>
         public IPermissionChecker PermissionChecker { get; set; }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="permissionManager">权限管理器</param>
         public AuthorizationScriptManager(IPermissionManager permissionManager)
         {
             AbpSession = NullAbpSession.Instance;
@@ -29,7 +37,10 @@ namespace Abp.Web.Authorization
             _permissionManager = permissionManager;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 获取包含所有授权信息的Javascript脚本
+        /// </summary>
+        /// <returns></returns>
         public async Task<string> GetScriptAsync()
         {
             var allPermissionNames = _permissionManager.GetAllPermissions(false).Select(p => p.Name).ToList();
@@ -68,6 +79,12 @@ namespace Abp.Web.Authorization
             return script.ToString();
         }
 
+        /// <summary>
+        /// 追加权限列表
+        /// </summary>
+        /// <param name="script"></param>
+        /// <param name="name">权限名称</param>
+        /// <param name="permissions">权限列表</param>
         private static void AppendPermissionList(StringBuilder script, string name, IReadOnlyList<string> permissions)
         {
             script.AppendLine("    abp.auth." + name + " = {");

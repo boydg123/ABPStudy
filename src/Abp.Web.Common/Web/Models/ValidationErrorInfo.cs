@@ -4,6 +4,7 @@ namespace Abp.Web.Models
 {
     /// <summary>
     /// Used to store information about a validation error.
+    /// 用于存储有关验证错误的信息
     /// </summary>
     [Serializable]
     public class ValidationErrorInfo

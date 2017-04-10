@@ -5,6 +5,9 @@ using Abp.Web.Api.Modeling;
 
 namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
 {
+    /// <summary>
+    /// JQuery代理脚本生成器
+    /// </summary>
     public class JQueryProxyScriptGenerator : IProxyScriptGenerator, ITransientDependency
     {
         /// <summary>
@@ -12,6 +15,11 @@ namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
         /// </summary>
         public const string Name = "jquery";
 
+        /// <summary>
+        /// 创建脚本
+        /// </summary>
+        /// <param name="model">API应用程序描述模型</param>
+        /// <returns></returns>
         public string CreateScript(ApplicationApiDescriptionModel model)
         {
             var script = new StringBuilder();
@@ -30,6 +38,11 @@ namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
             return script.ToString();
         }
 
+        /// <summary>
+        /// 添加模块脚本
+        /// </summary>
+        /// <param name="script"></param>
+        /// <param name="module">API模块描述模型</param>
         private static void AddModuleScript(StringBuilder script, ModuleApiDescriptionModel module)
         {
             script.AppendLine($"// module '{module.Name.ToCamelCase()}'");
@@ -47,6 +60,12 @@ namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
             script.AppendLine("})();");
         }
 
+        /// <summary>
+        /// 添加控制器脚本
+        /// </summary>
+        /// <param name="script"></param>
+        /// <param name="module">API模块描述模型</param>
+        /// <param name="controller"API控制器描述模型></param>
         private static void AddControllerScript(StringBuilder script, ModuleApiDescriptionModel module, ControllerApiDescriptionModel controller)
         {
             script.AppendLine($"  // controller '{controller.Name.ToCamelCase()}'");
@@ -65,6 +84,13 @@ namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
             script.AppendLine("  })();");
         }
 
+        /// <summary>
+        /// 添加Action脚本
+        /// </summary>
+        /// <param name="script"></param>
+        /// <param name="module">API模块描述模型</param>
+        /// <param name="controller">API控制器描述模型</param>
+        /// <param name="action">API Action描述模型</param>
         private static void AddActionScript(StringBuilder script, ModuleApiDescriptionModel module, ControllerApiDescriptionModel controller, ActionApiDescriptionModel action)
         {
             var parameterList = ProxyScriptingJsFuncHelper.GenerateJsFuncParameterList(action, "ajaxParams");
@@ -79,6 +105,12 @@ namespace Abp.Web.Api.ProxyScripting.Generators.JQuery
             script.AppendLine("    };");
         }
 
+        /// <summary>
+        /// 添加Ajax调用参数
+        /// </summary>
+        /// <param name="script"></param>
+        /// <param name="controller">API控制器描述模型</param>
+        /// <param name="action">API Action描述模型</param>
         private static void AddAjaxCallParameters(StringBuilder script, ControllerApiDescriptionModel controller, ActionApiDescriptionModel action)
         {
             var httpMethod = action.HttpMethod?.ToUpperInvariant() ?? "POST";

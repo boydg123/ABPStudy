@@ -4,15 +4,28 @@ using Abp.Runtime.Session;
 
 namespace Abp.Web.Sessions
 {
+    /// <summary>
+    /// Session脚本管理器(用于为Session创建客户端脚本)
+    /// </summary>
     public class SessionScriptManager : ISessionScriptManager, ITransientDependency
     {
+        /// <summary>
+        /// ABP Session引用
+        /// </summary>
         public IAbpSession AbpSession { get; set; }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public SessionScriptManager()
         {
             AbpSession = NullAbpSession.Instance;
         }
 
+        /// <summary>
+        /// 获取Session客户端脚本
+        /// </summary>
+        /// <returns></returns>
         public string GetScript()
         {
             var script = new StringBuilder();

@@ -1,5 +1,8 @@
 namespace Abp.Web.Models.AbpUserConfiguration
 {
+    /// <summary>
+    /// ABP用户Windows时区配置Dto
+    /// </summary>
     public class AbpUserWindowsTimeZoneConfigDto
     {
         public string TimeZoneId { get; set; }

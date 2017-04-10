@@ -2,6 +2,9 @@
 
 namespace Abp.Web.Api.Modeling
 {
+    /// <summary>
+    /// API返回值描述模型
+    /// </summary>
     [Serializable]
     public class ReturnValueApiDescriptionModel
     {
