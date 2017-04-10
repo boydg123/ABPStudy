@@ -5,6 +5,9 @@ using Abp.Collections.Extensions;
 
 namespace Abp.Web.Api.Modeling
 {
+    /// <summary>
+    /// API模块描述模型
+    /// </summary>
     [Serializable]
     public class ModuleApiDescriptionModel
     {

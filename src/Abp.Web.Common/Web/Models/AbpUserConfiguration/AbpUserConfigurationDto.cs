@@ -1,5 +1,8 @@
 namespace Abp.Web.Models.AbpUserConfiguration
 {
+    /// <summary>
+    /// ABP”√ªß≈‰÷√Dto
+    /// </summary>
     public class AbpUserConfigurationDto
     {
         public AbpMultiTenancyConfigDto MultiTenancy { get; set; }

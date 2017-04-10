@@ -13,11 +13,14 @@ namespace Abp.Web
 {
     /// <summary>
     /// This module is used to use ABP in ASP.NET web applications.
+    /// 此模块用于在asp.net web应用程序中使用ABP
     /// </summary>
     [DependsOn(typeof(AbpKernelModule))]    
     public class AbpWebCommonModule : AbpModule
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// 这是应用启动调用的第一个事件，这里面的代码，会在依赖注入注册之前运行
+        /// </summary>
         public override void PreInitialize()
         {
             IocManager.Register<IApiProxyScriptingConfiguration, ApiProxyScriptingConfiguration>();
@@ -34,7 +37,9 @@ namespace Abp.Web
                         )));
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 初始化ABP Web Common模块
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());            

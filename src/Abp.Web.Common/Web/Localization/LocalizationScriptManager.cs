@@ -10,12 +10,32 @@ using Abp.Runtime.Caching;
 
 namespace Abp.Web.Localization
 {
+    /// <summary>
+    /// 本地化脚本管理器实现(定义获取本地化Javascript脚本)
+    /// </summary>
     internal class LocalizationScriptManager : ILocalizationScriptManager, ISingletonDependency
     {
+        /// <summary>
+        /// 本地化管理器
+        /// </summary>
         private readonly ILocalizationManager _localizationManager;
+
+        /// <summary>
+        /// 缓存管理器
+        /// </summary>
         private readonly ICacheManager _cacheManager;
+
+        /// <summary>
+        /// 语言管理器
+        /// </summary>
         private readonly ILanguageManager _languageManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="localizationManager">本地化管理器</param>
+        /// <param name="cacheManager">缓存管理器</param>
+        /// <param name="languageManager">语言管理器</param>
         public LocalizationScriptManager(
             ILocalizationManager localizationManager, 
             ICacheManager cacheManager,
@@ -26,13 +46,20 @@ namespace Abp.Web.Localization
             _languageManager = languageManager;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 获取包含当前文化中的所有本地化信息的JavaScript。
+        /// </summary>
+        /// <returns></returns>
         public string GetScript()
         {
             return GetScript(Thread.CurrentThread.CurrentUICulture);
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 获取包含当前文化中的所有本地化信息的JavaScript。
+        /// </summary>
+        /// <param name="cultureInfo">文化信息</param>
+        /// <returns></returns>
         public string GetScript(CultureInfo cultureInfo)
         {
             //NOTE: Disabled caching since it's not true (localization script is changed per user, per tenant, per culture...)
@@ -40,6 +67,11 @@ namespace Abp.Web.Localization
             //return _cacheManager.GetCache(AbpCacheNames.LocalizationScripts).Get(cultureInfo.Name, () => BuildAll(cultureInfo));
         }
 
+        /// <summary>
+        /// 构建JavaScript。
+        /// </summary>
+        /// <param name="cultureInfo">文化信息</param>
+        /// <returns></returns>
         private string BuildAll(CultureInfo cultureInfo)
         {
             var script = new StringBuilder();

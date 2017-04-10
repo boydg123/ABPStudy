@@ -1,5 +1,8 @@
 namespace Abp.Web.Api.ProxyScripting.Generators
 {
+    /// <summary>
+    /// 参数构建来源
+    /// </summary>
     public static class ParameterBindingSources
     {
         public const string ModelBinding = "ModelBinding";

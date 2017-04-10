@@ -1,5 +1,8 @@
 namespace Abp.Web
 {
+    /// <summary>
+    /// HTTP请求动作帮助类
+    /// </summary>
     public static class HttpVerbHelper
     {
         public static HttpVerb Create(string httpMethod)

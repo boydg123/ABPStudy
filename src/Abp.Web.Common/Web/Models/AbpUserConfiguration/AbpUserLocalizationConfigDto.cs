@@ -3,6 +3,9 @@ using Abp.Localization;
 
 namespace Abp.Web.Models.AbpUserConfiguration
 {
+    /// <summary>
+    /// ABP用户本地化配置Dto
+    /// </summary>
     public class AbpUserLocalizationConfigDto
     {
         public AbpUserCurrentCultureConfigDto CurrentCulture { get; set; }

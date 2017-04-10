@@ -8,13 +8,31 @@ using Abp.Runtime.Session;
 
 namespace Abp.Web.Features
 {
+    /// <summary>
+    /// 功能脚本管理器
+    /// </summary>
     public class FeaturesScriptManager : IFeaturesScriptManager, ITransientDependency
     {
+        /// <summary>
+        /// ABP Session
+        /// </summary>
         public IAbpSession AbpSession { get; set; }
 
+        /// <summary>
+        /// 功能管理器
+        /// </summary>
         private readonly IFeatureManager _featureManager;
+
+        /// <summary>
+        /// 功能检查器
+        /// </summary>
         private readonly IFeatureChecker _featureChecker;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="featureManager">功能管理器</param>
+        /// <param name="featureChecker">功能检查器</param>
         public FeaturesScriptManager(IFeatureManager featureManager, IFeatureChecker featureChecker)
         {
             _featureManager = featureManager;
@@ -23,6 +41,10 @@ namespace Abp.Web.Features
             AbpSession = NullAbpSession.Instance;
         }
 
+        /// <summary>
+        /// 获取包含所有功能信息的Javascript
+        /// </summary>
+        /// <returns></returns>
         public async Task<string> GetScriptAsync()
         {
             var allFeatures = _featureManager.GetAll().ToList();

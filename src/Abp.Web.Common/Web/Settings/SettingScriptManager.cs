@@ -8,18 +8,34 @@ namespace Abp.Web.Settings
 {
     /// <summary>
     /// This class is used to build setting script.
+    /// 此类用于生成设置脚本
     /// </summary>
     public class SettingScriptManager : ISettingScriptManager, ISingletonDependency
     {
+        /// <summary>
+        /// 设置定义管理器
+        /// </summary>
         private readonly ISettingDefinitionManager _settingDefinitionManager;
+
+        /// <summary>
+        /// 设置管理器
+        /// </summary>
         private readonly ISettingManager _settingManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="settingDefinitionManager">设置定义管理器</param>
+        /// <param name="settingManager">设置管理器</param>
         public SettingScriptManager(ISettingDefinitionManager settingDefinitionManager, ISettingManager settingManager)
         {
             _settingDefinitionManager = settingDefinitionManager;
             _settingManager = settingManager;
         }
 
+        /// <summary>
+        /// 获取包含设置值的Javascript脚本
+        /// </summary>
         public async Task<string> GetScriptAsync()
         {
             var script = new StringBuilder();

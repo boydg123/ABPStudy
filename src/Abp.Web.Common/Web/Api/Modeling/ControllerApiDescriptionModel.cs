@@ -4,9 +4,15 @@ using System.Collections.Generic;
 
 namespace Abp.Web.Api.Modeling
 {
+    /// <summary>
+    /// API控制器描述模型
+    /// </summary>
     [Serializable]
     public class ControllerApiDescriptionModel
     {
+        /// <summary>
+        /// 名称
+        /// </summary>
         public string Name { get; }
 
         public IDictionary<string,  ActionApiDescriptionModel> Actions { get; }

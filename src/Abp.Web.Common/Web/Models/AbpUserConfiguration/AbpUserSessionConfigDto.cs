@@ -2,6 +2,9 @@ using Abp.MultiTenancy;
 
 namespace Abp.Web.Models.AbpUserConfiguration
 {
+    /// <summary>
+    /// ABP”√ªßSession≈‰÷√Dto
+    /// </summary>
     public class AbpUserSessionConfigDto
     {
         public long? UserId { get; set; }
