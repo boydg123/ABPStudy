@@ -16,8 +16,9 @@ namespace Abp.Json
 
         /// <summary>
         /// Serializes an object with a type information included.
-        /// 
+        /// 序列化一个包含类型信息的对象
         /// So, it can be deserialized using <see cref="DeserializeWithType"/> method later.
+        /// 所以，之后它能使用<see cref="DeserializeWithType"/>方法反序列化
         /// </summary>
         public static string SerializeWithType(object obj)
         {
