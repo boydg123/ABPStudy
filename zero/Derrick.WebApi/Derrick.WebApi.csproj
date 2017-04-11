@@ -140,10 +140,6 @@
       <Project>{707e867a-31d3-41f5-bb87-9b5ac95cc8a5}</Project>
       <Name>Abp.Web.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Abp.Web\Abp.Web.csproj">
-      <Project>{db264d99-a5fc-4ad3-b5f2-2b668396c797}</Project>
-      <Name>Abp.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\Abp\Abp.csproj">
       <Project>{c862331e-05d2-45e3-96d8-c4dea82b1ea8}</Project>
       <Name>Abp</Name>
