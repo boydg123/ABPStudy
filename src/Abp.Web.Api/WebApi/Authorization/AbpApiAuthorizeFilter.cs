@@ -20,15 +20,43 @@ using Abp.WebApi.Validation;
 
 namespace Abp.WebApi.Authorization
 {
+    /// <summary>
+    /// ABP Api授权过滤器
+    /// </summary>
     public class AbpApiAuthorizeFilter : IAuthorizationFilter, ITransientDependency
     {
+        /// <summary>
+        /// 获取或设置一个布尔值，该值指示能否为一个程序元素指定多个指示属性实例。
+        /// </summary>
         public bool AllowMultiple => false;
 
+        /// <summary>
+        /// 授权帮助类
+        /// </summary>
         private readonly IAuthorizationHelper _authorizationHelper;
+
+        /// <summary>
+        /// ABP Web Api配置
+        /// </summary>
         private readonly IAbpWebApiConfiguration _configuration;
+
+        /// <summary>
+        /// 本地化管理器
+        /// </summary>
         private readonly ILocalizationManager _localizationManager;
+
+        /// <summary>
+        /// 事件总线
+        /// </summary>
         private readonly IEventBus _eventBus;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="authorizationHelper">授权帮助类</param>
+        /// <param name="configuration">ABP Web Api配置</param>
+        /// <param name="localizationManager">本地化管理器</param>
+        /// <param name="eventBus">事件总线</param>
         public AbpApiAuthorizeFilter(
             IAuthorizationHelper authorizationHelper, 
             IAbpWebApiConfiguration configuration,
@@ -41,6 +69,13 @@ namespace Abp.WebApi.Authorization
             _eventBus = eventBus;
         }
 
+        /// <summary>
+        /// 执行授权过滤器 - 异步
+        /// </summary>
+        /// <param name="actionContext"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="continuation"></param>
+        /// <returns></returns>
         public virtual async Task<HttpResponseMessage> ExecuteAuthorizationFilterAsync(
             HttpActionContext actionContext,
             CancellationToken cancellationToken,
@@ -76,6 +111,11 @@ namespace Abp.WebApi.Authorization
             }
         }
 
+        /// <summary>
+        /// 创建没有授权的响应
+        /// </summary>
+        /// <param name="actionContext">HttpAction上下文</param>
+        /// <returns></returns>
         protected virtual HttpResponseMessage CreateUnAuthorizedResponse(HttpActionContext actionContext)
         {
             HttpStatusCode statusCode;

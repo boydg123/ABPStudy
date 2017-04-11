@@ -34,11 +34,14 @@ namespace Abp.WebApi
 {
     /// <summary>
     /// This module provides Abp features for ASP.NET Web API.
+    /// 此模块为ASP.NET Web API 提供Abp功能
     /// </summary>
     [DependsOn(typeof(AbpWebModule))]
     public class AbpWebApiModule : AbpModule
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// 这是应用启动调用的第一个事件，这里面的代码，会在依赖注入注册之前运行
+        /// </summary>
         public override void PreInitialize()
         {
             IocManager.AddConventionalRegistrar(new ApiControllerConventionalRegistrar());
@@ -51,12 +54,17 @@ namespace Abp.WebApi
             Configuration.Modules.AbpWebApi().ResultWrappingIgnoreUrls.Add("/swagger");
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 初始化ABP Web Api模块
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
 
+        /// <summary>
+        /// 这个方法在应用启动最后被调用
+        /// </summary>
         public override void PostInitialize()
         {
             var httpConfiguration = IocManager.Resolve<IAbpWebApiConfiguration>().HttpConfiguration;
@@ -83,6 +91,10 @@ namespace Abp.WebApi
             Configuration.Modules.AbpWebApi().HttpConfiguration.EnsureInitialized();
         }
 
+        /// <summary>
+        /// 初始化Asp.net 相关服务
+        /// </summary>
+        /// <param name="httpConfiguration"></param>
         private void InitializeAspNetServices(HttpConfiguration httpConfiguration)
         {
             httpConfiguration.Services.Replace(typeof(IHttpControllerSelector), new AbpHttpControllerSelector(httpConfiguration, IocManager.Resolve<DynamicApiControllerManager>()));
@@ -91,6 +103,10 @@ namespace Abp.WebApi
             httpConfiguration.Services.Replace(typeof(IApiExplorer), IocManager.Resolve<AbpApiExplorer>());
         }
 
+        /// <summary>
+        /// 初始化过滤器
+        /// </summary>
+        /// <param name="httpConfiguration"></param>
         private void InitializeFilters(HttpConfiguration httpConfiguration)
         {
             httpConfiguration.Filters.Add(IocManager.Resolve<AbpApiAuthorizeFilter>());
@@ -103,6 +119,10 @@ namespace Abp.WebApi
             httpConfiguration.MessageHandlers.Add(IocManager.Resolve<ResultWrapperHandler>());
         }
 
+        /// <summary>
+        /// 初始化格式化器
+        /// </summary>
+        /// <param name="httpConfiguration"></param>
         private static void InitializeFormatters(HttpConfiguration httpConfiguration)
         {
             //Remove formatters except JsonFormatter.
@@ -120,6 +140,10 @@ namespace Abp.WebApi
             httpConfiguration.Formatters.Add(new PlainTextFormatter());
         }
 
+        /// <summary>
+        /// 初始化此模块路由
+        /// </summary>
+        /// <param name="httpConfiguration"></param>
         private static void InitializeRoutes(HttpConfiguration httpConfiguration)
         {
             //Dynamic Web APIs
@@ -144,6 +168,10 @@ namespace Abp.WebApi
                 );
         }
 
+        /// <summary>
+        /// 初始化模型绑定
+        /// </summary>
+        /// <param name="httpConfiguration"></param>
         private static void InitializeModelBinders(HttpConfiguration httpConfiguration)
         {
             var abpApiDateTimeBinder = new AbpApiDateTimeBinder();

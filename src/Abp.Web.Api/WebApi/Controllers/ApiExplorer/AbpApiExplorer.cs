@@ -17,12 +17,31 @@ using Abp.WebApi.Controllers.Dynamic.Selectors;
 
 namespace Abp.WebApi.Controllers.ApiExplorer
 {
+    /// <summary>
+    /// ABP Api帮助浏览类(为每个API提供描述信息)
+    /// </summary>
     public class AbpApiExplorer : System.Web.Http.Description.ApiExplorer, IApiExplorer, ISingletonDependency
     {
+        /// <summary>
+        /// API描述类集合
+        /// </summary>
         private readonly Lazy<Collection<ApiDescription>> _apiDescriptions;
+
+        /// <summary>
+        /// ABP Api配置信息
+        /// </summary>
         private readonly IAbpWebApiConfiguration _abpWebApiConfiguration;
+
+        /// <summary>
+        /// 动态API控制器管理器
+        /// </summary>
         private readonly DynamicApiControllerManager _dynamicApiControllerManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="abpWebApiConfiguration">ABP Api配置信息</param>
+        /// <param name="dynamicApiControllerManager">动态API控制器管理器</param>
         public AbpApiExplorer(
             IAbpWebApiConfiguration abpWebApiConfiguration,
             DynamicApiControllerManager dynamicApiControllerManager
@@ -33,6 +52,9 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             _dynamicApiControllerManager = dynamicApiControllerManager;
         }
 
+        /// <summary>
+        /// API描述信息集合
+        /// </summary>
         public new Collection<ApiDescription> ApiDescriptions
         {
             get
@@ -41,6 +63,10 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             }
         }
 
+        /// <summary>
+        /// 初始化API描述信息
+        /// </summary>
+        /// <returns></returns>
         private Collection<ApiDescription> InitializeApiDescriptions()
         {
             var apiDescriptions = new Collection<ApiDescription>();
@@ -93,6 +119,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return apiDescriptions;
         }
 
+        /// <summary>
+        /// API帮助预览是否可用
+        /// </summary>
+        /// <param name="dynamicApiControllerInfo">动态API控制器信息</param>
+        /// <returns></returns>
         private static bool IsApiExplorerDisabled(DynamicApiControllerInfo dynamicApiControllerInfo)
         {
             if (dynamicApiControllerInfo.IsApiExplorerEnabled == false)
@@ -113,6 +144,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return false;
         }
 
+        /// <summary>
+        /// API帮助预览是否可用
+        /// </summary>
+        /// <param name="dynamicApiActionInfo">动态API Action信息</param>
+        /// <returns></returns>
         private static bool IsApiExplorerDisabled(DynamicApiActionInfo dynamicApiActionInfo)
         {
             if (dynamicApiActionInfo.IsApiExplorerEnabled == false)
@@ -133,6 +169,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return false;
         }
 
+        /// <summary>
+        /// 设置响应描述
+        /// </summary>
+        /// <param name="apiDescription">API描述信息</param>
+        /// <param name="actionDescriptor">动态Http Action描述器</param>
         private void SetResponseDescription(ApiDescription apiDescription, DynamicHttpActionDescriptor actionDescriptor)
         {
             var responseDescription = CreateResponseDescription(actionDescriptor);
@@ -140,6 +181,12 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             prop2.SetValue(apiDescription, responseDescription);
         }
 
+        /// <summary>
+        /// 创建参数描述
+        /// </summary>
+        /// <param name="actionBinding">Http Action绑定</param>
+        /// <param name="actionDescriptor">Http Action描述器</param>
+        /// <returns></returns>
         private IList<ApiParameterDescription> CreateParameterDescription(HttpActionBinding actionBinding, HttpActionDescriptor actionDescriptor)
         {
             IList<ApiParameterDescription> parameterDescriptions = new List<ApiParameterDescription>();
@@ -171,6 +218,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return parameterDescriptions;
         }
         
+        /// <summary>
+        /// 从描述器创建参数描述信息
+        /// </summary>
+        /// <param name="parameter">Http 参数描述器</param>
+        /// <returns></returns>
         private ApiParameterDescription CreateParameterDescriptionFromDescriptor(HttpParameterDescriptor parameter)
         {
 
@@ -183,6 +235,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             };
         }
 
+        /// <summary>
+        /// 从Http参数绑定创建参数描述
+        /// </summary>
+        /// <param name="parameterBinding">Http参数绑定</param>
+        /// <returns></returns>
         private ApiParameterDescription CreateParameterDescriptionFromBinding(HttpParameterBinding parameterBinding)
         {
             ApiParameterDescription parameterDescription = CreateParameterDescriptionFromDescriptor(parameterBinding.Descriptor);
@@ -198,6 +255,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return parameterDescription;
         }
 
+        /// <summary>
+        /// 创建响应描述
+        /// </summary>
+        /// <param name="actionDescriptor">Http Action描述器</param>
+        /// <returns></returns>
         private ResponseDescription CreateResponseDescription(HttpActionDescriptor actionDescriptor)
         {
             Collection<ResponseTypeAttribute> responseTypeAttribute = actionDescriptor.GetCustomAttributes<ResponseTypeAttribute>();
@@ -211,6 +273,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             };
         }
 
+        /// <summary>
+        /// 获取API响应文档
+        /// </summary>
+        /// <param name="actionDescriptor">Http Action描述器</param>
+        /// <returns></returns>
         private string GetApiResponseDocumentation(HttpActionDescriptor actionDescriptor)
         {
             IDocumentationProvider documentationProvider = DocumentationProvider ?? actionDescriptor.Configuration.Services.GetDocumentationProvider();
@@ -222,6 +289,11 @@ namespace Abp.WebApi.Controllers.ApiExplorer
             return null;
         }
 
+        /// <summary>
+        /// 获取API参数文档
+        /// </summary>
+        /// <param name="parameterDescriptor">Http参数描述器</param>
+        /// <returns></returns>
         private string GetApiParameterDocumentation(HttpParameterDescriptor parameterDescriptor)
         {
             IDocumentationProvider documentationProvider = DocumentationProvider ?? parameterDescriptor.Configuration.Services.GetDocumentationProvider();
@@ -234,8 +306,16 @@ namespace Abp.WebApi.Controllers.ApiExplorer
         }
     }
 
+    /// <summary>
+    /// Http参数绑定扩展
+    /// </summary>
     internal static class HttpParameterBindingExtensions
     {
+        /// <summary>
+        /// 将读取Uri
+        /// </summary>
+        /// <param name="parameterBinding">Http参数绑定对象</param>
+        /// <returns></returns>
         public static bool WillReadUri(this HttpParameterBinding parameterBinding)
         {
             if (parameterBinding == null)

@@ -8,13 +8,27 @@ using Abp.WebApi.Extensions;
 
 namespace Abp.Web.Security.AntiForgery
 {
+    /// <summary>
+    /// ABP Web Api 防伪管理器扩展
+    /// </summary>
     public static class AbpAntiForgeryManagerWebApiExtensions
     {
+        /// <summary>
+        /// 设置Cookie
+        /// </summary>
+        /// <param name="manager">ABP防伪管理器</param>
+        /// <param name="headers">Http响应头</param>
         public static void SetCookie(this IAbpAntiForgeryManager manager, HttpResponseHeaders headers)
         {
             headers.SetCookie(new Cookie(manager.Configuration.TokenCookieName, manager.GenerateToken()));
         }
 
+        /// <summary>
+        /// 是否有效
+        /// </summary>
+        /// <param name="manager">ABP防伪管理器</param>
+        /// <param name="headers">Http响应头</param>
+        /// <returns></returns>
         public static bool IsValid(this IAbpAntiForgeryManager manager, HttpRequestHeaders headers)
         {
             var cookieTokenValue = GetCookieValue(manager, headers);
@@ -32,6 +46,12 @@ namespace Abp.Web.Security.AntiForgery
             return manager.As<IAbpAntiForgeryValidator>().IsValid(cookieTokenValue, headerTokenValue);
         }
 
+        /// <summary>
+        /// 获取Cookie值
+        /// </summary>
+        /// <param name="manager">ABP防伪管理器</param>
+        /// <param name="headers">Http响应头</param>
+        /// <returns></returns>
         private static string GetCookieValue(IAbpAntiForgeryManager manager, HttpRequestHeaders headers)
         {
             var cookie = headers.GetCookies(manager.Configuration.TokenCookieName).LastOrDefault();
@@ -43,6 +63,12 @@ namespace Abp.Web.Security.AntiForgery
             return cookie[manager.Configuration.TokenCookieName].Value;
         }
 
+        /// <summary>
+        /// 获取Http响应头值
+        /// </summary>
+        /// <param name="manager">ABP防伪管理器</param>
+        /// <param name="headers">Http响应头</param>
+        /// <returns></returns>
         private static string GetHeaderValue(IAbpAntiForgeryManager manager, HttpRequestHeaders headers)
         {
             IEnumerable<string> headerValues;

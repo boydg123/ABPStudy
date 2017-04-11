@@ -8,6 +8,7 @@ namespace Abp.WebApi.Controllers.Dynamic
 {
     /// <summary>
     /// This class is used to store dynamic controller information.
+    /// 此类用于存储动态控制器信息
     /// </summary>
     public class DynamicApiControllerManager : ISingletonDependency
     {
