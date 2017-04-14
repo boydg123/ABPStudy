@@ -68,10 +68,10 @@ namespace Abp.Localization.Sources.Resource
 
 
         /// <summary>
-        //获取给定名称和文化的本地化字符串
+        //获取给定名称和区域的本地化字符串
         /// </summary>
         /// <param name="name">键名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <returns>本地化字符串</returns>
         public virtual string GetString(string name, CultureInfo culture)
         {
@@ -88,7 +88,7 @@ namespace Abp.Localization.Sources.Resource
         /// 获取当前语言中给定名称的本地化字符串。如果找不到返回NULL。
         /// </summary>
         /// <param name="name">键名称</param>
-        /// <param name="tryDefaults">true:回退到默认语言如果在当前文化没有发现</param>
+        /// <param name="tryDefaults">true:回退到默认语言如果在当前区域没有发现</param>
         /// <returns>本地化字符串</returns>
         public string GetStringOrNull(string name, bool tryDefaults = true)
         {
@@ -100,8 +100,8 @@ namespace Abp.Localization.Sources.Resource
         /// 获取当前语言中给定名称的本地化字符串。如果找不到返回NULL。
         /// </summary>
         /// <param name="name">键名称</param>
-        /// <param name="culture">文化信息</param>
-        /// <param name="tryDefaults">true:回退到默认语言如果在当前文化没有发现</param>
+        /// <param name="culture">区域信息</param>
+        /// <param name="tryDefaults">true:回退到默认语言如果在当前区域没有发现</param>
         /// <returns>本地化字符串</returns>
         public string GetStringOrNull(string name, CultureInfo culture, bool tryDefaults = true)
         {
@@ -112,7 +112,7 @@ namespace Abp.Localization.Sources.Resource
         /// <summary>
         /// 获取所有本地化字符串
         /// </summary>
-        /// <param name="includeDefaults">true:回退到默认语言文本如果当前文化没有发现。</param>
+        /// <param name="includeDefaults">true:回退到默认语言文本如果当前区域没有发现。</param>
         /// <returns></returns>
         public virtual IReadOnlyList<LocalizedString> GetAllStrings(bool includeDefaults = true)
         {
@@ -122,8 +122,8 @@ namespace Abp.Localization.Sources.Resource
         /// <summary>
         /// 获取所有本地化字符串
         /// </summary>
-        /// <param name="culture">文化信息</param>
-        /// <param name="includeDefaults">true:回退到默认语言文本如果当前文化没有发现。</param>
+        /// <param name="culture">区域信息</param>
+        /// <param name="includeDefaults">true:回退到默认语言文本如果当前区域没有发现。</param>
         /// <returns></returns>
         public virtual IReadOnlyList<LocalizedString> GetAllStrings(CultureInfo culture, bool includeDefaults = true)
         {
@@ -138,7 +138,7 @@ namespace Abp.Localization.Sources.Resource
         /// 返回指定名称或抛出异常
         /// </summary>
         /// <param name="name">名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <returns></returns>
         protected virtual string ReturnGivenNameOrThrowException(string name, CultureInfo culture)
         {

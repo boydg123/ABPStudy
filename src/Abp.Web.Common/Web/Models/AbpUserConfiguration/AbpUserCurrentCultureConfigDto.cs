@@ -1,7 +1,7 @@
 namespace Abp.Web.Models.AbpUserConfiguration
 {
     /// <summary>
-    /// ABP用户当前文化配置Dto
+    /// ABP用户当前区域配置Dto
     /// </summary>
     public class AbpUserCurrentCultureConfigDto
     {

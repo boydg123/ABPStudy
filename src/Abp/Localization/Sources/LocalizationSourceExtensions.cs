@@ -33,7 +33,7 @@ namespace Abp.Localization.Sources
         /// </summary>
         /// <param name="source">Localization source / 本地化源</param>
         /// <param name="name">Key name / 键名</param>
-        /// <param name="culture">Culture / 区域文化</param>
+        /// <param name="culture">Culture / 区域区域</param>
         /// <param name="args">Format arguments / 格式化参数</param>
         /// <returns>Formatted and localized string / 格式化后的本地化参数</returns>
         public static string GetString(this ILocalizationSource source, string name, CultureInfo culture, params object[] args)

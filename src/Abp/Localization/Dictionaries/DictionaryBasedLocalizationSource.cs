@@ -83,7 +83,7 @@ namespace Abp.Localization.Dictionaries
         /// 获取字符串
         /// </summary>
         /// <param name="name">名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <returns></returns>
         public string GetString(string name, CultureInfo culture)
         {
@@ -112,7 +112,7 @@ namespace Abp.Localization.Dictionaries
         /// 获取字符串
         /// </summary>
         /// <param name="name">名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <param name="tryDefaults">是否默认</param>
         /// <returns>如果没有找到则返回null</returns>
         public string GetStringOrNull(string name, CultureInfo culture, bool tryDefaults = true)
@@ -169,7 +169,7 @@ namespace Abp.Localization.Dictionaries
         /// <summary>
         /// 获取当前语言中的所有字符串
         /// </summary>
-        /// <param name="includeDefaults">回退到默认语言文本如果当前文化没有发现。</param>
+        /// <param name="includeDefaults">回退到默认语言文本如果当前区域没有发现。</param>
         /// <returns></returns>
         public IReadOnlyList<LocalizedString> GetAllStrings(bool includeDefaults = true)
         {
@@ -177,10 +177,10 @@ namespace Abp.Localization.Dictionaries
         }
 
         /// <summary>
-        /// 获取指定文化中的所有字符串
+        /// 获取指定区域中的所有字符串
         /// </summary>
-        /// <param name="culture">文化信息</param>
-        /// <param name="includeDefaults">回退到默认语言文本如果当前文化没有发现。</param>
+        /// <param name="culture">区域信息</param>
+        /// <param name="includeDefaults">回退到默认语言文本如果当前区域没有发现。</param>
         /// <returns></returns>
         public IReadOnlyList<LocalizedString> GetAllStrings(CultureInfo culture, bool includeDefaults = true)
         {
@@ -244,7 +244,7 @@ namespace Abp.Localization.Dictionaries
         /// 返回给定的名称或抛出异常
         /// </summary>
         /// <param name="name">名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <returns></returns>
         protected virtual string ReturnGivenNameOrThrowException(string name, CultureInfo culture)
         {
@@ -252,7 +252,7 @@ namespace Abp.Localization.Dictionaries
         }
 
         /// <summary>
-        /// 获取基础文化名称
+        /// 获取基础区域名称
         /// </summary>
         /// <param name="cultureName"></param>
         /// <returns></returns>

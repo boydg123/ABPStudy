@@ -23,7 +23,7 @@ namespace Abp.Localization.Dictionaries.Xml
         /// Private constructor.
         /// 私有构造函数
         /// </summary>
-        /// <param name="cultureInfo">Culture of the dictionary / 字典的文化</param>
+        /// <param name="cultureInfo">Culture of the dictionary / 字典的区域</param>
         private XmlLocalizationDictionary(CultureInfo cultureInfo)
             : base(cultureInfo)
         {

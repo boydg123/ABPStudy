@@ -23,7 +23,7 @@ namespace Abp.Localization.Dictionaries.Json
         ///     Private constructor.
         ///     私有构造函数
         /// </summary>
-        /// <param name="cultureInfo">Culture of the dictionary / 字典文化信息</param>
+        /// <param name="cultureInfo">Culture of the dictionary / 字典区域信息</param>
         private JsonLocalizationDictionary(CultureInfo cultureInfo)
             : base(cultureInfo)
         {

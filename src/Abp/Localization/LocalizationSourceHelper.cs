@@ -17,7 +17,7 @@ namespace Abp.Localization
         /// <param name="configuration">本地化配置</param>
         /// <param name="sourceName">源名称</param>
         /// <param name="name">名称</param>
-        /// <param name="culture">文化信息</param>
+        /// <param name="culture">区域信息</param>
         /// <returns></returns>
         public static string ReturnGivenNameOrThrowException(ILocalizationConfiguration configuration, string sourceName, string name, CultureInfo culture)
         {

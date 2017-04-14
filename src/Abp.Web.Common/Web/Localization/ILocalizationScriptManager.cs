@@ -10,15 +10,15 @@ namespace Abp.Web.Localization
     {
         /// <summary>
         /// Gets Javascript that contains all localization information in current culture.
-        /// 获取包含当前文化中的所有本地化信息的JavaScript。
+        /// 获取包含当前区域中的所有本地化信息的JavaScript。
         /// </summary>
         string GetScript();
 
         /// <summary>
         /// Gets Javascript that contains all localization information in given culture.
-        /// 获取在给定的文化中包含所有本地化信息的JavaScript。
+        /// 获取在给定的区域中包含所有本地化信息的JavaScript。
         /// </summary>
-        /// <param name="cultureInfo">Culture to get script / 获取脚本的文化信息</param>
+        /// <param name="cultureInfo">Culture to get script / 获取脚本的区域信息</param>
         string GetScript(CultureInfo cultureInfo);
     }
 }

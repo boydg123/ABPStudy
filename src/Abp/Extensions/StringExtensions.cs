@@ -316,10 +316,10 @@ namespace Abp.Extensions
 
         /// <summary>
         /// Converts PascalCase string to camelCase string in specified culture.
-        /// 使用指定的文化将帕斯卡命名法形式的字符串转换为驼峰命名法形式的字符串
+        /// 使用指定的区域将帕斯卡命名法形式的字符串转换为驼峰命名法形式的字符串
         /// </summary>
         /// <param name="str">String to convert / 将被转换的字符串</param>
-        /// <param name="culture">An object that supplies culture-specific casing rules / 提供特定区域大小写规则的区域文化对象</param>
+        /// <param name="culture">An object that supplies culture-specific casing rules / 提供特定区域大小写规则的区域区域对象</param>
         /// <returns>camelCase of the string / 驼峰命名法形式的字符串</returns>
         public static string ToCamelCase(this string str, CultureInfo culture)
         {
@@ -355,7 +355,7 @@ namespace Abp.Extensions
         /// 例如："ThisIsSampleSentence" 将被转换成 "This is a sample sentence"
         /// </summary>
         /// <param name="str">String to convert. / 将转换的字符串</param>
-        /// <param name="culture">An object that supplies culture-specific casing rules. / 提供特定区域大小写规则的区域文化对象</param>
+        /// <param name="culture">An object that supplies culture-specific casing rules. / 提供特定区域大小写规则的区域区域对象</param>
         public static string ToSentenceCase(this string str, CultureInfo culture)
         {
             if (string.IsNullOrWhiteSpace(str))
@@ -441,7 +441,7 @@ namespace Abp.Extensions
         /// 将驼峰命名法形式的字符串转换为帕斯卡命名法形式的字符串
         /// </summary>
         /// <param name="str">String to convert / 将被转换的字符串</param>
-        /// <param name="culture">An object that supplies culture-specific casing rules / 提供特定区域大小写规则的区域文化对象</param>
+        /// <param name="culture">An object that supplies culture-specific casing rules / 提供特定区域大小写规则的区域区域对象</param>
         /// <returns>PascalCase of the string / 帕斯卡命名法形式的字符串</returns>
         public static string ToPascalCase(this string str, CultureInfo culture)
         {

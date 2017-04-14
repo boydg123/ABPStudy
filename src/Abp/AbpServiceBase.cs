@@ -134,10 +134,10 @@ namespace Abp
 
         /// <summary>
         /// Gets localized string for given key name and specified culture information.
-        /// 获取给定名称和给定区域文化的格式化后的本地化字符串
+        /// 获取给定名称和给定区域区域的格式化后的本地化字符串
         /// </summary>
         /// <param name="name">Key name / 键名</param>
-        /// <param name="culture">culture information / 区域文化信息</param>
+        /// <param name="culture">culture information / 区域区域信息</param>
         /// <returns>Localized string / 本地化字符串</returns>
         protected virtual string L(string name, CultureInfo culture)
         {
@@ -146,10 +146,10 @@ namespace Abp
 
         /// <summary>
         /// Gets localized string for given key name and current language with formatting strings.
-        /// 获取给定名称和给定区域文化的格式化后的格式化后的本地化字符串
+        /// 获取给定名称和给定区域区域的格式化后的格式化后的本地化字符串
         /// </summary>
         /// <param name="name">Key name / 键名</param>
-        /// <param name="culture">culture information / 区域文化信息</param>
+        /// <param name="culture">culture information / 区域区域信息</param>
         /// <param name="args">Format arguments / 格式化参数</param>
         /// <returns>Localized string / 本地化字符串</returns>
         protected string L(string name, CultureInfo culture, params object[] args)

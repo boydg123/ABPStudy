@@ -9,9 +9,9 @@ namespace Abp.Localization
     public static class GlobalizationHelper
     {
         /// <summary>
-        /// 是否为有效的文化代码
+        /// 是否为有效的区域代码
         /// </summary>
-        /// <param name="cultureCode">文化码</param>
+        /// <param name="cultureCode">区域码</param>
         /// <returns></returns>
         public static bool IsValidCultureCode(string cultureCode)
         {

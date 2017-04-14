@@ -25,7 +25,7 @@ namespace Abp.Localization.Sources
 
         /// <summary>
         /// Gets localized string for given name in current language.Fallbacks to default language if not found in current culture.
-        /// 获取给定名称的当前语言表示的字符串。如果没有当前的文化信息则返回默认语言
+        /// 获取给定名称的当前语言表示的字符串。如果没有当前的区域信息则返回默认语言
         /// </summary>
         /// <param name="name">Key name / 键名称</param>
         /// <returns>Localized string / 本地化字符串</returns>
@@ -33,10 +33,10 @@ namespace Abp.Localization.Sources
 
         /// <summary>
         /// Gets localized string for given name and specified culture.Fallbacks to default language if not found in given culture.
-        /// 获取给定名称和文化的本地化字符串。如果没有当前的文化信息则返回默认语言
+        /// 获取给定名称和区域的本地化字符串。如果没有当前的区域信息则返回默认语言
         /// </summary>
         /// <param name="name">Key name / 键名称</param>
-        /// <param name="culture">culture information / 文化信息</param>
+        /// <param name="culture">culture information / 区域信息</param>
         /// <returns>Localized string / 本地化字符串</returns>
         string GetString(string name, CultureInfo culture);
 
@@ -47,7 +47,7 @@ namespace Abp.Localization.Sources
         /// <param name="name">Key name / 键名称</param>
         /// <param name="tryDefaults">
         /// True: Fallbacks to default language if not found in current culture.
-        /// true:回退到默认语言如果在当前文化没有发现
+        /// true:回退到默认语言如果在当前区域没有发现
         /// </param>
         /// <returns>Localized string / 本地化字符串</returns>
         string GetStringOrNull(string name, bool tryDefaults = true);
@@ -57,10 +57,10 @@ namespace Abp.Localization.Sources
         /// 获取当前语言中给定名称的本地化字符串。如果找不到返回NULL。
         /// </summary>
         /// <param name="name">Key name / 键名称</param>
-        /// <param name="culture">culture information / 文化信息</param>
+        /// <param name="culture">culture information / 区域信息</param>
         /// <param name="tryDefaults">
         /// True: Fallbacks to default language if not found in current culture.
-        /// true:回退到默认语言如果在当前文化没有发现
+        /// true:回退到默认语言如果在当前区域没有发现
         /// </param>
         /// <returns>Localized string / 本地化字符串</returns>
         string GetStringOrNull(string name, CultureInfo culture, bool tryDefaults = true);
@@ -71,7 +71,7 @@ namespace Abp.Localization.Sources
         /// </summary>
         /// <param name="includeDefaults">
         /// True: Fallbacks to default language texts if not found in current culture.
-        /// 回退到默认语言文本如果当前文化没有发现。
+        /// 回退到默认语言文本如果当前区域没有发现。
         /// </param>
         IReadOnlyList<LocalizedString> GetAllStrings(bool includeDefaults = true);
 
@@ -79,10 +79,10 @@ namespace Abp.Localization.Sources
         /// Gets all strings in specified culture.
         /// 获取所有本地化字符串
         /// </summary>
-        /// <param name="culture">culture information / 文化信息</param>
+        /// <param name="culture">culture information / 区域信息</param>
         /// <param name="includeDefaults">
         /// True: Fallbacks to default language texts if not found in current culture.
-        /// 回退到默认语言文本如果当前文化没有发现
+        /// 回退到默认语言文本如果当前区域没有发现
         /// </param>
         IReadOnlyList<LocalizedString> GetAllStrings(CultureInfo culture, bool includeDefaults = true);
     }

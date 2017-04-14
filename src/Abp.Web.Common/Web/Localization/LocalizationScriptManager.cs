@@ -47,7 +47,7 @@ namespace Abp.Web.Localization
         }
 
         /// <summary>
-        /// 获取包含当前文化中的所有本地化信息的JavaScript。
+        /// 获取包含当前区域中的所有本地化信息的JavaScript。
         /// </summary>
         /// <returns></returns>
         public string GetScript()
@@ -56,9 +56,9 @@ namespace Abp.Web.Localization
         }
 
         /// <summary>
-        /// 获取包含当前文化中的所有本地化信息的JavaScript。
+        /// 获取包含当前区域中的所有本地化信息的JavaScript。
         /// </summary>
-        /// <param name="cultureInfo">文化信息</param>
+        /// <param name="cultureInfo">区域信息</param>
         /// <returns></returns>
         public string GetScript(CultureInfo cultureInfo)
         {
@@ -70,7 +70,7 @@ namespace Abp.Web.Localization
         /// <summary>
         /// 构建JavaScript。
         /// </summary>
-        /// <param name="cultureInfo">文化信息</param>
+        /// <param name="cultureInfo">区域信息</param>
         /// <returns></returns>
         private string BuildAll(CultureInfo cultureInfo)
         {

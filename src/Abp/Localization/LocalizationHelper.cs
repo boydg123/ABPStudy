@@ -58,7 +58,7 @@ namespace Abp.Localization
         /// </summary>
         /// <param name="sourceName">Name of the localization source / localization source的名称</param>
         /// <param name="name">Key name to get localized string / 获取本地化字符的key名称</param>
-        /// <param name="culture">culture / 文化</param>
+        /// <param name="culture">culture / 区域</param>
         /// <returns>Localized string / 本地化字符串</returns>
         public static string GetString(string sourceName, string name, CultureInfo culture)
         {

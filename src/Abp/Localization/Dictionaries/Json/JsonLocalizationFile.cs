@@ -19,7 +19,7 @@ namespace Abp.Localization.Dictionaries.Json
 
         /// <summary>
         /// get or set the culture name; eg : en , en-us, zh-CN
-        /// 获取或设置文化名称;例如：en , en-us, zh-CN
+        /// 获取或设置区域名称;例如：en , en-us, zh-CN
         /// </summary>
         public string Culture { get; set; }
 

@@ -8,7 +8,7 @@ namespace Abp.Localization
     {
         /// <summary>
         /// Code name of the language.It should be valid culture code.
-        /// 语言Code,应该是有效的文化代码
+        /// 语言Code,应该是有效的区域代码
         /// Ex: "en-US" for American English, "tr-TR" for Turkey Turkish.
         /// 例子:"en-US"代表美国英语。"tr-TR"代表土耳其语
         /// </summary>
@@ -40,7 +40,7 @@ namespace Abp.Localization
         /// </summary>
         /// <param name="name">
         /// Code name of the language.It should be valid culture code.
-        /// 语言Code,应该是有效的文化代码
+        /// 语言Code,应该是有效的区域代码
         /// Ex: "en-US" for American English, "tr-TR" for Turkey Turkish.
         /// 例子:"en-US"代表美国英语。"tr-TR"代表土耳其语
         /// </param>

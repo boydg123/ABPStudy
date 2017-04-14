@@ -149,7 +149,7 @@ namespace Abp.Threading.BackgroundWorkers
 
         /// <summary>
         /// Gets localized string for given key name and specified culture information.
-        /// 获取给定键名称和指定的文化信息的本地化字符串
+        /// 获取给定键名称和指定的区域信息的本地化字符串
         /// </summary>
         /// <param name="name">Key name / key</param>
         /// <param name="culture">culture information / culture信息</param>

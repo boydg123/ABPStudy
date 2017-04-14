@@ -11,7 +11,7 @@ namespace Abp.Localization.Dictionaries
     {
         /// <summary>
         /// Culture of the dictionary.
-        /// 字典的文化
+        /// 字典的区域
         /// </summary>
         CultureInfo CultureInfo { get; }
 

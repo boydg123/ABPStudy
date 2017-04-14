@@ -11,7 +11,7 @@ namespace Abp.Localization
     public class LanguageManager : ILanguageManager, ITransientDependency
     {
         /// <summary>
-        /// 文化信息
+        /// 区域信息
         /// </summary>
         public LanguageInfo CurrentLanguage { get { return GetCurrentLanguage(); } }
 

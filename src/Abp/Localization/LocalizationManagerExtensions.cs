@@ -47,7 +47,7 @@ namespace Abp.Localization
         /// <param name="localizationManager">Localization manager instance / 本地化管理器的实例</param>
         /// <param name="sourceName">Name of the localization source / 本地化源的名称</param>
         /// <param name="name">Key name to get localized string / 获取本地化字符串的key名称</param>
-        /// <param name="culture">culture / 文化信息</param>
+        /// <param name="culture">culture / 区域信息</param>
         /// <returns>Localized string / 本地化字符串</returns>
         public static string GetString(this ILocalizationManager localizationManager, string sourceName, string name, CultureInfo culture)
         {

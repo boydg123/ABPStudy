@@ -61,7 +61,7 @@ namespace Abp.Localization
         /// <summary>
         /// 使用当前语言本地化字符串
         /// </summary>
-        /// <param name="culture">文化</param>
+        /// <param name="culture">区域</param>
         /// <returns>本地化后的字符串</returns>
         public string Localize(ILocalizationContext context, CultureInfo culture)
         {

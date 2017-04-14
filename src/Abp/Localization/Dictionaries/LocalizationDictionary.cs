@@ -12,7 +12,7 @@ namespace Abp.Localization.Dictionaries
     public class LocalizationDictionary : ILocalizationDictionary, IEnumerable<LocalizedString>
     {
         /// <summary>
-        /// 字典的文化
+        /// 字典的区域
         /// </summary>
         public CultureInfo CultureInfo { get; private set; }
 
@@ -40,7 +40,7 @@ namespace Abp.Localization.Dictionaries
         /// Creates a new <see cref="LocalizationDictionary"/> object.
         /// 构造函数
         /// </summary>
-        /// <param name="cultureInfo">Culture of the dictionary / 字典的文化</param>
+        /// <param name="cultureInfo">Culture of the dictionary / 字典的区域</param>
         public LocalizationDictionary(CultureInfo cultureInfo)
         {
             CultureInfo = cultureInfo;

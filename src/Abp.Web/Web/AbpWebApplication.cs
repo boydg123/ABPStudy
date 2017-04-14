@@ -88,7 +88,7 @@ namespace Abp.Web
         }
 
         /// <summary>
-        /// 设置当前文化信息
+        /// 设置当前区域信息
         /// </summary>
         protected virtual void SetCurrentCulture()
         {
