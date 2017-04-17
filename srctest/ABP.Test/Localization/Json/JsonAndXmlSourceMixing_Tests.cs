@@ -39,7 +39,22 @@ namespace ABP.Test.Localization.Json
         [Fact]
         public void Test_Xml_Json()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+
+            var manager = localIocManager.Resolve<LocalizationManager>();
+
+            var source = manager.GetSource("Lang");
+
+            var sourceAbp = manager.GetSource("Abp");
+            var allAbp = sourceAbp.GetAllStrings();
+
+            //source.GetString("Apple").ShouldBe("Apple");
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
+
+            var str = source.GetString("Apple");
+            var all = source.GetAllStrings();
+            source.GetString("Apple").ShouldBe("苹果");
         }
     }
 
@@ -51,16 +66,13 @@ namespace ABP.Test.Localization.Json
         public override void PreInitialize()
         {
             Configuration.Localization.Sources.Add(
-                new DictionaryBasedLocalizationSource("Lang",new XmlEmbeddedFileLocalizationDictionaryProvider(
+                new DictionaryBasedLocalizationSource("Lang", new XmlEmbeddedFileLocalizationDictionaryProvider(
                     Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.XmlSources"))
                     );
 
             Configuration.Localization.Sources.Extensions.Add(
-                new LocalizationSourceExtensionInfo(
-                    "Lang", new JsonEmbeddedFileLocalizationDictionaryProvider(
-                            Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"
-                        )
-                    )
+                new LocalizationSourceExtensionInfo("Lang", new JsonEmbeddedFileLocalizationDictionaryProvider(
+                   Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"))
                 );
         }
 

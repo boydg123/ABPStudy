@@ -3,5 +3,6 @@
   <texts>
     <text name="HowAreYou" value="你好吗?" />
     <text name="ThisIsATest">这是一个测试.</text>
+    <text name="name1">名字</text>
   </texts>
 </localizationDictionary>

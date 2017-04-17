@@ -3,5 +3,6 @@
   <texts>
     <text name="HowAreYou" value="How are you?" />
     <text name="ThisIsATest">This is a test.</text>
+    <text name="name1">name</text>
   </texts>
 </localizationDictionary>

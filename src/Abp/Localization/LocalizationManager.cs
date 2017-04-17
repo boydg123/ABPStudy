@@ -13,7 +13,7 @@ namespace Abp.Localization
     /// <summary>
     /// 本地化管理器
     /// </summary>
-    internal class LocalizationManager : ILocalizationManager
+    public class LocalizationManager : ILocalizationManager
     {
         /// <summary>
         /// 日志记录器
