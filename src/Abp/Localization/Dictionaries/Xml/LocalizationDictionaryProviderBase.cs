@@ -17,6 +17,9 @@ namespace Abp.Localization.Dictionaries.Xml
         /// </summary>
         public ILocalizationDictionary DefaultDictionary { get; protected set; }
 
+        /// <summary>
+        /// 本地化字符串字典集合 
+        /// </summary>
         public IDictionary<string, ILocalizationDictionary> Dictionaries { get; private set; }
 
         /// <summary>

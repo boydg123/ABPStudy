@@ -137,6 +137,7 @@
     <Compile Include="Json\JsonExtensions_Tests.cs" />
     <Compile Include="Json\JsonSerializationHelper_Tests.cs" />
     <Compile Include="Localization\Json\JsonAndXmlSourceMixing_Tests.cs" />
+    <Compile Include="Localization\Json\JsonEmbeddedFileLocalizationDictionaryProvider.cs" />
     <Compile Include="Modules\AbpAssemblyFinder_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBaseWithLocalManager.cs" />

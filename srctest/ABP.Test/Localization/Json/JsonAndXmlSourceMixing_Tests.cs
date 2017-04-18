@@ -34,7 +34,7 @@ namespace ABP.Test.Localization.Json
         }
 
         /// <summary>
-        /// 测试Xml和Json
+        /// 测试Xml和Json.如果在Json和Xml中设置同一个Key，Json貌似 > Xml
         /// </summary>
         [Fact]
         public void Test_Xml_Json()
@@ -45,10 +45,11 @@ namespace ABP.Test.Localization.Json
 
             var source = manager.GetSource("Lang");
 
-            var sourceAbp = manager.GetSource("Abp");
-            var allAbp = sourceAbp.GetAllStrings();
+            source.GetString("Apple").ShouldBe("Apple");
+            source.GetString("Name").ShouldBe("Derrick");
+            source.GetString("name1").ShouldBe("name");
 
-            //source.GetString("Apple").ShouldBe("Apple");
+            var allStr = source.GetAllStrings();
 
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CN");
 
@@ -65,15 +66,18 @@ namespace ABP.Test.Localization.Json
     {
         public override void PreInitialize()
         {
+
+            Configuration.Localization.Sources.Extensions.Add(
+               new LocalizationSourceExtensionInfo("Lang", new JsonEmbeddedFileLocalizationDictionaryProvider(
+                  Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"))
+               );
+
             Configuration.Localization.Sources.Add(
                 new DictionaryBasedLocalizationSource("Lang", new XmlEmbeddedFileLocalizationDictionaryProvider(
                     Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.XmlSources"))
                     );
 
-            Configuration.Localization.Sources.Extensions.Add(
-                new LocalizationSourceExtensionInfo("Lang", new JsonEmbeddedFileLocalizationDictionaryProvider(
-                   Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"))
-                );
+           
         }
 
         public override void Initialize()
