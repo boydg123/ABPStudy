@@ -637,19 +637,19 @@
     <Compile Include="Xml\Extensions\XmlExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-ca-ES.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-de.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-es.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-fr.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-it.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-lt.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-lv.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-pt-BR.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-ru.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-tr.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-uk.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp-zh-CN.xml" />
-    <Content Include="Localization\Sources\AbpXmlSource\Abp.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-ca-ES.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-de.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-es.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-fr.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-it.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-lt.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-lv.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-pt-BR.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-ru.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-tr.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-uk.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\Sources\AbpXmlSource\Abp.xml" />
     <Content Include="Timing\Timezone\Mapping\WindowsZones.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -39,7 +39,7 @@ namespace ABP.Test.Localization.Json
         [Fact]
         public void Test_Xml_Json()
         {
-            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
 
             var manager = localIocManager.Resolve<LocalizationManager>();
 

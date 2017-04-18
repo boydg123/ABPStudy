@@ -149,14 +149,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Localization\Json\JsonSources\Lang-zh-CN.json" />
-    <None Include="Localization\Json\JsonSources\Lang.json" />
+    <EmbeddedResource Include="Localization\Json\JsonSources\Lang-zh-CN.json" />
+    <EmbeddedResource Include="Localization\Json\JsonSources\Lang.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Localization\Json\XmlSources\Lang-zh-CN.xml" />
-    <Content Include="Localization\Json\XmlSources\Lang.xml" />
+    <EmbeddedResource Include="Localization\Json\XmlSources\Lang-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\Json\XmlSources\Lang.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
