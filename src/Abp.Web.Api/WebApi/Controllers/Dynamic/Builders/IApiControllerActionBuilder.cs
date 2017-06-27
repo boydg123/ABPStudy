@@ -4,46 +4,57 @@ using System.Web.Http.Filters;
 
 namespace Abp.WebApi.Controllers.Dynamic.Builders
 {
+    /// <summary>
+    /// 此接口用于定义动态API 控制器action
+    /// </summary>
     public interface IApiControllerActionBuilder
     {
         /// <summary>
         /// The controller builder related to this action.
+        /// 与当前Action相关的控制器生成器
         /// </summary>
         IApiControllerBuilder Controller { get; }
 
         /// <summary>
         /// Gets name of the action.
+        /// 获取Action的名称
         /// </summary>
         string ActionName { get; }
 
         /// <summary>
         /// Gets the action method.
+        /// 获取Action方法信息
         /// </summary>
         MethodInfo Method { get; }
 
         /// <summary>
         /// Gets current HttpVerb setting.
+        /// 获取当前Http操作设置
         /// </summary>
         HttpVerb? Verb { get; set; }
 
         /// <summary>
         /// Is API Explorer enabled.
+        /// 是否开启API浏览 
         /// </summary>
         bool? IsApiExplorerEnabled { get; set; }
 
         /// <summary>
         /// Gets current filters.
+        /// 获取当前过滤器
         /// </summary>
         IFilter[] Filters { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to create action for this method.
+        /// 获取或设置一个值，该值指示是否为该方法创建Action。
         /// </summary>
         bool DontCreate { get; set; }
     }
 
     /// <summary>
     /// This interface is used to define a dynamic api controller action.
+    /// 此接口用于定义动态API 控制器action
     /// </summary>
     /// <typeparam name="T">Type of the proxied object</typeparam>
     public interface IApiControllerActionBuilder<T>: IApiControllerActionBuilder

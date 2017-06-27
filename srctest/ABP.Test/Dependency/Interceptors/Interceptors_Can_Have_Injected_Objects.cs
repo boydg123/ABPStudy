@@ -3,6 +3,7 @@ using Xunit;
 using Shouldly;
 using System;
 using Castle.MicroKernel.Registration;
+using Castle.Windsor;
 
 namespace ABP.Test.Dependency.Interceptors
 {
@@ -17,6 +18,12 @@ namespace ABP.Test.Dependency.Interceptors
         [Fact]
         public void Interceptors_Should_Work()
         {
+            //var container = new WindsorContainer();
+            //container.Register(
+            //    Component.For<BracketInterceptor>().LifestyleTransient(),
+            //    Component.For<MyInterceptorClass>().Interceptors<BracketInterceptor>().LifestyleTransient()
+            //);
+            //var greetingObj = new MyInterceptorClass();
             localIocManager.IocContainer.Register(
                 Component.For<BracketInterceptor>().LifestyleTransient(),
                 Component.For<MyInterceptorClass>().Interceptors<BracketInterceptor>().LifestyleTransient()
