@@ -11,16 +11,24 @@ namespace Abp.Web.SignalR.Notifications
 {
     /// <summary>
     /// Implements <see cref="IRealTimeNotifier"/> to send notifications via SignalR.
+    /// 通过SignalR实现<see cref="IRealTimeNotifier"/>向用户发送通知
     /// </summary>
     public class SignalRRealTimeNotifier : IRealTimeNotifier, ITransientDependency
     {
         /// <summary>
         /// Reference to the logger.
+        /// 日志引用
         /// </summary>
         public ILogger Logger { get; set; }
 
+        /// <summary>
+        /// 应用程序在线客户端管理对象
+        /// </summary>
         private readonly IOnlineClientManager _onlineClientManager;
 
+        /// <summary>
+        /// 获取公用上下文
+        /// </summary>
         private static IHubContext CommonHub
         {
             get
@@ -30,7 +38,7 @@ namespace Abp.Web.SignalR.Notifications
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SignalRRealTimeNotifier"/> class.
+        /// 构造函数
         /// </summary>
         public SignalRRealTimeNotifier(IOnlineClientManager onlineClientManager)
         {
@@ -38,7 +46,11 @@ namespace Abp.Web.SignalR.Notifications
             Logger = NullLogger.Instance;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 异步发送通知
+        /// </summary>
+        /// <param name="userNotifications">发送给用户的通知对象数组</param>
+        /// <returns></returns>
         public Task SendNotificationsAsync(UserNotification[] userNotifications)
         {
             foreach (var userNotification in userNotifications)
