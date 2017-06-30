@@ -7,109 +7,109 @@ using Abp.Extensions;
 namespace Abp.Auditing
 {
     /// <summary>
-    /// Used to store audit logs.
+    /// 用于存储审计日志
     /// </summary>
     [Table("AbpAuditLogs")]
     public class AuditLog : Entity<long>, IMayHaveTenant
     {
         /// <summary>
-        /// Maximum length of <see cref="ServiceName"/> property.
+        /// <see cref="ServiceName"/>属性的最大长度
         /// </summary>
         public const int MaxServiceNameLength = 256;
 
         /// <summary>
-        /// Maximum length of <see cref="MethodName"/> property.
+        /// <see cref="MethodName"/>属性的最大长度
         /// </summary>
         public const int MaxMethodNameLength = 256;
 
         /// <summary>
-        /// Maximum length of <see cref="Parameters"/> property.
+        /// <see cref="Parameters"/>属性的最大长度
         /// </summary>
         public const int MaxParametersLength = 1024;
 
         /// <summary>
-        /// Maximum length of <see cref="ClientIpAddress"/> property.
+        /// <see cref="ClientIpAddress"/>属性的最大长度
         /// </summary>
         public const int MaxClientIpAddressLength = 64;
 
         /// <summary>
-        /// Maximum length of <see cref="ClientName"/> property.
+        /// <see cref="ClientName"/>属性的最大长度
         /// </summary>
         public const int MaxClientNameLength = 128;
 
         /// <summary>
-        /// Maximum length of <see cref="BrowserInfo"/> property.
+        /// <see cref="BrowserInfo"/>属性的最大长度
         /// </summary>
         public const int MaxBrowserInfoLength = 256;
 
         /// <summary>
-        /// Maximum length of <see cref="Exception"/> property.
+        /// <see cref="Exception"/>属性的最大长度
         /// </summary>
         public const int MaxExceptionLength = 2000;
 
         /// <summary>
-        /// Maximum length of <see cref="CustomData"/> property.
+        /// <see cref="CustomData"/>属性的最大长度
         /// </summary>
         public const int MaxCustomDataLength = 2000;
 
         /// <summary>
-        /// TenantId.
+        /// 租户ID
         /// </summary>
         public virtual int? TenantId { get; set; }
 
         /// <summary>
-        /// UserId.
+        /// 用户ID
         /// </summary>
         public virtual long? UserId { get; set; }
 
         /// <summary>
-        /// Service (class/interface) name.
+        /// 服务(类/接口)名称
         /// </summary>
         [MaxLength(MaxServiceNameLength)]
         public virtual string ServiceName { get; set; }
 
         /// <summary>
-        /// Executed method name.
+        /// 执行的方法名称
         /// </summary>
         [MaxLength(MaxMethodNameLength)]
         public virtual string MethodName { get; set; }
 
         /// <summary>
-        /// Calling parameters.
+        /// 调用参数
         /// </summary>
         [MaxLength(MaxParametersLength)]
         public virtual string Parameters { get; set; }
 
         /// <summary>
-        /// Start time of the method execution.
+        /// 方法执行的开始时间
         /// </summary>
         public virtual DateTime ExecutionTime { get; set; }
 
         /// <summary>
-        /// Total duration of the method call as milliseconds.
+        /// 方法调用的总持续时间(毫秒)
         /// </summary>
         public virtual int ExecutionDuration { get; set; }
 
         /// <summary>
-        /// IP address of the client.
+        /// 客户端IP地址
         /// </summary>
         [MaxLength(MaxClientIpAddressLength)]
         public virtual string ClientIpAddress { get; set; }
 
         /// <summary>
-        /// Name (generally computer name) of the client.
+        /// 客户机器名称(一般是电脑名称)
         /// </summary>
         [MaxLength(MaxClientNameLength)]
         public virtual string ClientName { get; set; }
 
         /// <summary>
-        /// Browser information if this method is called in a web request.
+        /// Web请求中调用此方法，浏览器信息
         /// </summary>
         [MaxLength(MaxBrowserInfoLength)]
         public virtual string BrowserInfo { get; set; }
 
         /// <summary>
-        /// Exception object, if an exception occured during execution of the method.
+        /// 如果在执行过程中出现异常，则为异常对象
         /// </summary>
         [MaxLength(MaxExceptionLength)]
         public virtual string Exception { get; set; }
@@ -131,30 +131,30 @@ namespace Abp.Auditing
         public virtual string CustomData { get; set; }
 
         /// <summary>
-        /// Creates a new CreateFromAuditInfo from given <see cref="auditInfo"/>.
+        /// 构造函数
         /// </summary>
-        /// <param name="auditInfo">Source <see cref="AuditInfo"/> object</param>
-        /// <returns>The <see cref="AuditLog"/> object that is created using <see cref="auditInfo"/></returns>
+        /// <param name="auditInfo">源 <see cref="AuditInfo"/> 对象</param>
+        /// <returns>使用<see cref="auditInfo"/>创建的<see cref="AuditLog"/>对象</returns>
         public static AuditLog CreateFromAuditInfo(AuditInfo auditInfo)
         {
             var exceptionMessage = auditInfo.Exception != null ? auditInfo.Exception.ToString() : null;
             return new AuditLog
-                   {
-                       TenantId = auditInfo.TenantId,
-                       UserId = auditInfo.UserId,
-                       ServiceName = auditInfo.ServiceName.TruncateWithPostfix(MaxServiceNameLength),
-                       MethodName = auditInfo.MethodName.TruncateWithPostfix(MaxMethodNameLength),
-                       Parameters = auditInfo.Parameters.TruncateWithPostfix(MaxParametersLength),
-                       ExecutionTime = auditInfo.ExecutionTime,
-                       ExecutionDuration = auditInfo.ExecutionDuration,
-                       ClientIpAddress = auditInfo.ClientIpAddress.TruncateWithPostfix(MaxClientIpAddressLength),
-                       ClientName = auditInfo.ClientName.TruncateWithPostfix(MaxClientNameLength),
-                       BrowserInfo = auditInfo.BrowserInfo.TruncateWithPostfix(MaxBrowserInfoLength),
-                       Exception = exceptionMessage.TruncateWithPostfix(MaxExceptionLength),
-                       ImpersonatorUserId = auditInfo.ImpersonatorUserId,
-                       ImpersonatorTenantId = auditInfo.ImpersonatorTenantId,
-                       CustomData = auditInfo.CustomData.TruncateWithPostfix(MaxCustomDataLength)
-                   };
+            {
+                TenantId = auditInfo.TenantId,
+                UserId = auditInfo.UserId,
+                ServiceName = auditInfo.ServiceName.TruncateWithPostfix(MaxServiceNameLength),
+                MethodName = auditInfo.MethodName.TruncateWithPostfix(MaxMethodNameLength),
+                Parameters = auditInfo.Parameters.TruncateWithPostfix(MaxParametersLength),
+                ExecutionTime = auditInfo.ExecutionTime,
+                ExecutionDuration = auditInfo.ExecutionDuration,
+                ClientIpAddress = auditInfo.ClientIpAddress.TruncateWithPostfix(MaxClientIpAddressLength),
+                ClientName = auditInfo.ClientName.TruncateWithPostfix(MaxClientNameLength),
+                BrowserInfo = auditInfo.BrowserInfo.TruncateWithPostfix(MaxBrowserInfoLength),
+                Exception = exceptionMessage.TruncateWithPostfix(MaxExceptionLength),
+                ImpersonatorUserId = auditInfo.ImpersonatorUserId,
+                ImpersonatorTenantId = auditInfo.ImpersonatorTenantId,
+                CustomData = auditInfo.CustomData.TruncateWithPostfix(MaxCustomDataLength)
+            };
         }
 
         public override string ToString()
