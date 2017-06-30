@@ -10,6 +10,7 @@ namespace Abp.Authorization.Users
 {
     /// <summary>
     /// Used to save a login attempt of a user.
+    /// 用于保存用户登录信息
     /// </summary>
     [Table("AbpUserLoginAttempts")]
     public class UserLoginAttempt : Entity<long>, IHasCreationTime, IMayHaveTenant
