@@ -13,7 +13,7 @@ using Abp.Runtime.Caching;
 namespace Abp.Application.Features
 {
     /// <summary>
-    /// Implements <see cref="IFeatureValueStore"/>.
+    /// <see cref="IFeatureValueStore"/>的实现
     /// </summary>
     public abstract class AbpFeatureValueStore<TTenant, TUser> : 
         IAbpZeroFeatureValueStore, 
@@ -32,7 +32,7 @@ namespace Abp.Application.Features
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AbpFeatureValueStore{TTenant, TUser}"/> class.
+        /// 构造函数
         /// </summary>
         protected AbpFeatureValueStore(
             ICacheManager cacheManager,
@@ -50,18 +50,35 @@ namespace Abp.Application.Features
             _unitOfWorkManager = unitOfWorkManager;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// 获取值(没有则返回Null)
+        /// </summary>
+        /// <param name="tenantId">租户ID</param>
+        /// <param name="featureName">功能名称</param>
+        /// <returns></returns>
         public virtual Task<string> GetValueOrNullAsync(int tenantId, Feature feature)
         {
             return GetValueOrNullAsync(tenantId, feature.Name);
         }
 
+        /// <summary>
+        /// 获取版本值(没有则返回Null)
+        /// </summary>
+        /// <param name="editionId">租户ID</param>
+        /// <param name="featureName">功能名称</param>
+        /// <returns></returns>
         public virtual async Task<string> GetEditionValueOrNullAsync(int editionId, string featureName)
         {
             var cacheItem = await GetEditionFeatureCacheItemAsync(editionId);
             return cacheItem.FeatureValues.GetOrDefault(featureName);
         }
 
+        /// <summary>
+        /// 获取值(没有则返回Null)
+        /// </summary>
+        /// <param name="tenantId">租户ID</param>
+        /// <param name="featureName">功能名称</param>
+        /// <returns></returns>
         public async Task<string> GetValueOrNullAsync(int tenantId, string featureName)
         {
             var cacheItem = await GetTenantFeatureCacheItemAsync(tenantId);
@@ -83,6 +100,13 @@ namespace Abp.Application.Features
             return null;
         }
 
+        /// <summary>
+        /// 设置版本功能值 - 异步
+        /// </summary>
+        /// <param name="editionId">版本ID</param>
+        /// <param name="featureName">功能名称</param>
+        /// <param name="value">值</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task SetEditionFeatureValueAsync(int editionId, string featureName, string value)
         {
@@ -114,6 +138,11 @@ namespace Abp.Application.Features
             }
         }
 
+        /// <summary>
+        /// 获取租户功能缓存项
+        /// </summary>
+        /// <param name="tenantId">租户ID</param>
+        /// <returns></returns>
         protected async Task<TenantFeatureCacheItem> GetTenantFeatureCacheItemAsync(int tenantId)
         {
             return await _cacheManager.GetTenantFeatureCache().GetAsync(tenantId, async () =>
@@ -149,6 +178,11 @@ namespace Abp.Application.Features
             });
         }
 
+        /// <summary>
+        /// 获取版本功能缓存项
+        /// </summary>
+        /// <param name="editionId">版本ID</param>
+        /// <returns></returns>
         protected virtual async Task<EditionfeatureCacheItem> GetEditionFeatureCacheItemAsync(int editionId)
         {
             return await _cacheManager
@@ -159,6 +193,11 @@ namespace Abp.Application.Features
                 );
         }
 
+        /// <summary>
+        /// 创建版本功能缓存项
+        /// </summary>
+        /// <param name="editionId">版本ID</param>
+        /// <returns></returns>
         protected virtual async Task<EditionfeatureCacheItem> CreateEditionFeatureCacheItem(int editionId)
         {
             var newCacheItem = new EditionfeatureCacheItem();
@@ -172,11 +211,19 @@ namespace Abp.Application.Features
             return newCacheItem;
         }
 
+        /// <summary>
+        /// 处理事件
+        /// </summary>
+        /// <param name="eventData"></param>
         public virtual void HandleEvent(EntityChangedEventData<EditionFeatureSetting> eventData)
         {
             _cacheManager.GetEditionFeatureCache().Remove(eventData.Entity.EditionId);
         }
 
+        /// <summary>
+        /// 处理事件
+        /// </summary>
+        /// <param name="eventData"></param>
         public virtual void HandleEvent(EntityChangedEventData<Edition> eventData)
         {
             if (eventData.Entity.IsTransient())

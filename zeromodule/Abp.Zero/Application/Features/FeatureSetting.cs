@@ -6,38 +6,38 @@ using Abp.MultiTenancy;
 namespace Abp.Application.Features
 {
     /// <summary>
-    /// Base class for feature settings
+    /// 设置的基类
     /// </summary>
     [Table("AbpFeatures")]
     [MultiTenancySide(MultiTenancySides.Host)]
     public abstract class FeatureSetting : CreationAuditedEntity<long>
     {
         /// <summary>
-        /// Maximum length of the <see cref="Name"/> field.
+        /// <see cref="Name"/>字段的最大长度
         /// </summary>
         public const int MaxNameLength = 128;
 
         /// <summary>
-        /// Maximum length of the <see cref="Value"/> property.
+        /// <see cref="Value"/>属性的最大长度
         /// </summary>
         public const int MaxValueLength = 2000;
 
         /// <summary>
-        /// Feature name.
+        /// 功能名称
         /// </summary>
         [Required]
         [MaxLength(MaxNameLength)]
         public virtual string Name { get; set; }
 
         /// <summary>
-        /// Value.
+        /// 功能值
         /// </summary>
         [Required(AllowEmptyStrings = true)]
         [MaxLength(MaxValueLength)]
         public virtual string Value { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FeatureSetting"/> class.
+        /// 构造函数
         /// </summary>
         protected FeatureSetting()
         {
@@ -45,10 +45,10 @@ namespace Abp.Application.Features
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FeatureSetting"/> class.
+        /// 构造函数
         /// </summary>
-        /// <param name="name">Feature name.</param>
-        /// <param name="value">Feature value.</param>
+        /// <param name="name">功能名称</param>
+        /// <param name="value">功能值</param>
         protected FeatureSetting(string name, string value)
         {
             Name = name;
