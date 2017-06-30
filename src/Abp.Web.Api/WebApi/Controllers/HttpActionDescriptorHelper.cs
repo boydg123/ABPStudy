@@ -5,8 +5,16 @@ using Abp.Web.Models;
 
 namespace Abp.WebApi.Controllers
 {
+    /// <summary>
+    /// Http Action描述器帮助类
+    /// </summary>
     internal static class HttpActionDescriptorHelper
     {
+        /// <summary>
+        /// 获取包装结果属性(没获取到则返回Null)
+        /// </summary>
+        /// <param name="actionDescriptor"></param>
+        /// <returns></returns>
         public static WrapResultAttribute GetWrapResultAttributeOrNull(HttpActionDescriptor actionDescriptor)
         {
             if (actionDescriptor == null)

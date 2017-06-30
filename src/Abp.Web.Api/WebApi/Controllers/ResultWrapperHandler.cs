@@ -14,16 +14,30 @@ namespace Abp.WebApi.Controllers
 {
     /// <summary>
     /// Wraps Web API return values by <see cref="AjaxResponse"/>.
+    /// 通过<see cref="AjaxResponse"/>包装Web API返回值
     /// </summary>
     public class ResultWrapperHandler : DelegatingHandler, ITransientDependency
     {
+        /// <summary>
+        /// ABP Web API配置引用
+        /// </summary>
         private readonly IAbpWebApiConfiguration _configuration;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="configuration"></param>
         public ResultWrapperHandler(IAbpWebApiConfiguration configuration)
         {
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// 异步发送
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             return base.SendAsync(request, cancellationToken).ContinueWith(
@@ -34,6 +48,11 @@ namespace Abp.WebApi.Controllers
                 }, cancellationToken);
         }
 
+        /// <summary>
+        /// 如果需要则包装Result
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="response"></param>
         protected virtual void WrapResultIfNeeded(HttpRequestMessage request, HttpResponseMessage response)
         {
             if (!response.IsSuccessStatusCode)
@@ -88,6 +107,11 @@ namespace Abp.WebApi.Controllers
                 );
         }
 
+        /// <summary>
+        /// 是否忽略URL
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <returns></returns>
         private bool IsIgnoredUrl(Uri uri)
         {
             if (uri == null || uri.AbsolutePath.IsNullOrEmpty())
