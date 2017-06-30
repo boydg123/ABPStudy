@@ -25,6 +25,7 @@ namespace Abp.Authorization.Users
 {
     /// <summary>
     /// Extends <see cref="UserManager{TUser,TKey}"/> of ASP.NET Identity Framework.
+    /// ASP.NET Identity¿ò¼ÜµÄÀ©Õ¹ <see cref="UserManager{TUser,TKey}"/>
     /// </summary>
     public abstract class AbpUserManager<TRole, TUser>
         : UserManager<TUser, long>,

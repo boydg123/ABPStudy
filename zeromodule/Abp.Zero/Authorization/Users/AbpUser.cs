@@ -191,32 +191,49 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Settings for this user.
+        /// 当前用户的设置列表
         /// </summary>
         [ForeignKey("UserId")]
         public virtual ICollection<Setting> Settings { get; set; }
 
+        /// <summary>
+        /// 删除的用户
+        /// </summary>
         public virtual TUser DeleterUser { get; set; }
-
+        /// <summary>
+        /// 创建用户
+        /// </summary>
         public virtual TUser CreatorUser { get; set; }
-
+        /// <summary>
+        /// 最后修改的用户
+        /// </summary>
         public virtual TUser LastModifierUser { get; set; }
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         protected AbpUser()
         {
             IsActive = true;
             SecurityStamp = SequentialGuidGenerator.Instance.Create().ToString();
         }
-
+        /// <summary>
+        /// 设置新密码的重置code
+        /// </summary>
         public virtual void SetNewPasswordResetCode()
         {
             PasswordResetCode = Guid.NewGuid().ToString("N").Truncate(MaxPasswordResetCodeLength);
         }
-
+        /// <summary>
+        /// 设置新邮箱的重置码
+        /// </summary>
         public virtual void SetNewEmailConfirmationCode()
         {
             EmailConfirmationCode = Guid.NewGuid().ToString("N").Truncate(MaxEmailConfirmationCodeLength);
         }
-
+        /// <summary>
+        /// 重写字符串
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return string.Format("[User {0}] {1}", Id, UserName);

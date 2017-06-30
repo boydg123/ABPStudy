@@ -14,6 +14,7 @@ namespace Abp.Authorization.Users
 {
     /// <summary>
     /// Implements 'User Store' of ASP.NET Identity Framework.
+    /// 实现了ASP.NET Identity框架的用户存储
     /// </summary>
     public abstract class AbpUserStore<TRole, TUser> :
         IUserStore<TUser, long>,
@@ -45,7 +46,7 @@ namespace Abp.Authorization.Users
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         
         /// <summary>
-        /// Constructor.
+        /// 构造函数.
         /// </summary>
         protected AbpUserStore(
             IRepository<TUser, long> userRepository,
@@ -68,40 +69,66 @@ namespace Abp.Authorization.Users
         }
 
         #region IQueryableUserStore
-
+        /// <summary>
+        /// 用户列表
+        /// </summary>
         public virtual IQueryable<TUser> Users => _userRepository.GetAll();
 
         #endregion
 
         #region IUserStore
-
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual async Task CreateAsync(TUser user)
         {
             await _userRepository.InsertAsync(user);
         }
-
+        /// <summary>
+        /// 修改用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual async Task UpdateAsync(TUser user)
         {
             await _userRepository.UpdateAsync(user);
         }
-
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual async Task DeleteAsync(TUser user)
         {
             await _userRepository.DeleteAsync(user.Id);
         }
-
+        /// <summary>
+        /// 根据用户ID查找用户
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <returns></returns>
         public virtual async Task<TUser> FindByIdAsync(long userId)
         {
             return await _userRepository.FirstOrDefaultAsync(userId);
         }
-
+        /// <summary>
+        /// 根据UserName查找用户
+        /// </summary>
+        /// <param name="userName">UserName</param>
+        /// <returns></returns>
         public virtual async Task<TUser> FindByNameAsync(string userName)
         {
             return await _userRepository.FirstOrDefaultAsync(
                 user => user.UserName == userName
             );
         }
-
+        /// <summary>
+        /// 根据邮箱查找用户
+        /// </summary>
+        /// <param name="email">邮箱</param>
+        /// <returns></returns>
         public virtual async Task<TUser> FindByEmailAsync(string email)
         {
             return await _userRepository.FirstOrDefaultAsync(
@@ -111,8 +138,9 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Tries to find a user with user name or email address in current tenant.
+        /// 尝试去查找一个UserName或邮箱地址在当前商户中的用户
         /// </summary>
-        /// <param name="userNameOrEmailAddress">User name or email address</param>
+        /// <param name="userNameOrEmailAddress">User name or email address / UserName或邮箱地址</param>
         /// <returns>User or null</returns>
         public virtual async Task<TUser> FindByNameOrEmailAsync(string userNameOrEmailAddress)
         {
@@ -123,9 +151,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Tries to find a user with user name or email address in given tenant.
+        /// 尝试去查找一个UserName或邮箱在指定的商户中的用户
         /// </summary>
-        /// <param name="tenantId">Tenant Id</param>
-        /// <param name="userNameOrEmailAddress">User name or email address</param>
+        /// <param name="tenantId">Tenant Id / 商户ID</param>
+        /// <param name="userNameOrEmailAddress">User name or email address / UserName或邮箱地址</param>
         /// <returns>User or null</returns>
         [UnitOfWork]
         public virtual async Task<TUser> FindByNameOrEmailAsync(int? tenantId, string userNameOrEmailAddress)
@@ -139,18 +168,31 @@ namespace Abp.Authorization.Users
         #endregion
         
         #region IUserPasswordStore
-
+        /// <summary>
+        /// 设置密码Hash值
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="passwordHash">密码哈希值</param>
+        /// <returns></returns>
         public virtual Task SetPasswordHashAsync(TUser user, string passwordHash)
         {
             user.Password = passwordHash;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取给定用户的密码哈希值
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual Task<string> GetPasswordHashAsync(TUser user)
         {
             return Task.FromResult(user.Password);
         }
-
+        /// <summary>
+        /// 判断指定用户是否有密码
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public virtual Task<bool> HasPasswordAsync(TUser user)
         {
             return Task.FromResult(!string.IsNullOrEmpty(user.Password));
@@ -159,23 +201,41 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IUserEmailStore
-
+        /// <summary>
+        /// 设置指定用户的邮箱
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="email">邮箱地址</param>
+        /// <returns></returns>
         public virtual Task SetEmailAsync(TUser user, string email)
         {
             user.EmailAddress = email;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取指定用户的邮箱
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual Task<string> GetEmailAsync(TUser user)
         {
             return Task.FromResult(user.EmailAddress);
         }
-
+        /// <summary>
+        /// 判断指定用户的邮箱是否确认
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual Task<bool> GetEmailConfirmedAsync(TUser user)
         {
             return Task.FromResult(user.IsEmailConfirmed);
         }
-
+        /// <summary>
+        /// 设置用户的邮箱确认信息
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="confirmed">是否确认</param>
+        /// <returns></returns>
         public virtual Task SetEmailConfirmedAsync(TUser user, bool confirmed)
         {
             user.IsEmailConfirmed = confirmed;
@@ -185,7 +245,12 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IUserLoginStore
-
+        /// <summary>
+        /// 添加用户的登录信息
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="login">登录信息对象</param>
+        /// <returns></returns>
         public virtual async Task AddLoginAsync(TUser user, UserLoginInfo login)
         {
             await _userLoginRepository.InsertAsync(
@@ -197,7 +262,12 @@ namespace Abp.Authorization.Users
                     UserId = user.Id
                 });
         }
-
+        /// <summary>
+        /// 移除用户的登录信息
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="login">登录信息对象</param>
+        /// <returns></returns>
         public virtual async Task RemoveLoginAsync(TUser user, UserLoginInfo login)
         {
             await _userLoginRepository.DeleteAsync(
@@ -206,14 +276,22 @@ namespace Abp.Authorization.Users
                       ul.ProviderKey == login.ProviderKey
             );
         }
-
+        /// <summary>
+        /// 获取用户的登录信息列表
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns>登录信息列表</returns>
         public virtual async Task<IList<UserLoginInfo>> GetLoginsAsync(TUser user)
         {
             return (await _userLoginRepository.GetAllListAsync(ul => ul.UserId == user.Id))
                 .Select(ul => new UserLoginInfo(ul.LoginProvider, ul.ProviderKey))
                 .ToList();
         }
-
+        /// <summary>
+        /// 根据用户登录信息查找用户
+        /// </summary>
+        /// <param name="login">用户登录信息</param>
+        /// <returns></returns>
         public virtual async Task<TUser> FindAsync(UserLoginInfo login)
         {
             var userLogin = await _userLoginRepository.FirstOrDefaultAsync(
@@ -227,7 +305,11 @@ namespace Abp.Authorization.Users
 
             return await _userRepository.FirstOrDefaultAsync(u => u.Id == userLogin.UserId);
         }
-
+        /// <summary>
+        /// 根据用户登录信息获取用户列表
+        /// </summary>
+        /// <param name="login">用户登录信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<TUser>> FindAllAsync(UserLoginInfo login)
         {
@@ -238,7 +320,12 @@ namespace Abp.Authorization.Users
 
             return Task.FromResult(query.ToList());
         }
-
+        /// <summary>
+        /// 根据指定商户以及用户登录信息查找用户
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="login">用户登录信息</param>
+        /// <returns></returns>
         public virtual Task<TUser> FindAsync(int? tenantId, UserLoginInfo login)
         {
             using (_unitOfWorkManager.Current.SetTenantId(tenantId))
@@ -256,12 +343,23 @@ namespace Abp.Authorization.Users
 
         #region IUserRoleStore
 
+        /// <summary>
+        /// 给指定角色添加用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="roleName">角色名称</param>
+        /// <returns></returns>
         public virtual async Task AddToRoleAsync(TUser user, string roleName)
         {
             var role = await GetRoleByNameAsync(roleName);
             await _userRoleRepository.InsertAsync(new UserRole(user.TenantId, user.Id, role.Id));
         }
-
+        /// <summary>
+        /// 给指定角色移除用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="roleName">角色名称</param>
+        /// <returns></returns>
         public virtual async Task RemoveFromRoleAsync(TUser user, string roleName)
         {
             var role = await GetRoleByNameAsync(roleName);
@@ -273,7 +371,11 @@ namespace Abp.Authorization.Users
 
             await _userRoleRepository.DeleteAsync(userRole);
         }
-
+        /// <summary>
+        /// 获取用户的所有角色信息
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<IList<string>> GetRolesAsync(TUser user)
         {
@@ -284,7 +386,12 @@ namespace Abp.Authorization.Users
 
             return await AsyncQueryableExecuter.ToListAsync(query);
         }
-
+        /// <summary>
+        /// 判断用户是否在指定角色中
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="roleName">角色名称</param>
+        /// <returns></returns>
         public virtual async Task<bool> IsInRoleAsync(TUser user, string roleName)
         {
             var role = await GetRoleByNameAsync(roleName);
@@ -295,6 +402,12 @@ namespace Abp.Authorization.Users
 
         #region IUserPermissionStore
 
+        /// <summary>
+        /// 给用户添加指定权限
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="permissionGrant">权限授予信息</param>
+        /// <returns></returns>
         public virtual async Task AddPermissionAsync(TUser user, PermissionGrantInfo permissionGrant)
         {
             if (await HasPermissionAsync(user.Id, permissionGrant))
@@ -311,7 +424,12 @@ namespace Abp.Authorization.Users
                     IsGranted = permissionGrant.IsGranted
                 });
         }
-
+        /// <summary>
+        /// 给用户移除权限
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="permissionGrant">权限授予信息</param>
+        /// <returns></returns>
         public virtual async Task RemovePermissionAsync(TUser user, PermissionGrantInfo permissionGrant)
         {
             await _userPermissionSettingRepository.DeleteAsync(
@@ -320,14 +438,23 @@ namespace Abp.Authorization.Users
                                      permissionSetting.IsGranted == permissionGrant.IsGranted
             );
         }
-
+        /// <summary>
+        /// 获取用户权限列表
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <returns></returns>
         public virtual async Task<IList<PermissionGrantInfo>> GetPermissionsAsync(long userId)
         {
             return (await _userPermissionSettingRepository.GetAllListAsync(p => p.UserId == userId))
                 .Select(p => new PermissionGrantInfo(p.Name, p.IsGranted))
                 .ToList();
         }
-
+        /// <summary>
+        /// 判断用户是否有指定的权限
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="permissionGrant">权限授予信息</param>
+        /// <returns></returns>
         public virtual async Task<bool> HasPermissionAsync(long userId, PermissionGrantInfo permissionGrant)
         {
             return await _userPermissionSettingRepository.FirstOrDefaultAsync(
@@ -336,7 +463,11 @@ namespace Abp.Authorization.Users
                             p.IsGranted == permissionGrant.IsGranted
                    ) != null;
         }
-
+        /// <summary>
+        /// 为用户移除所有权限设置
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public virtual async Task RemoveAllPermissionSettingsAsync(TUser user)
         {
             await _userPermissionSettingRepository.DeleteAsync(s => s.UserId == user.Id);
@@ -346,6 +477,11 @@ namespace Abp.Authorization.Users
 
         #region IUserLockoutStore
 
+        /// <summary>
+        /// 获取用户的锁定最后日期
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<DateTimeOffset> GetLockoutEndDateAsync(TUser user)
         {
             return Task.FromResult(
@@ -354,34 +490,60 @@ namespace Abp.Authorization.Users
                     : new DateTimeOffset()
             );
         }
-
+        /// <summary>
+        /// 设置用户的锁定最后日期
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="lockoutEnd">锁定最后日期设置对象</param>
+        /// <returns></returns>
         public Task SetLockoutEndDateAsync(TUser user, DateTimeOffset lockoutEnd)
         {
             user.LockoutEndDateUtc = lockoutEnd == DateTimeOffset.MinValue ? new DateTime?() : lockoutEnd.UtcDateTime;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 增加用户访问失败的次数
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<int> IncrementAccessFailedCountAsync(TUser user)
         {
             return Task.FromResult(++user.AccessFailedCount);
         }
-
+        /// <summary>
+        /// 重置用户访问失败的次数
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task ResetAccessFailedCountAsync(TUser user)
         {
             user.AccessFailedCount = 0;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取用户访问失败的次数
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<int> GetAccessFailedCountAsync(TUser user)
         {
             return Task.FromResult(user.AccessFailedCount);
         }
-
+        /// <summary>
+        /// 获取用户锁定是否启用
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<bool> GetLockoutEnabledAsync(TUser user)
         {
             return Task.FromResult(user.IsLockoutEnabled);
         }
-
+        /// <summary>
+        /// 设置用户锁定是否启用
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="enabled">是否启用</param>
+        /// <returns></returns>
         public Task SetLockoutEnabledAsync(TUser user, bool enabled)
         {
             user.IsLockoutEnabled = enabled;
@@ -391,23 +553,41 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IUserPhoneNumberStore
-
+        /// <summary>
+        /// 设置用户电话号码
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="phoneNumber">电话号码</param>
+        /// <returns></returns>
         public Task SetPhoneNumberAsync(TUser user, string phoneNumber)
         {
             user.PhoneNumber = phoneNumber;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取用户电话号码
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<string> GetPhoneNumberAsync(TUser user)
         {
             return Task.FromResult(user.PhoneNumber);
         }
-
+        /// <summary>
+        /// 获取用户电话号码是否确认
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<bool> GetPhoneNumberConfirmedAsync(TUser user)
         {
             return Task.FromResult(user.IsPhoneNumberConfirmed);
         }
-
+        /// <summary>
+        /// 设置用户电话号码是否确认
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="confirmed">是否确认</param>
+        /// <returns></returns>
         public Task SetPhoneNumberConfirmedAsync(TUser user, bool confirmed)
         {
             user.IsPhoneNumberConfirmed = confirmed;
@@ -417,18 +597,32 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IUserClaimStore
-
+        /// <summary>
+        /// 获取用户的声明
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public async Task<IList<Claim>> GetClaimsAsync(TUser user)
         {
             var userClaims = await _userClaimRepository.GetAllListAsync(uc => uc.UserId == user.Id);
             return userClaims.Select(uc => new Claim(uc.ClaimType, uc.ClaimValue)).ToList();
         }
-
+        /// <summary>
+        /// 添加用户声明
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="claim">声明</param>
+        /// <returns></returns>
         public Task AddClaimAsync(TUser user, Claim claim)
         {
             return _userClaimRepository.InsertAsync(new UserClaim(user, claim));
         }
-
+        /// <summary>
+        /// 移除用户声明
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="claim">声明</param>
+        /// <returns></returns>
         public Task RemoveClaimAsync(TUser user, Claim claim)
         {
             return _userClaimRepository.DeleteAsync(
@@ -441,7 +635,9 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IDisposable
-
+        /// <summary>
+        /// 释放资源
+        /// </summary>
         public virtual void Dispose()
         {
             //No need to dispose since using IOC.
@@ -450,7 +646,11 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region Helpers
-
+        /// <summary>
+        /// 通过角色名称获取角色对象
+        /// </summary>
+        /// <param name="roleName">角色名称</param>
+        /// <returns></returns>
         private async Task<TRole> GetRoleByNameAsync(string roleName)
         {
             var role = await _roleRepository.FirstOrDefaultAsync(r => r.Name == roleName);
@@ -465,26 +665,44 @@ namespace Abp.Authorization.Users
         #endregion
 
         #region IUserSecurityStampStore
-
+        /// <summary>
+        /// 设置用户安全标记
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="stamp">安全标记</param>
+        /// <returns></returns>
         public Task SetSecurityStampAsync(TUser user, string stamp)
         {
             user.SecurityStamp = stamp;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取用户安全标记
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         public Task<string> GetSecurityStampAsync(TUser user)
         {
             return Task.FromResult(user.SecurityStamp);
         }
 
         #endregion
-
+        /// <summary>
+        /// 设置用户是否启用双身份验证
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="enabled">是否启用双重身份验证</param>
+        /// <returns></returns>
         public Task SetTwoFactorEnabledAsync(TUser user, bool enabled)
         {
             user.IsTwoFactorEnabled = enabled;
             return Task.FromResult(0);
         }
-
+        /// <summary>
+        /// 获取用户是否启用双重身份验证
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public Task<bool> GetTwoFactorEnabledAsync(TUser user)
         {
             return Task.FromResult(user.IsTwoFactorEnabled);
