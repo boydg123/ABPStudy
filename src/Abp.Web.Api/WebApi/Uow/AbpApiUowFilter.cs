@@ -11,13 +11,30 @@ using Abp.WebApi.Validation;
 
 namespace Abp.WebApi.Uow
 {
+    /// <summary>
+    /// ABP Api工作单元过滤器
+    /// </summary>
     public class AbpApiUowFilter : IActionFilter, ITransientDependency
     {
+        /// <summary>
+        /// 工作单元管理器
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
+        /// <summary>
+        /// ABP WebApi配置引用
+        /// </summary>
         private readonly IAbpWebApiConfiguration _configuration;
 
+        /// <summary>
+        /// 是否允许多选
+        /// </summary>
         public bool AllowMultiple => false;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="unitOfWorkManager"></param>
+        /// <param name="configuration"></param>
         public AbpApiUowFilter(
             IUnitOfWorkManager unitOfWorkManager,
             IAbpWebApiConfiguration configuration
@@ -27,6 +44,13 @@ namespace Abp.WebApi.Uow
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// 执行过滤方法
+        /// </summary>
+        /// <param name="actionContext"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="continuation"></param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> ExecuteActionFilterAsync(HttpActionContext actionContext, CancellationToken cancellationToken, Func<Task<HttpResponseMessage>> continuation)
         {
             var methodInfo = actionContext.ActionDescriptor.GetMethodInfoOrNull();

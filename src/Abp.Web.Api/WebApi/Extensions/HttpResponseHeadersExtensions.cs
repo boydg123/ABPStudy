@@ -5,8 +5,16 @@ using System.Web;
 
 namespace Abp.WebApi.Extensions
 {
+    /// <summary>
+    /// Http 响应头扩展
+    /// </summary>
     public static class HttpResponseHeadersExtensions
     {
+        /// <summary>
+        /// 设置Cookie
+        /// </summary>
+        /// <param name="headers">Http 响应头</param>
+        /// <param name="cookie">Cookie</param>
         public static void SetCookie(this HttpResponseHeaders headers, Cookie cookie)
         {
             Check.NotNull(headers, nameof(headers));

@@ -10,9 +10,15 @@ using Abp.WebApi.Controllers;
 
 namespace Abp.WebApi.Runtime.Caching
 {
+    /// <summary>
+    /// ABP缓存控制器
+    /// </summary>
     [DontWrapResult]
     public class AbpCacheController : AbpApiController
     {
+        /// <summary>
+        /// 缓存管理引用
+        /// </summary>
         private readonly ICacheManager _cacheManager;
 
         public AbpCacheController(ICacheManager cacheManager)
@@ -20,6 +26,11 @@ namespace Abp.WebApi.Runtime.Caching
             _cacheManager = cacheManager;
         }
 
+        /// <summary>
+        /// 清除缓存
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<AjaxResponse> Clear(ClearCacheModel model)
         {
@@ -44,6 +55,11 @@ namespace Abp.WebApi.Runtime.Caching
             return new AjaxResponse();
         }
 
+        /// <summary>
+        /// 清除所有缓存
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("api/AbpCache/ClearAll")]
         public async Task<AjaxResponse> ClearAll(ClearAllCacheModel model)
@@ -64,6 +80,11 @@ namespace Abp.WebApi.Runtime.Caching
             return new AjaxResponse();
         }
 
+        /// <summary>
+        /// 检查密码
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         private async Task CheckPassword(string password)
         {
             var actualPassword = await SettingManager.GetSettingValueAsync(ClearCacheSettingNames.Password);

@@ -14,16 +14,31 @@ using Castle.Core.Logging;
 
 namespace Abp.WebApi.Security.AntiForgery
 {
+    /// <summary>
+    /// ABP Api防伪过滤器
+    /// </summary>
     public class AbpAntiForgeryApiFilter : IAuthorizationFilter, ITransientDependency
     {
+        /// <summary>
+        /// 日志引用
+        /// </summary>
         public ILogger Logger { get; set; }
 
+        /// <summary>
+        /// 是否允许多选
+        /// </summary>
         public bool AllowMultiple => false;
 
         private readonly IAbpAntiForgeryManager _abpAntiForgeryManager;
         private readonly IAbpWebApiConfiguration _webApiConfiguration;
         private readonly IAbpAntiForgeryWebConfiguration _antiForgeryWebConfiguration;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="abpAntiForgeryManager"></param>
+        /// <param name="webApiConfiguration"></param>
+        /// <param name="antiForgeryWebConfiguration"></param>
         public AbpAntiForgeryApiFilter(
             IAbpAntiForgeryManager abpAntiForgeryManager, 
             IAbpWebApiConfiguration webApiConfiguration,
@@ -35,6 +50,13 @@ namespace Abp.WebApi.Security.AntiForgery
             Logger = NullLogger.Instance;
         }
 
+        /// <summary>
+        /// 执行验证过滤 - 异步
+        /// </summary>
+        /// <param name="actionContext"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="continuation"></param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> ExecuteAuthorizationFilterAsync(
             HttpActionContext actionContext,
             CancellationToken cancellationToken,
@@ -59,6 +81,12 @@ namespace Abp.WebApi.Security.AntiForgery
             return await continuation();
         }
 
+        /// <summary>
+        /// 创建错误响应信息
+        /// </summary>
+        /// <param name="actionContext"></param>
+        /// <param name="reason"></param>
+        /// <returns></returns>
         protected virtual HttpResponseMessage CreateErrorResponse(HttpActionContext actionContext, string reason)
         {
             Logger.Warn(reason);
