@@ -11,8 +11,14 @@ using Microsoft.AspNet.Identity;
 
 namespace Abp.IdentityFramework
 {
+    /// <summary>
+    /// IdentityResult的扩展类
+    /// </summary>
     public static class IdentityResultExtensions
     {
+        /// <summary>
+        /// Identity本地化字典
+        /// </summary>
         private static readonly Dictionary<string, string> IdentityLocalizations
             = new Dictionary<string, string>
               {
@@ -41,8 +47,9 @@ namespace Abp.IdentityFramework
 
         /// <summary>
         /// Checks errors of given <see cref="IdentityResult"/> and throws <see cref="UserFriendlyException"/> if it's not succeeded.
+        /// 基于给定的<see cref="IdentityResult"/> 检查错误，并且抛出<see cref="UserFriendlyException"/>异常如果它没有成功
         /// </summary>
-        /// <param name="identityResult">Identity result to check</param>
+        /// <param name="identityResult">Identity result to check / 身份检查的结果</param>
         public static void CheckErrors(this IdentityResult identityResult)
         {
             if (identityResult.Succeeded)
@@ -55,9 +62,10 @@ namespace Abp.IdentityFramework
 
         /// <summary>
         /// Checks errors of given <see cref="IdentityResult"/> and throws <see cref="UserFriendlyException"/> if it's not succeeded.
+        /// 基于给定的<see cref="IdentityResult"/> 检查错误，并且抛出<see cref="UserFriendlyException"/>异常如果它没有成功
         /// </summary>
-        /// <param name="identityResult">Identity result to check</param>
-        /// <param name="localizationManager">Localization manager to localize error messages</param>
+        /// <param name="identityResult">Identity result to check / 身份检查的结果</param>
+        /// <param name="localizationManager">Localization manager to localize error messages / 本地化管理器定位错误消息</param>
         public static void CheckErrors(this IdentityResult identityResult, ILocalizationManager localizationManager)
         {
             if (identityResult.Succeeded)
@@ -68,6 +76,12 @@ namespace Abp.IdentityFramework
             throw new UserFriendlyException(identityResult.LocalizeErrors(localizationManager));
         }
 
+        /// <summary>
+        /// 本地化错误消息
+        /// </summary>
+        /// <param name="identityResult">身份结果</param>
+        /// <param name="localizationManager">本地化管理器</param>
+        /// <returns></returns>
         public static string LocalizeErrors(this IdentityResult identityResult, ILocalizationManager localizationManager)
         {
             if (identityResult.Succeeded)
@@ -87,7 +101,12 @@ namespace Abp.IdentityFramework
 
             return identityResult.Errors.Select(err => LocalizeErrorMessage(err, localizationManager)).JoinAsString(" ");
         }
-
+        /// <summary>
+        /// 本地化错误消息
+        /// </summary>
+        /// <param name="identityErrorMessage">标识错误消息</param>
+        /// <param name="localizationManager">本地化管理器</param>
+        /// <returns></returns>
         private static string LocalizeErrorMessage(string identityErrorMessage, ILocalizationManager localizationManager)
         {
             var localizationSource = localizationManager.GetSource(AbpZeroConsts.LocalizationSourceName);
