@@ -2,11 +2,12 @@ namespace Abp.Configuration
 {
     /// <summary>
     /// Implements methods to convert objects between SettingInfo and Setting classes.
+    /// 实现将设置信息和设置类之间转换的方法
     /// </summary>
     internal static class SettingExtensions
     {
         /// <summary>
-        /// Creates new <see cref="Setting"/> object from given <see cref="SettingInfo"/> object.
+        /// 从给定的<see cref="SettingInfo"/>对象创建一个<see cref="Setting"/>对象
         /// </summary>
         public static Setting ToSetting(this SettingInfo settingInfo)
         {
@@ -16,7 +17,7 @@ namespace Abp.Configuration
         }
 
         /// <summary>
-        /// Creates new <see cref="SettingInfo"/> object from given <see cref="Setting"/> object.
+        /// 从给定的<see cref="Setting"/>对象创建一个<see cref="SettingInfo"/>对象
         /// </summary>
         public static SettingInfo ToSettingInfo(this Setting setting)
         {

@@ -9,14 +9,21 @@ namespace Abp.Configuration
 {
     /// <summary>
     /// Implements <see cref="ISettingStore"/>.
+    /// <see cref="ISettingStore"/>的实现
     /// </summary>
     public class SettingStore : ISettingStore, ITransientDependency
     {
+        /// <summary>
+        /// 设置仓储引用
+        /// </summary>
         private readonly IRepository<Setting, long> _settingRepository;
+        /// <summary>
+        /// 工作单元引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         /// <summary>
-        /// Constructor.
+        /// 构造函数
         /// </summary>
         public SettingStore(
             IRepository<Setting, long> settingRepository,
@@ -26,6 +33,12 @@ namespace Abp.Configuration
             _unitOfWorkManager = unitOfWorkManager;
         }
 
+        /// <summary>
+        /// 获取所有设置信息集合
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="userId">用户ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<List<SettingInfo>> GetAllListAsync(int? tenantId, long? userId)
         {
@@ -44,7 +57,13 @@ namespace Abp.Configuration
                 }
             }
         }
-
+        /// <summary>
+        /// 获取设置信息或Null
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="userId">用户ID</param>
+        /// <param name="name">设置名称</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<SettingInfo> GetSettingOrNullAsync(int? tenantId, long? userId, string name)
         {
@@ -57,7 +76,11 @@ namespace Abp.Configuration
                 }
             }
         }
-
+        /// <summary>
+        /// 删除设置
+        /// </summary>
+        /// <param name="settingInfo">设置信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task DeleteAsync(SettingInfo settingInfo)
         {
@@ -72,7 +95,11 @@ namespace Abp.Configuration
                 }
             }
         }
-
+        /// <summary>
+        /// 创建设置
+        /// </summary>
+        /// <param name="settingInfo">设置信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task CreateAsync(SettingInfo settingInfo)
         {
@@ -85,7 +112,11 @@ namespace Abp.Configuration
                 }
             }
         }
-
+        /// <summary>
+        /// 修改设置
+        /// </summary>
+        /// <param name="settingInfo">设置信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task UpdateAsync(SettingInfo settingInfo)
         {
