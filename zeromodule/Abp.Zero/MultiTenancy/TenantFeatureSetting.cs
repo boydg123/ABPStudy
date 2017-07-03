@@ -5,16 +5,17 @@ namespace Abp.MultiTenancy
 {
     /// <summary>
     /// Feature setting for a Tenant (<see cref="AbpTenant{TUser}"/>).
+    /// 商户(<see cref="AbpTenant{TUser}"/>)的功能设置
     /// </summary>
     public class TenantFeatureSetting : FeatureSetting, IMustHaveTenant
     {
         /// <summary>
-        /// Tenant's Id.
+        /// 商户的ID
         /// </summary>
         public virtual int TenantId { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TenantFeatureSetting"/> class.
+        /// 构造函数
         /// </summary>
         public TenantFeatureSetting()
         {
@@ -22,11 +23,11 @@ namespace Abp.MultiTenancy
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TenantFeatureSetting"/> class.
+        /// 构造函数
         /// </summary>
-        /// <param name="tenantId">The tenant identifier.</param>
-        /// <param name="name">Feature name.</param>
-        /// <param name="value">Feature value.</param>
+        /// <param name="tenantId">The tenant identifier. / 商户ID</param>
+        /// <param name="name">Feature name. / 功能名称</param>
+        /// <param name="value">Feature value. / 功能值</param>
         public TenantFeatureSetting(int tenantId, string name, string value)
             :base(name, value)
         {
