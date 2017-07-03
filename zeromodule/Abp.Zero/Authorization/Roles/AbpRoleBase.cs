@@ -7,23 +7,24 @@ using Microsoft.AspNet.Identity;
 namespace Abp.Authorization.Roles
 {
     /// <summary>
-    /// Base class for role.
+    /// 角色基类.
     /// </summary>
     [Table("AbpRoles")]
     public abstract class AbpRoleBase : FullAuditedEntity<int>, IRole<int>, IMayHaveTenant
     {
         /// <summary>
-        /// Maximum length of the <see cref="Name"/> property.
+        /// <see cref="Name"/>属性的最大长度
         /// </summary>
         public const int MaxNameLength = 32;
 
         /// <summary>
         /// Tenant's Id, if this role is a tenant-level role. Null, if not.
+        /// 商户ID，如果这个角色是商户级别的角色，NULL，否则不是
         /// </summary>
         public virtual int? TenantId { get; set; }
 
         /// <summary>
-        /// Unique name of this role.
+        /// 角色的唯一名称
         /// </summary>
         [Required]
         [StringLength(MaxNameLength)]
