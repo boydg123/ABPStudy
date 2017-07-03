@@ -12,20 +12,38 @@ using Abp.Runtime.Session;
 namespace Abp.Localization
 {
     /// <summary>
-    /// Implements <see cref="IMultiTenantLocalizationDictionary"/>.
+    /// <see cref="IMultiTenantLocalizationDictionary"/>的实现
     /// </summary>
     public class MultiTenantLocalizationDictionary :
         IMultiTenantLocalizationDictionary
     {
+        /// <summary>
+        /// 源名称
+        /// </summary>
         private readonly string _sourceName;
+        /// <summary>
+        /// 本地化字符串的字典
+        /// </summary>
         private readonly ILocalizationDictionary _internalDictionary;
+        /// <summary>
+        /// 自定义本地化仓储
+        /// </summary>
         private readonly IRepository<ApplicationLanguageText, long> _customLocalizationRepository;
+        /// <summary>
+        /// 缓存管理引用
+        /// </summary>
         private readonly ICacheManager _cacheManager;
+        /// <summary>
+        /// Abp Session引用
+        /// </summary>
         private readonly IAbpSession _session;
+        /// <summary>
+        /// 工作单元引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MultiTenantLocalizationDictionary"/> class.
+        /// 构造函数
         /// </summary>
         public MultiTenantLocalizationDictionary(
             string sourceName,
@@ -42,20 +60,35 @@ namespace Abp.Localization
             _session = session;
             _unitOfWorkManager = unitOfWorkManager;
         }
-
+        /// <summary>
+        /// 区域文化信息
+        /// </summary>
         public CultureInfo CultureInfo { get { return _internalDictionary.CultureInfo; } }
-
+        /// <summary>
+        /// Name索引
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public string this[string name]
         {
             get { return _internalDictionary[name]; }
             set { _internalDictionary[name] = value; }
         }
-
+        /// <summary>
+        /// 获取字符串或Null
+        /// </summary>
+        /// <param name="name">名称</param>
+        /// <returns></returns>
         public LocalizedString GetOrNull(string name)
         {
             return GetOrNull(_session.TenantId, name);
         }
-
+        /// <summary>
+        /// 获取字符串或Null
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="name">名称</param>
+        /// <returns></returns>
         public LocalizedString GetOrNull(int? tenantId, string name)
         {
             //Get cache
@@ -90,12 +123,19 @@ namespace Abp.Localization
             //Not found at all
             return null;
         }
-
+        /// <summary>
+        /// 获取所有字符串
+        /// </summary>
+        /// <returns></returns>
         public IReadOnlyList<LocalizedString> GetAllStrings()
         {
             return GetAllStrings(_session.TenantId);
         }
-
+        /// <summary>
+        /// 获取指定商户的所有字符串
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         public IReadOnlyList<LocalizedString> GetAllStrings(int? tenantId)
         {
             //Get cache
@@ -128,12 +168,21 @@ namespace Abp.Localization
 
             return dictionary.Values.ToImmutableList();
         }
-
+        /// <summary>
+        /// 区域缓存Key
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         private string CalculateCacheKey(int? tenantId)
         {
             return MultiTenantLocalizationDictionaryCacheHelper.CalculateCacheKey(tenantId, _sourceName, CultureInfo.Name);
         }
 
+        /// <summary>
+        /// 从数据库获取所有值
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         protected virtual Dictionary<string, string> GetAllValuesFromDatabase(int? tenantId)
         {

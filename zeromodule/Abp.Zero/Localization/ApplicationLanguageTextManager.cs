@@ -9,15 +9,25 @@ namespace Abp.Localization
 {
     /// <summary>
     /// Manages localization texts for host and tenants.
+    /// <see cref="IApplicationLanguageTextManager"/>的实现，管理宿主和租户的本地化文本
     /// </summary>
     public class ApplicationLanguageTextManager : IApplicationLanguageTextManager, ITransientDependency
     {
+        /// <summary>
+        /// 本地化管理引用
+        /// </summary>
         private readonly ILocalizationManager _localizationManager;
+        /// <summary>
+        /// 应用程序语言文本仓储
+        /// </summary>
         private readonly IRepository<ApplicationLanguageText, long> _applicationTextRepository;
+        /// <summary>
+        /// 工作单元引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApplicationLanguageTextManager"/> class.
+        /// 构造函数
         /// </summary>
         public ApplicationLanguageTextManager(
             ILocalizationManager localizationManager, 
@@ -31,12 +41,13 @@ namespace Abp.Localization
 
         /// <summary>
         /// Gets a localized string value.
+        /// 获取一个本地化字符串值
         /// </summary>
-        /// <param name="tenantId">TenantId or null for host</param>
-        /// <param name="sourceName">Source name</param>
-        /// <param name="culture">Culture</param>
-        /// <param name="key">Localization key</param>
-        /// <param name="tryDefaults">True: fallbacks to default languages if can not find in given culture</param>
+        /// <param name="tenantId">TenantId or null for host / 商户ID或Null(如果是宿主商户)</param>
+        /// <param name="sourceName">Source name / 源名称</param>
+        /// <param name="culture">Culture / 区域文化信息</param>
+        /// <param name="key">Localization key / 本地化Key</param>
+        /// <param name="tryDefaults">True: fallbacks to default languages if can not find in given culture / True,如果从给定的区域中找不到则返回默认语言</param>
         public string GetStringOrNull(int? tenantId, string sourceName, CultureInfo culture, string key, bool tryDefaults = true)
         {
             var source = _localizationManager.GetSource(sourceName);
@@ -53,12 +64,13 @@ namespace Abp.Localization
 
         /// <summary>
         /// Updates a localized string value.
+        /// 更新一个本地化字符串值
         /// </summary>
-        /// <param name="tenantId">TenantId or null for host</param>
-        /// <param name="sourceName">Source name</param>
-        /// <param name="culture">Culture</param>
-        /// <param name="key">Localization key</param>
-        /// <param name="value">New localized value.</param>
+        /// <param name="tenantId">TenantId or null for host / 商户ID或Null(如果是宿主商户)</param>
+        /// <param name="sourceName">Source name / 源名称</param>
+        /// <param name="culture">Culture / 区域文化信息</param>
+        /// <param name="key">Localization key / 本地化Key</param>
+        /// <param name="value">New localized value. / 新本地化值</param>
         [UnitOfWork]
         public virtual async Task UpdateStringAsync(int? tenantId, string sourceName, CultureInfo culture, string key, string value)
         {

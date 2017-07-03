@@ -12,30 +12,47 @@ namespace Abp.Localization
 {
     /// <summary>
     /// Extends <see cref="ILocalizationDictionaryProvider"/> to add tenant and database based localization.
+    /// <see cref="ILocalizationDictionaryProvider"/>的扩展，添加了商户和基于数据库的本地化
     /// </summary>
     public class MultiTenantLocalizationDictionaryProvider : ILocalizationDictionaryProvider
     {
+        /// <summary>
+        /// 本地化字符串的默认字典
+        /// </summary>
         public ILocalizationDictionary DefaultDictionary
         {
             get { return GetDefaultDictionary(); }
         }
-
+        /// <summary>
+        /// 本地化字典集合
+        /// </summary>
         public IDictionary<string, ILocalizationDictionary> Dictionaries
         {
             get { return GetDictionaries(); }
         }
-
+        /// <summary>
+        /// 当前本地化字典集合
+        /// </summary>
         private readonly ConcurrentDictionary<string, ILocalizationDictionary> _dictionaries;
-
+        /// <summary>
+        /// 源名称
+        /// </summary>
         private string _sourceName;
-
+        /// <summary>
+        /// 本地化字典内部提供者
+        /// </summary>
         private readonly ILocalizationDictionaryProvider _internalProvider;
-
+        /// <summary>
+        /// IOC管理引用
+        /// </summary>
         private readonly IIocManager _iocManager;
+        /// <summary>
+        /// 语言管理引用
+        /// </summary>
         private ILanguageManager _languageManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MultiTenantLocalizationDictionaryProvider"/> class.
+        /// 构造函数
         /// </summary>
         public MultiTenantLocalizationDictionaryProvider(ILocalizationDictionaryProvider internalProvider, IIocManager iocManager)
         {
@@ -43,14 +60,20 @@ namespace Abp.Localization
             _iocManager = iocManager;
             _dictionaries = new ConcurrentDictionary<string, ILocalizationDictionary>();
         }
-
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        /// <param name="sourceName">源名称</param>
         public void Initialize(string sourceName)
         {
             _sourceName = sourceName;
             _languageManager = _iocManager.Resolve<ILanguageManager>();
             _internalProvider.Initialize(_sourceName);
         }
-
+        /// <summary>
+        /// 获取字典集合
+        /// </summary>
+        /// <returns></returns>
         protected virtual IDictionary<string, ILocalizationDictionary> GetDictionaries()
         {
             var languages = _languageManager.GetLanguages();
@@ -62,7 +85,10 @@ namespace Abp.Localization
 
             return _dictionaries;
         }
-
+        /// <summary>
+        /// 获取默认字典
+        /// </summary>
+        /// <returns></returns>
         protected virtual ILocalizationDictionary GetDefaultDictionary()
         {
             var languages = _languageManager.GetLanguages();
@@ -79,7 +105,11 @@ namespace Abp.Localization
 
             return _dictionaries.GetOrAdd(defaultLanguage.Name, s => CreateLocalizationDictionary(defaultLanguage));
         }
-
+        /// <summary>
+        /// 创建本地化字典
+        /// </summary>
+        /// <param name="language">语言信息</param>
+        /// <returns></returns>
         protected virtual IMultiTenantLocalizationDictionary CreateLocalizationDictionary(LanguageInfo language)
         {
             var internalDictionary =
@@ -94,7 +124,10 @@ namespace Abp.Localization
 
             return dictionary;
         }
-
+        /// <summary>
+        /// 扩展
+        /// </summary>
+        /// <param name="dictionary">本地化字典对象</param>
         public virtual void Extend(ILocalizationDictionary dictionary)
         {
             //Add

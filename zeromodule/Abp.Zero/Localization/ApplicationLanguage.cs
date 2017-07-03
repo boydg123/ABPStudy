@@ -7,59 +7,67 @@ using Abp.Domain.Entities.Auditing;
 namespace Abp.Localization
 {
     /// <summary>
-    /// Represents a language of the application.
+    /// 表示应用程序的语言
     /// </summary>
     [Serializable]
     [Table("AbpLanguages")]
     public class ApplicationLanguage : FullAuditedEntity, IMayHaveTenant
     {
         /// <summary>
-        /// The maximum name length.
+        /// <see cref="Name"/>属性的最大长度
         /// </summary>
         public const int MaxNameLength = 10;
 
         /// <summary>
-        /// The maximum display name length.
+        /// <see cref="DisplayName"/>属性的最大长度
         /// </summary>
         public const int MaxDisplayNameLength = 64;
 
         /// <summary>
-        /// The maximum icon length.
+        /// <see cref="Icon"/>属性的最大长度
         /// </summary>
         public const int MaxIconLength = 128;
 
         /// <summary>
         /// TenantId of this entity. Can be null for host.
+        /// 商户ID，如果是宿主商户则为Null
         /// </summary>
         public virtual int? TenantId { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the culture, like "en" or "en-US".
+        /// 区域名称."cn" 或 "zh-cn"
         /// </summary>
         [Required]
         [StringLength(MaxNameLength)]
         public virtual string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the display name.
+        /// 显示名称
         /// </summary>
         [Required]
         [StringLength(MaxDisplayNameLength)]
         public virtual string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or sets the icon.
+        /// ICON
         /// </summary>
         [StringLength(MaxIconLength)]
         public virtual string Icon { get; set; }
 
         /// <summary>
-        /// Creates a new <see cref="ApplicationLanguage"/> object.
+        /// 构造函数
         /// </summary>
         public ApplicationLanguage()
         {
         }
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="name">区域名称</param>
+        /// <param name="displayName">显示名称</param>
+        /// <param name="icon">ICON</param>
         public ApplicationLanguage(int? tenantId, string name, string displayName, string icon = null)
         {
             TenantId = tenantId;
@@ -67,7 +75,10 @@ namespace Abp.Localization
             DisplayName = displayName;
             Icon = icon;
         }
-
+        /// <summary>
+        /// 转换成语言信息对象
+        /// </summary>
+        /// <returns></returns>
         public virtual LanguageInfo ToLanguageInfo()
         {
             return new LanguageInfo(Name, DisplayName, Icon);

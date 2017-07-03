@@ -7,7 +7,7 @@ using Abp.Domain.Entities.Auditing;
 namespace Abp.Localization
 {
     /// <summary>
-    /// Used to store a localization text.
+    /// 用于存储一个本地化文本
     /// </summary>
     [Serializable]
     [Table("AbpLanguageTexts")]
@@ -19,32 +19,34 @@ namespace Abp.Localization
 
         /// <summary>
         /// TenantId of this entity. Can be null for host.
+        /// 商户ID，如果是宿主商户则可以为Null
         /// </summary>
         public virtual int? TenantId { get; set; }
 
         /// <summary>
         /// Language name (culture name). Matches to <see cref="ApplicationLanguage.Name"/>.
+        /// 语言名称(区域名)，匹配自<see cref="ApplicationLanguage.Name"/>.
         /// </summary>
         [Required]
         [StringLength(ApplicationLanguage.MaxNameLength)]
         public virtual string LanguageName { get; set; }
 
         /// <summary>
-        /// Localization source name
+        /// 本地化源名称
         /// </summary>
         [Required]
         [StringLength(MaxSourceNameLength)]
         public virtual string Source { get; set; }
 
         /// <summary>
-        /// Localization key
+        /// 本地化Key
         /// </summary>
         [Required]
         [StringLength(MaxKeyLength)]
         public virtual string Key { get; set; }
 
         /// <summary>
-        /// Localized value
+        /// 本地化值
         /// </summary>
         [Required(AllowEmptyStrings = true)]
         [StringLength(MaxValueLength)]

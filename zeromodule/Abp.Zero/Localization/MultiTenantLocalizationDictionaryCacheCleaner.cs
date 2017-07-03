@@ -7,21 +7,29 @@ namespace Abp.Localization
 {
     /// <summary>
     /// Clears related localization cache when a <see cref="ApplicationLanguageText"/> changes.
+    /// 当<see cref="ApplicationLanguageText"/>修改时清楚相关的本地化缓存
     /// </summary>
     public class MultiTenantLocalizationDictionaryCacheCleaner : 
         ITransientDependency,
         IEventHandler<EntityChangedEventData<ApplicationLanguageText>>
     {
+        /// <summary>
+        /// 缓存管理引用
+        /// </summary>
         private readonly ICacheManager _cacheManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MultiTenantLocalizationDictionaryCacheCleaner"/> class.
+        /// 构造函数
         /// </summary>
         public MultiTenantLocalizationDictionaryCacheCleaner(ICacheManager cacheManager)
         {
             _cacheManager = cacheManager;
         }
 
+        /// <summary>
+        /// 处理<see cref="ApplicationLanguageText"/>修改事件
+        /// </summary>
+        /// <param name="eventData"></param>
         public void HandleEvent(EntityChangedEventData<ApplicationLanguageText> eventData)
         {
             _cacheManager

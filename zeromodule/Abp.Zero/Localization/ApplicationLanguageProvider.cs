@@ -7,18 +7,21 @@ namespace Abp.Localization
 {
     /// <summary>
     /// Implements <see cref="ILanguageProvider"/> to get languages from <see cref="IApplicationLanguageManager"/>.
+    /// <see cref="ILanguageProvider"/>的实现，从<see cref="IApplicationLanguageManager"/>获取语言
     /// </summary>
     public class ApplicationLanguageProvider : ILanguageProvider
     {
         /// <summary>
-        /// Reference to the session.
+        /// ABP Session的引用
         /// </summary>
         public IAbpSession AbpSession { get; set; }
-
+        /// <summary>
+        /// 应用程序语言管理
+        /// </summary>
         private readonly IApplicationLanguageManager _applicationLanguageManager;
 
         /// <summary>
-        /// Constructor.
+        /// 构造函数.
         /// </summary>
         public ApplicationLanguageProvider(IApplicationLanguageManager applicationLanguageManager)
         {
@@ -28,7 +31,7 @@ namespace Abp.Localization
         }
 
         /// <summary>
-        /// Gets the languages for current tenant.
+        /// 为当前商户获取默认语言.
         /// </summary>
         public IReadOnlyList<LanguageInfo> GetLanguages()
         {
@@ -41,7 +44,10 @@ namespace Abp.Localization
 
             return languageInfos;
         }
-
+        /// <summary>
+        /// 为当前商户设置默认语言
+        /// </summary>
+        /// <param name="languageInfos"></param>
         private void SetDefaultLanguage(List<LanguageInfo> languageInfos)
         {
             if (languageInfos.Count <= 0)
