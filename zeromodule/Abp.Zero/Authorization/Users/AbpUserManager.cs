@@ -33,6 +33,9 @@ namespace Abp.Authorization.Users
         where TRole : AbpRole<TUser>, new()
         where TUser : AbpUser<TUser>
     {
+        /// <summary>
+        /// 用户权限存储对象
+        /// </summary>
         protected IUserPermissionStore<TUser> UserPermissionStore
         {
             get
@@ -45,25 +48,71 @@ namespace Abp.Authorization.Users
                 return Store as IUserPermissionStore<TUser>;
             }
         }
-
+        /// <summary>
+        /// 本地化管理引用
+        /// </summary>
         public ILocalizationManager LocalizationManager { get; }
-
+        /// <summary>
+        /// ABP Session引用
+        /// </summary>
         public IAbpSession AbpSession { get; set; }
-
+        /// <summary>
+        /// 功能依赖上下文
+        /// </summary>
         public FeatureDependencyContext FeatureDependencyContext { get; set; }
-
+        /// <summary>
+        /// 角色管理引用
+        /// </summary>
         protected AbpRoleManager<TRole, TUser> RoleManager { get; }
-
+        /// <summary>
+        /// ABP 用户存储引用
+        /// </summary>
         public AbpUserStore<TRole, TUser> AbpStore { get; }
 
+        /// <summary>
+        /// 权限管理引用
+        /// </summary>
         private readonly IPermissionManager _permissionManager;
+        /// <summary>
+        /// 工作单元管理引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
+        /// <summary>
+        /// 缓存管理引用
+        /// </summary>
         private readonly ICacheManager _cacheManager;
+        /// <summary>
+        /// 组织架构仓储引用
+        /// </summary>
         private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
+        /// <summary>
+        /// 用户组织架构仓储引用
+        /// </summary>
         private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
+        /// <summary>
+        /// 组织架构设置引用
+        /// </summary>
         private readonly IOrganizationUnitSettings _organizationUnitSettings;
+        /// <summary>
+        /// 设置引用
+        /// </summary>
         private readonly ISettingManager _settingManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="userStore"></param>
+        /// <param name="roleManager"></param>
+        /// <param name="permissionManager"></param>
+        /// <param name="unitOfWorkManager"></param>
+        /// <param name="cacheManager"></param>
+        /// <param name="organizationUnitRepository"></param>
+        /// <param name="userOrganizationUnitRepository"></param>
+        /// <param name="organizationUnitSettings"></param>
+        /// <param name="localizationManager"></param>
+        /// <param name="emailService"></param>
+        /// <param name="settingManager"></param>
+        /// <param name="userTokenProviderAccessor"></param>
         protected AbpUserManager(
             AbpUserStore<TRole, TUser> userStore,
             AbpRoleManager<TRole, TUser> roleManager,
@@ -102,6 +151,11 @@ namespace Abp.Authorization.Users
             UserTokenProvider = userTokenProviderAccessor.GetUserTokenProviderOrNull<TUser>();
         }
 
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="user">用户对象</param>
+        /// <returns></returns>
         public override async Task<IdentityResult> CreateAsync(TUser user)
         {
             var result = await CheckDuplicateUsernameOrEmailAddressAsync(user.Id, user.UserName, user.EmailAddress);
@@ -121,9 +175,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Check whether a user is granted for a permission.
+        /// 检查用户是否授予给定的权限
         /// </summary>
-        /// <param name="userId">User id</param>
-        /// <param name="permissionName">Permission name</param>
+        /// <param name="userId">用户ID</param>
+        /// <param name="permissionName">权限名称</param>
         public virtual async Task<bool> IsGrantedAsync(long userId, string permissionName)
         {
             return await IsGrantedAsync(
@@ -144,9 +199,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Check whether a user is granted for a permission.
+        /// 检查用户是否授予给定的权限
         /// </summary>
-        /// <param name="userId">User id</param>
-        /// <param name="permission">Permission</param>
+        /// <param name="userId">用户ID</param>
+        /// <param name="permission">权限对象</param>
         public virtual async Task<bool> IsGrantedAsync(long userId, Permission permission)
         {
             //Check for multi-tenancy side
@@ -192,9 +248,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Gets granted permissions for a user.
+        /// 获取用户所有的授权对象
         /// </summary>
-        /// <param name="user">Role</param>
-        /// <returns>List of granted permissions</returns>
+        /// <param name="user">Role / 用户</param>
+        /// <returns>List of granted permissions / 授权的列表</returns>
         public virtual async Task<IReadOnlyList<Permission>> GetGrantedPermissionsAsync(TUser user)
         {
             var permissionList = new List<Permission>();
@@ -211,11 +268,11 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Sets all granted permissions of a user at once.
-        /// Prohibits all other permissions.
+        /// Sets all granted permissions of a user at once.Prohibits all other permissions.
+        /// 立即设置用户的所有授予权限。禁止所有其他权限。
         /// </summary>
-        /// <param name="user">The user</param>
-        /// <param name="permissions">Permissions</param>
+        /// <param name="user">用户</param>
+        /// <param name="permissions">权限列表</param>
         public virtual async Task SetGrantedPermissionsAsync(TUser user, IEnumerable<Permission> permissions)
         {
             var oldPermissions = await GetGrantedPermissionsAsync(user);
@@ -234,8 +291,9 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Prohibits all permissions for a user.
+        /// 禁止用户的所有权限
         /// </summary>
-        /// <param name="user">User</param>
+        /// <param name="user">用户</param>
         public async Task ProhibitAllPermissionsAsync(TUser user)
         {
             foreach (var permission in _permissionManager.GetAllPermissions())
@@ -245,11 +303,10 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Resets all permission settings for a user.
-        /// It removes all permission settings for the user.
-        /// User will have permissions according to his roles.
-        /// This method does not prohibit all permissions.
-        /// For that, use <see cref="ProhibitAllPermissionsAsync"/>.
+        /// Resets all permission settings for a user.It removes all permission settings for the user.User will have permissions according to his roles.
+        /// 为用户重置所有的权限设置，它移除用户的所有权限，用户将根据自己的角色拥有权限
+        /// This method does not prohibit all permissions.For that, use <see cref="ProhibitAllPermissionsAsync"/>.
+        /// 此方法不禁止所有权限，那使用<see cref="ProhibitAllPermissionsAsync"/>.
         /// </summary>
         /// <param name="user">User</param>
         public async Task ResetAllPermissionsAsync(TUser user)
@@ -259,9 +316,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Grants a permission for a user if not already granted.
+        /// 如果尚未授予则授予用户指定的权限
         /// </summary>
-        /// <param name="user">User</param>
-        /// <param name="permission">Permission</param>
+        /// <param name="user">用户对象</param>
+        /// <param name="permission">权限对象</param>
         public virtual async Task GrantPermissionAsync(TUser user, Permission permission)
         {
             await UserPermissionStore.RemovePermissionAsync(user, new PermissionGrantInfo(permission.Name, false));
@@ -276,9 +334,10 @@ namespace Abp.Authorization.Users
 
         /// <summary>
         /// Prohibits a permission for a user if it's granted.
+        /// 如果权限是授予的，则禁止这个权限
         /// </summary>
-        /// <param name="user">User</param>
-        /// <param name="permission">Permission</param>
+        /// <param name="user">用户对象</param>
+        /// <param name="permission">权限对象</param>
         public virtual async Task ProhibitPermissionAsync(TUser user, Permission permission)
         {
             await UserPermissionStore.RemovePermissionAsync(user, new PermissionGrantInfo(permission.Name, true));
@@ -290,24 +349,32 @@ namespace Abp.Authorization.Users
 
             await UserPermissionStore.AddPermissionAsync(user, new PermissionGrantInfo(permission.Name, false));
         }
-
+        /// <summary>
+        /// 通过用户名或邮箱查找
+        /// </summary>
+        /// <param name="userNameOrEmailAddress">用户名或邮箱</param>
+        /// <returns></returns>
         public virtual async Task<TUser> FindByNameOrEmailAsync(string userNameOrEmailAddress)
         {
             return await AbpStore.FindByNameOrEmailAsync(userNameOrEmailAddress);
         }
-
+        /// <summary>
+        /// 查找所有用户
+        /// </summary>
+        /// <param name="login">用户登录信息</param>
+        /// <returns></returns>
         public virtual Task<List<TUser>> FindAllAsync(UserLoginInfo login)
         {
             return AbpStore.FindAllAsync(login);
         }
 
         /// <summary>
-        /// Gets a user by given id.
-        /// Throws exception if no user found with given id.
+        /// Gets a user by given id.Throws exception if no user found with given id.
+        /// 通过给定的ID获取一个用户，如果没有找打则抛出异常
         /// </summary>
-        /// <param name="userId">User id</param>
-        /// <returns>User</returns>
-        /// <exception cref="AbpException">Throws exception if no user found with given id</exception>
+        /// <param name="userId">用户ID</param>
+        /// <returns>用户对象</returns>
+        /// <exception cref="AbpException">通过给定的ID没有找到用户则抛出异常</exception>
         public virtual async Task<TUser> GetUserByIdAsync(long userId)
         {
             var user = await FindByIdAsync(userId);
@@ -319,6 +386,12 @@ namespace Abp.Authorization.Users
             return user;
         }
 
+        /// <summary>
+        /// 创建标识
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="authenticationType">认证类型</param>
+        /// <returns></returns>
         public async override Task<ClaimsIdentity> CreateIdentityAsync(TUser user, string authenticationType)
         {
             var identity = await base.CreateIdentityAsync(user, authenticationType);
@@ -329,7 +402,11 @@ namespace Abp.Authorization.Users
 
             return identity;
         }
-
+        /// <summary>
+        /// 修改身份
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns>身份结果</returns>
         public async override Task<IdentityResult> UpdateAsync(TUser user)
         {
             var result = await CheckDuplicateUsernameOrEmailAddressAsync(user.Id, user.UserName, user.EmailAddress);
@@ -346,7 +423,11 @@ namespace Abp.Authorization.Users
 
             return await base.UpdateAsync(user);
         }
-
+        /// <summary>
+        /// 删除身份
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns>身份结果</returns>
         public async override Task<IdentityResult> DeleteAsync(TUser user)
         {
             if (user.UserName == AbpUser<TUser>.AdminUserName)
@@ -356,7 +437,12 @@ namespace Abp.Authorization.Users
 
             return await base.DeleteAsync(user);
         }
-
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="newPassword">新密码</param>
+        /// <returns>身份结果</returns>
         public virtual async Task<IdentityResult> ChangePasswordAsync(TUser user, string newPassword)
         {
             var result = await PasswordValidator.ValidateAsync(newPassword);
@@ -368,7 +454,13 @@ namespace Abp.Authorization.Users
             await AbpStore.SetPasswordHashAsync(user, PasswordHasher.HashPassword(newPassword));
             return IdentityResult.Success;
         }
-
+        /// <summary>
+        /// 检查重复的用户名或电子邮件地址分配
+        /// </summary>
+        /// <param name="expectedUserId">预期的用户ID</param>
+        /// <param name="userName">用户UserName</param>
+        /// <param name="emailAddress">邮箱地址</param>
+        /// <returns></returns>
         public virtual async Task<IdentityResult> CheckDuplicateUsernameOrEmailAddressAsync(long? expectedUserId, string userName, string emailAddress)
         {
             var user = (await FindByNameAsync(userName));
@@ -386,6 +478,12 @@ namespace Abp.Authorization.Users
             return IdentityResult.Success;
         }
 
+        /// <summary>
+        /// 设置角色
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="roleNames">角色名</param>
+        /// <returns></returns>
         public virtual async Task<IdentityResult> SetRoles(TUser user, string[] roleNames)
         {
             //Remove from removed roles
@@ -418,7 +516,12 @@ namespace Abp.Authorization.Users
 
             return IdentityResult.Success;
         }
-
+        /// <summary>
+        /// 判断指定用户是否在指定的组织结构中
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="ouId">组织ID</param>
+        /// <returns></returns>
         public virtual async Task<bool> IsInOrganizationUnitAsync(long userId, long ouId)
         {
             return await IsInOrganizationUnitAsync(
@@ -426,7 +529,12 @@ namespace Abp.Authorization.Users
                 await _organizationUnitRepository.GetAsync(ouId)
                 );
         }
-
+        /// <summary>
+        /// 判断用户是否在指定的组织中
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="ou">组织</param>
+        /// <returns></returns>
         public virtual async Task<bool> IsInOrganizationUnitAsync(TUser user, OrganizationUnit ou)
         {
             return await _userOrganizationUnitRepository.CountAsync(uou =>
@@ -434,6 +542,12 @@ namespace Abp.Authorization.Users
                 ) > 0;
         }
 
+        /// <summary>
+        /// 将用户添加到指定组织中
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="ouId">组织ID</param>
+        /// <returns></returns>
         public virtual async Task AddToOrganizationUnitAsync(long userId, long ouId)
         {
             await AddToOrganizationUnitAsync(
@@ -441,7 +555,12 @@ namespace Abp.Authorization.Users
                 await _organizationUnitRepository.GetAsync(ouId)
                 );
         }
-
+        /// <summary>
+        /// 添加用户到指定组织中
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="ou">组织</param>
+        /// <returns></returns>
         public virtual async Task AddToOrganizationUnitAsync(TUser user, OrganizationUnit ou)
         {
             var currentOus = await GetOrganizationUnitsAsync(user);
@@ -455,7 +574,12 @@ namespace Abp.Authorization.Users
 
             await _userOrganizationUnitRepository.InsertAsync(new UserOrganizationUnit(user.TenantId, user.Id, ou.Id));
         }
-
+        /// <summary>
+        /// 移除指定组织中的特定用户
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="ouId">组织ID</param>
+        /// <returns></returns>
         public virtual async Task RemoveFromOrganizationUnitAsync(long userId, long ouId)
         {
             await RemoveFromOrganizationUnitAsync(
@@ -463,12 +587,22 @@ namespace Abp.Authorization.Users
                 await _organizationUnitRepository.GetAsync(ouId)
                 );
         }
-
+        /// <summary>
+        /// 移除指定组织中的特定用户
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="ou">组织</param>
+        /// <returns></returns>
         public virtual async Task RemoveFromOrganizationUnitAsync(TUser user, OrganizationUnit ou)
         {
             await _userOrganizationUnitRepository.DeleteAsync(uou => uou.UserId == user.Id && uou.OrganizationUnitId == ou.Id);
         }
-
+        /// <summary>
+        /// 设置组织
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="organizationUnitIds">组织结构ID数组</param>
+        /// <returns></returns>
         public virtual async Task SetOrganizationUnitsAsync(long userId, params long[] organizationUnitIds)
         {
             await SetOrganizationUnitsAsync(
@@ -476,7 +610,12 @@ namespace Abp.Authorization.Users
                 organizationUnitIds
                 );
         }
-
+        /// <summary>
+        /// 检查组织结构成员的最大成员数量
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="requestedCount">请求数量</param>
+        /// <returns></returns>
         private async Task CheckMaxUserOrganizationUnitMembershipCountAsync(int? tenantId, int requestedCount)
         {
             var maxCount = await _organizationUnitSettings.GetMaxUserMembershipCountAsync(tenantId);
@@ -485,7 +624,12 @@ namespace Abp.Authorization.Users
                 throw new AbpException(string.Format("Can not set more than {0} organization unit for a user!", maxCount));
             }
         }
-
+        /// <summary>
+        /// 设置组织结构
+        /// </summary>
+        /// <param name="user">用户对象</param>
+        /// <param name="organizationUnitIds">组织结构ID数组</param>
+        /// <returns></returns>
         public virtual async Task SetOrganizationUnitsAsync(TUser user, params long[] organizationUnitIds)
         {
             if (organizationUnitIds == null)
@@ -519,6 +663,11 @@ namespace Abp.Authorization.Users
             }
         }
 
+        /// <summary>
+        /// 获取组织架构
+        /// </summary>
+        /// <param name="user">用户对象</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<OrganizationUnit>> GetOrganizationUnitsAsync(TUser user)
         {
@@ -530,6 +679,12 @@ namespace Abp.Authorization.Users
             return Task.FromResult(query.ToList());
         }
 
+        /// <summary>
+        /// 获取组织架构中的用户
+        /// </summary>
+        /// <param name="organizationUnit">组织</param>
+        /// <param name="includeChildren">是否包含子节点</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<TUser>> GetUsersInOrganizationUnit(OrganizationUnit organizationUnit, bool includeChildren = false)
         {
@@ -553,7 +708,10 @@ namespace Abp.Authorization.Users
                 return Task.FromResult(query.ToList());
             }
         }
-
+        /// <summary>
+        /// 注册两个因子提供者 ？？
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
         public virtual void RegisterTwoFactorProviders(int? tenantId)
         {
             TwoFactorProviders.Clear();
@@ -588,14 +746,21 @@ namespace Abp.Authorization.Users
                 );
             }
         }
-
+        /// <summary>
+        /// 初始化锁定设置
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
         public virtual void InitializeLockoutSettings(int? tenantId)
         {
             UserLockoutEnabledByDefault = IsTrue(AbpZeroSettingNames.UserManagement.UserLockOut.IsEnabled, tenantId);
             DefaultAccountLockoutTimeSpan = TimeSpan.FromSeconds(GetSettingValue<int>(AbpZeroSettingNames.UserManagement.UserLockOut.DefaultAccountLockoutSeconds, tenantId));
             MaxFailedAccessAttemptsBeforeLockout = GetSettingValue<int>(AbpZeroSettingNames.UserManagement.UserLockOut.MaxFailedAccessAttemptsBeforeLockout, tenantId);
         }
-
+        /// <summary>
+        /// 获得有效的双因素提供者
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public override async Task<IList<string>> GetValidTwoFactorProvidersAsync(long userId)
         {
             var user = await GetUserByIdAsync(userId);
@@ -604,7 +769,13 @@ namespace Abp.Authorization.Users
 
             return await base.GetValidTwoFactorProvidersAsync(userId);
         }
-
+        /// <summary>
+        /// 通知双因素令牌
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="twoFactorProvider">双因素提供者</param>
+        /// <param name="token">令牌字符串</param>
+        /// <returns></returns>
         public override async Task<IdentityResult> NotifyTwoFactorTokenAsync(long userId, string twoFactorProvider, string token)
         {
             var user = await GetUserByIdAsync(userId);
@@ -613,7 +784,12 @@ namespace Abp.Authorization.Users
 
             return await base.NotifyTwoFactorTokenAsync(userId, twoFactorProvider, token);
         }
-
+        /// <summary>
+        /// 生成双因素令牌
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="twoFactorProvider">双因素提供者</param>
+        /// <returns></returns>
         public override async Task<string> GenerateTwoFactorTokenAsync(long userId, string twoFactorProvider)
         {
             var user = await GetUserByIdAsync(userId);
@@ -622,7 +798,13 @@ namespace Abp.Authorization.Users
 
             return await base.GenerateTwoFactorTokenAsync(userId, twoFactorProvider);
         }
-
+        /// <summary>
+        /// 验证双因素令牌
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <param name="twoFactorProvider">双因素提供者</param>
+        /// <param name="token">令牌</param>
+        /// <returns></returns>
         public override async Task<bool> VerifyTwoFactorTokenAsync(long userId, string twoFactorProvider, string token)
         {
             var user = await GetUserByIdAsync(userId);
@@ -631,7 +813,11 @@ namespace Abp.Authorization.Users
 
             return await base.VerifyTwoFactorTokenAsync(userId, twoFactorProvider, token);
         }
-
+        /// <summary>
+        /// 获取用户权限缓存项
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <returns></returns>
         private async Task<UserPermissionCacheItem> GetUserPermissionCacheItemAsync(long userId)
         {
             var cacheKey = userId + "@" + (GetCurrentTenantId() ?? 0);
@@ -659,24 +845,42 @@ namespace Abp.Authorization.Users
                 return newCacheItem;
             });
         }
-
+        /// <summary>
+        /// Is True
+        /// </summary>
+        /// <param name="settingName">设置名称</param>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         private bool IsTrue(string settingName, int? tenantId)
         {
             return GetSettingValue<bool>(settingName, tenantId);
         }
-
+        /// <summary>
+        /// 获取设置的值
+        /// </summary>
+        /// <typeparam name="T">设置对象</typeparam>
+        /// <param name="settingName">设置名称</param>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         private T GetSettingValue<T>(string settingName, int? tenantId) where T : struct
         {
             return tenantId == null
                 ? _settingManager.GetSettingValueForApplication<T>(settingName)
                 : _settingManager.GetSettingValueForTenant<T>(settingName, tenantId.Value);
         }
-
+        /// <summary>
+        /// 获取本地化字符串
+        /// </summary>
+        /// <param name="name">获取字符串的Key</param>
+        /// <returns></returns>
         private string L(string name)
         {
             return LocalizationManager.GetString(AbpZeroConsts.LocalizationSourceName, name);
         }
-
+        /// <summary>
+        /// 获取当前商户ID
+        /// </summary>
+        /// <returns></returns>
         private int? GetCurrentTenantId()
         {
             if (_unitOfWorkManager.Current != null)

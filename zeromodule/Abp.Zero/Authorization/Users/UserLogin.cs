@@ -12,13 +12,11 @@ namespace Abp.Authorization.Users
     public class UserLogin : Entity<long>, IMayHaveTenant
     {
         /// <summary>
-        /// Maximum length of <see cref="LoginProvider"/> property.
         /// <see cref="LoginProvider"/>属性的最大长度
         /// </summary>
         public const int MaxLoginProviderLength = 128;
 
         /// <summary>
-        /// Maximum length of <see cref="ProviderKey"/> property.
         /// <see cref="ProviderKey"/>属性的最大长度
         /// </summary>
         public const int MaxProviderKeyLength = 256;
@@ -28,13 +26,11 @@ namespace Abp.Authorization.Users
         public virtual int? TenantId { get; set; }
 
         /// <summary>
-        /// Id of the User.
         /// 用户ID
         /// </summary>
         public virtual long UserId { get; set; }
 
         /// <summary>
-        /// Login Provider.
         /// 登录提供者
         /// </summary>
         [Required]
@@ -42,7 +38,6 @@ namespace Abp.Authorization.Users
         public virtual string LoginProvider { get; set; }
 
         /// <summary>
-        /// Key in the <see cref="LoginProvider"/>.
         /// <see cref="LoginProvider"/>中的key
         /// </summary>
         [Required]

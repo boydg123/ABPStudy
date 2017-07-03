@@ -687,6 +687,7 @@ namespace Abp.Authorization.Users
         }
 
         #endregion
+
         /// <summary>
         /// 设置用户是否启用双身份验证
         /// </summary>
