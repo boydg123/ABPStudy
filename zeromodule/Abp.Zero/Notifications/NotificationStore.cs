@@ -11,17 +11,33 @@ namespace Abp.Notifications
 {
     /// <summary>
     /// Implements <see cref="INotificationStore"/> using repositories.
+    /// <see cref="INotificationStore"/>的仓储实现
     /// </summary>
     public class NotificationStore : INotificationStore, ITransientDependency
     {
+        /// <summary>
+        /// 通知仓储
+        /// </summary>
         private readonly IRepository<NotificationInfo, Guid> _notificationRepository;
+        /// <summary>
+        /// 商户通知仓储
+        /// </summary>
         private readonly IRepository<TenantNotificationInfo, Guid> _tenantNotificationRepository;
+        /// <summary>
+        /// 用户通知仓储
+        /// </summary>
         private readonly IRepository<UserNotificationInfo, Guid> _userNotificationRepository;
+        /// <summary>
+        /// 通知订阅仓储
+        /// </summary>
         private readonly IRepository<NotificationSubscriptionInfo, Guid> _notificationSubscriptionRepository;
+        /// <summary>
+        /// 工作单元引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="NotificationStore"/> class.
+        /// 构造函数
         /// </summary>
         public NotificationStore(
             IRepository<NotificationInfo, Guid> notificationRepository,
@@ -36,7 +52,12 @@ namespace Abp.Notifications
             _notificationSubscriptionRepository = notificationSubscriptionRepository;
             _unitOfWorkManager = unitOfWorkManager;
         }
-
+        #region 订阅
+        /// <summary>
+        /// 新增订阅通知
+        /// </summary>
+        /// <param name="subscription">通知订阅信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task InsertSubscriptionAsync(NotificationSubscriptionInfo subscription)
         {
@@ -46,7 +67,14 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 删除订阅通知
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="entityId">实体ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task DeleteSubscriptionAsync(UserIdentifier user, string notificationName, string entityTypeName, string entityId)
         {
@@ -61,7 +89,14 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
+        #endregion
 
+        #region 通知
+        /// <summary>
+        /// 新增一个通知
+        /// </summary>
+        /// <param name="notification">通知消息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task InsertNotificationAsync(NotificationInfo notification)
         {
@@ -71,7 +106,11 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 获取通知或Null
+        /// </summary>
+        /// <param name="notificationId">通知ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<NotificationInfo> GetNotificationOrNullAsync(Guid notificationId)
         {
@@ -80,7 +119,14 @@ namespace Abp.Notifications
                 return _notificationRepository.FirstOrDefaultAsync(notificationId);
             }
         }
+        #endregion
 
+        #region 用户通知
+        /// <summary>
+        /// 新增用户通知
+        /// </summary>
+        /// <param name="userNotification">用户通知信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task InsertUserNotificationAsync(UserNotificationInfo userNotification)
         {
@@ -90,7 +136,15 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
+        #endregion 
 
+        /// <summary>
+        /// 获取订阅消息
+        /// </summary>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="entityId">实体ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<NotificationSubscriptionInfo>> GetSubscriptionsAsync(string notificationName, string entityTypeName, string entityId)
         {
@@ -103,7 +157,14 @@ namespace Abp.Notifications
                     );
             }
         }
-
+        /// <summary>
+        /// 获取订阅消息列表
+        /// </summary>
+        /// <param name="tenantIds">商户ID数组</param>
+        /// <param name="notificationName">通知名</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="entityId">实体ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<List<NotificationSubscriptionInfo>> GetSubscriptionsAsync(int?[] tenantIds, string notificationName, string entityTypeName, string entityId)
         {
@@ -116,7 +177,11 @@ namespace Abp.Notifications
 
             return subscriptions;
         }
-
+        /// <summary>
+        /// 获取订阅消息列表
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<NotificationSubscriptionInfo>> GetSubscriptionsAsync(UserIdentifier user)
         {
@@ -125,7 +190,14 @@ namespace Abp.Notifications
                 return _notificationSubscriptionRepository.GetAllListAsync(s => s.UserId == user.UserId);
             }
         }
-        
+        /// <summary>
+        /// 获取订阅消息列表
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityTypeName">实体类型名</param>
+        /// <param name="entityId">实体ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         protected virtual Task<List<NotificationSubscriptionInfo>> GetSubscriptionsAsync(int? tenantId, string notificationName, string entityTypeName, string entityId)
         {
@@ -138,7 +210,14 @@ namespace Abp.Notifications
                 );
             }
         }
-
+        /// <summary>
+        /// 是否是订阅消息
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityTypeName">实体类型名称</param>
+        /// <param name="entityId">实体ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<bool> IsSubscribedAsync(UserIdentifier user, string notificationName, string entityTypeName, string entityId)
         {
@@ -152,7 +231,13 @@ namespace Abp.Notifications
                     ) > 0;
             }
         }
-
+        /// <summary>
+        /// 更新用户通知状态
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="userNotificationId">用户通知ID</param>
+        /// <param name="state">状态信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task UpdateUserNotificationStateAsync(int? tenantId, Guid userNotificationId, UserNotificationState state)
         {
@@ -168,7 +253,12 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 更新所有用户通知状态
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="state">通知状态</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task UpdateAllUserNotificationStatesAsync(UserIdentifier user, UserNotificationState state)
         {
@@ -184,7 +274,12 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 删除用户通知状态
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="userNotificationId">用户通知ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task DeleteUserNotificationAsync(int? tenantId, Guid userNotificationId)
         {
@@ -194,7 +289,11 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 删除给定用户的所有用户通知
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task DeleteAllUserNotificationsAsync(UserIdentifier user)
         {
@@ -204,7 +303,14 @@ namespace Abp.Notifications
                 await _unitOfWorkManager.Current.SaveChangesAsync();
             }
         }
-
+        /// <summary>
+        /// 获取用户通知以及关联的通知
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="state">用户通知状态</param>
+        /// <param name="skipCount">跳过的数量</param>
+        /// <param name="maxResultCount">最大结果数</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<List<UserNotificationInfoWithNotificationInfo>> GetUserNotificationsWithNotificationsAsync(UserIdentifier user, UserNotificationState? state = null, int skipCount = 0, int maxResultCount = int.MaxValue)
         {
@@ -225,7 +331,12 @@ namespace Abp.Notifications
                     ).ToList());
             }
         }
-
+        /// <summary>
+        /// 获取用户通知数量
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="state">用户通知状态</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<int> GetUserNotificationCountAsync(UserIdentifier user, UserNotificationState? state = null)
         {
@@ -234,7 +345,12 @@ namespace Abp.Notifications
                 return _userNotificationRepository.CountAsync(un => un.UserId == user.UserId && (state == null || un.State == state.Value));
             }
         }
-
+        /// <summary>
+        /// 获取用户通知以及关联的通知或Null
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="userNotificationId">用户通知ID</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task<UserNotificationInfoWithNotificationInfo> GetUserNotificationWithNotificationOrNullAsync(int? tenantId, Guid userNotificationId)
         {
@@ -254,7 +370,11 @@ namespace Abp.Notifications
                 return Task.FromResult(new UserNotificationInfoWithNotificationInfo(item.userNotificationInfo, item.tenantNotificationInfo));
             }
         }
-
+        /// <summary>
+        /// 新增商户通知
+        /// </summary>
+        /// <param name="tenantNotificationInfo">商户通知信息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual Task InsertTenantNotificationAsync(TenantNotificationInfo tenantNotificationInfo)
         {
@@ -263,7 +383,11 @@ namespace Abp.Notifications
                 return _tenantNotificationRepository.InsertAsync(tenantNotificationInfo);
             }
         }
-
+        /// <summary>
+        /// 删除通知
+        /// </summary>
+        /// <param name="notification">通知信息</param>
+        /// <returns></returns>
         public virtual Task DeleteNotificationAsync(NotificationInfo notification)
         {
             return _notificationRepository.DeleteAsync(notification);
