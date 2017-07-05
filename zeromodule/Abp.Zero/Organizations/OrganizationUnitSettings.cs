@@ -7,12 +7,13 @@ namespace Abp.Organizations
 {
     /// <summary>
     /// Implements <see cref="IOrganizationUnitSettings"/> to get settings from <see cref="ISettingManager"/>.
+    /// <see cref="IOrganizationUnitSettings"/> 的实现从<see cref="ISettingManager"/>获取设置
     /// </summary>
     public class OrganizationUnitSettings : IOrganizationUnitSettings, ITransientDependency
     {
         /// <summary>
-        /// Maximum allowed organization unit membership count for a user.
-        /// Returns value for current tenant.
+        /// Maximum allowed organization unit membership count for a user.Returns value for current tenant.
+        /// 获取用户允许的最大组织架构成员数量。返回当前商户的值
         /// </summary>
         public int MaxUserMembershipCount
         {
@@ -22,10 +23,13 @@ namespace Abp.Organizations
             }
         }
 
+        /// <summary>
+        /// 设置管理引用
+        /// </summary>
         private readonly ISettingManager _settingManager;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationUnitSettings"/> class.
+        /// 构造函数
         /// </summary>
         public OrganizationUnitSettings(ISettingManager settingManager)
         {
@@ -33,8 +37,8 @@ namespace Abp.Organizations
         }
 
         /// <summary>
-        /// Maximum allowed organization unit membership count for a user.
-        /// Returns value for given tenant.
+        /// Maximum allowed organization unit membership count for a user.Returns value for given tenant.
+        /// 获取用户允许的最大组织架构成员数量。返回当前商户的值
         /// </summary>
         public async Task<int> GetMaxUserMembershipCountAsync(int? tenantId)
         {
@@ -47,7 +51,12 @@ namespace Abp.Organizations
                 return await _settingManager.GetSettingValueForApplicationAsync<int>(AbpZeroSettingNames.OrganizationUnits.MaxUserMembershipCount);
             }
         }
-
+        /// <summary>
+        /// 设置用户允许的最大组织架构成员数量
+        /// </summary>
+        /// <param name="tenantId">商户ID或Null(商户是宿主商户)</param>
+        /// <param name="value">设置的值</param>
+        /// <returns></returns>
         public async Task SetMaxUserMembershipCountAsync(int? tenantId, int value)
         {
             if (tenantId.HasValue)
