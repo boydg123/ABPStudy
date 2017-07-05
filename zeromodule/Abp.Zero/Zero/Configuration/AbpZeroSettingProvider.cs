@@ -4,6 +4,9 @@ using Abp.Localization;
 
 namespace Abp.Zero.Configuration
 {
+    /// <summary>
+    /// ABP Zero设置提供者
+    /// </summary>
     public class AbpZeroSettingProvider : SettingProvider
     {
         public override IEnumerable<SettingDefinition> GetSettingDefinitions(SettingDefinitionProviderContext context)

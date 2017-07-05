@@ -5,8 +5,14 @@ using Abp.MultiTenancy;
 
 namespace Abp.Zero.Configuration
 {
+    /// <summary>
+    /// ABP Zero实体类型
+    /// </summary>
     public class AbpZeroEntityTypes : IAbpZeroEntityTypes
     {
+        /// <summary>
+        /// 应用程序的用户类型
+        /// </summary>
         public Type User
         {
             get { return _user; }
@@ -26,7 +32,9 @@ namespace Abp.Zero.Configuration
             }
         }
         private Type _user;
-
+        /// <summary>
+        /// 应用程序的角色类型
+        /// </summary>
         public Type Role
         {
             get { return _role; }
@@ -46,7 +54,9 @@ namespace Abp.Zero.Configuration
             }
         }
         private Type _role;
-
+        /// <summary>
+        /// 应用程序的商户类型
+        /// </summary>
         public Type Tenant
         {
             get { return _tenant; }

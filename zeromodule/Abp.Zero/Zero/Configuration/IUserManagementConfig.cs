@@ -3,7 +3,7 @@
 namespace Abp.Zero.Configuration
 {
     /// <summary>
-    /// User management configuration.
+    /// 用户管理配置
     /// </summary>
     public interface IUserManagementConfig
     {

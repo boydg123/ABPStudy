@@ -17,10 +17,14 @@ namespace Abp.Zero
 {
     /// <summary>
     /// ABP zero core module.
+    /// ABP Zero Core模块
     /// </summary>
     [DependsOn(typeof(AbpKernelModule))]
     public class AbpZeroCoreModule : AbpModule
     {
+        /// <summary>
+        /// 模块初始化前
+        /// </summary>
         public override void PreInitialize()
         {
             IocManager.Register<IRoleManagementConfig, RoleManagementConfig>();
@@ -40,7 +44,9 @@ namespace Abp.Zero
 
             IocManager.IocContainer.Kernel.ComponentRegistered += Kernel_ComponentRegistered;
         }
-
+        /// <summary>
+        /// 模块初始化
+        /// </summary>
         public override void Initialize()
         {
             FillMissingEntityTypes();
@@ -50,7 +56,11 @@ namespace Abp.Zero
 
             RegisterTenantCache();
         }
-
+        /// <summary>
+        /// 组件注册
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="handler"></param>
         private void Kernel_ComponentRegistered(string key, Castle.MicroKernel.IHandler handler)
         {
             if (typeof(IAbpZeroFeatureValueStore).IsAssignableFrom(handler.ComponentModel.Implementation) && !IocManager.IsRegistered<IAbpZeroFeatureValueStore>())
@@ -60,7 +70,9 @@ namespace Abp.Zero
                     );
             }
         }
-
+        /// <summary>
+        /// 填充Miss实体类型
+        /// </summary>
         private void FillMissingEntityTypes()
         {
             using (var entityTypes = IocManager.ResolveAsDisposable<IAbpZeroEntityTypes>())
@@ -81,7 +93,9 @@ namespace Abp.Zero
                 }
             }
         }
-
+        /// <summary>
+        /// 注册商户缓存
+        /// </summary>
         private void RegisterTenantCache()
         {
             if (IocManager.IsRegistered<ITenantCache>())

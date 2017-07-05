@@ -2,20 +2,23 @@
 
 namespace Abp.Zero.Configuration
 {
+    /// <summary>
+    /// ABP Zero实体类型
+    /// </summary>
     public interface IAbpZeroEntityTypes
     {
         /// <summary>
-        /// User type of the application.
+        /// 应用程序的用户类型
         /// </summary>
         Type User { get; set; }
 
         /// <summary>
-        /// Role type of the application.
+        /// 应用程序的角色类型
         /// </summary>
         Type Role { get; set; }
 
         /// <summary>
-        /// Tenant type of the application.
+        /// 应用程序的商户类型
         /// </summary>
         Type Tenant { get; set; }
     }
