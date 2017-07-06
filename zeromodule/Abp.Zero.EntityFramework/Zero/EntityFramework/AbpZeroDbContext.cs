@@ -12,8 +12,8 @@ using Abp.Notifications;
 namespace Abp.Zero.EntityFramework
 {
     /// <summary>
-    /// Base DbContext for ABP zero.
-    /// Derive your DbContext from this class to have base entities.
+    /// Base DbContext for ABP zero.Derive your DbContext from this class to have base entities.
+    /// ABP Zero的数据库上下文基类，从该类派生自己的数据库上下文
     /// </summary>
     public abstract class AbpZeroDbContext<TTenant, TRole, TUser> : AbpZeroCommonDbContext<TRole, TUser>
         where TTenant : AbpTenant<TUser>
@@ -21,43 +21,43 @@ namespace Abp.Zero.EntityFramework
         where TUser : AbpUser<TUser>
     {
         /// <summary>
-        /// Tenants
+        /// 商户
         /// </summary>
         public virtual IDbSet<TTenant> Tenants { get; set; }
 
         /// <summary>
-        /// Editions.
+        /// 版本.
         /// </summary>
         public virtual IDbSet<Edition> Editions { get; set; }
 
         /// <summary>
-        /// FeatureSettings.
+        /// 功能设置.
         /// </summary>
         public virtual IDbSet<FeatureSetting> FeatureSettings { get; set; }
 
         /// <summary>
-        /// TenantFeatureSetting.
+        /// 商户功能设置.
         /// </summary>
         public virtual IDbSet<TenantFeatureSetting> TenantFeatureSettings { get; set; }
 
         /// <summary>
-        /// EditionFeatureSettings.
+        /// 版本功能设置.
         /// </summary>
         public virtual IDbSet<EditionFeatureSetting> EditionFeatureSettings { get; set; }
 
         /// <summary>
-        /// Background jobs.
+        /// 后台作业.
         /// </summary>
         public virtual IDbSet<BackgroundJobInfo> BackgroundJobs { get; set; }
 
         /// <summary>
-        /// User accounts
+        /// 用户
         /// </summary>
         public virtual IDbSet<UserAccount> UserAccounts { get; set; }
 
         /// <summary>
-        /// Default constructor.
-        /// Do not directly instantiate this class. Instead, use dependency injection!
+        /// Default constructor.Do not directly instantiate this class. Instead, use dependency injection!
+        /// 默认构造函数。不要直接实例化这个类，相反，使用依赖注入
         /// </summary>
         protected AbpZeroDbContext()
         {
@@ -66,8 +66,9 @@ namespace Abp.Zero.EntityFramework
 
         /// <summary>
         /// Constructor with connection string parameter.
+        /// 连接字符串参数的构造函数
         /// </summary>
-        /// <param name="nameOrConnectionString">Connection string or a name in connection strings in configuration file</param>
+        /// <param name="nameOrConnectionString">Connection string or a name in connection strings in configuration file / 连接字符串或在配置文件中的连接字符串Name</param>
         protected AbpZeroDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
@@ -76,6 +77,7 @@ namespace Abp.Zero.EntityFramework
 
         /// <summary>
         /// This constructor can be used for unit tests.
+        /// 这个构造函数可被用于单元测试
         /// </summary>
         protected AbpZeroDbContext(DbConnection dbConnection, bool contextOwnsConnection)
             : base(dbConnection, contextOwnsConnection)
