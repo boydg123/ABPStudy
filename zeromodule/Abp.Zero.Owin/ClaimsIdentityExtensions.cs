@@ -7,6 +7,9 @@ using Microsoft.AspNet.Identity;
 namespace Abp
 {
     //TODO: Use from ABP after ABP v1.0!
+    /// <summary>
+    /// 身份声明扩展
+    /// </summary>
     public static class ClaimsIdentityExtensions
     {
         public static int? GetTenantId(this IIdentity identity)

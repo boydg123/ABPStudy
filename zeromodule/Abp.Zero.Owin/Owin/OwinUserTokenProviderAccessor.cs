@@ -6,17 +6,31 @@ using Microsoft.Owin.Security.DataProtection;
 
 namespace Abp.Owin
 {
+    /// <summary>
+    /// Owin 用户Token 提供访问器
+    /// </summary>
     public class OwinUserTokenProviderAccessor : IUserTokenProviderAccessor
     {
+        /// <summary>
+        /// 日志引用
+        /// </summary>
         public ILogger Logger { get; set; }
-
+        /// <summary>
+        /// 数据保护提供者
+        /// </summary>
         public IDataProtectionProvider DataProtectionProvider { get; set; }
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public OwinUserTokenProviderAccessor()
         {
             Logger = NullLogger.Instance;
         }
-
+        /// <summary>
+        /// 获取用户Token提供器或Null
+        /// </summary>
+        /// <typeparam name="TUser">用户对象</typeparam>
+        /// <returns></returns>
         public IUserTokenProvider<TUser, long> GetUserTokenProviderOrNull<TUser>()
             where TUser : AbpUser<TUser>
         {
