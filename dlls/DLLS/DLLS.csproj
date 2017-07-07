@@ -117,6 +117,8 @@
     <Content Include="StackExchange.Redis.dll" />
     <Content Include="Swashbuckle.Core.dll" />
     <Content Include="System.Collections.Immutable.dll" />
+    <Content Include="System.Runtime.dll" />
+    <Content Include="System.Threading.Tasks.dll" />
     <Content Include="System\System.Collections.Immutable.dll" />
     <Content Include="System\System.IdentityModel.Tokens.Jwt.dll" />
     <Content Include="System\System.Linq.Dynamic.dll" />
