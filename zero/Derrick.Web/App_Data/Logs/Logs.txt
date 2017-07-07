@@ -3798,3 +3798,607 @@ DEBUG 2017-07-06 18:19:00,831 [10776] Abp.Logging.LogHelper                    -
 DEBUG 2017-07-06 18:19:00,833 [10776] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2017-07-06 18:19:00,834 [10776] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
 DEBUG 2017-07-06 18:19:00,835 [10776] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-07 12:50:03,899 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 12:50:03,918 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 12:50:03,925 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,927 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,928 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,929 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,930 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:50:03,934 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 12:50:04,396 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:50:04,396 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:50:04,396 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:50:04,396 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+FATAL 2017-07-07 12:50:04,809 [1    ] Abp.AbpBootstrapper                      - System.IO.FileLoadException: 未能加载文件或程序集“Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”
+   在 System.Reflection.RuntimeAssembly.GetExportedTypes(RuntimeAssembly assembly, ObjectHandleOnStack retTypes)
+   在 System.Reflection.RuntimeAssembly.GetExportedTypes()
+   在 Castle.Core.Internal.ReflectionUtil.GetAvailableTypes(Assembly assembly, Boolean includeNonExported)
+   在 Castle.Core.Internal.ReflectionUtil.GetAvailableTypesOrdered(Assembly assembly, Boolean includeNonExported)
+   在 Castle.MicroKernel.Registration.FromAssemblyDescriptor.<SelectedTypes>b__0(Assembly a)
+   在 System.Linq.Enumerable.<SelectManyIterator>d__16`2.MoveNext()
+   在 Castle.MicroKernel.Registration.FromDescriptor.Castle.MicroKernel.Registration.IRegistration.Register(IKernelInternal kernel)
+   在 Castle.MicroKernel.Registration.BasedOnDescriptor.Castle.MicroKernel.Registration.IRegistration.Register(IKernelInternal kernel)
+   在 Castle.MicroKernel.DefaultKernel.Register(IRegistration[] registrations)
+   在 Castle.Windsor.WindsorContainer.Register(IRegistration[] registrations)
+   在 Abp.Web.Mvc.Controllers.ControllerConventionalRegistrar.RegisterAssembly(IConventionalRegistrationContext context) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Controllers\ControllerConventionalRegistrar.cs:行号 15
+   在 Abp.Dependency.IocManager.RegisterAssemblyByConvention(Assembly assembly, ConventionalRegistrationConfig config) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Dependency\IocManager.cs:行号 92
+   在 Abp.AbpKernelModule.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpKernelModule.cs:行号 104
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_1(AbpModuleInfo module) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 77
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 77
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+日志: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+调用程序集: Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/Newtonsoft.Json/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/Newtonsoft.Json.DLL。
+警告: 比较程序集名称时发生不匹配: 主版本
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+
+System.IO.FileLoadException: 未能加载文件或程序集“Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”
+   在 System.Reflection.RuntimeAssembly.GetExportedTypes(RuntimeAssembly assembly, ObjectHandleOnStack retTypes)
+   在 System.Reflection.RuntimeAssembly.GetExportedTypes()
+   在 Castle.Core.Internal.ReflectionUtil.GetAvailableTypes(Assembly assembly, Boolean includeNonExported)
+   在 Castle.Core.Internal.ReflectionUtil.GetAvailableTypesOrdered(Assembly assembly, Boolean includeNonExported)
+   在 Castle.MicroKernel.Registration.FromAssemblyDescriptor.<SelectedTypes>b__0(Assembly a)
+   在 System.Linq.Enumerable.<SelectManyIterator>d__16`2.MoveNext()
+   在 Castle.MicroKernel.Registration.FromDescriptor.Castle.MicroKernel.Registration.IRegistration.Register(IKernelInternal kernel)
+   在 Castle.MicroKernel.Registration.BasedOnDescriptor.Castle.MicroKernel.Registration.IRegistration.Register(IKernelInternal kernel)
+   在 Castle.MicroKernel.DefaultKernel.Register(IRegistration[] registrations)
+   在 Castle.Windsor.WindsorContainer.Register(IRegistration[] registrations)
+   在 Abp.Web.Mvc.Controllers.ControllerConventionalRegistrar.RegisterAssembly(IConventionalRegistrationContext context) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Controllers\ControllerConventionalRegistrar.cs:行号 15
+   在 Abp.Dependency.IocManager.RegisterAssemblyByConvention(Assembly assembly, ConventionalRegistrationConfig config) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Dependency\IocManager.cs:行号 92
+   在 Abp.AbpKernelModule.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpKernelModule.cs:行号 104
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_1(AbpModuleInfo module) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 77
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 77
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+日志: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+调用程序集: Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/Newtonsoft.Json/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/Newtonsoft.Json.DLL。
+警告: 比较程序集名称时发生不匹配: 主版本
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+
+DEBUG 2017-07-07 12:52:18,764 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 12:52:18,790 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 12:52:18,801 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,804 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,804 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,804 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:18,811 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 12:52:19,002 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:52:19,002 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:52:19,002 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:52:19,002 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:52:19,677 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:52:28,405 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-07 12:52:28,436 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-07 12:52:28,437 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-07 12:52:28,437 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-07 12:52:28,437 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-07 12:52:28,610 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-07 12:52:30,727 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:52:31,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-07 12:52:31,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-07 12:52:31,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-07 12:52:31,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-07 12:52:31,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-07 12:52:31,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-07 12:52:31,929 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:52:31,966 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:52:31,999 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-07 12:52:32,001 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-07 12:52:32,003 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-07 12:52:32,005 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-07 12:52:32,007 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-07 12:52:32,010 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-07 12:52:32,011 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-07 12:52:32,013 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-07 12:52:32,014 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-07 12:52:32,016 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-07 12:52:32,018 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-07 12:52:32,020 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-07 12:52:32,021 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-07 12:52:32,023 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-07 12:52:32,024 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-07 12:52:32,026 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-07 12:52:32,027 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-07 12:52:32,029 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-07 12:52:32,032 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-07 12:52:32,034 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-07 12:52:32,037 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-07 12:52:32,038 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-07 12:54:31,498 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 12:54:31,515 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 12:54:31,520 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,522 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,523 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,524 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,525 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,526 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,527 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,527 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,527 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,527 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,527 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:31,532 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 12:54:31,735 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:54:31,735 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:54:31,735 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:54:31,735 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:54:32,445 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:54:39,341 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-07 12:54:39,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-07 12:54:39,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-07 12:54:39,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-07 12:54:39,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-07 12:54:39,521 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-07 12:54:41,716 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:54:41,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-07 12:54:41,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-07 12:54:42,001 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-07 12:54:42,001 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-07 12:54:42,001 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-07 12:54:42,001 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-07 12:54:42,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-07 12:54:42,003 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-07 12:54:42,004 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-07 12:54:42,005 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-07 12:54:42,650 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:54:42,682 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:54:42,707 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-07 12:54:42,709 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-07 12:54:42,710 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-07 12:54:42,712 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-07 12:54:42,713 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-07 12:54:42,715 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-07 12:54:42,716 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-07 12:54:42,717 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-07 12:54:42,719 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-07 12:54:42,720 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-07 12:54:42,721 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-07 12:54:42,724 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-07 12:54:42,725 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-07 12:54:42,726 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-07 12:54:42,728 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-07 12:54:42,729 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-07 12:54:42,731 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-07 12:54:42,733 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-07 12:54:42,734 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-07 12:54:42,735 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-07 12:54:42,737 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-07 12:54:42,769 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-07 12:56:59,964 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 12:56:59,982 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 12:56:59,988 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,991 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,992 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,993 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,994 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,995 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:56:59,998 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 12:57:00,197 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:57:00,197 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:57:00,197 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:57:00,197 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:57:00,741 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:57:03,033 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-07 12:57:03,044 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-07 12:57:03,044 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-07 12:57:03,045 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-07 12:57:03,045 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-07 12:57:03,215 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-07 12:57:05,338 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:57:05,607 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-07 12:57:05,607 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-07 12:57:05,615 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-07 12:57:05,616 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-07 12:57:05,617 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-07 12:57:05,618 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-07 12:57:05,619 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-07 12:57:05,620 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-07 12:57:05,621 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-07 12:57:05,621 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-07 12:57:05,621 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-07 12:57:06,288 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:57:06,327 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:57:06,351 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-07 12:57:06,354 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-07 12:57:06,355 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-07 12:57:06,357 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-07 12:57:06,358 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-07 12:57:06,360 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-07 12:57:06,362 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-07 12:57:06,364 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-07 12:57:06,365 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-07 12:57:06,366 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-07 12:57:06,368 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-07 12:57:06,369 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-07 12:57:06,370 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-07 12:57:06,372 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-07 12:57:06,373 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-07 12:57:06,375 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-07 12:57:06,377 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-07 12:57:06,378 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-07 12:57:06,380 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-07 12:57:06,382 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-07 12:57:06,383 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-07 12:57:06,385 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-07 12:59:16,233 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 12:59:16,256 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 12:59:16,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,263 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,264 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,265 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,265 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,265 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,265 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,266 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,267 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,267 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:16,274 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 12:59:16,467 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:59:16,467 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:59:16,467 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:59:16,467 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 12:59:17,035 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 12:59:19,310 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-07 12:59:19,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-07 12:59:19,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-07 12:59:19,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-07 12:59:19,323 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-07 12:59:19,472 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-07 12:59:21,578 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:59:21,857 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-07 12:59:21,857 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-07 12:59:21,863 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-07 12:59:21,863 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-07 12:59:21,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-07 12:59:21,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-07 12:59:21,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-07 12:59:21,864 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-07 12:59:21,865 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-07 12:59:21,865 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-07 12:59:21,865 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-07 12:59:21,865 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-07 12:59:21,866 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-07 12:59:21,867 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-07 12:59:21,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-07 12:59:21,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-07 12:59:22,541 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 12:59:22,579 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+FATAL 2017-07-07 12:59:22,628 [1    ] Abp.AbpBootstrapper                      - System.IO.FileLoadException: 未能加载文件或程序集“System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”
+   在 Abp.WebApi.Controllers.Dynamic.DynamicApiControllerManager.GetAll()
+   在 Abp.WebApi.AbpWebApiModule.PostInitialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Api\WebApi\AbpWebApiModule.cs:行号 78
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+日志: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+调用程序集: Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Collections.Immutable.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Collections.Immutable/System.Collections.Immutable.DLL。
+日志: 尝试下载新的 URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/System.Collections.Immutable.DLL。
+警告: 比较程序集名称时发生不匹配: 生成号
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+
+System.IO.FileLoadException: 未能加载文件或程序集“System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”或它的某一个依赖项。找到的程序集清单定义与程序集引用不匹配。 (异常来自 HRESULT:0x80131040)
+文件名:“System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a”
+   在 Abp.WebApi.Controllers.Dynamic.DynamicApiControllerManager.GetAll()
+   在 Abp.WebApi.AbpWebApiModule.PostInitialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Api\WebApi\AbpWebApiModule.cs:行号 78
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Modules\AbpModuleManager.cs:行号 78
+   在 Abp.AbpBootstrapper.Initialize() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\AbpBootstrapper.cs:行号 152
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+日志: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+日志: 初始 PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+调用程序集: Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+日志: 使用主机配置文件: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Collections.Immutable.DLL。
+日志: 尝试下载新的 URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Collections.Immutable/System.Collections.Immutable.DLL。
+日志: 尝试下载新的 URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/System.Collections.Immutable.DLL。
+警告: 比较程序集名称时发生不匹配: 生成号
+错误: 未能完成程序集的安装(hr = 0x80131040)。探测终止。
+
+DEBUG 2017-07-07 13:01:08,757 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-07 13:01:08,779 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-07 13:01:08,786 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,788 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,789 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,790 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,791 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,792 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:08,795 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-07 13:01:09,039 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 13:01:09,039 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 13:01:09,039 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 13:01:09,039 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-07 13:01:09,575 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-07 13:01:11,840 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-07 13:01:11,851 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-07 13:01:11,852 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-07 13:01:11,852 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-07 13:01:11,852 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-07 13:01:12,009 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-07 13:01:14,121 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 13:01:14,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-07 13:01:14,397 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-07 13:01:14,402 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-07 13:01:14,403 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-07 13:01:14,404 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-07 13:01:14,405 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-07 13:01:14,406 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-07 13:01:14,406 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-07 13:01:14,406 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-07 13:01:15,090 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 13:01:15,123 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-07 13:01:15,147 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-07 13:01:15,149 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-07 13:01:15,150 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-07 13:01:15,151 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-07 13:01:15,153 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-07 13:01:15,154 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-07 13:01:15,155 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-07 13:01:15,158 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-07 13:01:15,160 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-07 13:01:15,161 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-07 13:01:15,162 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-07 13:01:15,163 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-07 13:01:15,165 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-07 13:01:15,166 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-07 13:01:15,167 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-07 13:01:15,168 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-07 13:01:15,170 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-07 13:01:15,171 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-07 13:01:15,172 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-07 13:01:15,174 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-07 13:01:15,176 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-07 13:01:15,177 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.

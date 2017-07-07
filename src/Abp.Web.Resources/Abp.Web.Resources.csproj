@@ -75,6 +75,7 @@
     <None Include="Abp\Framework\styles\abp.less" />
     <None Include="Abp\Framework\styles\abp.mixings.css.map" />
     <None Include="Abp\Framework\styles\abp.mixings.less" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Abp\Abp.csproj">

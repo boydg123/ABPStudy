@@ -157,6 +157,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Localization\Json\JsonSources\Lang-zh-CN.json" />
     <EmbeddedResource Include="Localization\Json\JsonSources\Lang.json" />
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
