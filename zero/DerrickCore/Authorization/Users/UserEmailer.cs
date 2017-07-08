@@ -184,7 +184,11 @@ namespace Derrick.Authorization.Users
                 Logger.Error(exception.Message, exception);
             }
         }
-
+        /// <summary>
+        /// 获取商户名或Null
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         private string GetTenancyNameOrNull(int? tenantId)
         {
             if (tenantId == null)
