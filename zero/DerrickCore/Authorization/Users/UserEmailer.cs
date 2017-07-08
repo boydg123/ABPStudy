@@ -15,16 +15,39 @@ using Derrick.Web;
 namespace Derrick.Authorization.Users
 {
     /// <summary>
-    /// Used to send email to users.
+    /// 用于给用户发送邮件
     /// </summary>
     public class UserEmailer : AbpZeroTemplateServiceBase, IUserEmailer, ITransientDependency
     {
+        /// <summary>
+        /// 邮件模版提供者
+        /// </summary>
         private readonly IEmailTemplateProvider _emailTemplateProvider;
+        /// <summary>
+        /// 邮件发送者
+        /// </summary>
         private readonly IEmailSender _emailSender;
+        /// <summary>
+        /// Web Url 服务
+        /// </summary>
         private readonly IWebUrlService _webUrlService;
+        /// <summary>
+        /// 商户仓储
+        /// </summary>
         private readonly IRepository<Tenant> _tenantRepository;
+        /// <summary>
+        /// 当前工作单元提供者
+        /// </summary>
         private readonly ICurrentUnitOfWorkProvider _unitOfWorkProvider;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="emailTemplateProvider">邮件模版提供者</param>
+        /// <param name="emailSender">邮件发送者</param>
+        /// <param name="webUrlService">Web Url 服务</param>
+        /// <param name="tenantRepository">商户仓储</param>
+        /// <param name="unitOfWorkProvider">当前工作单元提供者</param>
         public UserEmailer(IEmailTemplateProvider emailTemplateProvider,
             IEmailSender emailSender,
             IWebUrlService webUrlService,
@@ -39,11 +62,11 @@ namespace Derrick.Authorization.Users
         }
 
         /// <summary>
-        /// Send email activation link to user's email address.
+        /// 发送电子邮件激活链接到用户的邮箱
         /// </summary>
-        /// <param name="user">User</param>
+        /// <param name="user">用户</param>
         /// <param name="plainPassword">
-        /// Can be set to user's plain password to include it in the email.
+        /// 可以设置为用户的普通密码用以包含在电子邮件中.
         /// </param>
         [UnitOfWork]
         public virtual async Task SendEmailActivationLinkAsync(User user, string plainPassword = null)
@@ -90,9 +113,9 @@ namespace Derrick.Authorization.Users
         }
 
         /// <summary>
-        /// Sends a password reset link to user's email.
+        /// 发送一个密码重置链接到用户的邮箱.
         /// </summary>
-        /// <param name="user">User</param>
+        /// <param name="user">用户</param>
         public async Task SendPasswordResetLinkAsync(User user)
         {
             if (user.PasswordResetCode.IsNullOrEmpty())
@@ -131,6 +154,13 @@ namespace Derrick.Authorization.Users
             await _emailSender.SendAsync(user.EmailAddress, L("PasswordResetEmail_Subject"), emailTemplate.ToString());
         }
 
+        /// <summary>
+        /// 发送一个未读的聊天信息电子邮件到用户邮箱
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <param name="senderUsername">发送者用户名</param>
+        /// <param name="senderTenancyName">发送者商户名</param>
+        /// <param name="chatMessage">聊天信息</param>
         public void TryToSendChatMessageMail(User user, string senderUsername, string senderTenancyName, ChatMessage chatMessage)
         {
             try

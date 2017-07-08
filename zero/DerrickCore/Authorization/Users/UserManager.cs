@@ -17,12 +17,13 @@ using Derrick.Identity;
 namespace Derrick.Authorization.Users
 {
     /// <summary>
-    /// User manager.
-    /// Used to implement domain logic for users.
-    /// Extends <see cref="AbpUserManager{TRole,TUser}"/>.
+    /// Extends <see cref="AbpUserManager{TRole,TUser}"/>的扩展，用户管理，用于为用户实现域逻辑
     /// </summary>
     public class UserManager : AbpUserManager<Role, User>
     {
+        /// <summary>
+        /// 工作单元管理器引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         public UserManager(
@@ -58,6 +59,11 @@ namespace Derrick.Authorization.Users
             SmsService = smsService;
         }
 
+        /// <summary>
+        /// 获取用户或Null - 异步
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         public async Task<User> GetUserOrNullAsync(UserIdentifier userIdentifier)
         {
             using (_unitOfWorkManager.Begin())
@@ -69,11 +75,21 @@ namespace Derrick.Authorization.Users
             }
         }
 
+        /// <summary>
+        /// 获取用户或Null
+        /// </summary>
+        /// <param name="userIdentifier">用户</param>
+        /// <returns></returns>
         public User GetUserOrNull(UserIdentifier userIdentifier)
         {
             return AsyncHelper.RunSync(() => GetUserOrNullAsync(userIdentifier));
         }
 
+        /// <summary>
+        /// 获取用户 - 异步
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         public async Task<User> GetUserAsync(UserIdentifier userIdentifier)
         {
             var user = await GetUserOrNullAsync(userIdentifier);
@@ -85,6 +101,11 @@ namespace Derrick.Authorization.Users
             return user;
         }
 
+        /// <summary>
+        /// 获取用户
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         public User GetUser(UserIdentifier userIdentifier)
         {
             return AsyncHelper.RunSync(() => GetUserAsync(userIdentifier));

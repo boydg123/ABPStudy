@@ -3,30 +3,33 @@ using Derrick.Chat;
 
 namespace Derrick.Authorization.Users
 {
+    /// <summary>
+    /// 用于给用户发送邮件
+    /// </summary>
     public interface IUserEmailer
     {
         /// <summary>
-        /// Send email activation link to user's email address.
+        /// 发送电子邮件激活链接到用户的邮箱
         /// </summary>
-        /// <param name="user">User</param>
+        /// <param name="user">用户</param>
         /// <param name="plainPassword">
-        /// Can be set to user's plain password to include it in the email.
+        /// 可以设置为用户的普通密码用以包含在电子邮件中
         /// </param>
         Task SendEmailActivationLinkAsync(User user, string plainPassword = null);
 
         /// <summary>
-        /// Sends a password reset link to user's email.
+        /// 发送一个密码重置链接到用户的邮箱
         /// </summary>
-        /// <param name="user">User</param>
+        /// <param name="user">用户</param>
         Task SendPasswordResetLinkAsync(User user);
 
         /// <summary>
-        /// Sends an email for unread chat message to user's email.
+        /// 发送一个未读的聊天信息电子邮件到用户邮箱
         /// </summary>
-        /// <param name="user"></param>
-        /// <param name="senderUsername"></param>
-        /// <param name="senderTenancyName"></param>
-        /// <param name="chatMessage"></param>
+        /// <param name="user">用户</param>
+        /// <param name="senderUsername">发送者用户名</param>
+        /// <param name="senderTenancyName">发送者商户名</param>
+        /// <param name="chatMessage">聊天信息</param>
         void TryToSendChatMessageMail(User user, string senderUsername, string senderTenancyName, ChatMessage chatMessage);
     }
 }

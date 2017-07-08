@@ -24,7 +24,6 @@ using Microsoft.AspNet.Identity;
 namespace Abp.Authorization.Users
 {
     /// <summary>
-    /// Extends <see cref="UserManager{TUser,TKey}"/> of ASP.NET Identity Framework.
     /// ASP.NET Identity框架的扩展 <see cref="UserManager{TUser,TKey}"/>
     /// </summary>
     public abstract class AbpUserManager<TRole, TUser>
@@ -174,7 +173,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Check whether a user is granted for a permission.
         /// 检查用户是否授予给定的权限
         /// </summary>
         /// <param name="userId">用户ID</param>
@@ -188,17 +186,16 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Check whether a user is granted for a permission.
+        /// 检查用户是否授予给定的权限
         /// </summary>
-        /// <param name="user">User</param>
-        /// <param name="permission">Permission</param>
+        /// <param name="user">用户</param>
+        /// <param name="permission">权限</param>
         public virtual Task<bool> IsGrantedAsync(TUser user, Permission permission)
         {
             return IsGrantedAsync(user.Id, permission);
         }
 
         /// <summary>
-        /// Check whether a user is granted for a permission.
         /// 检查用户是否授予给定的权限
         /// </summary>
         /// <param name="userId">用户ID</param>
@@ -247,11 +244,10 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Gets granted permissions for a user.
         /// 获取用户所有的授权对象
         /// </summary>
-        /// <param name="user">Role / 用户</param>
-        /// <returns>List of granted permissions / 授权的列表</returns>
+        /// <param name="user">用户</param>
+        /// <returns>授权的列表</returns>
         public virtual async Task<IReadOnlyList<Permission>> GetGrantedPermissionsAsync(TUser user)
         {
             var permissionList = new List<Permission>();
@@ -268,7 +264,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Sets all granted permissions of a user at once.Prohibits all other permissions.
         /// 立即设置用户的所有授予权限。禁止所有其他权限。
         /// </summary>
         /// <param name="user">用户</param>
@@ -290,7 +285,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Prohibits all permissions for a user.
         /// 禁止用户的所有权限
         /// </summary>
         /// <param name="user">用户</param>
@@ -303,9 +297,7 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Resets all permission settings for a user.It removes all permission settings for the user.User will have permissions according to his roles.
         /// 为用户重置所有的权限设置，它移除用户的所有权限，用户将根据自己的角色拥有权限
-        /// This method does not prohibit all permissions.For that, use <see cref="ProhibitAllPermissionsAsync"/>.
         /// 此方法不禁止所有权限，那使用<see cref="ProhibitAllPermissionsAsync"/>.
         /// </summary>
         /// <param name="user">User</param>
@@ -315,7 +307,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Grants a permission for a user if not already granted.
         /// 如果尚未授予则授予用户指定的权限
         /// </summary>
         /// <param name="user">用户对象</param>
@@ -333,7 +324,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Prohibits a permission for a user if it's granted.
         /// 如果权限是授予的，则禁止这个权限
         /// </summary>
         /// <param name="user">用户对象</param>
@@ -369,7 +359,6 @@ namespace Abp.Authorization.Users
         }
 
         /// <summary>
-        /// Gets a user by given id.Throws exception if no user found with given id.
         /// 通过给定的ID获取一个用户，如果没有找打则抛出异常
         /// </summary>
         /// <param name="userId">用户ID</param>

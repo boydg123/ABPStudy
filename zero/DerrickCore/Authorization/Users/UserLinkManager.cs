@@ -7,15 +7,30 @@ using Abp.Domain.Uow;
 
 namespace Derrick.Authorization.Users
 {
+    /// <summary>
+    /// 用户链接管理实现
+    /// </summary>
     public class UserLinkManager : AbpZeroTemplateDomainServiceBase, IUserLinkManager
     {
+        /// <summary>
+        /// 用户帐号仓储
+        /// </summary>
         private readonly IRepository<UserAccount, long> _userAccountRepository;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="userAccountRepository">用户帐号仓储</param>
         public UserLinkManager(IRepository<UserAccount, long> userAccountRepository)
         {
             _userAccountRepository = userAccountRepository;
         }
 
+        /// <summary>
+        /// 连接
+        /// </summary>
+        /// <param name="firstUser">第一个用户</param>
+        /// <param name="secondUser">第二个用户</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task Link(User firstUser, User secondUser)
         {
@@ -37,6 +52,12 @@ namespace Derrick.Authorization.Users
             await CurrentUnitOfWork.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// 用户连接
+        /// </summary>
+        /// <param name="firstUserIdentifier">第一个用户标识</param>
+        /// <param name="secondUserIdentifier">第二个用户标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<bool> AreUsersLinked(UserIdentifier firstUserIdentifier, UserIdentifier secondUserIdentifier)
         {
@@ -51,6 +72,11 @@ namespace Derrick.Authorization.Users
             return firstUserAccount.UserLinkId == secondUserAccount.UserLinkId;
         }
 
+        /// <summary>
+        /// 断开链接
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task Unlink(UserIdentifier userIdentifier)
         {
@@ -60,6 +86,11 @@ namespace Derrick.Authorization.Users
             await CurrentUnitOfWork.SaveChangesAsync();
         }
 
+        /// <summary>
+        /// 获取用户帐号
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual async Task<UserAccount> GetUserAccountAsync(UserIdentifier userIdentifier)
         {

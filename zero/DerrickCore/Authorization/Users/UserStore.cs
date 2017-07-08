@@ -6,7 +6,7 @@ using Derrick.Authorization.Roles;
 namespace Derrick.Authorization.Users
 {
     /// <summary>
-    /// Used to perform database operations for <see cref="UserManager"/>.
+    /// 用于为<see cref="UserManager"/>执行数据库操作
     /// </summary>
     public class UserStore : AbpUserStore<Role, User>
     {

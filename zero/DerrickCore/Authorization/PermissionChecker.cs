@@ -6,7 +6,7 @@ using Derrick.MultiTenancy;
 namespace Derrick.Authorization
 {
     /// <summary>
-    /// Implements <see cref="PermissionChecker"/>.
+    /// <see cref="PermissionChecker"/>的实现
     /// </summary>
     public class PermissionChecker : PermissionChecker<Tenant, Role, User>
     {

@@ -6,24 +6,35 @@ using Abp.MultiTenancy;
 namespace Derrick.Authorization
 {
     /// <summary>
-    /// Application's authorization provider.
-    /// Defines permissions for the application.
-    /// See <see cref="AppPermissions"/> for all permission names.
+    /// 应用程序的授权提供者，定义应用程序的权限。从<see cref="AppPermissions"/>查看应用程序的所有权限名称。
     /// </summary>
     public class AppAuthorizationProvider : AuthorizationProvider
     {
+        /// <summary>
+        /// 是否启用多商户
+        /// </summary>
         private readonly bool _isMultiTenancyEnabled;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="isMultiTenancyEnabled">是否启用多商户</param>
         public AppAuthorizationProvider(bool isMultiTenancyEnabled)
         {
             _isMultiTenancyEnabled = isMultiTenancyEnabled;
         }
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="multiTenancyConfig">多商户配置引用</param>
         public AppAuthorizationProvider(IMultiTenancyConfig multiTenancyConfig)
         {
             _isMultiTenancyEnabled = multiTenancyConfig.IsEnabled;
         }
-
+        /// <summary>
+        /// 设置权限
+        /// </summary>
+        /// <param name="context">权限定义上下文</param>
         public override void SetPermissions(IPermissionDefinitionContext context)
         {
             //COMMON PERMISSIONS (FOR BOTH OF TENANTS AND HOST)
@@ -82,7 +93,11 @@ namespace Derrick.Authorization
 
             administration.CreateChildPermission(AppPermissions.Pages_Administration_HangfireDashboard, L("HangfireDashboard"), multiTenancySides: _isMultiTenancyEnabled ? MultiTenancySides.Host : MultiTenancySides.Tenant);
         }
-
+        /// <summary>
+        /// 获取本地化字符串
+        /// </summary>
+        /// <param name="name">字符串Name</param>
+        /// <returns></returns>
         private static ILocalizableString L(string name)
         {
             return new LocalizableString(name, AbpZeroTemplateConsts.LocalizationSourceName);

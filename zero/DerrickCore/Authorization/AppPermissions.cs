@@ -1,8 +1,7 @@
 ﻿namespace Derrick.Authorization
 {
     /// <summary>
-    /// Defines string constants for application's permission names.
-    /// <see cref="AppAuthorizationProvider"/> for permission definitions.
+    /// 以常量字符串为应用程序定义权限名称。<see cref="AppAuthorizationProvider"/>的权限定义
     /// </summary>
     public static class AppPermissions
     {
