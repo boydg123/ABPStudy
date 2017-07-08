@@ -9,7 +9,6 @@ using Microsoft.AspNet.Identity;
 namespace Abp.Authorization.Roles
 {
     /// <summary>
-    /// Implements 'Role Store' of ASP.NET Identity Framework.
     /// 使用ASP.NET Identity框架实现'角色存储'
     /// </summary>
     public abstract class AbpRoleStore<TRole, TUser> :
