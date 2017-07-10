@@ -5,6 +5,9 @@ using Derrick.Friendships;
 
 namespace Derrick.Chat
 {
+    /// <summary>
+    /// <see cref="IChatCommunicator"/> 的空引用
+    /// </summary>
     public class NullChatCommunicator : IChatCommunicator
     {
         public void SendMessageToClient(IReadOnlyList<IOnlineClient> clients, ChatMessage message)

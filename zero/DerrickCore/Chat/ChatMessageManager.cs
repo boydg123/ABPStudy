@@ -13,19 +13,60 @@ using Derrick.Friendships.Cache;
 
 namespace Derrick.Chat
 {
+    /// <summary>
+    /// 聊天消息管理器实现
+    /// </summary>
     [AbpAuthorize]
     public class ChatMessageManager : AbpZeroTemplateDomainServiceBase, IChatMessageManager
     {
+        /// <summary>
+        /// 友谊管理引用
+        /// </summary>
         private readonly IFriendshipManager _friendshipManager;
+        /// <summary>
+        /// 聊天沟通引用
+        /// </summary>
         private readonly IChatCommunicator _chatCommunicator;
+        /// <summary>
+        /// 在线客户管理引用
+        /// </summary>
         private readonly IOnlineClientManager _onlineClientManager;
+        /// <summary>
+        /// 用户管理引用
+        /// </summary>
         private readonly UserManager _userManager;
+        /// <summary>
+        /// 商户缓存引用
+        /// </summary>
         private readonly ITenantCache _tenantCache;
+        /// <summary>
+        /// 友谊缓存引用
+        /// </summary>
         private readonly IUserFriendsCache _userFriendsCache;
+        /// <summary>
+        /// 用户邮件发送引用
+        /// </summary>
         private readonly IUserEmailer _userEmailer;
+        /// <summary>
+        /// 聊天消息仓储
+        /// </summary>
         private readonly IRepository<ChatMessage, long> _chatMessageRepository;
+        /// <summary>
+        /// 聊天功能检查器引用
+        /// </summary>
         private readonly IChatFeatureChecker _chatFeatureChecker;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="friendshipManager">友谊管理引用</param>
+        /// <param name="chatCommunicator">聊天沟通引用</param>
+        /// <param name="onlineClientManager">在线客户管理引用</param>
+        /// <param name="userManager">用户管理引用</param>
+        /// <param name="tenantCache">商户缓存引用</param>
+        /// <param name="userFriendsCache">友谊缓存引用</param>
+        /// <param name="userEmailer">用户邮件发送引用</param>
+        /// <param name="chatMessageRepository">聊天消息仓储</param>
+        /// <param name="chatFeatureChecker">聊天功能检查器引用</param>
         public ChatMessageManager(
             IFriendshipManager friendshipManager,
             IChatCommunicator chatCommunicator,
@@ -48,6 +89,15 @@ namespace Derrick.Chat
             _chatFeatureChecker = chatFeatureChecker;
         }
 
+        /// <summary>
+        /// 发送消息
+        /// </summary>
+        /// <param name="sender">发送人标识</param>
+        /// <param name="receiver">接收人标识</param>
+        /// <param name="message">消息</param>
+        /// <param name="senderTenancyName">发送者商户名称</param>
+        /// <param name="senderUserName">发送者用户名</param>
+        /// <param name="senderProfilePictureId">发送人图片</param>
         public void SendMessage(UserIdentifier sender, UserIdentifier receiver, string message, string senderTenancyName, string senderUserName, Guid? senderProfilePictureId)
         {
             CheckReceiverExists(receiver);
@@ -65,6 +115,10 @@ namespace Derrick.Chat
             HandleSenderUserInfoChange(sender, receiver, senderTenancyName, senderUserName, senderProfilePictureId);
         }
 
+        /// <summary>
+        /// 检测接受人是否存在
+        /// </summary>
+        /// <param name="receiver"></param>
         private void CheckReceiverExists(UserIdentifier receiver)
         {
             var receiverUser = _userManager.GetUserOrNull(receiver);
@@ -74,6 +128,11 @@ namespace Derrick.Chat
             }
         }
 
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <param name="message">聊天消息</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual long Save(ChatMessage message)
         {
@@ -83,6 +142,12 @@ namespace Derrick.Chat
             }
         }
 
+        /// <summary>
+        /// 获取未读消息数量
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="sender">发送者标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual int GetUnreadMessageCount(UserIdentifier sender, UserIdentifier receiver)
         {
@@ -92,6 +157,12 @@ namespace Derrick.Chat
             }
         }
 
+        /// <summary>
+        /// 处理消息发送到接收
+        /// </summary>
+        /// <param name="senderIdentifier">发送者标识</param>
+        /// <param name="receiverIdentifier">接收者标识</param>
+        /// <param name="message">消息</param>
         private void HandleSenderToReceiver(UserIdentifier senderIdentifier, UserIdentifier receiverIdentifier, string message)
         {
             var friendshipState = _friendshipManager.GetFriendshipOrNull(senderIdentifier, receiverIdentifier)?.State;
@@ -137,6 +208,12 @@ namespace Derrick.Chat
                 );
         }
 
+        /// <summary>
+        /// 处理接收消息到发送者
+        /// </summary>
+        /// <param name="senderIdentifier">发送者标识</param>
+        /// <param name="receiverIdentifier">接收者标识</param>
+        /// <param name="message">消息</param>
         private void HandleReceiverToSender(UserIdentifier senderIdentifier, UserIdentifier receiverIdentifier, string message)
         {
             var friendshipState = _friendshipManager.GetFriendshipOrNull(receiverIdentifier, senderIdentifier)?.State;
@@ -194,7 +271,14 @@ namespace Derrick.Chat
                 );
             }
         }
-
+        /// <summary>
+        /// 处理发送用户信息修改
+        /// </summary>
+        /// <param name="sender">发送者标识</param>
+        /// <param name="receiver">接受者标识</param>
+        /// <param name="senderTenancyName">发送者商户名</param>
+        /// <param name="senderUserName">发送者用户名</param>
+        /// <param name="senderProfilePictureId">发送者图片ID</param>
         private void HandleSenderUserInfoChange(UserIdentifier sender, UserIdentifier receiver, string senderTenancyName, string senderUserName, Guid? senderProfilePictureId)
         {
             var receiverCacheItem = _userFriendsCache.GetCacheItemOrNull(receiver);
