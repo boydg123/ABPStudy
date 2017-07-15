@@ -11,17 +11,46 @@ using Derrick.Authorization.Users;
 
 namespace Derrick.Friendships.Cache
 {
+    /// <summary>
+    /// 用户好友缓存实现
+    /// </summary>
     public class UserFriendsCache : IUserFriendsCache, ISingletonDependency
     {
+        /// <summary>
+        /// 缓存管理引用
+        /// </summary>
         private readonly ICacheManager _cacheManager;
+        /// <summary>
+        /// 好友仓储
+        /// </summary>
         private readonly IRepository<Friendship, long> _friendshipRepository;
+        /// <summary>
+        /// 聊天消息仓储
+        /// </summary>
         private readonly IRepository<ChatMessage, long> _chatMessageRepository;
+        /// <summary>
+        /// 商户缓存引用
+        /// </summary>
         private readonly ITenantCache _tenantCache;
+        /// <summary>
+        /// 用户管理引用
+        /// </summary>
         private readonly UserManager _userManager;
+        /// <summary>
+        /// 工作单元引用
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         private readonly object _syncObj = new object();
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="cacheManager">缓存管理引用</param>
+        /// <param name="friendshipRepository">好友仓储</param>
+        /// <param name="chatMessageRepository">聊天消息仓储</param>
+        /// <param name="tenantCache">商户缓存引用</param>
+        /// <param name="userManager">用户管理引用</param>
+        /// <param name="unitOfWorkManager">工作单元引用</param>
         public UserFriendsCache(
             ICacheManager cacheManager,
             IRepository<Friendship, long> friendshipRepository,
@@ -38,6 +67,11 @@ namespace Derrick.Friendships.Cache
             _unitOfWorkManager = unitOfWorkManager;
         }
 
+        /// <summary>
+        /// 获取缓存项
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         public virtual UserWithFriendsCacheItem GetCacheItem(UserIdentifier userIdentifier)
         {
@@ -45,14 +79,22 @@ namespace Derrick.Friendships.Cache
                 .GetCache(FriendCacheItem.CacheName)
                 .Get<string, UserWithFriendsCacheItem>(userIdentifier.ToUserIdentifierString(), f => GetUserFriendsCacheItemInternal(userIdentifier));
         }
-
+        /// <summary>
+        /// 获取缓存项或Null
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         public virtual UserWithFriendsCacheItem GetCacheItemOrNull(UserIdentifier userIdentifier)
         {
             return _cacheManager
                 .GetCache(FriendCacheItem.CacheName)
                 .GetOrDefault<string, UserWithFriendsCacheItem>(userIdentifier.ToUserIdentifierString());
         }
-
+        /// <summary>
+        /// 重置未读消息数量
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="friendIdentifier">用户好友标识</param>
         [UnitOfWork]
         public virtual void ResetUnreadMessageCount(UserIdentifier userIdentifier, UserIdentifier friendIdentifier)
         {
@@ -78,7 +120,12 @@ namespace Derrick.Friendships.Cache
             }
         }
 
-
+        /// <summary>
+        /// 增加未读消息数量
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="friendIdentifier">用户好友标识</param>
+        /// <param name="change">修改的数量</param>
         [UnitOfWork]
         public virtual void IncreaseUnreadMessageCount(UserIdentifier userIdentifier, UserIdentifier friendIdentifier, int change)
         {
@@ -103,7 +150,11 @@ namespace Derrick.Friendships.Cache
                 friend.UnreadMessageCount += change;
             }
         }
-
+        /// <summary>
+        /// 添加好友
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="friend">好友缓存项</param>
         public void AddFriend(UserIdentifier userIdentifier, FriendCacheItem friend)
         {
             var user = GetCacheItemOrNull(userIdentifier);
@@ -120,7 +171,11 @@ namespace Derrick.Friendships.Cache
                 }
             }
         }
-
+        /// <summary>
+        /// 移除好友
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="friend">好友缓存项</param>
         public void RemoveFriend(UserIdentifier userIdentifier, FriendCacheItem friend)
         {
             var user = GetCacheItemOrNull(userIdentifier);
@@ -137,7 +192,11 @@ namespace Derrick.Friendships.Cache
                 }
             }
         }
-
+        /// <summary>
+        /// 更新好友
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <param name="friend">好友缓存项</param>
         public void UpdateFriend(UserIdentifier userIdentifier, FriendCacheItem friend)
         {
             var user = GetCacheItemOrNull(userIdentifier);
@@ -159,7 +218,11 @@ namespace Derrick.Friendships.Cache
                 }
             }
         }
-
+        /// <summary>
+        /// 内部获取用户好友缓存项
+        /// </summary>
+        /// <param name="userIdentifier">用户标识</param>
+        /// <returns></returns>
         [UnitOfWork]
         protected virtual UserWithFriendsCacheItem GetUserFriendsCacheItemInternal(UserIdentifier userIdentifier)
         {
