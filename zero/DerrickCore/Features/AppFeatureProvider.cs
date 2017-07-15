@@ -5,11 +5,18 @@ using Abp.UI.Inputs;
 
 namespace Derrick.Features
 {
-    /* This feature provider is just for an example.
-     * You can freely delete all features and add your own.
+    /* This feature provider is just for an example.You can freely delete all features and add your own.
+     * 
      */
+    /// <summary>
+    /// APP功能提供者。这只是个例子，可以删除所有添加自己的功能
+    /// </summary>
     public class AppFeatureProvider : FeatureProvider
     {
+        /// <summary>
+        /// 设置功能
+        /// </summary>
+        /// <param name="context">功能定义上下文</param>
         public override void SetFeatures(IFeatureDefinitionContext context)
         {
             var chatFeature = context.Create(

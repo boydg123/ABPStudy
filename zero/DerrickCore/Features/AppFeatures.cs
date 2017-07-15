@@ -1,5 +1,8 @@
 ﻿namespace Derrick.Features
 {
+    /// <summary>
+    /// APP 功能
+    /// </summary>
     public static class AppFeatures
     {
         public const string ChatFeature = "App.ChatFeature";
