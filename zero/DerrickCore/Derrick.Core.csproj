@@ -170,14 +170,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Emailing\EmailTemplates\default.html" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-ar.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-de.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-it.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-pt-BR.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-ru.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-tr.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate-zh-CN.xml" />
-    <Content Include="Localization\AbpZeroTemplate\AbpZeroTemplate.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-ar.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-de.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-it.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-pt-BR.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-ru.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-tr.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\AbpZeroTemplate\AbpZeroTemplate.xml" />
     <Content Include="Localization\AbpZeroTemplate\READ_ME.txt" />
   </ItemGroup>
   <ItemGroup>

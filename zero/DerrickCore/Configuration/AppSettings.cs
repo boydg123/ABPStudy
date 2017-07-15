@@ -1,16 +1,21 @@
 namespace Derrick.Configuration
 {
     /// <summary>
-    /// Defines string constants for setting names in the application.
-    /// See <see cref="AppSettingProvider"/> for setting definitions.
+    /// 定义应用程序内的设置名称常量。通过<see cref="AppSettingProvider"/>查看设置定义
     /// </summary>
     public static class AppSettings
     {
+        /// <summary>
+        /// 常规设置
+        /// </summary>
         public static class General
         {
             public const string WebSiteRootAddress = "App.General.WebSiteRootAddress";
         }
 
+        /// <summary>
+        /// 商户设置
+        /// </summary>
         public static class TenantManagement
         {
             public const string AllowSelfRegistration = "App.TenantManagement.AllowSelfRegistration";
@@ -19,6 +24,9 @@ namespace Derrick.Configuration
             public const string DefaultEdition = "App.TenantManagement.DefaultEdition";
         }
 
+        /// <summary>
+        /// 用户设置
+        /// </summary>
         public static class UserManagement
         {
             public const string AllowSelfRegistration = "App.UserManagement.AllowSelfRegistration";
@@ -26,6 +34,9 @@ namespace Derrick.Configuration
             public const string UseCaptchaOnRegistration = "App.UserManagement.UseCaptchaOnRegistration";
         }
 
+        /// <summary>
+        /// 安全设置
+        /// </summary>
         public static class Security
         {
             public const string PasswordComplexity = "App.Security.PasswordComplexity";

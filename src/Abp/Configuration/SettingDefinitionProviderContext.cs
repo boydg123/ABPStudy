@@ -1,7 +1,6 @@
 ﻿namespace Abp.Configuration
 {
     /// <summary>
-    /// The context that is used in setting providers.
     /// 设置提供者上下文
     /// </summary>
     public class SettingDefinitionProviderContext
