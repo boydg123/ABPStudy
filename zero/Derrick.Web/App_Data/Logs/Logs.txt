@@ -4778,3 +4778,1204 @@ DEBUG 2017-07-07 14:48:46,624 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2017-07-07 14:48:46,625 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
 DEBUG 2017-07-07 14:48:46,626 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
 DEBUG 2017-07-07 14:48:46,628 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-15 11:59:35,457 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 11:59:35,482 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 11:59:35,490 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,493 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,493 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,493 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,493 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,494 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,494 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,494 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,494 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,496 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:35,500 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 11:59:35,998 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 11:59:35,998 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 11:59:35,998 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 11:59:35,998 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 11:59:36,848 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 11:59:40,866 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 11:59:40,879 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 11:59:40,879 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 11:59:40,880 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 11:59:40,880 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 11:59:41,036 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 11:59:43,237 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 11:59:43,532 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 11:59:43,532 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 11:59:43,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 11:59:43,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 11:59:43,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 11:59:43,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 11:59:43,548 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 11:59:43,549 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 11:59:43,550 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 11:59:44,438 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 11:59:44,478 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 11:59:44,520 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 11:59:44,522 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 11:59:44,523 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 11:59:44,525 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 11:59:44,527 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 11:59:44,528 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 11:59:44,529 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 11:59:44,531 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 11:59:44,532 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 11:59:44,533 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 11:59:44,534 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 11:59:44,535 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 11:59:44,536 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 11:59:44,538 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 11:59:44,539 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 11:59:44,541 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 11:59:44,543 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 11:59:44,545 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 11:59:44,546 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 11:59:44,548 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 11:59:44,549 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 11:59:44,550 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+WARN  2017-07-15 12:37:28,297 [6    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 73
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 146
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 103
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Threading.AsyncHelper.RunSync(Func`1 action) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Threading\AsyncHelper.cs:行号 46
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 51
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 73
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 146
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelper.cs:行号 103
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass3.<Run>b__1(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Threading.AsyncHelper.RunSync(Func`1 action) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Threading\AsyncHelper.cs:行号 46
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 51
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
+ERROR 2017-07-15 12:37:31,242 [5    ] errick.Web.Controllers.AccountController - Could not load file or assembly 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+System.IO.FileLoadException: Could not load file or assembly 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.DefaultTypeFactory(String typeName)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateFactory(String typeName)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfigCore(RazorWebSectionGroup config, String virtualPath, String physicalPath)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(String virtualPath, String physicalPath)
+   at System.Web.WebPages.Razor.RazorBuildProvider.GetHostFromConfig()
+   at System.Web.WebPages.Razor.RazorBuildProvider.CreateHost()
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+=== Pre-bind state information ===
+LOG: DisplayName = System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+LOG: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+LOG: Initial PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+Calling assembly : (Unknown).
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+LOG: Using host configuration file: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+LOG: Attempting download of new URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Web.Mvc.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Web.Mvc/System.Web.Mvc.DLL.
+LOG: Attempting download of new URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/System.Web.Mvc.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Minor Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+WARN  2017-07-15 12:37:31,460 [5    ] Abp.Logging.LogHelper                    - Can not find 'InternalServerError' in localization source 'AbpWeb'!
+DEBUG 2017-07-15 12:44:33,017 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 12:44:34,858 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 12:44:34,868 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:34,881 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 12:44:35,955 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:44:35,956 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:44:35,956 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:44:35,956 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:44:37,123 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:44:38,553 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 12:44:38,566 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 12:44:38,566 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 12:44:38,567 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 12:44:38,567 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 12:44:38,698 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 12:44:40,746 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:44:41,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 12:44:41,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 12:44:41,027 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 12:44:41,028 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 12:44:41,029 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 12:44:41,030 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 12:44:41,674 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:44:41,716 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:44:41,737 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 12:44:41,740 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 12:44:41,742 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 12:44:41,744 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 12:44:41,746 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 12:44:41,748 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 12:44:41,749 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 12:44:41,750 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 12:44:41,752 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 12:44:41,753 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 12:44:41,754 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 12:44:41,755 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 12:44:41,758 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 12:44:41,759 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 12:44:41,761 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 12:44:41,762 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 12:44:41,763 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 12:44:41,766 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 12:44:41,767 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 12:44:41,768 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 12:44:41,770 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 12:44:41,771 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-15 12:55:22,728 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 12:55:22,747 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 12:55:22,756 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:22,770 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 12:55:22,948 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:55:22,948 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:55:22,948 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:55:22,948 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:55:23,498 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:55:45,680 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 12:55:45,691 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 12:55:45,692 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 12:55:45,692 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 12:55:45,692 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 12:55:45,988 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 12:55:48,037 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:55:48,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 12:55:48,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 12:55:48,362 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 12:55:48,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 12:55:48,364 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 12:55:48,365 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 12:55:48,366 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 12:55:48,366 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 12:55:48,366 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 12:55:48,366 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 12:55:49,050 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:55:49,084 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:55:49,110 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 12:55:49,113 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 12:55:49,116 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 12:55:49,119 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 12:55:49,122 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 12:55:49,127 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 12:55:49,130 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 12:55:49,132 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 12:55:49,133 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 12:55:49,135 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 12:55:49,136 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 12:55:49,137 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 12:55:49,139 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 12:55:49,142 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 12:55:49,143 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 12:55:49,145 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 12:55:49,146 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 12:55:49,147 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 12:55:49,149 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 12:55:49,150 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 12:55:49,151 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 12:55:49,153 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+ERROR 2017-07-15 12:55:53,904 [5    ] Derrick.Web.Controllers.HomeController   - Could not load file or assembly 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+System.IO.FileLoadException: Could not load file or assembly 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+File name: 'System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   at System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   at System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   at System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.Compilation.BuildManager.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.DefaultTypeFactory(String typeName)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateFactory(String typeName)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfigCore(RazorWebSectionGroup config, String virtualPath, String physicalPath)
+   at System.Web.WebPages.Razor.WebRazorHostFactory.CreateHostFromConfig(String virtualPath, String physicalPath)
+   at System.Web.WebPages.Razor.RazorBuildProvider.GetHostFromConfig()
+   at System.Web.WebPages.Razor.RazorBuildProvider.CreateHost()
+   at System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()
+   at System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+
+=== Pre-bind state information ===
+LOG: DisplayName = System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+LOG: Appbase = file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/
+LOG: Initial PrivatePath = D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\bin
+Calling assembly : (Unknown).
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\zero\Derrick.Web\web.config
+LOG: Using host configuration file: C:\Users\Dou\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Post-policy reference: System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+LOG: Attempting download of new URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Web.Mvc.DLL.
+LOG: Attempting download of new URL file:///C:/Users/Dou/AppData/Local/Temp/Temporary ASP.NET Files/root/dd8b6fd3/a6120a72/System.Web.Mvc/System.Web.Mvc.DLL.
+LOG: Attempting download of new URL file:///D:/学习资料/自己学习代码/学习开源/ABP/ABPStudy/Derrick/zero/Derrick.Web/bin/System.Web.Mvc.DLL.
+WRN: Comparing the assembly name resulted in the mismatch: Minor Version
+ERR: Failed to complete setup of assembly (hr = 0x80131040). Probing terminated.
+
+WARN  2017-07-15 12:55:54,294 [5    ] Abp.Logging.LogHelper                    - Can not find 'InternalServerError' in localization source 'AbpWeb'!
+DEBUG 2017-07-15 12:58:12,048 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 12:58:12,067 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 12:58:12,072 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,076 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:12,083 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 12:58:12,282 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:58:12,282 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:58:12,282 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:58:12,282 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 12:58:12,903 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 12:58:20,410 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 12:58:20,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 12:58:20,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 12:58:20,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 12:58:20,434 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 12:58:20,603 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 12:58:22,622 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:58:22,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 12:58:22,892 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 12:58:22,898 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 12:58:22,899 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 12:58:22,900 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 12:58:22,901 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 12:58:22,902 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 12:58:22,902 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 12:58:22,902 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 12:58:22,902 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 12:58:22,902 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 12:58:23,619 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:58:23,658 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 12:58:23,690 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 12:58:23,692 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 12:58:23,695 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 12:58:23,697 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 12:58:23,702 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 12:58:23,706 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 12:58:23,709 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 12:58:23,718 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 12:58:23,721 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 12:58:23,724 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 12:58:23,725 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 12:58:23,727 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 12:58:23,730 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 12:58:23,732 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 12:58:23,734 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 12:58:23,736 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 12:58:23,738 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 12:58:23,740 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 12:58:23,742 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 12:58:23,744 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 12:58:23,746 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 12:58:23,748 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+WARN  2017-07-15 12:58:35,336 [5    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:35,339 [5    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:35,359 [5    ] Abp.Logging.LogHelper                    - Can not find 'NewTenant' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:35,359 [5    ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:37,229 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:37,238 [6    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:37,239 [6    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:37,242 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,600 [6    ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,601 [6    ] Abp.Logging.LogHelper                    - Can not find 'PleaseEnterLoginInformation' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,630 [6    ] Abp.Logging.LogHelper                    - Can not find 'TenancyName' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,631 [6    ] Abp.Logging.LogHelper                    - Can not find 'TenancyName' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,632 [6    ] Abp.Logging.LogHelper                    - Can not find 'UserNameOrEmail' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,633 [6    ] Abp.Logging.LogHelper                    - Can not find 'UserNameOrEmail' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,633 [6    ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,634 [6    ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,635 [6    ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,636 [6    ] Abp.Logging.LogHelper                    - Can not find 'RememberMe' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,637 [6    ] Abp.Logging.LogHelper                    - Can not find 'ForgotPassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,644 [6    ] Abp.Logging.LogHelper                    - Can not find 'CreateAnAccount' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:43,645 [6    ] Abp.Logging.LogHelper                    - Can not find 'EmailActivation' in localization source 'AbpZeroTemplate'!
+ERROR 2017-07-15 12:58:43,722 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Content/font-awesome.min.css! Abp.AbpException: There is no exposed embedded resource for: Content/font-awesome.min.css
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:43,837 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/abp.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/abp.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:43,905 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/libs/abp.jquery.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/libs/abp.jquery.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:43,953 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/libs/abp.blockUI.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/libs/abp.blockUI.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:44,006 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/libs/abp.spin.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/libs/abp.spin.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:44,038 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/libs/abp.toastr.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/libs/abp.toastr.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+ERROR 2017-07-15 12:58:44,081 [6    ] Abp.Logging.LogHelper                    - Can not find file for: ~/Abp/Framework/scripts/libs/abp.sweet-alert.js! Abp.AbpException: There is no exposed embedded resource for: Abp/Framework/scripts/libs/abp.sweet-alert.js
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+WARN  2017-07-15 12:58:44,756 [8    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:44,760 [8    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:44,761 [8    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 12:58:44,765 [8    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:36,931 [11   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:36,932 [11   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:36,935 [11   ] Abp.Logging.LogHelper                    - Can not find 'NewTenant' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:36,936 [11   ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:37,107 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:37,111 [6    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:37,112 [6    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:01:37,114 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:05:47,374 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 13:05:47,393 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 13:05:47,401 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,403 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,403 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,403 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,404 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,405 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,406 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,406 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,406 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,406 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,407 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,407 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:47,411 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 13:05:47,639 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:05:47,639 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:05:47,639 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:05:47,639 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:05:48,126 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:05:50,183 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 13:05:50,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 13:05:50,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 13:05:50,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 13:05:50,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 13:05:50,276 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:05:51,477 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:05:51,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 13:05:51,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 13:05:51,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 13:05:51,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 13:05:51,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 13:05:51,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 13:05:51,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 13:05:51,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 13:05:51,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 13:05:51,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 13:05:52,270 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:05:52,292 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:05:52,312 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 13:05:52,313 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 13:05:52,315 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 13:05:52,316 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 13:05:52,318 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 13:05:52,319 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 13:05:52,320 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 13:05:52,321 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 13:05:52,323 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 13:05:52,324 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 13:05:52,326 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 13:05:52,327 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 13:05:52,328 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 13:05:52,330 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 13:05:52,331 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 13:05:52,333 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 13:05:52,335 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 13:05:52,337 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 13:05:52,340 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 13:05:52,342 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 13:05:52,344 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 13:05:52,345 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+WARN  2017-07-15 13:05:58,616 [5    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:58,618 [5    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:58,638 [5    ] Abp.Logging.LogHelper                    - Can not find 'NewTenant' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:58,639 [5    ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:59,612 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:59,614 [6    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:59,614 [6    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:05:59,615 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:24:50,270 [16   ] rity.AntiForgery.AbpAntiForgeryApiFilter - Empty or invalid anti forgery header token.
+WARN  2017-07-15 13:24:50,270 [16   ] rity.AntiForgery.AbpAntiForgeryApiFilter - Requested URI: http://localhost:60289/api/Account
+WARN  2017-07-15 13:28:02,190 [21   ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,191 [21   ] Abp.Logging.LogHelper                    - Can not find 'PleaseEnterLoginInformation' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,214 [21   ] Abp.Logging.LogHelper                    - Can not find 'TenancyName' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,215 [21   ] Abp.Logging.LogHelper                    - Can not find 'TenancyName' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,215 [21   ] Abp.Logging.LogHelper                    - Can not find 'UserNameOrEmail' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,216 [21   ] Abp.Logging.LogHelper                    - Can not find 'UserNameOrEmail' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,216 [21   ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,216 [21   ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,217 [21   ] Abp.Logging.LogHelper                    - Can not find 'LogIn' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,217 [21   ] Abp.Logging.LogHelper                    - Can not find 'RememberMe' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,218 [21   ] Abp.Logging.LogHelper                    - Can not find 'ForgotPassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,220 [21   ] Abp.Logging.LogHelper                    - Can not find 'CreateAnAccount' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,221 [21   ] Abp.Logging.LogHelper                    - Can not find 'EmailActivation' in localization source 'AbpZeroTemplate'!
+ERROR 2017-07-15 13:28:02,244 [21   ] Abp.Logging.LogHelper                    - Can not find file for: ~/Content/font-awesome.min.css! Abp.AbpException: There is no exposed embedded resource for: Content/font-awesome.min.css
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+WARN  2017-07-15 13:28:02,479 [16   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,483 [16   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,484 [16   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:02,488 [16   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,618 [14   ] Abp.Logging.LogHelper                    - Can not find 'ChangePassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,619 [14   ] Abp.Logging.LogHelper                    - Can not find 'PleaseEnterYourNewPassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,620 [14   ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,621 [14   ] Abp.Logging.LogHelper                    - Can not find 'Password' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,623 [14   ] Abp.Logging.LogHelper                    - Can not find 'PasswordRepeat' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,624 [14   ] Abp.Logging.LogHelper                    - Can not find 'PasswordRepeat' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,624 [14   ] Abp.Logging.LogHelper                    - Can not find 'Submit' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,800 [26   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,802 [26   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,803 [26   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:11,804 [26   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,468 [15   ] Abp.Logging.LogHelper                    - Can not find 'Tenants' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,469 [15   ] Abp.Logging.LogHelper                    - Can not find 'Editions' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,470 [15   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,475 [15   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,476 [15   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,477 [15   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,479 [15   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,480 [15   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,482 [15   ] Abp.Logging.LogHelper                    - Can not find 'Maintenance' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,484 [15   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,508 [15   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,509 [15   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,516 [15   ] Abp.Logging.LogHelper                    - Can not find 'Tenants' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,518 [15   ] Abp.Logging.LogHelper                    - Can not find 'Editions' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,519 [15   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,521 [15   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,521 [15   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,523 [15   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,523 [15   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,525 [15   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,526 [15   ] Abp.Logging.LogHelper                    - Can not find 'Maintenance' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:28:29,527 [15   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:28:30,021 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"85083585-519b-4fc4-a3b1-430c43f6b478","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-07-15T05:28:30.0106634Z","Properties":{}}
+DEBUG 2017-07-15 13:28:30,151 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 85083585-519b-4fc4-a3b1-430c43f6b478
+WARN  2017-07-15 13:29:00,155 [12   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:00,155 [12   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:00,156 [12   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:00,340 [14   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:00,341 [14   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:00,341 [14   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:29:10,337 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 85083585-519b-4fc4-a3b1-430c43f6b478
+WARN  2017-07-15 13:29:10,510 [14   ] Abp.Logging.LogHelper                    - Can not find 'Tenants' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,511 [14   ] Abp.Logging.LogHelper                    - Can not find 'Editions' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,512 [14   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,514 [14   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,515 [14   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,516 [14   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,533 [14   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,535 [14   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,536 [14   ] Abp.Logging.LogHelper                    - Can not find 'Maintenance' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,538 [14   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,542 [14   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,542 [14   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,544 [14   ] Abp.Logging.LogHelper                    - Can not find 'Tenants' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,545 [14   ] Abp.Logging.LogHelper                    - Can not find 'Editions' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,546 [14   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,552 [14   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,553 [14   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,554 [14   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,571 [14   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,576 [14   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,577 [14   ] Abp.Logging.LogHelper                    - Can not find 'Maintenance' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:10,578 [14   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:11,191 [6    ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:11,191 [6    ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:11,192 [6    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:29:11,611 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f2f5f9bc-7867-44d7-89ab-e59db512e9e5","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-07-15T05:29:11.6104797Z","Properties":{}}
+DEBUG 2017-07-15 13:29:11,637 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f2f5f9bc-7867-44d7-89ab-e59db512e9e5
+WARN  2017-07-15 13:29:11,711 [15   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:11,712 [15   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:29:11,713 [15   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:29:52,781 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f2f5f9bc-7867-44d7-89ab-e59db512e9e5
+DEBUG 2017-07-15 13:30:31,363 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"988db87c-a19f-46ee-8290-0c311ff7e414","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:30:31.3625868Z","Properties":{}}
+DEBUG 2017-07-15 13:30:31,647 [25   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 988db87c-a19f-46ee-8290-0c311ff7e414
+DEBUG 2017-07-15 13:30:34,226 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 988db87c-a19f-46ee-8290-0c311ff7e414
+DEBUG 2017-07-15 13:30:36,880 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"43bfe360-16ec-4ce2-8e91-329fb8cf57ea","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:30:36.8799038Z","Properties":{}}
+DEBUG 2017-07-15 13:30:36,908 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 43bfe360-16ec-4ce2-8e91-329fb8cf57ea
+WARN  2017-07-15 13:30:45,182 [6    ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,182 [6    ] Abp.Logging.LogHelper                    - Can not find 'DashboardHeaderInfo' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,183 [6    ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Title' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,183 [6    ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Info' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,184 [6    ] Abp.Logging.LogHelper                    - Can not find 'LookingForSpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,185 [6    ] Abp.Logging.LogHelper                    - Can not find 'DashboardNoteForSpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:45,185 [6    ] Abp.Logging.LogHelper                    - Can not find 'SeeDemo' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,870 [6    ] Abp.Logging.LogHelper                    - Can not find 'LinkedAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,871 [6    ] Abp.Logging.LogHelper                    - Can not find 'ChangePassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,871 [6    ] Abp.Logging.LogHelper                    - Can not find 'LoginAttempts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,871 [6    ] Abp.Logging.LogHelper                    - Can not find 'ChangeProfilePicture' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,872 [6    ] Abp.Logging.LogHelper                    - Can not find 'MySettings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,873 [6    ] Abp.Logging.LogHelper                    - Can not find 'Logout' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,873 [6    ] Abp.Logging.LogHelper                    - Can not find 'ManageAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,874 [6    ] Abp.Logging.LogHelper                    - Can not find 'SetAllAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,874 [6    ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,874 [6    ] Abp.Logging.LogHelper                    - Can not find 'SetAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,875 [6    ] Abp.Logging.LogHelper                    - Can not find 'ThereIsNoNotification' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,875 [6    ] Abp.Logging.LogHelper                    - Can not find 'SeeAllNotifications' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,901 [6    ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,902 [6    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,903 [6    ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,904 [6    ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,904 [6    ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,905 [6    ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,907 [6    ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,910 [6    ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,947 [6    ] Abp.Logging.LogHelper                    - Can not find 'ChatUserSearch_Hint' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,947 [6    ] Abp.Logging.LogHelper                    - Can not find 'FilterOrAddUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,948 [6    ] Abp.Logging.LogHelper                    - Can not find 'AddFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,948 [6    ] Abp.Logging.LogHelper                    - Can not find 'Friends' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,949 [6    ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,950 [6    ] Abp.Logging.LogHelper                    - Can not find 'BlockedUsers' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,950 [6    ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyBlockedFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,950 [6    ] Abp.Logging.LogHelper                    - Can not find 'Back' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,951 [6    ] Abp.Logging.LogHelper                    - Can not find 'BlockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,951 [6    ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,952 [6    ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:46,952 [6    ] Abp.Logging.LogHelper                    - Can not find 'TypeAMessageHere' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:30:48,203 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 43bfe360-16ec-4ce2-8e91-329fb8cf57ea
+WARN  2017-07-15 13:30:48,613 [28   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,614 [28   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,616 [28   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,617 [28   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,618 [28   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,619 [28   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,620 [28   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,621 [28   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,623 [28   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,624 [28   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,627 [28   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,628 [28   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,630 [28   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,631 [28   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,632 [28   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,634 [28   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,635 [28   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:48,637 [28   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:50,407 [20   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:50,407 [20   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:50,408 [20   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:30:50,666 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e1d30a94-2c32-461e-a16f-60160b416834","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:30:50.665335Z","Properties":{}}
+DEBUG 2017-07-15 13:30:50,688 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e1d30a94-2c32-461e-a16f-60160b416834
+WARN  2017-07-15 13:30:51,011 [15   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:51,012 [15   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:30:51,012 [15   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:32:09,333 [20   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-07-15 13:32:09,335 [20   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:32:09,335 [20   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:32:09,335 [20   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-07-15 13:32:12,986 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 13:32:14,424 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 13:32:14,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,437 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,440 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,440 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,440 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,441 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:14,444 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 13:32:15,346 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:32:15,346 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:32:15,346 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:32:15,347 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:32:16,505 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:18,086 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 13:32:18,097 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 13:32:18,097 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 13:32:18,097 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 13:32:18,097 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 13:32:18,211 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:32:20,008 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:32:20,333 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 13:32:20,333 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 13:32:20,343 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 13:32:20,343 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 13:32:20,343 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 13:32:20,344 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 13:32:20,344 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 13:32:20,344 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 13:32:20,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 13:32:20,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 13:32:20,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 13:32:20,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 13:32:20,345 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 13:32:20,346 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 13:32:20,347 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 13:32:20,348 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 13:32:20,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 13:32:21,060 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:32:21,093 [1    ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:32:21,118 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 13:32:21,121 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 13:32:21,123 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 13:32:21,125 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 13:32:21,127 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 13:32:21,129 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 13:32:21,131 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 13:32:21,133 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 13:32:21,135 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 13:32:21,137 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 13:32:21,140 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 13:32:21,142 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 13:32:21,145 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 13:32:21,147 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 13:32:21,149 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 13:32:21,152 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 13:32:21,155 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 13:32:21,157 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 13:32:21,159 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 13:32:21,161 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 13:32:21,163 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 13:32:21,165 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-15 13:32:29,456 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"e1d30a94-2c32-461e-a16f-60160b416834","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:32:26.4065681Z","Properties":{}}
+DEBUG 2017-07-15 13:32:54,972 [12   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-07-15 13:32:54,974 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:32:54,975 [12   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:32:54,975 [12   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-07-15 13:32:58,601 [34   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-15 13:32:59,652 [34   ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2017-07-15 13:32:59,659 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.Web.AbpZeroTemplateWebModule, Derrick.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,660 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,660 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,660 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,660 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,661 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,661 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,661 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateDataModule, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,661 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,662 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,662 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateCoreModule, DerrickCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,662 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,663 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,663 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.AbpZeroTemplateApplicationModule, Derrick.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,663 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Derrick.WebApi.AbpZeroTemplateWebApiModule, Derrick.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,664 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,664 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,664 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,665 [34   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:32:59,671 [34   ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2017-07-15 13:33:00,581 [34   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:33:00,581 [34   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:33:00,581 [34   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:33:00,581 [34   ] o.Configuration.LanguageManagementConfig - Converted AbpZeroTemplate (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-15 13:33:01,584 [34   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Derrick.EntityFramework.AbpZeroTemplateDbContext, Derrick.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-15 13:33:03,073 [34   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-15 13:33:03,079 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-15 13:33:03,080 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-15 13:33:03,080 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-15 13:33:03,080 [34   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZeroTemplate
+DEBUG 2017-07-15 13:33:03,173 [34   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-15 13:33:04,551 [34   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:33:04,869 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 35 classes define auto mapping attributes
+DEBUG 2017-07-15 13:33:04,869 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-15 13:33:04,879 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-07-15 13:33:04,879 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-07-15 13:33:04,880 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitDto
+DEBUG 2017-07-15 13:33:04,880 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Organizations.Dto.OrganizationUnitUserListDto
+DEBUG 2017-07-15 13:33:04,880 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-15 13:33:04,880 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantEditDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.MultiTenancy.Dto.TenantListDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageEditDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Localization.Dto.ApplicationLanguageListDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Friendships.Dto.FriendDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionEditDto
+DEBUG 2017-07-15 13:33:04,881 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.EditionListDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Editions.Dto.FlatFeatureDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatMessageDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2017-07-15 13:33:04,882 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserLoginAttemptDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleEditDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Roles.Dto.RoleListDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2017-07-15 13:33:04,883 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Auditing.Dto.AuditLogListDto
+DEBUG 2017-07-15 13:33:04,885 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Authorization.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2017-07-15 13:33:04,885 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-15 13:33:04,885 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-15 13:33:04,885 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-15 13:33:04,885 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-15 13:33:04,886 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-15 13:33:04,886 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-15 13:33:04,886 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-15 13:33:04,886 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-15 13:33:04,886 [34   ] Abp.AutoMapper.AbpAutoMapperModule       - Derrick.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-15 13:33:05,513 [34   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:33:05,537 [34   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-15 13:33:05,555 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-15 13:33:05,557 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-15 13:33:05,559 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-15 13:33:05,561 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-15 13:33:05,564 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-15 13:33:05,566 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-15 13:33:05,568 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-15 13:33:05,571 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-15 13:33:05,573 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-15 13:33:05,575 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-15 13:33:05,576 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-15 13:33:05,578 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-15 13:33:05,579 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-15 13:33:05,580 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-15 13:33:05,582 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-15 13:33:05,584 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-15 13:33:05,587 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-15 13:33:05,589 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-15 13:33:05,591 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-15 13:33:05,594 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-15 13:33:05,596 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-15 13:33:05,598 [34   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Derrick.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-15 13:33:09,873 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"e1d30a94-2c32-461e-a16f-60160b416834","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:33:08.9480193Z","Properties":{}}
+WARN  2017-07-15 13:33:52,184 [15   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,185 [15   ] Abp.Logging.LogHelper                    - Can not find 'DashboardHeaderInfo' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,186 [15   ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Title' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,187 [15   ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Info' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,187 [15   ] Abp.Logging.LogHelper                    - Can not find 'LookingForSpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,198 [15   ] Abp.Logging.LogHelper                    - Can not find 'DashboardNoteForSpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:52,199 [15   ] Abp.Logging.LogHelper                    - Can not find 'SeeDemo' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,033 [15   ] Abp.Logging.LogHelper                    - Can not find 'LinkedAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,034 [15   ] Abp.Logging.LogHelper                    - Can not find 'ChangePassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,034 [15   ] Abp.Logging.LogHelper                    - Can not find 'LoginAttempts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,034 [15   ] Abp.Logging.LogHelper                    - Can not find 'ChangeProfilePicture' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,035 [15   ] Abp.Logging.LogHelper                    - Can not find 'MySettings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,035 [15   ] Abp.Logging.LogHelper                    - Can not find 'Logout' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,036 [15   ] Abp.Logging.LogHelper                    - Can not find 'ManageAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,036 [15   ] Abp.Logging.LogHelper                    - Can not find 'SetAllAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,037 [15   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,037 [15   ] Abp.Logging.LogHelper                    - Can not find 'SetAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,038 [15   ] Abp.Logging.LogHelper                    - Can not find 'ThereIsNoNotification' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,038 [15   ] Abp.Logging.LogHelper                    - Can not find 'SeeAllNotifications' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,119 [15   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,120 [15   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,122 [15   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,123 [15   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,124 [15   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,125 [15   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,127 [15   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,129 [15   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,176 [15   ] Abp.Logging.LogHelper                    - Can not find 'ChatUserSearch_Hint' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,177 [15   ] Abp.Logging.LogHelper                    - Can not find 'FilterOrAddUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,177 [15   ] Abp.Logging.LogHelper                    - Can not find 'AddFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,178 [15   ] Abp.Logging.LogHelper                    - Can not find 'Friends' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,178 [15   ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,179 [15   ] Abp.Logging.LogHelper                    - Can not find 'BlockedUsers' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,179 [15   ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyBlockedFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,180 [15   ] Abp.Logging.LogHelper                    - Can not find 'Back' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,180 [15   ] Abp.Logging.LogHelper                    - Can not find 'BlockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,181 [15   ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,181 [15   ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:53,182 [15   ] Abp.Logging.LogHelper                    - Can not find 'TypeAMessageHere' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:33:54,759 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e1d30a94-2c32-461e-a16f-60160b416834
+WARN  2017-07-15 13:33:55,395 [14   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,396 [14   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,398 [14   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,399 [14   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,401 [14   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,402 [14   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,404 [14   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,406 [14   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,408 [14   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,408 [14   ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,411 [14   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,412 [14   ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,425 [14   ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,429 [14   ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,431 [14   ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,434 [14   ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,436 [14   ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:33:55,437 [14   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:33:57,098 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"820c5e11-4cd6-4c33-9efe-9d84c3932761","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:33:57.0979593Z","Properties":{}}
+DEBUG 2017-07-15 13:33:57,187 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 820c5e11-4cd6-4c33-9efe-9d84c3932761
+DEBUG 2017-07-15 13:34:22,352 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 820c5e11-4cd6-4c33-9efe-9d84c3932761
+WARN  2017-07-15 13:34:22,699 [5    ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,700 [5    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,702 [5    ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,703 [5    ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,704 [5    ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,705 [5    ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,714 [5    ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,715 [5    ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,716 [5    ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,717 [5    ] Abp.Logging.LogHelper                    - Can not find 'AboutUs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,719 [5    ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,720 [5    ] Abp.Logging.LogHelper                    - Can not find 'Administration' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,722 [5    ] Abp.Logging.LogHelper                    - Can not find 'OrganizationUnits' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,722 [5    ] Abp.Logging.LogHelper                    - Can not find 'Roles' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,725 [5    ] Abp.Logging.LogHelper                    - Can not find 'Users' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,727 [5    ] Abp.Logging.LogHelper                    - Can not find 'Languages' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,730 [5    ] Abp.Logging.LogHelper                    - Can not find 'AuditLogs' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:22,732 [5    ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,014 [18   ] Abp.Logging.LogHelper                    - Can not find 'ChatUserSearch_Hint' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,016 [18   ] Abp.Logging.LogHelper                    - Can not find 'FilterOrAddUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,016 [18   ] Abp.Logging.LogHelper                    - Can not find 'AddFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,017 [18   ] Abp.Logging.LogHelper                    - Can not find 'Friends' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,018 [18   ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,018 [18   ] Abp.Logging.LogHelper                    - Can not find 'BlockedUsers' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,019 [18   ] Abp.Logging.LogHelper                    - Can not find 'YouDontHaveAnyBlockedFriend' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,020 [18   ] Abp.Logging.LogHelper                    - Can not find 'BlockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,021 [18   ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,021 [18   ] Abp.Logging.LogHelper                    - Can not find 'UnblockUser' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,022 [18   ] Abp.Logging.LogHelper                    - Can not find 'TypeAMessageHere' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,307 [25   ] Abp.Logging.LogHelper                    - Can not find 'OopsYouAreLost' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,309 [25   ] Abp.Logging.LogHelper                    - Can not find 'WeCanNotFindThePage' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:24,310 [25   ] Abp.Logging.LogHelper                    - Can not find 'HomePage' in localization source 'AbpZeroTemplate'!
+DEBUG 2017-07-15 13:34:24,331 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"55457826-88d3-43c5-b723-fbc1470c0814","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-15T05:34:24.330316Z","Properties":{}}
+ERROR 2017-07-15 13:34:24,366 [25   ] Abp.Logging.LogHelper                    - Can not find file for: ~/Content/font-awesome.min.css! Abp.AbpException: There is no exposed embedded resource for: Content/font-awesome.min.css
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetPathInfoForFullPath(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 87
+   at Abp.Resources.Embedded.EmbeddedResourceManager.GetResource(String fullPath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp\Resources\Embedded\EmbeddedResourceManager.cs:line 59
+   at Abp.Web.Mvc.Resources.WebResourceHelper.GetEmbeddedResource(String fullResourcePath) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Resources\WebResourceHelper.cs:line 59
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioningForEmbeddedFile(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 109
+   at Abp.Web.Mvc.Extensions.HtmlHelperResourceExtensions.GetPathWithVersioning(String path) in D:\学习资料\自己学习代码\学习开源\ABP\ABPStudy\Derrick\src\Abp.Web.Mvc\Web\Mvc\Extensions\HtmlHelperResourceExtensions.cs:line 72
+DEBUG 2017-07-15 13:34:24,368 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 55457826-88d3-43c5-b723-fbc1470c0814
+WARN  2017-07-15 13:34:25,761 [27   ] Abp.Logging.LogHelper                    - Can not find 'Dashboard' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,762 [27   ] Abp.Logging.LogHelper                    - Can not find 'DashboardHeaderInfo' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,762 [27   ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Title' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,762 [27   ] Abp.Logging.LogHelper                    - Can not find 'DashboardDemo_Note_Info' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,763 [27   ] Abp.Logging.LogHelper                    - Can not find 'LookingForMpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,764 [27   ] Abp.Logging.LogHelper                    - Can not find 'DashboardNoteForMpaVersion' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,797 [24   ] Abp.Logging.LogHelper                    - Can not find 'SetAllAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,797 [24   ] Abp.Logging.LogHelper                    - Can not find 'Settings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,798 [24   ] Abp.Logging.LogHelper                    - Can not find 'SetAsRead' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,799 [24   ] Abp.Logging.LogHelper                    - Can not find 'ThereIsNoNotification' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,799 [24   ] Abp.Logging.LogHelper                    - Can not find 'SeeAllNotifications' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,800 [24   ] Abp.Logging.LogHelper                    - Can not find 'YouCanBackToYourAccount' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,801 [24   ] Abp.Logging.LogHelper                    - Can not find 'BackToMyAccount' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,802 [24   ] Abp.Logging.LogHelper                    - Can not find 'LinkedAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,802 [24   ] Abp.Logging.LogHelper                    - Can not find 'ManageAccounts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,803 [24   ] Abp.Logging.LogHelper                    - Can not find 'ChangePassword' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,803 [24   ] Abp.Logging.LogHelper                    - Can not find 'LoginAttempts' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,804 [24   ] Abp.Logging.LogHelper                    - Can not find 'ChangeProfilePicture' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,804 [24   ] Abp.Logging.LogHelper                    - Can not find 'MySettings' in localization source 'AbpZeroTemplate'!
+WARN  2017-07-15 13:34:25,805 [24   ] Abp.Logging.LogHelper                    - Can not find 'Logout' in localization source 'AbpZeroTemplate'!
