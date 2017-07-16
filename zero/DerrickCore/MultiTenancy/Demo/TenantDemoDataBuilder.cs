@@ -18,12 +18,16 @@ using Derrick.Storage;
 namespace Derrick.MultiTenancy.Demo
 {
     /// <summary>
-    /// Used to build demo data for new tenants.
-    /// Creates sample organization units, users... etc.
+    /// Used to build demo data for new tenants.Creates sample organization units, users... etc.
+    /// 用于为新商户生成Demo数据。创建简单的组织架构，用户等等
     /// It works only if in DEMO mode ("App.DemoMode" should be "true" in web.config). Otherwise, does nothing.
+    /// 它将在Demo模式中使用。("App.DemoMode"在配置文件中应该配置为"true")否则，无效。
     /// </summary>
     public class TenantDemoDataBuilder : AbpZeroTemplateServiceBase, ITransientDependency
     {
+        /// <summary>
+        /// 判断是否是Demo模式
+        /// </summary>
         public bool IsInDemoMode
         {
             get
@@ -32,14 +36,46 @@ namespace Derrick.MultiTenancy.Demo
             }
         }
 
+        /// <summary>
+        /// 组织架构管理器
+        /// </summary>
         private readonly OrganizationUnitManager _organizationUnitManager;
+        /// <summary>
+        /// 用户管理器
+        /// </summary>
         private readonly UserManager _userManager;
+        /// <summary>
+        /// 随机用户生成器
+        /// </summary>
         private readonly RandomUserGenerator _randomUserGenerator;
+        /// <summary>
+        /// 二进制对象管理器
+        /// </summary>
         private readonly IBinaryObjectManager _binaryObjectManager;
+        /// <summary>
+        /// APP文件夹描述
+        /// </summary>
         private readonly IAppFolders _appFolders;
+        /// <summary>
+        /// 好友管理器
+        /// </summary>
         private readonly IFriendshipManager _friendshipManager;
+        /// <summary>
+        /// 聊天消息仓储
+        /// </summary>
         private readonly IRepository<ChatMessage, long> _chatMessageRepository;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="organizationUnitManager">组织架构管理器</param>
+        /// <param name="userManager">用户管理器</param>
+        /// <param name="randomUserGenerator">随机用户生成器</param>
+        /// <param name="binaryObjectManager">二进制对象管理器</param>
+        /// <param name="appFolders">APP文件夹描述</param>
+        /// <param name="friendshipManager">好友管理器</param>
+        /// <param name="chatMessageManager">聊天消息管理器</param>
+        /// <param name="chatMessageRepository">聊天消息仓储</param>
         public TenantDemoDataBuilder(
             OrganizationUnitManager organizationUnitManager,
             UserManager userManager,
@@ -59,6 +95,11 @@ namespace Derrick.MultiTenancy.Demo
             _chatMessageRepository = chatMessageRepository;
         }
 
+        /// <summary>
+        /// 生成 - 异步
+        /// </summary>
+        /// <param name="tenant">商户对象</param>
+        /// <returns></returns>
         public async Task BuildForAsync(Tenant tenant)
         {
             if (!IsInDemoMode)
@@ -73,6 +114,11 @@ namespace Derrick.MultiTenancy.Demo
             }
         }
 
+        /// <summary>
+        /// 内部生成
+        /// </summary>
+        /// <param name="tenant">商户对象</param>
+        /// <returns></returns>
         private async Task BuildForInternalAsync(Tenant tenant)
         {
             //Create Organization Units
@@ -180,6 +226,14 @@ namespace Derrick.MultiTenancy.Demo
 
         }
 
+        /// <summary>
+        /// 创建或保存组织架构
+        /// </summary>
+        /// <param name="organizationUnits">组织架构列表</param>
+        /// <param name="tenant">商户</param>
+        /// <param name="displayName">显示名称</param>
+        /// <param name="parent">父组织，默认为Null</param>
+        /// <returns></returns>
         private async Task<OrganizationUnit> CreateAndSaveOrganizationUnit(List<OrganizationUnit> organizationUnits, Tenant tenant, string displayName, OrganizationUnit parent = null)
         {
             var organizationUnit = new OrganizationUnit(tenant.Id, displayName, parent == null ? (long?)null : parent.Id);
@@ -192,6 +246,11 @@ namespace Derrick.MultiTenancy.Demo
             return organizationUnit;
         }
 
+        /// <summary>
+        /// 设置随机图片 - 异步
+        /// </summary>
+        /// <param name="user">用户对象</param>
+        /// <returns></returns>
         private async Task SetRandomProfilePictureAsync(User user)
         {
             try
@@ -210,6 +269,10 @@ namespace Derrick.MultiTenancy.Demo
             }
         }
 
+        /// <summary>
+        /// 获取随机图片字节
+        /// </summary>
+        /// <returns></returns>
         private byte[] GetRandomProfilePictureBytes()
         {
             var fileName = string.Format("sample-profile-{0}.jpg", (RandomHelper.GetRandom(1, 11)).ToString("00"));

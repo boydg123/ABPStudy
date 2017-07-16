@@ -20,19 +20,58 @@ using Derrick.Notifications;
 namespace Derrick.MultiTenancy
 {
     /// <summary>
-    /// Tenant manager.
+    /// 商户管理器
     /// </summary>
     public class TenantManager : AbpTenantManager<Tenant, User>
     {
+        /// <summary>
+        /// 工作单元管理器
+        /// </summary>
         private readonly IUnitOfWorkManager _unitOfWorkManager;
+        /// <summary>
+        /// 角色管理器
+        /// </summary>
         private readonly RoleManager _roleManager;
+        /// <summary>
+        /// 用户管理器
+        /// </summary>
         private readonly UserManager _userManager;
+        /// <summary>
+        /// 用户邮件管理器
+        /// </summary>
         private readonly IUserEmailer _userEmailer;
+        /// <summary>
+        /// 商户Demo数据构建器
+        /// </summary>
         private readonly TenantDemoDataBuilder _demoDataBuilder;
+        /// <summary>
+        /// 订阅通知管理器
+        /// </summary>
         private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
+        /// <summary>
+        /// APP通知接口
+        /// </summary>
         private readonly IAppNotifier _appNotifier;
+        /// <summary>
+        /// ABP Zero数据迁移
+        /// </summary>
         private readonly IAbpZeroDbMigrator _abpZeroDbMigrator;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="tenantRepository">商户仓储</param>
+        /// <param name="tenantFeatureRepository">商户功能仓储</param>
+        /// <param name="editionManager">版本管理器</param>
+        /// <param name="unitOfWorkManager">工作单元管理器</param>
+        /// <param name="roleManager">角色管理器</param>
+        /// <param name="userEmailer">用户邮件</param>
+        /// <param name="demoDataBuilder">Demo数据构建器</param>
+        /// <param name="userManager">用户管理器</param>
+        /// <param name="notificationSubscriptionManager">订阅通知管理器</param>
+        /// <param name="appNotifier">APP通知</param>
+        /// <param name="featureValueStore">功能值存储器</param>
+        /// <param name="abpZeroDbMigrator">ABP数据迁移</param>
         public TenantManager(
             IRepository<Tenant> tenantRepository,
             IRepository<TenantFeatureSetting, long> tenantFeatureRepository,
@@ -62,6 +101,19 @@ namespace Derrick.MultiTenancy
             _abpZeroDbMigrator = abpZeroDbMigrator;
         }
 
+        /// <summary>
+        /// 创建管理用户 - 异步
+        /// </summary>
+        /// <param name="tenancyName">商户名称</param>
+        /// <param name="name">名称</param>
+        /// <param name="adminPassword">管理员密码</param>
+        /// <param name="adminEmailAddress">管理员邮箱</param>
+        /// <param name="connectionString">连接字符串</param>
+        /// <param name="isActive">是否激活</param>
+        /// <param name="editionId">版本ID</param>
+        /// <param name="shouldChangePasswordOnNextLogin">在下次登录是否需要修改密码</param>
+        /// <param name="sendActivationEmail">发送激活邮件</param>
+        /// <returns></returns>
         public async Task<int> CreateWithAdminUserAsync(string tenancyName, string name, string adminPassword, string adminEmailAddress, string connectionString, bool isActive, int? editionId, bool shouldChangePasswordOnNextLogin, bool sendActivationEmail)
         {
             int newTenantId;
@@ -150,7 +202,10 @@ namespace Derrick.MultiTenancy
             return newTenantId;
         }
 
-
+        /// <summary>
+        /// 检查错误
+        /// </summary>
+        /// <param name="identityResult">标识结果</param>
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);

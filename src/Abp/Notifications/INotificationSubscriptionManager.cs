@@ -5,34 +5,30 @@ using Abp.Domain.Entities;
 namespace Abp.Notifications
 {
     /// <summary>
-    /// Used to manage subscriptions for notifications.
     /// 用于管理通知的订阅
     /// </summary>
     public interface INotificationSubscriptionManager
     {
         /// <summary>
-        /// Subscribes to a notification for given user and notification informations.
         /// 为指定用户和通知消息订阅一个通知
         /// </summary>
-        /// <param name="user">User / 用户</param>
-        /// <param name="notificationName">Name of the notification. / 通知名称</param>
-        /// <param name="entityIdentifier">entity identifier / 标识实体</param>
+        /// <param name="user">用户</param>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityIdentifier">标识实体</param>
         Task SubscribeAsync(UserIdentifier user, string notificationName, EntityIdentifier entityIdentifier = null);
 
         /// <summary>
-        /// Subscribes to all available notifications for given user.It does not subscribe entity related notifications.
         /// 为指定用户订阅所有可用的通知，它不订阅通知相关的实体
         /// </summary>
-        /// <param name="user">User.</param>
+        /// <param name="user">用户标识.</param>
         Task SubscribeToAllAvailableNotificationsAsync(UserIdentifier user);
 
         /// <summary>
-        /// Unsubscribes from a notification.
         /// 退订一个通知
         /// </summary>
-        /// <param name="user">User. / 用户</param>
-        /// <param name="notificationName">Name of the notification. / 通知名称</param>
-        /// <param name="entityIdentifier">entity identifier / 标识实体</param>
+        /// <param name="user">用户</param>
+        /// <param name="notificationName">通知名称</param>
+        /// <param name="entityIdentifier">标识实体</param>
         Task UnsubscribeAsync(UserIdentifier user, string notificationName, EntityIdentifier entityIdentifier = null);
 
         /// <summary>

@@ -7,8 +7,14 @@ using Derrick.Authorization.Users;
 
 namespace Derrick.MultiTenancy.Demo
 {
+    /// <summary>
+    /// 随机用户生成器
+    /// </summary>
     public class RandomUserGenerator : ITransientDependency
     {
+        /// <summary>
+        /// 用户名数组
+        /// </summary>
         public static string[] Names = new[]
         {
             "Agatha Christie",
@@ -73,6 +79,9 @@ namespace Derrick.MultiTenancy.Demo
             "William Faulkner"
         };
 
+        /// <summary>
+        /// 邮箱数组
+        /// </summary>
         public static string[] EmailProviders = new[]
         {
             "yahoo.com",
@@ -85,6 +94,12 @@ namespace Derrick.MultiTenancy.Demo
             "aspnetboilerplate.com"
         };
 
+        /// <summary>
+        /// 获取随机用户列表
+        /// </summary>
+        /// <param name="userCount">用户数量</param>
+        /// <param name="tenantId">商户ID</param>
+        /// <returns></returns>
         public List<User> GetRandomUsers(int userCount, int tenantId)
         {
             var users = new List<User>();
@@ -98,6 +113,12 @@ namespace Derrick.MultiTenancy.Demo
             return users;
         }
 
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="tenantId">商户ID</param>
+        /// <param name="nameSurname">姓</param>
+        /// <returns></returns>
         private static User CreateUser(int? tenantId, string nameSurname)
         {
             return new User
@@ -114,11 +135,21 @@ namespace Derrick.MultiTenancy.Demo
             };
         }
 
+        /// <summary>
+        /// 生成用户名
+        /// </summary>
+        /// <param name="nameSurname">姓</param>
+        /// <returns></returns>
         private static string GenerateUsername(string nameSurname)
         {
             return nameSurname.Replace(" ", ".").ToLower(CultureInfo.InvariantCulture);
         }
 
+        /// <summary>
+        /// 生成邮箱
+        /// </summary>
+        /// <param name="nameSurname">姓</param>
+        /// <returns></returns>
         private static string GenerateEmail(string nameSurname)
         {
             return GenerateUsername(nameSurname) + "@" + RandomHelper.GetRandomOf(EmailProviders);
