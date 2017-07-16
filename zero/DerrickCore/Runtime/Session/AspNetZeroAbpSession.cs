@@ -6,11 +6,18 @@ namespace Derrick.Runtime.Session
 {
     /// <summary>
     /// Extends <see cref="ClaimsAbpSession"/>  (from Abp.Zero library).
+    /// <see cref="ClaimsAbpSession"/>的扩展。(从ABP库)
     /// </summary>
     public class AspNetZeroAbpSession : ClaimsAbpSession
     {
+        /// <summary>
+        /// 商户ID访问器
+        /// </summary>
         public ITenantIdAccessor TenantIdAccessor { get; set; }
 
+        /// <summary>
+        /// 商户ID
+        /// </summary>
         public override int? TenantId
         {
             get
@@ -25,6 +32,10 @@ namespace Derrick.Runtime.Session
             }
         }
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="multiTenancy">多商户配置</param>
         public AspNetZeroAbpSession(IMultiTenancyConfig multiTenancy) 
             : base(multiTenancy)
         {
