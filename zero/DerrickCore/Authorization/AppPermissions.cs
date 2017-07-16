@@ -10,10 +10,21 @@
         public const string Pages = "Pages";
         
         public const string Pages_Administration = "Pages.Administration";
-
+        /// <summary>
+        /// 页面-管理员-角色
+        /// </summary>
         public const string Pages_Administration_Roles = "Pages.Administration.Roles";
+        /// <summary>
+        /// 页面-管理员-角色-创建
+        /// </summary>
         public const string Pages_Administration_Roles_Create = "Pages.Administration.Roles.Create";
+        /// <summary>
+        /// 页面-管理员-角色-编辑
+        /// </summary>
         public const string Pages_Administration_Roles_Edit = "Pages.Administration.Roles.Edit";
+        /// <summary>
+        /// 页面-管理员-角色-删除
+        /// </summary>
         public const string Pages_Administration_Roles_Delete = "Pages.Administration.Roles.Delete";
 
         /// <summary>
