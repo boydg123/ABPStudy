@@ -5,7 +5,7 @@ namespace Derrick.Authorization.Permissions.Dto
     /// <summary>
     /// 统一权限Dto
     /// </summary>
-    [AutoMapFrom(typeof(Abp.Authorization.Permission))]
+    [AutoMapFrom(typeof(Abp.Authorization.Permission))] 
     public class FlatPermissionDto
     {
         /// <summary>

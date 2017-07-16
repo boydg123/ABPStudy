@@ -5,7 +5,7 @@ namespace Derrick.Authorization.Permissions.Dto
     /// </summary>
     public class FlatPermissionWithLevelDto : FlatPermissionDto
     {
-        /// <summary>
+        /// <summary> 
         /// ¼¶±ð
         /// </summary>
         public int Level { get; set; }

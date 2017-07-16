@@ -5,11 +5,14 @@ using Abp.Runtime.Validation;
 
 namespace Derrick.Authorization.Permissions
 {
+    /// <summary>
+    /// 权限管理扩展
+    /// </summary>
     public static class PermissionManagerExtensions
     {
         /// <summary>
-        /// Gets all permissions by names.
-        /// Throws <see cref="AbpValidationException"/> if can not find any of the permission names.
+        /// Gets all permissions by names.Throws <see cref="AbpValidationException"/> if can not find any of the permission names.
+        /// 通过名称获取所有权限。如果没有找到任何权限名称，则抛出<see cref="AbpValidationException"/>异常
         /// </summary>
         public static IEnumerable<Abp.Authorization.Permission> GetPermissionsFromNamesByValidating(this IPermissionManager permissionManager, IEnumerable<string> permissionNames)
         {
