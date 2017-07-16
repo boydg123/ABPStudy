@@ -27,10 +27,14 @@ namespace Derrick
 {
     /// <summary>
     /// Core (domain) module of the application.
+    /// 应用程序的核心模块
     /// </summary>
     [DependsOn(typeof(AbpZeroCoreModule), typeof(AbpZeroLdapModule), typeof(AbpAutoMapperModule))]
     public class AbpZeroTemplateCoreModule : AbpModule
     {
+        /// <summary>
+        /// 初始化前
+        /// </summary>
         public override void PreInitialize()
         {
             Configuration.Auditing.IsEnabledForAnonymousUsers = true;
@@ -83,11 +87,17 @@ namespace Derrick
             });
         }
 
+        /// <summary>
+        /// 模块初始化
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
 
+        /// <summary>
+        /// 初始化后
+        /// </summary>
         public override void PostInitialize()
         {
             IocManager.RegisterIfNot<IChatCommunicator, NullChatCommunicator>();

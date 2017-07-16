@@ -1,7 +1,7 @@
 ﻿namespace Derrick
 {
     /// <summary>
-    /// Some general constants for the application.
+    /// 应用程序中普通的常量
     /// </summary>
     public class AbpZeroTemplateConsts
     {
