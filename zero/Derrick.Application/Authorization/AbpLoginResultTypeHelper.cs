@@ -5,8 +5,18 @@ using Abp.UI;
 
 namespace Derrick.Authorization
 {
+    /// <summary>
+    /// ABP登录结果类型帮助类
+    /// </summary>
     public class AbpLoginResultTypeHelper : AbpZeroTemplateServiceBase, ITransientDependency
     {
+        /// <summary>
+        /// 为尝试登录失败创建异常信息
+        /// </summary>
+        /// <param name="result">登录结果类型</param>
+        /// <param name="usernameOrEmailAddress">用户名或邮箱</param>
+        /// <param name="tenancyName">商户名</param>
+        /// <returns></returns>
         public Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)
         {
             switch (result)

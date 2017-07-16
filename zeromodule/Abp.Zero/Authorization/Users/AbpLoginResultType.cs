@@ -1,7 +1,7 @@
 namespace Abp.Authorization.Users
 {
     /// <summary>
-    /// ABP登录结构类型
+    /// ABP登录结果类型
     /// </summary>
     public enum AbpLoginResultType : byte
     {

@@ -16,6 +16,9 @@
         public const string Pages_Administration_Roles_Edit = "Pages.Administration.Roles.Edit";
         public const string Pages_Administration_Roles_Delete = "Pages.Administration.Roles.Delete";
 
+        /// <summary>
+        /// 页面-管理员-用户
+        /// </summary>
         public const string Pages_Administration_Users = "Pages.Administration.Users";
         public const string Pages_Administration_Users_Create = "Pages.Administration.Users.Create";
         public const string Pages_Administration_Users_Edit = "Pages.Administration.Users.Edit";

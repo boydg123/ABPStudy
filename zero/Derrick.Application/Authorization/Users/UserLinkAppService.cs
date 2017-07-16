@@ -16,15 +16,40 @@ using Derrick.MultiTenancy;
 
 namespace Derrick.Authorization.Users
 {
+    /// <summary>
+    /// <see cref="IUserLinkAppService"/>实现，用户链接APP服务
+    /// </summary>
     [AbpAuthorize]
     public class UserLinkAppService : AbpZeroTemplateAppServiceBase, IUserLinkAppService
     {
+        /// <summary>
+        /// ABP登录信息结果类型帮助
+        /// </summary>
         private readonly AbpLoginResultTypeHelper _abpLoginResultTypeHelper;
+        /// <summary>
+        /// 用户链接管理
+        /// </summary>
         private readonly IUserLinkManager _userLinkManager;
+        /// <summary>
+        /// 商户仓储
+        /// </summary>
         private readonly IRepository<Tenant> _tenantRepository;
+        /// <summary>
+        /// 用户帐号仓储
+        /// </summary>
         private readonly IRepository<UserAccount, long> _userAccountRepository;
+        /// <summary>
+        /// 登录管理
+        /// </summary>
         private readonly LogInManager _logInManager;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="abpLoginResultTypeHelper">ABP登录信息结果类型帮助</param>
+        /// <param name="userLinkManager">用户链接管理</param>
+        /// <param name="tenantRepository">商户仓储</param>
+        /// <param name="userAccountRepository">用户帐号仓储</param>
+        /// <param name="logInManager">登录管理</param>
         public UserLinkAppService(
             AbpLoginResultTypeHelper abpLoginResultTypeHelper,
             IUserLinkManager userLinkManager,
@@ -38,7 +63,11 @@ namespace Derrick.Authorization.Users
             _userAccountRepository = userAccountRepository;
             _logInManager = logInManager;
         }
-
+        /// <summary>
+        /// 链接到用户
+        /// </summary>
+        /// <param name="linkToUserInput">用户连接Input信息</param>
+        /// <returns></returns>
         public async Task LinkToUser(LinkToUserInput input)
         {
             var loginResult = await _logInManager.LoginAsync(input.UsernameOrEmailAddress, input.Password, input.TenancyName);
@@ -60,7 +89,11 @@ namespace Derrick.Authorization.Users
 
             await _userLinkManager.Link(GetCurrentUser(), loginResult.User);
         }
-
+        /// <summary>
+        /// 获取连接用户Dto列表(带分页)
+        /// </summary>
+        /// <param name="input">用户链接Input</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<LinkedUserDto>> GetLinkedUsers(GetLinkedUsersInput input)
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
@@ -81,7 +114,10 @@ namespace Derrick.Authorization.Users
                 linkedUsers
             );
         }
-
+        /// <summary>
+        /// 获取最近使用的链接用户
+        /// </summary>
+        /// <returns></returns>
         [DisableAuditing]
         public async Task<ListResultDto<LinkedUserDto>> GetRecentlyUsedLinkedUsers()
         {
@@ -96,7 +132,11 @@ namespace Derrick.Authorization.Users
 
             return new ListResultDto<LinkedUserDto>(recentlyUsedlinkedUsers);
         }
-
+        /// <summary>
+        /// 用户断开链接
+        /// </summary>
+        /// <param name="input">断开链接用户Input</param>
+        /// <returns></returns>
         public async Task UnlinkUser(UnlinkUserInput input)
         {
             var currentUserAccount = await _userLinkManager.GetUserAccountAsync(AbpSession.ToUserIdentifier());
@@ -113,7 +153,12 @@ namespace Derrick.Authorization.Users
 
             await _userLinkManager.Unlink(input.ToUserIdentifier());
         }
-
+        /// <summary>
+        /// 创建链接用户查询
+        /// </summary>
+        /// <param name="currentUserAccount">当前用户帐号</param>
+        /// <param name="sorting">排序</param>
+        /// <returns></returns>
         private IQueryable<LinkedUserDto> CreateLinkedUsersQuery(UserAccount currentUserAccount, string sorting)
         {
             var currentUserIdentifier = AbpSession.ToUserIdentifier();

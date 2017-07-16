@@ -9,11 +9,24 @@ using Derrick.Dto;
 
 namespace Derrick.Authorization.Users.Exporting
 {
+    /// <summary>
+    /// <see cref="IUserListExcelExporter"/>实现，用户列表Excel导出器
+    /// </summary>
     public class UserListExcelExporter : EpPlusExcelExporterBase, IUserListExcelExporter
     {
+        /// <summary>
+        /// 时区转换器
+        /// </summary>
         private readonly ITimeZoneConverter _timeZoneConverter;
+        /// <summary>
+        /// Abp Session引用
+        /// </summary>
         private readonly IAbpSession _abpSession;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="timeZoneConverter">时区转换器</param>
+        /// <param name="abpSession">Abp Session引用</param>
         public UserListExcelExporter(
             ITimeZoneConverter timeZoneConverter, 
             IAbpSession abpSession)
@@ -21,7 +34,11 @@ namespace Derrick.Authorization.Users.Exporting
             _timeZoneConverter = timeZoneConverter;
             _abpSession = abpSession;
         }
-
+        /// <summary>
+        /// 将用户列表导出到Excel
+        /// </summary>
+        /// <param name="userListDtos">用户dto列表</param>
+        /// <returns></returns>
         public FileDto ExportToFile(List<UserListDto> userListDtos)
         {
             return CreateExcelPackage(

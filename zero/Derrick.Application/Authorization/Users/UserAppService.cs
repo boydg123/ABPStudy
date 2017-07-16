@@ -27,18 +27,55 @@ using Derrick.Notifications;
 
 namespace Derrick.Authorization.Users
 {
+    /// <summary>
+    /// <see cref="IUserAppService"/>实现，用户APP服务
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Administration_Users)]
     public class UserAppService : AbpZeroTemplateAppServiceBase, IUserAppService
     {
+        /// <summary>
+        /// 角色管理
+        /// </summary>
         private readonly RoleManager _roleManager;
+        /// <summary>
+        /// 用户邮件发送器
+        /// </summary>
         private readonly IUserEmailer _userEmailer;
+        /// <summary>
+        /// 用户列表Excel导出器
+        /// </summary>
         private readonly IUserListExcelExporter _userListExcelExporter;
+        /// <summary>
+        /// 订阅通知管理器
+        /// </summary>
         private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
+        /// <summary>
+        /// APP通知
+        /// </summary>
         private readonly IAppNotifier _appNotifier;
+        /// <summary>
+        /// 角色权限设置仓储
+        /// </summary>
         private readonly IRepository<RolePermissionSetting, long> _rolePermissionRepository;
+        /// <summary>
+        /// 用户权限设置仓储
+        /// </summary>
         private readonly IRepository<UserPermissionSetting, long> _userPermissionRepository;
+        /// <summary>
+        /// 用户角色仓储
+        /// </summary>
         private readonly IRepository<UserRole, long> _userRoleRepository;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="roleManager">角色管理</param>
+        /// <param name="userEmailer">用户邮件发送器</param>
+        /// <param name="userListExcelExporter">用户列表Excel导出器</param>
+        /// <param name="notificationSubscriptionManager">订阅通知管理器</param>
+        /// <param name="appNotifier">APP通知</param>
+        /// <param name="rolePermissionRepository">角色权限设置仓储</param>
+        /// <param name="userPermissionRepository">用户权限设置仓储</param>
+        /// <param name="userRoleRepository">用户角色仓储</param>
         public UserAppService(
             RoleManager roleManager,
             IUserEmailer userEmailer,
@@ -59,6 +96,11 @@ namespace Derrick.Authorization.Users
             _userRoleRepository = userRoleRepository;
         }
 
+        /// <summary>
+        /// 获取用户列表Dto(带分页)
+        /// </summary>
+        /// <param name="input">用户输入信息</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<UserListDto>> GetUsers(GetUsersInput input)
         {
             var query = UserManager.Users
@@ -101,7 +143,10 @@ namespace Derrick.Authorization.Users
                 userListDtos
                 );
         }
-
+        /// <summary>
+        /// 获取导出到Excel的用户信息
+        /// </summary>
+        /// <returns></returns>
         public async Task<FileDto> GetUsersToExcel()
         {
             var users = await UserManager.Users.Include(u => u.Roles).ToListAsync();
@@ -110,7 +155,11 @@ namespace Derrick.Authorization.Users
 
             return _userListExcelExporter.ExportToFile(userListDtos);
         }
-
+        /// <summary>
+        /// 获取编辑时的用户信息
+        /// </summary>
+        /// <param name="input">可空的ID Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Create, AppPermissions.Pages_Administration_Users_Edit)]
         public async Task<GetUserForEditOutput> GetUserForEdit(NullableIdDto<long> input)
         {
@@ -160,7 +209,11 @@ namespace Derrick.Authorization.Users
 
             return output;
         }
-
+        /// <summary>
+        /// 获取编辑时的用户权限信息
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_ChangePermissions)]
         public async Task<GetUserPermissionsForEditOutput> GetUserPermissionsForEdit(EntityDto<long> input)
         {
@@ -174,14 +227,22 @@ namespace Derrick.Authorization.Users
                 GrantedPermissionNames = grantedPermissions.Select(p => p.Name).ToList()
             };
         }
-
+        /// <summary>
+        /// 重置用户特定权限
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_ChangePermissions)]
         public async Task ResetUserSpecificPermissions(EntityDto<long> input)
         {
             var user = await UserManager.GetUserByIdAsync(input.Id);
             await UserManager.ResetAllPermissionsAsync(user);
         }
-
+        /// <summary>
+        /// 更新用户权限
+        /// </summary>
+        /// <param name="input">更新用户权限输入信息</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_ChangePermissions)]
         public async Task UpdateUserPermissions(UpdateUserPermissionsInput input)
         {
@@ -189,7 +250,11 @@ namespace Derrick.Authorization.Users
             var grantedPermissions = PermissionManager.GetPermissionsFromNamesByValidating(input.GrantedPermissionNames);
             await UserManager.SetGrantedPermissionsAsync(user, grantedPermissions);
         }
-
+        /// <summary>
+        /// 创建或更新用户
+        /// </summary>
+        /// <param name="input">创建或更新用户输入信息</param>
+        /// <returns></returns>
         public async Task CreateOrUpdateUser(CreateOrUpdateUserInput input)
         {
             if (input.User.Id.HasValue)
@@ -201,7 +266,11 @@ namespace Derrick.Authorization.Users
                 await CreateUserAsync(input);
             }
         }
-
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Delete)]
         public async Task DeleteUser(EntityDto<long> input)
         {
@@ -213,13 +282,21 @@ namespace Derrick.Authorization.Users
             var user = await UserManager.GetUserByIdAsync(input.Id);
             CheckErrors(await UserManager.DeleteAsync(user));
         }
-
+        /// <summary>
+        /// 解锁用户
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         public async Task UnlockUser(EntityDto<long> input)
         {
             var user = await UserManager.GetUserByIdAsync(input.Id);
             user.Unlock();
         }
-
+        /// <summary>
+        /// 更新用户 - 异步
+        /// </summary>
+        /// <param name="input">创建或更新用户Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Edit)]
         protected virtual async Task UpdateUserAsync(CreateOrUpdateUserInput input)
         {
@@ -251,7 +328,11 @@ namespace Derrick.Authorization.Users
                 await _userEmailer.SendEmailActivationLinkAsync(user, input.User.Password);
             }
         }
-
+        /// <summary>
+        /// 创建用户 - 异步
+        /// </summary>
+        /// <param name="input">创建或更新用户Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Users_Create)]
         protected virtual async Task CreateUserAsync(CreateOrUpdateUserInput input)
         {
@@ -293,7 +374,11 @@ namespace Derrick.Authorization.Users
                 await _userEmailer.SendEmailActivationLinkAsync(user, input.User.Password);
             }
         }
-
+        /// <summary>
+        /// 填充角色名称
+        /// </summary>
+        /// <param name="userListDtos">用户Dto列表</param>
+        /// <returns></returns>
         private async Task FillRoleNames(List<UserListDto> userListDtos)
         {
             /* This method is optimized to fill role names to given list. */

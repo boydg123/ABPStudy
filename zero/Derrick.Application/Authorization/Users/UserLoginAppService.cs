@@ -13,16 +13,28 @@ using Derrick.Authorization.Users.Dto;
 
 namespace Derrick.Authorization.Users
 {
+    /// <summary>
+    /// <see cref="IUserLoginAppService"/>实现，用户登录APP服务
+    /// </summary>
     [AbpAuthorize]
     public class UserLoginAppService : AbpZeroTemplateAppServiceBase, IUserLoginAppService
     {
+        /// <summary>
+        /// 用户尝试登录仓储
+        /// </summary>
         private readonly IRepository<UserLoginAttempt, long> _userLoginAttemptRepository;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="userLoginAttemptRepository">用户尝试登录仓储</param>
         public UserLoginAppService(IRepository<UserLoginAttempt, long> userLoginAttemptRepository)
         {
             _userLoginAttemptRepository = userLoginAttemptRepository;
         }
-
+        /// <summary>
+        /// 获取最新的用户登录尝试
+        /// </summary>
+        /// <returns></returns>
         [DisableAuditing]
         public async Task<ListResultDto<UserLoginAttemptDto>> GetRecentUserLoginAttempts()
         {

@@ -18,13 +18,30 @@ using Newtonsoft.Json;
 
 namespace Derrick.Authorization.Users.Profile
 {
+    /// <summary>
+    /// <see cref="IProfileAppService"/>实现，用户资料APP服务
+    /// </summary>
     [AbpAuthorize]
     public class ProfileAppService : AbpZeroTemplateAppServiceBase, IProfileAppService
     {
+        /// <summary>
+        /// APP文件夹
+        /// </summary>
         private readonly IAppFolders _appFolders;
+        /// <summary>
+        /// 二进制对象管理
+        /// </summary>
         private readonly IBinaryObjectManager _binaryObjectManager;
+        /// <summary>
+        /// 时区服务
+        /// </summary>
         private readonly ITimeZoneService _timeZoneService;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="appFolders">APP文件夹</param>
+        /// <param name="binaryObjectManager">二进制对象管理</param>
+        /// <param name="timezoneService">时区服务</param>
         public ProfileAppService(
             IAppFolders appFolders,
             IBinaryObjectManager binaryObjectManager,
@@ -34,7 +51,10 @@ namespace Derrick.Authorization.Users.Profile
             _binaryObjectManager = binaryObjectManager;
             _timeZoneService = timezoneService;
         }
-
+        /// <summary>
+        /// 为编辑时获取当前用户资料
+        /// </summary>
+        /// <returns></returns>
         public async Task<CurrentUserProfileEditDto> GetCurrentUserProfileForEdit()
         {
             var user = await GetCurrentUserAsync();
@@ -53,7 +73,11 @@ namespace Derrick.Authorization.Users.Profile
 
             return userProfileEditDto;
         }
-
+        /// <summary>
+        /// 更新当前用户资料
+        /// </summary>
+        /// <param name="input">当前用户资料编辑Dto</param>
+        /// <returns></returns>
         public async Task UpdateCurrentUserProfile(CurrentUserProfileEditDto input)
         {
             var user = await GetCurrentUserAsync();
@@ -73,7 +97,11 @@ namespace Derrick.Authorization.Users.Profile
                 }
             }
         }
-
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <param name="input">修改密码Input</param>
+        /// <returns></returns>
         public async Task ChangePassword(ChangePasswordInput input)
         {
             await CheckPasswordComplexity(input.NewPassword);
@@ -81,7 +109,11 @@ namespace Derrick.Authorization.Users.Profile
             var user = await GetCurrentUserAsync();
             CheckErrors(await UserManager.ChangePasswordAsync(user.Id, input.CurrentPassword, input.NewPassword));
         }
-
+        /// <summary>
+        /// 更新用户资料图片
+        /// </summary>
+        /// <param name="input">更新用户资料图片Input</param>
+        /// <returns></returns>
         public async Task UpdateProfilePicture(UpdateProfilePictureInput input)
         {
             var tempProfilePicturePath = Path.Combine(_appFolders.TempFileDownloadFolder, input.FileName);
@@ -124,7 +156,10 @@ namespace Derrick.Authorization.Users.Profile
 
             FileHelper.DeleteIfExists(tempProfilePicturePath);
         }
-
+        /// <summary>
+        /// 获取密码复杂度设置
+        /// </summary>
+        /// <returns></returns>
         public async Task<GetPasswordComplexitySettingOutput> GetPasswordComplexitySetting()
         {
             var settingValue = await SettingManager.GetSettingValueAsync(AppSettings.Security.PasswordComplexity);
@@ -135,7 +170,11 @@ namespace Derrick.Authorization.Users.Profile
                 Setting = setting
             };
         }
-
+        /// <summary>
+        /// 修改密码复杂度
+        /// </summary>
+        /// <param name="password">密码</param>
+        /// <returns></returns>
         private async Task CheckPasswordComplexity(string password)
         {
             var passwordComplexitySettingValue = await SettingManager.GetSettingValueAsync(AppSettings.Security.PasswordComplexity);
