@@ -22,7 +22,7 @@ namespace Derrick.Storage
         /// <returns></returns>
         Task SaveAsync(BinaryObject file);
 
-        /// <summary>
+        /// <summary> 
         /// 通过ID删除二进制对象
         /// </summary>
         /// <param name="id">Guid</param>
