@@ -8,11 +8,24 @@ using Derrick.Dto;
 
 namespace Derrick.Auditing.Exporting
 {
+    /// <summary>
+    /// <see cref="IAuditLogListExcelExporter"/>实现，审计日志列表Excel导出器
+    /// </summary>
     public class AuditLogListExcelExporter : EpPlusExcelExporterBase, IAuditLogListExcelExporter
     {
+        /// <summary>
+        /// 时区转换器
+        /// </summary>
         private readonly ITimeZoneConverter _timeZoneConverter;
+        /// <summary>
+        /// Abp Session引用
+        /// </summary>
         private readonly IAbpSession _abpSession;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="timeZoneConverter">时区转换器</param>
+        /// <param name="abpSession"></param>
         public AuditLogListExcelExporter(
             ITimeZoneConverter timeZoneConverter,
             IAbpSession abpSession)
@@ -20,7 +33,11 @@ namespace Derrick.Auditing.Exporting
             _timeZoneConverter = timeZoneConverter;
             _abpSession = abpSession;
         }
-
+        /// <summary>
+        /// 将审计日志列表导出到Excel文件
+        /// </summary>
+        /// <param name="auditLogListDtos">审计日志列表Dto</param>
+        /// <returns></returns>
         public FileDto ExportToFile(List<AuditLogListDto> auditLogListDtos)
         {
             return CreateExcelPackage(

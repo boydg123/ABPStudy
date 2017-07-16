@@ -18,15 +18,37 @@ using Derrick.Dto;
 
 namespace Derrick.Auditing
 {
+    /// <summary>
+    /// <see cref="IAuditLogAppService"/>实现，审计日志APP服务
+    /// </summary>
     [DisableAuditing]
     [AbpAuthorize(AppPermissions.Pages_Administration_AuditLogs)]
     public class AuditLogAppService : AbpZeroTemplateAppServiceBase, IAuditLogAppService
     {
+        /// <summary>
+        /// 审计日志仓储
+        /// </summary>
         private readonly IRepository<AuditLog, long> _auditLogRepository;
+        /// <summary>
+        /// 用户仓储
+        /// </summary>
         private readonly IRepository<User, long> _userRepository;
+        /// <summary>
+        /// 审计日志列表Excel导出器
+        /// </summary>
         private readonly IAuditLogListExcelExporter _auditLogListExcelExporter;
+        /// <summary>
+        /// 命名空间剥离器
+        /// </summary>
         private readonly INamespaceStripper _namespaceStripper;
-    
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="auditLogRepository">审计日志仓储</param>
+        /// <param name="userRepository">用户仓储</param>
+        /// <param name="auditLogListExcelExporter">审计日志列表Excel导出器</param>
+        /// <param name="namespaceStripper">命名空间剥离器</param>
         public AuditLogAppService(
             IRepository<AuditLog, long> auditLogRepository, 
             IRepository<User, long> userRepository, 
@@ -38,7 +60,12 @@ namespace Derrick.Auditing
             _auditLogListExcelExporter = auditLogListExcelExporter;
             _namespaceStripper = namespaceStripper;
         }
-        
+
+        /// <summary>
+        /// 获取审计日志列表(带分页)
+        /// </summary>
+        /// <param name="input">审计日志输入对象</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<AuditLogListDto>> GetAuditLogs(GetAuditLogsInput input)
         {
             var query = CreateAuditLogAndUsersQuery(input);
@@ -55,6 +82,11 @@ namespace Derrick.Auditing
             return new PagedResultDto<AuditLogListDto>(resultCount, auditLogListDtos);
         }
 
+        /// <summary>
+        /// 获取导出到Excel审计日志
+        /// </summary>
+        /// <param name="input">审计日志输入对象</param>
+        /// <returns></returns>
         public async Task<FileDto> GetAuditLogsToExcel(GetAuditLogsInput input)
         {
             var auditLogs = await CreateAuditLogAndUsersQuery(input)
@@ -67,6 +99,11 @@ namespace Derrick.Auditing
             return _auditLogListExcelExporter.ExportToFile(auditLogListDtos);
         }
 
+        /// <summary>
+        /// 将用户审计日志对象列表导出到设计日志Dto列表
+        /// </summary>
+        /// <param name="results">用户审计日志对象</param>
+        /// <returns></returns>
         private List<AuditLogListDto> ConvertToAuditLogListDtos(List<AuditLogAndUser> results)
         {
             return results.Select(
@@ -79,6 +116,11 @@ namespace Derrick.Auditing
                 }).ToList();
         }
 
+        /// <summary>
+        /// 创建审计日志和用户查询
+        /// </summary>
+        /// <param name="input">审计日志输入对象</param>
+        /// <returns></returns>
         private IQueryable<AuditLogAndUser> CreateAuditLogAndUsersQuery(GetAuditLogsInput input)
         {
             var query = from auditLog in _auditLogRepository.GetAll()

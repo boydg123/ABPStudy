@@ -29,6 +29,9 @@
         public const string Pages_Administration_Languages_Delete = "Pages.Administration.Languages.Delete";
         public const string Pages_Administration_Languages_ChangeTexts = "Pages.Administration.Languages.ChangeTexts";
 
+        /// <summary>
+        /// 页面-管理员-审计日志
+        /// </summary>
         public const string Pages_Administration_AuditLogs = "Pages.Administration.AuditLogs";
 
         public const string Pages_Administration_OrganizationUnits = "Pages.Administration.OrganizationUnits";
