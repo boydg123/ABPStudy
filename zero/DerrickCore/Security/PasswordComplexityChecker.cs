@@ -3,8 +3,17 @@ using Abp.Extensions;
 
 namespace Derrick.Security
 {
+    /// <summary>
+    /// 密码复杂度检查器
+    /// </summary>
     public class PasswordComplexityChecker
     {
+        /// <summary>
+        /// 检查密码
+        /// </summary>
+        /// <param name="setting">密码复杂度设置信息</param>
+        /// <param name="password">密码</param>
+        /// <returns></returns>
         public bool Check(PasswordComplexitySetting setting, string password)
         {
             if (password.IsNullOrEmpty())
