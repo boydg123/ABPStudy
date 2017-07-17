@@ -17,12 +17,34 @@ using Derrick.Friendships.Dto;
 
 namespace Derrick.Chat
 {
+    /// <summary>
+    /// 聊天服务实现
+    /// </summary>
     public class ChatAppService : AbpZeroTemplateAppServiceBase, IChatAppService
     {
+        /// <summary>
+        /// 聊天消息仓储
+        /// </summary>
         private readonly IRepository<ChatMessage, long> _chatMessageRepository;
+        /// <summary>
+        /// 用户好友缓存
+        /// </summary>
         private readonly IUserFriendsCache _userFriendsCache;
+        /// <summary>
+        /// 在线客户端管理
+        /// </summary>
         private readonly IOnlineClientManager _onlineClientManager;
+        /// <summary>
+        /// 聊天沟通器
+        /// </summary>
         private readonly IChatCommunicator _chatCommunicator;
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="chatMessageRepository">聊天消息仓储</param>
+        /// <param name="userFriendsCache">用户好友缓存</param>
+        /// <param name="onlineClientManager">在线客户端管理</param>
+        /// <param name="chatCommunicator">聊天沟通器</param>
         public ChatAppService(
             IRepository<ChatMessage, long> chatMessageRepository,
             IUserFriendsCache userFriendsCache,
@@ -35,6 +57,10 @@ namespace Derrick.Chat
             _chatCommunicator = chatCommunicator;
         }
 
+        /// <summary>
+        /// 获取用户聊天好友以及设置
+        /// </summary>
+        /// <returns></returns>
         [DisableAuditing]
         public GetUserChatFriendsWithSettingsOutput GetUserChatFriendsWithSettings()
         {
@@ -55,7 +81,11 @@ namespace Derrick.Chat
                 ServerTime = Clock.Now
             };
         }
-
+        /// <summary>
+        /// 获取用户聊天消息
+        /// </summary>
+        /// <param name="input">用户聊天消息Input</param>
+        /// <returns></returns>
         [DisableAuditing]
         public async Task<ListResultDto<ChatMessageDto>> GetUserChatMessages(GetUserChatMessagesInput input)
         {
@@ -71,7 +101,11 @@ namespace Derrick.Chat
 
             return new ListResultDto<ChatMessageDto>(messages.MapTo<List<ChatMessageDto>>());
         }
-
+        /// <summary>
+        /// 标记所有未读消息作为已读
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public async Task MarkAllUnreadMessagesOfUserAsRead(MarkAllUnreadMessagesOfUserAsReadInput input)
         {
             var userId = AbpSession.GetUserId();
