@@ -6,9 +6,16 @@ using Derrick.Tenants.Dashboard.Dto;
 
 namespace Derrick.Tenants.Dashboard
 {
+    /// <summary>
+    /// 商户Dashboard服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Tenant_Dashboard)]
     public class TenantDashboardAppService : AbpZeroTemplateAppServiceBase, ITenantDashboardAppService
     {
+        /// <summary>
+        /// 获取激活成员
+        /// </summary>
+        /// <returns></returns>
         public GetMemberActivityOutput GetMemberActivity()
         {
             //Generating some random data. We could get numbers from database...
