@@ -17,13 +17,31 @@ using Derrick.Localization.Dto;
 
 namespace Derrick.Localization
 {
+    /// <summary>
+    /// 语言服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Administration_Languages)]
     public class LanguageAppService : AbpZeroTemplateAppServiceBase, ILanguageAppService
     {
+        /// <summary>
+        /// 应用程序语言管理器
+        /// </summary>
         private readonly IApplicationLanguageManager _applicationLanguageManager;
+        /// <summary>
+        /// 应用程序语言文本管理器
+        /// </summary>
         private readonly IApplicationLanguageTextManager _applicationLanguageTextManager;
+        /// <summary>
+        /// 应用程序语言仓储
+        /// </summary>
         private readonly IRepository<ApplicationLanguage> _languageRepository;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="applicationLanguageManager">应用程序语言管理</param>
+        /// <param name="applicationLanguageTextManager">应用程序语言文本管理</param>
+        /// <param name="languageRepository">应用程序语言仓储</param>
         public LanguageAppService(
             IApplicationLanguageManager applicationLanguageManager,
             IApplicationLanguageTextManager applicationLanguageTextManager,
@@ -34,6 +52,10 @@ namespace Derrick.Localization
             _applicationLanguageTextManager = applicationLanguageTextManager;
         }
 
+        /// <summary>
+        /// 获取语言
+        /// </summary>
+        /// <returns></returns>
         public async Task<GetLanguagesOutput> GetLanguages()
         {
             var languages = (await _applicationLanguageManager.GetLanguagesAsync(AbpSession.TenantId)).OrderBy(l => l.DisplayName);
@@ -44,7 +66,11 @@ namespace Derrick.Localization
                 defaultLanguage == null ? null : defaultLanguage.Name
                 );
         }
-
+        /// <summary>
+        /// 获取编辑语言
+        /// </summary>
+        /// <param name="input">空ID Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_Create, AppPermissions.Pages_Administration_Languages_Edit)]
         public async Task<GetLanguageForEditOutput> GetLanguageForEdit(NullableIdDto input)
         {
@@ -77,7 +103,11 @@ namespace Derrick.Localization
 
             return output;
         }
-
+        /// <summary>
+        /// 创建或更新语言
+        /// </summary>
+        /// <param name="input">创建或更新语言Input</param>
+        /// <returns></returns>
         public async Task CreateOrUpdateLanguage(CreateOrUpdateLanguageInput input)
         {
             if (input.Language.Id.HasValue)
@@ -89,13 +119,21 @@ namespace Derrick.Localization
                 await CreateLanguageAsync(input);
             }
         }
-
+        /// <summary>
+        /// 删除语言
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         public async Task DeleteLanguage(EntityDto input)
         {
             var language = await _languageRepository.GetAsync(input.Id);
             await _applicationLanguageManager.RemoveAsync(AbpSession.TenantId, language.Name);
         }
-
+        /// <summary>
+        /// 设置默认语言
+        /// </summary>
+        /// <param name="input">设置默认语言Input</param>
+        /// <returns></returns>
         public async Task SetDefaultLanguage(SetDefaultLanguageInput input)
         {
             await _applicationLanguageManager.SetDefaultLanguageAsync(
@@ -103,7 +141,11 @@ namespace Derrick.Localization
                 GetCultureInfoByChecking(input.Name).Name
                 );
         }
-
+        /// <summary>
+        /// 获取语言文本
+        /// </summary>
+        /// <param name="input">获取语言文本Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_ChangeTexts)]
         public async Task<PagedResultDto<LanguageTextListDto>> GetLanguageTexts(GetLanguageTextsInput input)
         {
@@ -179,14 +221,22 @@ namespace Derrick.Localization
                 languageTexts.ToList()
                 );
         }
-
+        /// <summary>
+        /// 更新语言文本
+        /// </summary>
+        /// <param name="input">更新语言文本Input</param>
+        /// <returns></returns>
         public async Task UpdateLanguageText(UpdateLanguageTextInput input)
         {
             var culture = GetCultureInfoByChecking(input.LanguageName);
             var source = LocalizationManager.GetSource(input.SourceName);
             await _applicationLanguageTextManager.UpdateStringAsync(AbpSession.TenantId, source.Name, culture, input.Key, input.Value);
         }
-
+        /// <summary>
+        /// 创建语言
+        /// </summary>
+        /// <param name="input">创建或更新语言Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_Create)]
         protected virtual async Task CreateLanguageAsync(CreateOrUpdateLanguageInput input)
         {
@@ -203,7 +253,11 @@ namespace Derrick.Localization
                     )
                 );
         }
-
+        /// <summary>
+        /// 更新语言
+        /// </summary>
+        /// <param name="input">创建或更新语言Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_Languages_Edit)]
         protected virtual async Task UpdateLanguageAsync(CreateOrUpdateLanguageInput input)
         {
@@ -221,7 +275,11 @@ namespace Derrick.Localization
 
             await _applicationLanguageManager.UpdateAsync(AbpSession.TenantId, language);
         }
-
+        /// <summary>
+        /// 通过检测获取区域信息
+        /// </summary>
+        /// <param name="name">名称</param>
+        /// <returns></returns>
         private CultureInfo GetCultureInfoByChecking(string name)
         {
             try
@@ -234,7 +292,12 @@ namespace Derrick.Localization
                 throw new UserFriendlyException(L("InvlalidLanguageCode"));
             }
         }
-        
+        /// <summary>
+        /// 检查已存在的语言
+        /// </summary>
+        /// <param name="languageName">语言名称</param>
+        /// <param name="expectedId">预期ID</param>
+        /// <returns></returns>
         private async Task CheckLanguageIfAlreadyExists(string languageName, int? expectedId = null)
         {
             var existingLanguage = (await _applicationLanguageManager.GetLanguagesAsync(AbpSession.TenantId))

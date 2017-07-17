@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace Derrick.Localization
 {
+    /// <summary>
+    /// Farm标记帮助类
+    /// </summary>
     public static class FamFamFamFlagsHelper
     {
+        /// <summary>
+        /// 标记类名称集合
+        /// </summary>
         public static List<string> FlagClassNames = new List<string>
         {
             "famfamfam-flag-zw",
@@ -264,7 +270,11 @@ namespace Derrick.Localization
             "famfamfam-flag-np",
             "famfamfam-flag-ch"
         };
-
+        /// <summary>
+        /// 获取国家Code
+        /// </summary>
+        /// <param name="famfamFlagName">Fam标记名称</param>
+        /// <returns></returns>
         public static string GetCountryCode(string famfamFlagName)
         {
             return famfamFlagName.Substring(
