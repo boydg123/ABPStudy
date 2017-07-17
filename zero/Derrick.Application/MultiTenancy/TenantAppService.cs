@@ -17,17 +17,30 @@ using Derrick.MultiTenancy.Dto;
 
 namespace Derrick.MultiTenancy
 {
+    /// <summary>
+    /// 商户服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Tenants)]
     public class TenantAppService : AbpZeroTemplateAppServiceBase, ITenantAppService
     {
+        /// <summary>
+        /// 商户管理器
+        /// </summary>
         private readonly TenantManager _tenantManager;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="tenantManager"></param>
         public TenantAppService(
             TenantManager tenantManager)
         {
             _tenantManager = tenantManager;
         }
-
+        /// <summary>
+        /// 获取商户列表(带分页)
+        /// </summary>
+        /// <param name="input">获取商户Input</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<TenantListDto>> GetTenants(GetTenantsInput input)
         {
             var query = TenantManager.Tenants
@@ -47,7 +60,11 @@ namespace Derrick.MultiTenancy
                 tenants.MapTo<List<TenantListDto>>()
                 );
         }
-
+        /// <summary>
+        /// 创建商户
+        /// </summary>
+        /// <param name="input">创建商户Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_Create)]
         [UnitOfWork(IsDisabled = true)]
         public async Task CreateTenant(CreateTenantInput input)
@@ -62,7 +79,11 @@ namespace Derrick.MultiTenancy
                 input.ShouldChangePasswordOnNextLogin,
                 input.SendActivationEmail);
         }
-
+        /// <summary>
+        /// 获取编辑商户
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_Edit)]
         public async Task<TenantEditDto> GetTenantForEdit(EntityDto input)
         {
@@ -70,7 +91,11 @@ namespace Derrick.MultiTenancy
             tenantEditDto.ConnectionString = SimpleStringCipher.Instance.Decrypt(tenantEditDto.ConnectionString);
             return tenantEditDto;
         }
-
+        /// <summary>
+        /// 更新商户
+        /// </summary>
+        /// <param name="input">商户编辑Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_Edit)]
         public async Task UpdateTenant(TenantEditDto input)
         {
@@ -79,14 +104,22 @@ namespace Derrick.MultiTenancy
             input.MapTo(tenant);
             CheckErrors(await TenantManager.UpdateAsync(tenant));
         }
-
+        /// <summary>
+        /// 删除商户
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_Delete)]
         public async Task DeleteTenant(EntityDto input)
         {
             var tenant = await TenantManager.GetByIdAsync(input.Id);
             CheckErrors(await TenantManager.DeleteAsync(tenant));
         }
-
+        /// <summary>
+        /// 获取编辑时商户功能
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
         public async Task<GetTenantFeaturesForEditOutput> GetTenantFeaturesForEdit(EntityDto input)
         {
@@ -99,13 +132,21 @@ namespace Derrick.MultiTenancy
                 FeatureValues = featureValues.Select(fv => new NameValueDto(fv)).ToList()
             };
         }
-
+        /// <summary>
+        /// 更新商户功能
+        /// </summary>
+        /// <param name="input">更新商户功能Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
         public async Task UpdateTenantFeatures(UpdateTenantFeaturesInput input)
         {
             await TenantManager.SetFeatureValuesAsync(input.Id, input.FeatureValues.Select(fv => new NameValue(fv.Name, fv.Value)).ToArray());
         }
-
+        /// <summary>
+        /// 重置商户指定的功能
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
         public async Task ResetTenantSpecificFeatures(EntityDto input)
         {
