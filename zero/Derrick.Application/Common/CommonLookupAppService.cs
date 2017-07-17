@@ -10,16 +10,28 @@ using Derrick.Editions;
 
 namespace Derrick.Common
 {
+    /// <summary>
+    /// 通用Lookup服务实现
+    /// </summary>
     [AbpAuthorize]
     public class CommonLookupAppService : AbpZeroTemplateAppServiceBase, ICommonLookupAppService
     {
+        /// <summary>
+        /// 版本管理器
+        /// </summary>
         private readonly EditionManager _editionManager;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="editionManager">版本管理器</param>
         public CommonLookupAppService(EditionManager editionManager)
         {
             _editionManager = editionManager;
         }
-
+        /// <summary>
+        /// 为Combobox获取版本
+        /// </summary>
+        /// <returns></returns>
         public async Task<ListResultDto<ComboboxItemDto>> GetEditionsForCombobox()
         {
             var editions = await _editionManager.Editions.ToListAsync();
@@ -27,7 +39,11 @@ namespace Derrick.Common
                 editions.Select(e => new ComboboxItemDto(e.Id.ToString(), e.DisplayName)).ToList()
                 );
         }
-
+        /// <summary>
+        /// 查找用户
+        /// </summary>
+        /// <param name="input">查找用户Input</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<NameValueDto>> FindUsers(FindUsersInput input)
         {
             if (AbpSession.TenantId != null)
@@ -66,7 +82,10 @@ namespace Derrick.Common
                     );
             }
         }
-
+        /// <summary>
+        /// 获取默认版本名称
+        /// </summary>
+        /// <returns></returns>
         public string GetDefaultEditionName()
         {
             return EditionManager.DefaultEditionName;
