@@ -14,13 +14,31 @@ using System.Linq.Dynamic;
 
 namespace Derrick.Organizations
 {
+    /// <summary>
+    /// 组织架构服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits)]
     public class OrganizationUnitAppService : AbpZeroTemplateAppServiceBase, IOrganizationUnitAppService
     {
+        /// <summary>
+        /// 组织架构管理器
+        /// </summary>
         private readonly OrganizationUnitManager _organizationUnitManager;
+        /// <summary>
+        /// 组织架构仓储
+        /// </summary>
         private readonly IRepository<OrganizationUnit, long> _organizationUnitRepository;
+        /// <summary>
+        /// 用户组织架构仓储
+        /// </summary>
         private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="organizationUnitManager">组织架构管理</param>
+        /// <param name="organizationUnitRepository">组织架构仓储</param>
+        /// <param name="userOrganizationUnitRepository">用户组织架构仓储</param>
         public OrganizationUnitAppService(
             OrganizationUnitManager organizationUnitManager,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
@@ -30,7 +48,10 @@ namespace Derrick.Organizations
             _organizationUnitRepository = organizationUnitRepository;
             _userOrganizationUnitRepository = userOrganizationUnitRepository;
         }
-
+        /// <summary>
+        /// 获取组织架构
+        /// </summary>
+        /// <returns></returns>
         public async Task<ListResultDto<OrganizationUnitDto>> GetOrganizationUnits()
         {
             var query =
@@ -48,7 +69,11 @@ namespace Derrick.Organizations
                     return dto;
                 }).ToList());
         }
-
+        /// <summary>
+        /// 获取组织架构用户
+        /// </summary>
+        /// <param name="input">获取组织架构用户Input</param>
+        /// <returns></returns>
         public async Task<PagedResultDto<OrganizationUnitUserListDto>> GetOrganizationUnitUsers(GetOrganizationUnitUsersInput input)
         {
             var query = from uou in _userOrganizationUnitRepository.GetAll()
@@ -69,7 +94,11 @@ namespace Derrick.Organizations
                     return dto;
                 }).ToList());
         }
-
+        /// <summary>
+        /// 创建组织架构
+        /// </summary>
+        /// <param name="input">创建组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageOrganizationTree)]
         public async Task<OrganizationUnitDto> CreateOrganizationUnit(CreateOrganizationUnitInput input)
         {
@@ -80,7 +109,11 @@ namespace Derrick.Organizations
 
             return organizationUnit.MapTo<OrganizationUnitDto>();
         }
-
+        /// <summary>
+        /// 更新组织架构
+        /// </summary>
+        /// <param name="input">更新组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageOrganizationTree)]
         public async Task<OrganizationUnitDto> UpdateOrganizationUnit(UpdateOrganizationUnitInput input)
         {
@@ -92,7 +125,11 @@ namespace Derrick.Organizations
 
             return await CreateOrganizationUnitDto(organizationUnit);
         }
-
+        /// <summary>
+        /// 转移组织架构
+        /// </summary>
+        /// <param name="input">转移组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageOrganizationTree)]
         public async Task<OrganizationUnitDto> MoveOrganizationUnit(MoveOrganizationUnitInput input)
         {
@@ -102,31 +139,51 @@ namespace Derrick.Organizations
                 await _organizationUnitRepository.GetAsync(input.Id)
                 );
         }
-
+        /// <summary>
+        /// 删除组织架构
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageOrganizationTree)]
         public async Task DeleteOrganizationUnit(EntityDto<long> input)
         {
             await _organizationUnitManager.DeleteAsync(input.Id);
         }
-
+        /// <summary>
+        /// 添加用户到组织架构
+        /// </summary>
+        /// <param name="input">用户到组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageMembers)]
         public async Task AddUserToOrganizationUnit(UserToOrganizationUnitInput input)
         {
             await UserManager.AddToOrganizationUnitAsync(input.UserId, input.OrganizationUnitId);
         }
-
+        /// <summary>
+        /// 从组织架构移除用户
+        /// </summary>
+        /// <param name="input">用户到组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageMembers)]
         public async Task RemoveUserFromOrganizationUnit(UserToOrganizationUnitInput input)
         {
             await UserManager.RemoveFromOrganizationUnitAsync(input.UserId, input.OrganizationUnitId);
         }
-
+        /// <summary>
+        /// 判断用户是否在组织中
+        /// </summary>
+        /// <param name="input">用户到组织架构Input</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Administration_OrganizationUnits_ManageMembers)]
         public async Task<bool> IsInOrganizationUnit(UserToOrganizationUnitInput input)
         {
             return await UserManager.IsInOrganizationUnitAsync(input.UserId, input.OrganizationUnitId);
         }
-
+        /// <summary>
+        /// 创建组织架构Dto
+        /// </summary>
+        /// <param name="organizationUnit">组织架构</param>
+        /// <returns></returns>
         private async Task<OrganizationUnitDto> CreateOrganizationUnitDto(OrganizationUnit organizationUnit)
         {
             var dto = organizationUnit.MapTo<OrganizationUnitDto>();
