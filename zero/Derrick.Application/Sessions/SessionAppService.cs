@@ -6,9 +6,16 @@ using Derrick.Sessions.Dto;
 
 namespace Derrick.Sessions
 {
+    /// <summary>
+    /// Session服务实现
+    /// </summary>
     [AbpAuthorize]
     public class SessionAppService : AbpZeroTemplateAppServiceBase, ISessionAppService
     {
+        /// <summary>
+        /// 获取当前登录信息
+        /// </summary>
+        /// <returns></returns>
         [DisableAuditing]
         public async Task<GetCurrentLoginInformationsOutput> GetCurrentLoginInformations()
         {
