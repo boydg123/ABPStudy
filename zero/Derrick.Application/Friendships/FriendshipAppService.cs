@@ -13,15 +13,41 @@ using Derrick.Friendships.Dto;
 
 namespace Derrick.Friendships
 {
+    /// <summary>
+    /// 好友服务实现
+    /// </summary>
     [AbpAuthorize]
     public class FriendshipAppService : AbpZeroTemplateAppServiceBase, IFriendshipAppService
     {
+        /// <summary>
+        /// 好友管理器
+        /// </summary>
         private readonly IFriendshipManager _friendshipManager;
+        /// <summary>
+        /// 在线客户端管理器
+        /// </summary>
         private readonly IOnlineClientManager _onlineClientManager;
+        /// <summary>
+        /// 聊天沟通器
+        /// </summary>
         private readonly IChatCommunicator _chatCommunicator;
+        /// <summary>
+        /// 商户缓存
+        /// </summary>
         private readonly ITenantCache _tenantCache;
+        /// <summary>
+        /// 聊天功能检查器
+        /// </summary>
         private readonly IChatFeatureChecker _chatFeatureChecker;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="friendshipManager">好友管理</param>
+        /// <param name="onlineClientManager">在线客户端管理</param>
+        /// <param name="chatCommunicator">聊天沟通</param>
+        /// <param name="tenantCache">商户缓存</param>
+        /// <param name="chatFeatureChecker">聊天功能检查</param>
         public FriendshipAppService(
             IFriendshipManager friendshipManager,
             IOnlineClientManager onlineClientManager,
@@ -36,6 +62,11 @@ namespace Derrick.Friendships
             _chatFeatureChecker = chatFeatureChecker;
         }
 
+        /// <summary>
+        /// 创建好友请求
+        /// </summary>
+        /// <param name="input">创建好友请求Input</param>
+        /// <returns></returns>
         public async Task<FriendDto> CreateFriendshipRequest(CreateFriendshipRequestInput input)
         {
             var userIdentifier = AbpSession.ToUserIdentifier();
@@ -83,7 +114,11 @@ namespace Derrick.Friendships
 
             return sourceFriendshipRequest;
         }
-
+        /// <summary>
+        /// 通过用户名创建好友请求
+        /// </summary>
+        /// <param name="input">通过用户名创建好友请求Input</param>
+        /// <returns></returns>
         public async Task<FriendDto> CreateFriendshipRequestByUserName(CreateFriendshipRequestByUserNameInput input)
         {
             var probableFriend = await GetUserIdentifier(input.TenancyName, input.UserName);
@@ -93,7 +128,10 @@ namespace Derrick.Friendships
                 UserId = probableFriend.UserId
             });
         }
-
+        /// <summary>
+        /// 阻止用户
+        /// </summary>
+        /// <param name="input">阻止用户Input</param>
         public void BlockUser(BlockUserInput input)
         {
             var userIdentifier = AbpSession.ToUserIdentifier();
@@ -106,7 +144,10 @@ namespace Derrick.Friendships
                 _chatCommunicator.SendUserStateChangeToClients(clients, friendIdentifier, FriendshipState.Blocked);
             }
         }
-
+        /// <summary>
+        /// 解锁用户
+        /// </summary>
+        /// <param name="input">解锁用户Input</param>
         public void UnblockUser(UnblockUserInput input)
         {
             var userIdentifier = AbpSession.ToUserIdentifier();
@@ -119,7 +160,10 @@ namespace Derrick.Friendships
                 _chatCommunicator.SendUserStateChangeToClients(clients, friendIdentifier, FriendshipState.Accepted);
             }
         }
-
+        /// <summary>
+        /// 接受好友请求
+        /// </summary>
+        /// <param name="input">接受好友请求Input</param>
         public void AcceptFriendshipRequest(AcceptFriendshipRequestInput input)
         {
             var userIdentifier = AbpSession.ToUserIdentifier();
@@ -132,7 +176,12 @@ namespace Derrick.Friendships
                 _chatCommunicator.SendUserStateChangeToClients(clients, friendIdentifier, FriendshipState.Blocked);
             }
         }
-
+        /// <summary>
+        /// 获取用户标识
+        /// </summary>
+        /// <param name="tenancyName">商户名</param>
+        /// <param name="userName">用户名</param>
+        /// <returns></returns>
         private async Task<UserIdentifier> GetUserIdentifier(string tenancyName, string userName)
         {
             int? tenantId = null;
