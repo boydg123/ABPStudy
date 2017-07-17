@@ -1,7 +1,7 @@
 namespace Derrick.Authorization.Permissions.Dto
 {
     /// <summary>
-    /// 统一权限级别Dto
+    /// 平级权限级别Dto
     /// </summary>
     public class FlatPermissionWithLevelDto : FlatPermissionDto
     {

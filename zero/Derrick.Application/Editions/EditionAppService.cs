@@ -13,16 +13,28 @@ using Derrick.Editions.Dto;
 
 namespace Derrick.Editions
 {
+    /// <summary>
+    /// 版本服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Editions)]
     public class EditionAppService : AbpZeroTemplateAppServiceBase, IEditionAppService
     {
+        /// <summary>
+        /// 版本管理器
+        /// </summary>
         private readonly EditionManager _editionManager;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="editionManager">版本管理器</param>
         public EditionAppService(EditionManager editionManager)
         {
             _editionManager = editionManager;
         }
-
+        /// <summary>
+        /// 获取版本列表
+        /// </summary>
+        /// <returns></returns>
         public async Task<ListResultDto<EditionListDto>> GetEditions()
         {
             var editions = await _editionManager.Editions.ToListAsync();
@@ -30,7 +42,11 @@ namespace Derrick.Editions
                 editions.MapTo<List<EditionListDto>>()
                 );
         }
-
+        /// <summary>
+        /// 为编辑获取版本
+        /// </summary>
+        /// <param name="input">空ID Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Editions_Create, AppPermissions.Pages_Editions_Edit)]
         public async Task<GetEditionForEditOutput> GetEditionForEdit(NullableIdDto input)
         {
@@ -58,7 +74,11 @@ namespace Derrick.Editions
                 FeatureValues = featureValues.Select(fv => new NameValueDto(fv)).ToList()
             };
         }
-
+        /// <summary>
+        /// 创建或更新版本
+        /// </summary>
+        /// <param name="input">创建或更新版本Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Editions_Create, AppPermissions.Pages_Editions_Edit)]
         public async Task CreateOrUpdateEdition(CreateOrUpdateEditionDto input)
         {
@@ -71,14 +91,22 @@ namespace Derrick.Editions
                 await UpdateEditionAsync(input);
             }
         }
-
+        /// <summary>
+        /// 删除版本
+        /// </summary>
+        /// <param name="input">实体Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Editions_Delete)]
         public async Task DeleteEdition(EntityDto input)
         {
             var edition = await _editionManager.GetByIdAsync(input.Id);
             await _editionManager.DeleteAsync(edition);
         }
-
+        /// <summary>
+        /// 获取Combobox版本集合
+        /// </summary>
+        /// <param name="selectedEditionId">选中版本的ID</param>
+        /// <returns></returns>
         public async Task<List<ComboboxItemDto>> GetEditionComboboxItems(int? selectedEditionId = null)
         {
             var editions = await _editionManager.Editions.ToListAsync();
@@ -102,7 +130,11 @@ namespace Derrick.Editions
 
             return editionItems;
         }
-
+        /// <summary>
+        /// 创建版本
+        /// </summary>
+        /// <param name="input">创建或更新版本Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Editions_Create)]
         protected virtual async Task CreateEditionAsync(CreateOrUpdateEditionDto input)
         {
@@ -113,7 +145,11 @@ namespace Derrick.Editions
 
             await SetFeatureValues(edition, input.FeatureValues);
         }
-
+        /// <summary>
+        /// 更新版本
+        /// </summary>
+        /// <param name="input">创建或更新版本Dto</param>
+        /// <returns></returns>
         [AbpAuthorize(AppPermissions.Pages_Editions_Edit)]
         protected virtual async Task UpdateEditionAsync(CreateOrUpdateEditionDto input)
         {
@@ -124,7 +160,12 @@ namespace Derrick.Editions
 
             await SetFeatureValues(edition, input.FeatureValues);
         }
-
+        /// <summary>
+        /// 设置功能值
+        /// </summary>
+        /// <param name="edition">版本</param>
+        /// <param name="featureValues">功能值</param>
+        /// <returns></returns>
         private Task SetFeatureValues(Edition edition, List<NameValueDto> featureValues)
         {
             return _editionManager.SetFeatureValuesAsync(edition.Id, featureValues.Select(fv => new NameValue(fv.Name, fv.Value)).ToArray());

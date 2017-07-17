@@ -3,7 +3,7 @@ using Abp.AutoMapper;
 namespace Derrick.Authorization.Permissions.Dto
 {
     /// <summary>
-    /// 统一权限Dto
+    /// 平级权限Dto
     /// </summary>
     [AutoMapFrom(typeof(Abp.Authorization.Permission))] 
     public class FlatPermissionDto
