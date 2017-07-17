@@ -7,11 +7,14 @@ using Derrick.Authorization;
 namespace Derrick
 {
     /// <summary>
-    /// Application layer module of the application.
+    /// 应用程序中应用层模块
     /// </summary>
     [DependsOn(typeof(AbpZeroTemplateCoreModule))]
     public class AbpZeroTemplateApplicationModule : AbpModule
     {
+        /// <summary>
+        /// 初始化前
+        /// </summary>
         public override void PreInitialize()
         {
             //Adding authorization providers
@@ -23,7 +26,9 @@ namespace Derrick
                 CustomDtoMapper.CreateMappings(mapper);
             });
         }
-
+        /// <summary>
+        /// 初始化
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());

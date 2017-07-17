@@ -1,17 +1,17 @@
 ﻿namespace Derrick
 {
     /// <summary>
-    /// Some consts used in the application.
+    /// 应用程序中使用的常量
     /// </summary>
     public class AppConsts
     {
         /// <summary>
-        /// Default page size for paged requests.
+        /// 分页请求的默认页码
         /// </summary>
         public const int DefaultPageSize = 10;
 
         /// <summary>
-        /// Maximum allowed page size for paged requests.
+        /// 分页请求的最大允许页码
         /// </summary>
         public const int MaxPageSize = 1000;
     }
