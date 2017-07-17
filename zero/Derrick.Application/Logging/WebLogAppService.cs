@@ -11,16 +11,28 @@ using Derrick.Net.MimeTypes;
 
 namespace Derrick.Logging
 {
+    /// <summary>
+    /// Web日志服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Administration_Host_Maintenance)]
     public class WebLogAppService : AbpZeroTemplateAppServiceBase, IWebLogAppService
     {
+        /// <summary>
+        /// APP文件夹
+        /// </summary>
         private readonly IAppFolders _appFolders;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="appFolders">APP文件夹</param>
         public WebLogAppService(IAppFolders appFolders)
         {
             _appFolders = appFolders;
         }
-
+        /// <summary>
+        /// 获取最新的web日志
+        /// </summary>
+        /// <returns></returns>
         public GetLatestWebLogsOutput GetLatestWebLogs()
         {
             var directory = new DirectoryInfo(_appFolders.WebLogsFolder);
@@ -61,7 +73,10 @@ namespace Derrick.Logging
                 LatesWebLogLines = lines.Take(lineCount).Reverse().ToList()
             };
         }
-
+        /// <summary>
+        /// 下载web日志
+        /// </summary>
+        /// <returns></returns>
         public FileDto DownloadWebLogs()
         {
             var zipFileDto = new FileDto("WebSiteLogs.zip", MimeTypeNames.ApplicationZip);
