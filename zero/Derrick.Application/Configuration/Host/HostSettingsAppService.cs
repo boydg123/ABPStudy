@@ -17,14 +17,36 @@ using Newtonsoft.Json;
 
 namespace Derrick.Configuration.Host
 {
+    /// <summary>
+    /// 宿主设置服务实现
+    /// </summary>
     [AbpAuthorize(AppPermissions.Pages_Administration_Host_Settings)]
     public class HostSettingsAppService : AbpZeroTemplateAppServiceBase, IHostSettingsAppService
     {
+        /// <summary>
+        /// 邮件发送器
+        /// </summary>
         private readonly IEmailSender _emailSender;
+        /// <summary>
+        /// 版本管理器
+        /// </summary>
         private readonly EditionManager _editionManager;
+        /// <summary>
+        /// 时区服务
+        /// </summary>
         private readonly ITimeZoneService _timeZoneService;
+        /// <summary>
+        /// 设置定义管理器
+        /// </summary>
         readonly ISettingDefinitionManager _settingDefinitionManager;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="emailSender">邮件发送器</param>
+        /// <param name="editionManager">版本管理器</param>
+        /// <param name="timeZoneService">时区服务</param>
+        /// <param name="settingDefinitionManager">设置定义管理器</param>
         public HostSettingsAppService(
             IEmailSender emailSender,
             EditionManager editionManager,
@@ -37,8 +59,11 @@ namespace Derrick.Configuration.Host
             _settingDefinitionManager = settingDefinitionManager;
         }
 
-        #region Get Settings
-
+        #region Get Settings / 获取设置
+        /// <summary>
+        /// 获取所有设置
+        /// </summary>
+        /// <returns></returns>
         public async Task<HostSettingsEditDto> GetAllSettings()
         {
             return new HostSettingsEditDto
@@ -50,7 +75,10 @@ namespace Derrick.Configuration.Host
                 Security = await GetSecuritySettingsAsync()
             };
         }
-
+        /// <summary>
+        /// 获取常规设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<GeneralSettingsEditDto> GetGeneralSettingsAsync()
         {
             var timezone = await SettingManager.GetSettingValueForApplicationAsync(TimingSettingNames.TimeZone);
@@ -69,7 +97,10 @@ namespace Derrick.Configuration.Host
 
             return settings;
         }
-
+        /// <summary>
+        /// 获取商户管理设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<TenantManagementSettingsEditDto> GetTenantManagementSettingsAsync()
         {
             var settings = new TenantManagementSettingsEditDto
@@ -87,7 +118,10 @@ namespace Derrick.Configuration.Host
 
             return settings;
         }
-
+        /// <summary>
+        /// 获取用户管理设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<HostUserManagementSettingsEditDto> GetUserManagementAsync()
         {
             return new HostUserManagementSettingsEditDto
@@ -95,7 +129,10 @@ namespace Derrick.Configuration.Host
                 IsEmailConfirmationRequiredForLogin = await SettingManager.GetSettingValueAsync<bool>(AbpZeroSettingNames.UserManagement.IsEmailConfirmationRequiredForLogin)
             };
         }
-
+        /// <summary>
+        /// 获取邮件设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<EmailSettingsEditDto> GetEmailSettingsAsync()
         {
             return new EmailSettingsEditDto
@@ -111,7 +148,10 @@ namespace Derrick.Configuration.Host
                 SmtpUseDefaultCredentials = await SettingManager.GetSettingValueAsync<bool>(EmailSettingNames.Smtp.UseDefaultCredentials)
             };
         }
-
+        /// <summary>
+        /// 获取安全设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<SecuritySettingsEditDto> GetSecuritySettingsAsync()
         {
             var passwordComplexitySetting = await SettingManager.GetSettingValueAsync(AppSettings.Security.PasswordComplexity);
@@ -126,7 +166,10 @@ namespace Derrick.Configuration.Host
                 TwoFactorLogin = await GetTwoFactorLoginSettingsAsync()
             };
         }
-
+        /// <summary>
+        /// 获取用户锁定设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<UserLockOutSettingsEditDto> GetUserLockOutSettingsAsync()
         {
             return new UserLockOutSettingsEditDto
@@ -136,7 +179,10 @@ namespace Derrick.Configuration.Host
                 DefaultAccountLockoutSeconds = await SettingManager.GetSettingValueAsync<int>(AbpZeroSettingNames.UserManagement.UserLockOut.DefaultAccountLockoutSeconds)
             };
         }
-
+        /// <summary>
+        /// 获取双因子登录设置
+        /// </summary>
+        /// <returns></returns>
         private async Task<TwoFactorLoginSettingsEditDto> GetTwoFactorLoginSettingsAsync()
         {
             return new TwoFactorLoginSettingsEditDto
@@ -150,8 +196,12 @@ namespace Derrick.Configuration.Host
 
         #endregion
 
-        #region Update Settings
-
+        #region Update Settings / 更新设置
+        /// <summary>
+        /// 更新所有设置
+        /// </summary>
+        /// <param name="input">宿主设置编辑Dto</param>
+        /// <returns></returns>
         public async Task UpdateAllSettings(HostSettingsEditDto input)
         {
             await UpdateGeneralSettingsAsync(input.General);
@@ -160,7 +210,11 @@ namespace Derrick.Configuration.Host
             await UpdateSecuritySettingsAsync(input.Security);
             await UpdateEmailSettingsAsync(input.Email);
         }
-        
+        /// <summary>
+        /// 更新常规设置
+        /// </summary>
+        /// <param name="settings">常规设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateGeneralSettingsAsync(GeneralSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(
@@ -181,7 +235,11 @@ namespace Derrick.Configuration.Host
                 }
             }
         }
-
+        /// <summary>
+        /// 更新商户管理设置
+        /// </summary>
+        /// <param name="settings">商户管理设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateTenantManagementAsync(TenantManagementSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(
@@ -203,7 +261,11 @@ namespace Derrick.Configuration.Host
                 settings.DefaultEditionId?.ToString() ?? ""
             );
         }
-        
+        /// <summary>
+        /// 更新用户管理设置
+        /// </summary>
+        /// <param name="settings">宿主用户管理设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateUserManagementSettingsAsync(HostUserManagementSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(
@@ -211,7 +273,11 @@ namespace Derrick.Configuration.Host
                 settings.IsEmailConfirmationRequiredForLogin.ToString(CultureInfo.InvariantCulture).ToLower(CultureInfo.InvariantCulture)
             );
         }
-
+        /// <summary>
+        /// 更新安全设置
+        /// </summary>
+        /// <param name="settings">安全设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateSecuritySettingsAsync(SecuritySettingsEditDto settings)
         {
             if (settings.UseDefaultPasswordComplexitySettings)
@@ -232,14 +298,22 @@ namespace Derrick.Configuration.Host
             await UpdateUserLockOutSettingsAsync(settings.UserLockOut);
             await UpdateTwoFactorLoginSettingsAsync(settings.TwoFactorLogin);
         }
-
+        /// <summary>
+        /// 更新用户锁设置
+        /// </summary>
+        /// <param name="settings">用户锁定设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateUserLockOutSettingsAsync(UserLockOutSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.UserLockOut.IsEnabled, settings.IsEnabled.ToString(CultureInfo.InvariantCulture).ToLower());
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.UserLockOut.DefaultAccountLockoutSeconds, settings.DefaultAccountLockoutSeconds.ToString());
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.UserLockOut.MaxFailedAccessAttemptsBeforeLockout, settings.MaxFailedAccessAttemptsBeforeLockout.ToString());
         }
-
+        /// <summary>
+        /// 更新双因子登录设置
+        /// </summary>
+        /// <param name="settings">双因子登录设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateTwoFactorLoginSettingsAsync(TwoFactorLoginSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.TwoFactorLogin.IsEnabled, settings.IsEnabled.ToString(CultureInfo.InvariantCulture).ToLower());
@@ -247,7 +321,11 @@ namespace Derrick.Configuration.Host
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.TwoFactorLogin.IsSmsProviderEnabled, settings.IsSmsProviderEnabled.ToString(CultureInfo.InvariantCulture).ToLower());
             await SettingManager.ChangeSettingForApplicationAsync(AbpZeroSettingNames.UserManagement.TwoFactorLogin.IsRememberBrowserEnabled, settings.IsRememberBrowserEnabled.ToString(CultureInfo.InvariantCulture).ToLower());
         }
-
+        /// <summary>
+        /// 更新邮件设置
+        /// </summary>
+        /// <param name="settings">邮件设置编辑Dto</param>
+        /// <returns></returns>
         private async Task UpdateEmailSettingsAsync(EmailSettingsEditDto settings)
         {
             await SettingManager.ChangeSettingForApplicationAsync(EmailSettingNames.DefaultFromAddress, settings.DefaultFromAddress);
@@ -263,8 +341,13 @@ namespace Derrick.Configuration.Host
 
         #endregion
 
-        #region Send Test Email
+        #region Send Test Email / 发送测试邮件
 
+        /// <summary>
+        /// 发送测试邮件
+        /// </summary>
+        /// <param name="input">发送测试邮件Input</param>
+        /// <returns></returns>
         public async Task SendTestEmail(SendTestEmailInput input)
         {
             await _emailSender.SendAsync(
