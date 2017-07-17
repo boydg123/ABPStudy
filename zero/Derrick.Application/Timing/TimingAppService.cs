@@ -8,21 +8,38 @@ using Derrick.Timing.Dto;
 
 namespace Derrick.Timing
 {
+    /// <summary>
+    /// 定时服务实现
+    /// </summary>
     public class TimingAppService : AbpZeroTemplateAppServiceBase, ITimingAppService
     {
+        /// <summary>
+        /// 时区服务
+        /// </summary>
         private readonly ITimeZoneService _timeZoneService;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="timeZoneService">时区服务</param>
         public TimingAppService(ITimeZoneService timeZoneService)
         {
             _timeZoneService = timeZoneService;
         }
-
+        /// <summary>
+        /// 获取时区
+        /// </summary>
+        /// <param name="input">获取时区Input</param>
+        /// <returns></returns>
         public async Task<ListResultDto<NameValueDto>> GetTimezones(GetTimezonesInput input)
         {
             var timeZones = await GetTimezoneInfos(input.DefaultTimezoneScope);
             return new ListResultDto<NameValueDto>(timeZones);
         }
-
+        /// <summary>
+        /// 获取时区Combobox项
+        /// </summary>
+        /// <param name="input">获取时区Combobox项Input</param>
+        /// <returns></returns>
         public async Task<List<ComboboxItemDto>> GetTimezoneComboboxItems(GetTimezoneComboboxItemsInput input)
         {
             var timeZones = await GetTimezoneInfos(input.DefaultTimezoneScope);
