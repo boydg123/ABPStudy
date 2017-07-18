@@ -10,11 +10,14 @@ using Swashbuckle.Application;
 namespace Derrick.WebApi
 {
     /// <summary>
-    /// Web API layer of the application.
+    /// 应用程序Web API模块
     /// </summary>
     [DependsOn(typeof(AbpWebApiModule), typeof(AbpZeroTemplateApplicationModule))]
     public class AbpZeroTemplateWebApiModule : AbpModule
     {
+        /// <summary>
+        /// 初始化
+        /// </summary>
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
@@ -29,6 +32,9 @@ namespace Derrick.WebApi
             ConfigureSwaggerUi(); //Remove this line to disable swagger UI.
         }
 
+        /// <summary>
+        /// 配置Swagger UI
+        /// </summary>
         private void ConfigureSwaggerUi()
         {
             Configuration.Modules.AbpWebApi().HttpConfiguration
