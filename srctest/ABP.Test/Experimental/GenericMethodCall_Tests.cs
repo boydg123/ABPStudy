@@ -2,7 +2,7 @@
 using Abp.Domain.Entities;
 using Abp.Events.Bus.Entities;
 
-namespace ABP.Test.Experimental
+namespace Abp.Test.Experimental
 {
     /// <summary>
     /// 拷贝原测试方法......

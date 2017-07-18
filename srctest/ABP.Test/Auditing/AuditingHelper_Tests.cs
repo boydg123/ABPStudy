@@ -2,7 +2,7 @@
 using Xunit;
 using Shouldly;
 
-namespace ABP.Test.Auditing
+namespace Abp.Test.Auditing
 {
     /// <summary>
     /// 审计帮助类测试

@@ -4,7 +4,7 @@ using Shouldly;
 using System;
 using Castle.MicroKernel.Registration;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 泛型注入测试

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 事件数据对象派生对象

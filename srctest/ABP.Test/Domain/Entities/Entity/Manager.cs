@@ -1,4 +1,4 @@
-﻿namespace ABP.Test.Domain.Entities
+﻿namespace Abp.Test.Domain.Entities
 {
     /// <summary>
     /// 经理实体

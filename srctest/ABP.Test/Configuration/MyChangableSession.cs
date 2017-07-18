@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Abp.MultiTenancy;
 
-namespace ABP.Test.Configuration
+namespace Abp.Test.Configuration
 {
     public class MyChangableSession : IAbpSession
     {

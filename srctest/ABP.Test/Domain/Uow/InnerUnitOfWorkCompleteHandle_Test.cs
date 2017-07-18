@@ -4,7 +4,7 @@ using Shouldly;
 using System;
 using Xunit;
 
-namespace ABP.Test.Domain.Uow
+namespace Abp.Test.Domain.Uow
 {
     /// <summary>
     /// 

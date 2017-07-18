@@ -16,7 +16,7 @@ using System.Reflection;
 using System.Threading;
 using System.Globalization;
 
-namespace ABP.Test.Localization.Json
+namespace Abp.Test.Localization.Json
 {
     /// <summary>
     /// Json和Xml Source混合测试
@@ -69,12 +69,12 @@ namespace ABP.Test.Localization.Json
 
             Configuration.Localization.Sources.Extensions.Add(
                new LocalizationSourceExtensionInfo("Lang", new JsonEmbeddedFileLocalizationDictionaryProvider(
-                  Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"))
+                  Assembly.GetExecutingAssembly(), "Abp.Test.Localization.Json.JsonSources"))
                );
 
             Configuration.Localization.Sources.Add(
                 new DictionaryBasedLocalizationSource("Lang", new XmlEmbeddedFileLocalizationDictionaryProvider(
-                    Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.XmlSources"))
+                    Assembly.GetExecutingAssembly(), "Abp.Test.Localization.Json.XmlSources"))
                     );
 
            

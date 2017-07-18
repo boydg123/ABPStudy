@@ -3,7 +3,7 @@ using Xunit;
 using Shouldly;
 using Castle.MicroKernel;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 循环构造函数依赖测试

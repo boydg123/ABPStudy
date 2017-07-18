@@ -2,7 +2,7 @@
 using Xunit;
 using Shouldly;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 循环属性依赖测试

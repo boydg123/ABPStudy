@@ -1,6 +1,6 @@
 ﻿using Abp.Domain.Entities;
 
-namespace ABP.Test.Domain.Entities
+namespace Abp.Test.Domain.Entities
 {
     /// <summary>
     /// 部门实体

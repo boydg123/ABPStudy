@@ -5,7 +5,7 @@ using Xunit;
 using Shouldly;
 using System;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 事件总线，多处理测试

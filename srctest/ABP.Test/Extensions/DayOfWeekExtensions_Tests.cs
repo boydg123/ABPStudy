@@ -7,7 +7,7 @@ using Xunit;
 using Shouldly;
 using Abp.Extensions;
 
-namespace ABP.Test.Extensions
+namespace Abp.Test.Extensions
 {
     /// <summary>
     /// DayOfWeek测试

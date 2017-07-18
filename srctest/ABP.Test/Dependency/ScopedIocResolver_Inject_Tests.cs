@@ -3,7 +3,7 @@ using Xunit;
 using Shouldly;
 using System;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     public class ScopedIocResolver_Inject_Tests : TestBaseWithLocalManager
     {

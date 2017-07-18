@@ -2,7 +2,7 @@
 using Xunit;
 using System.Linq;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// IOC管理器测试

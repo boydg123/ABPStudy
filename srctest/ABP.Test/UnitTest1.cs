@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ABP.Test
+namespace Abp.Test
 {
     [TestClass]
     public class UnitTest1

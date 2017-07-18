@@ -2,7 +2,7 @@
 using Xunit;
 using Shouldly;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 一次性依赖对象包装器

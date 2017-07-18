@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 
 
-namespace ABP.Test.Localization.Json
+namespace Abp.Test.Localization.Json
 {
     /// <summary>
     /// 嵌入到程序集中Json文件提供本地化字符串的测试
@@ -17,7 +17,7 @@ namespace ABP.Test.Localization.Json
         public JsonEmbeddedFileLocalizationDictionaryProvider_Test()
         {
             _dictionaryProvider = new JsonEmbeddedFileLocalizationDictionaryProvider(
-                Assembly.GetExecutingAssembly(), "ABP.Test.Localization.Json.JsonSources"
+                Assembly.GetExecutingAssembly(), "Abp.Test.Localization.Json.JsonSources"
                 );
 
             _dictionaryProvider.Initialize("Lang");

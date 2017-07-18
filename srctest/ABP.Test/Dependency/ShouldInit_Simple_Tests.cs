@@ -3,7 +3,7 @@ using Abp.Dependency;
 using Shouldly;
 using Xunit;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 验证类自动创建的时候是否自动调用初始化方法

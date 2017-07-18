@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Abp.Application.Features;
 using Abp.Configuration.Startup;
 
-namespace ABP.Test.Authorization
+namespace Abp.Test.Authorization
 {
     /// <summary>
     /// 授权帮助类测试

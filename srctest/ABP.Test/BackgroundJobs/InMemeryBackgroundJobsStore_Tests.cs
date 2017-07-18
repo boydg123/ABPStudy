@@ -7,7 +7,7 @@ using Xunit;
 using Shouldly;
 using Abp.BackgroundJobs;
 
-namespace ABP.Test.BackgroundJobs
+namespace Abp.Test.BackgroundJobs
 {
     public class InMemeryBackgroundJobsStore_Tests
     {

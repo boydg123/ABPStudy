@@ -5,7 +5,7 @@ using System;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 
-namespace ABP.Test.Dependency.Interceptors
+namespace Abp.Test.Dependency.Interceptors
 {
     /// <summary>
     /// 拦截器能被注入

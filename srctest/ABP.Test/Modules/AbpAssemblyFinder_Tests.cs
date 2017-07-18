@@ -6,7 +6,7 @@ using Abp.Modules;
 using Abp;
 using Abp.Reflection;
 
-namespace ABP.Test.Modules
+namespace Abp.Test.Modules
 {
     public class AbpAssemblyFinder_Tests : TestBaseWithLocalManager
     {

@@ -3,7 +3,7 @@ using Shouldly;
 using System.Collections.Generic;
 using Xunit;
 
-namespace ABP.Test.Collections.Extensions
+namespace Abp.Test.Collections.Extensions
 {
     public class ListExtensions_Tests
     {

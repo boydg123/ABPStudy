@@ -2,7 +2,7 @@
 using Shouldly;
 using Castle.MicroKernel.Registration;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// IOC管理器生命周期测试

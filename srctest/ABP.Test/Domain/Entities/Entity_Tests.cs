@@ -1,7 +1,7 @@
 ﻿using Xunit;
 using Shouldly;
 
-namespace ABP.Test.Domain.Entities
+namespace Abp.Test.Domain.Entities
 {
     /// <summary>
     /// 实体测试

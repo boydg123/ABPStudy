@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace ABP.Test.Domain.Values
+namespace Abp.Test.Domain.Values
 {
     /// <summary>
     /// 值对象简单测试

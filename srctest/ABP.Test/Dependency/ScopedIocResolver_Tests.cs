@@ -4,7 +4,7 @@ using Xunit;
 using Shouldly;
 using System.Collections.Generic;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// IOC作用域解析器测试

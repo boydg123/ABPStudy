@@ -4,7 +4,7 @@ using Shouldly;
 using System.Linq;
 using Castle.MicroKernel.Registration;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// IOC管理器管理同一接口不同实现对象，关于覆盖的测试

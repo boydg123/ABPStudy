@@ -1,6 +1,6 @@
 ﻿using Abp.Events.Bus;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 简单时间数据对象

@@ -7,7 +7,7 @@ using NSubstitute;
 using Abp.Runtime.Session;
 using Castle.MicroKernel.Registration;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 属性注入测试

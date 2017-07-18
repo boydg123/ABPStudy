@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{2CE622A1-01FA-4BF0-9FBB-41AFB4FB5915}"
 EndProject
@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Web.SignalR", "src\Abp.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "srctest", "srctest", "{5379F371-87D1-4ECA-809D-F5C1B1839F05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABP.Test", "srctest\ABP.Test\ABP.Test.csproj", "{C124C2BB-0397-4B2D-B8CE-99D2EB6EED62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abp.Test", "srctest\ABP.Test\Abp.Test.csproj", "{C124C2BB-0397-4B2D-B8CE-99D2EB6EED62}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zero", "zero", "{FF5CC851-2364-40BE-AE29-2FF0B70DF73B}"
 EndProject

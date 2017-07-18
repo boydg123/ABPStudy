@@ -8,7 +8,7 @@ using Shouldly;
 using Abp.Json;
 using Abp.Timing;
 
-namespace ABP.Test.Json
+namespace Abp.Test.Json
 {
     public class JsonSerializationHelper_Tests
     {
@@ -26,7 +26,7 @@ namespace ABP.Test.Json
         {
             Clock.Provider = ClockProviders.Utc;
             var class2 = JsonSerializationHelper.SerializeWithType(new MyClass2(new DateTime(2017, 4, 11, 11, 11, 11)));
-            var dataStr = "ABP.Test.Json.JsonSerializationHelper_Tests+MyClass2, ABP.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|{\"Date\":\"2017 - 04 - 11T11: 11:11Z\"}";
+            var dataStr = "Abp.Test.Json.JsonSerializationHelper_Tests+MyClass2, Abp.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|{\"Date\":\"2017 - 04 - 11T11: 11:11Z\"}";
             var result = (MyClass2)JsonSerializationHelper.DeserializeWithType(dataStr);
             result.ShouldNotBe(null);
             result.Date.ShouldBe(new DateTime(2017, 4, 11, 11, 11, 11, Clock.Kind));

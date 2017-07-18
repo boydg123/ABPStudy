@@ -2,7 +2,7 @@
 using Shouldly;
 using System;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 事件总线异常测试

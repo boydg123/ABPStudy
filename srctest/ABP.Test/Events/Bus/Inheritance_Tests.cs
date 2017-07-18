@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 继承测试

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 简单释放对象2

@@ -1,7 +1,7 @@
 ﻿using Abp.Dependency;
 using System;
 
-namespace ABP.Test
+namespace Abp.Test
 {
     /// <summary>
     /// 测试基类

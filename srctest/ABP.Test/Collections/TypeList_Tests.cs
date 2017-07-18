@@ -2,7 +2,7 @@
 using Xunit;
 using Abp.Collections;
 
-namespace ABP.Test.Collections
+namespace Abp.Test.Collections
 {
     public class TypeList_Tests
     {

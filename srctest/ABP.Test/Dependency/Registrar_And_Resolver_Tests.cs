@@ -2,7 +2,7 @@
 using Xunit;
 using Shouldly;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     /// <summary>
     /// 注册与解析对象的相关测试

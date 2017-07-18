@@ -6,7 +6,7 @@ using Abp.Domain.Uow;
 using Castle.MicroKernel.Registration;
 using System.Transactions;
 
-namespace ABP.Test.Domain.Uow
+namespace Abp.Test.Domain.Uow
 {
     public class UnitOfWorkManager_Tests : TestBaseWithLocalManager
     {

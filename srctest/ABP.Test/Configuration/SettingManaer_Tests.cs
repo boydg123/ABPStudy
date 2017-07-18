@@ -12,7 +12,7 @@ using Xunit;
 using Shouldly;
 using Abp;
 
-namespace ABP.Test.Configuration
+namespace Abp.Test.Configuration
 {
     /// <summary>
     /// 设置管理测试

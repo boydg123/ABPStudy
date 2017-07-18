@@ -7,7 +7,7 @@ using Abp.Localization;
 using Abp.Configuration.Startup;
 using Abp.Application.Features;
 
-namespace ABP.Test.Authorization
+namespace Abp.Test.Authorization
 {
     public class PermissionDefiniion_Tests : TestBaseWithLocalManager
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ABP.Test.Domain.Values
+namespace Abp.Test.Domain.Values
 {
     /// <summary>
     /// 地址1

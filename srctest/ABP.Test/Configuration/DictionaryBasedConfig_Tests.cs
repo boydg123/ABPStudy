@@ -2,7 +2,7 @@
 using Shouldly;
 using Abp.Configuration;
 
-namespace ABP.Test.Configuration
+namespace Abp.Test.Configuration
 {
     /// <summary>
     /// 自定义配置测试

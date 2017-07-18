@@ -2,7 +2,7 @@
 using Xunit;
 using Abp.Dependency;
 
-namespace ABP.Test.Dependency
+namespace Abp.Test.Dependency
 {
     public class IocManager_Self_Register_Tests : TestBaseWithLocalManager
     {

@@ -8,7 +8,7 @@ using Shouldly;
 using Abp.Domain.Entities;
 using Abp.Events.Bus.Entities;
 
-namespace ABP.Test.Events.Bus
+namespace Abp.Test.Events.Bus
 {
     /// <summary>
     /// 通用继承测试

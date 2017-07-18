@@ -13,7 +13,7 @@ using Abp.Configuration.Startup;
 using Abp.Dependency;
 using Abp.Runtime.Session;
 
-namespace ABP.Test.Authorization
+namespace Abp.Test.Authorization
 {
     /// <summary>
     /// 授权拦截器测试

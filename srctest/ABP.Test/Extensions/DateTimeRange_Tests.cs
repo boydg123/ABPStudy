@@ -2,7 +2,7 @@
 using Shouldly;
 using Abp.Timing;
 
-namespace ABP.Test.Extensions
+namespace Abp.Test.Extensions
 {
     /// <summary>
     /// DateTimeRange测试

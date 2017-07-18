@@ -13,7 +13,7 @@ using NSubstitute;
 using Abp.Authorization;
 using Abp;
 
-namespace ABP.Test.Application.Navigation
+namespace Abp.Test.Application.Navigation
 {
     /// <summary>
     /// 导航测试用例

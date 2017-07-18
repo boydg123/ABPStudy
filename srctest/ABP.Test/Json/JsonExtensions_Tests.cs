@@ -2,7 +2,7 @@
 using Shouldly;
 using Abp.Json;
 
-namespace ABP.Test.Json
+namespace Abp.Test.Json
 {
     public class JsonExtensions_Tests
     {
