@@ -10,14 +10,23 @@ using Derrick.Storage;
 
 namespace Derrick.EntityFramework
 {
+    /// <summary>
+    /// ABP Zero DB上下文
+    /// </summary>
     public class AbpZeroTemplateDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         /* Define an IDbSet for each entity of the application */
-
+        /// <summary>
+        /// 二进制对象
+        /// </summary>
         public virtual IDbSet<BinaryObject> BinaryObjects { get; set; }
-
+        /// <summary>
+        /// 好友
+        /// </summary>
         public virtual IDbSet<Friendship> Friendships { get; set; }
-
+        /// <summary>
+        /// 聊天消息
+        /// </summary>
         public virtual IDbSet<ChatMessage> ChatMessages { get; set; }
 
         /* Setting "Default" to base class helps us when working migration commands on Package Manager Console.

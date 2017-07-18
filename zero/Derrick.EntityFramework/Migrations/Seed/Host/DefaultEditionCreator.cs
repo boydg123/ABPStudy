@@ -7,20 +7,36 @@ using Derrick.Features;
 
 namespace Derrick.Migrations.Seed.Host
 {
+    /// <summary>
+    /// 默认版本创造器
+    /// </summary>
     public class DefaultEditionCreator
     {
+        /// <summary>
+        /// DB上下文
+        /// </summary>
         private readonly AbpZeroTemplateDbContext _context;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="context">DB上下文</param>
         public DefaultEditionCreator(AbpZeroTemplateDbContext context)
         {
             _context = context;
         }
 
+        /// <summary>
+        /// 创建
+        /// </summary>
         public void Create()
         {
             CreateEditions();
         }
 
+        /// <summary>
+        /// 创建版本
+        /// </summary>
         private void CreateEditions()
         {
             var defaultEdition = _context.Editions.FirstOrDefault(e => e.Name == EditionManager.DefaultEditionName);
@@ -41,6 +57,12 @@ namespace Derrick.Migrations.Seed.Host
             }
         }
 
+        /// <summary>
+        /// 创建不存在的功能
+        /// </summary>
+        /// <param name="editionId">版本ID</param>
+        /// <param name="featureName">功能名称</param>
+        /// <param name="isEnabled">是否启用</param>
         private void CreateFeatureIfNotExists(int editionId, string featureName, bool isEnabled)
         {
             var defaultEditionChatFeature = _context.EditionFeatureSettings

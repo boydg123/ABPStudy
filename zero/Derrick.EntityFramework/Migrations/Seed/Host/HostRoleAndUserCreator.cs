@@ -10,20 +10,33 @@ using Derrick.EntityFramework;
 
 namespace Derrick.Migrations.Seed.Host
 {
+    /// <summary>
+    /// 宿主角色以及用户创造器
+    /// </summary>
     public class HostRoleAndUserCreator
     {
+        /// <summary>
+        /// DB上下文
+        /// </summary>
         private readonly AbpZeroTemplateDbContext _context;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="context">DB上下文</param>
         public HostRoleAndUserCreator(AbpZeroTemplateDbContext context)
         {
             _context = context;
         }
-
+        /// <summary>
+        /// 创建
+        /// </summary>
         public void Create()
         {
             CreateHostRoleAndUsers();
         }
-
+        /// <summary>
+        /// 创建宿主角色和用户
+        /// </summary>
         private void CreateHostRoleAndUsers()
         {
             //Admin role for host

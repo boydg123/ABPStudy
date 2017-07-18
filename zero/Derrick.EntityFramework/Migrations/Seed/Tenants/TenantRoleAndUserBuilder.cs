@@ -10,22 +10,39 @@ using Derrick.EntityFramework;
 
 namespace Derrick.Migrations.Seed.Tenants
 {
+    /// <summary>
+    /// 商户角色和用户生成器
+    /// </summary>
     public class TenantRoleAndUserBuilder
     {
+        /// <summary>
+        /// DB上下文
+        /// </summary>
         private readonly AbpZeroTemplateDbContext _context;
+        /// <summary>
+        /// 商户ID
+        /// </summary>
         private readonly int _tenantId;
-
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="context">DB上下文</param>
+        /// <param name="tenantId">商户ID</param>
         public TenantRoleAndUserBuilder(AbpZeroTemplateDbContext context, int tenantId)
         {
             _context = context;
             _tenantId = tenantId;
         }
-
+        /// <summary>
+        /// 创建
+        /// </summary>
         public void Create()
         {
             CreateRolesAndUsers();
         }
-
+        /// <summary>
+        /// 创建角色和用户
+        /// </summary>
         private void CreateRolesAndUsers()
         {
             //Admin role
