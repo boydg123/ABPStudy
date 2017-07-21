@@ -8,8 +8,14 @@ using Abp.Reflection;
 
 namespace Abp.Test.Modules
 {
+    /// <summary>
+    /// Abp 程序集查找器测试
+    /// </summary>
     public class AbpAssemblyFinder_Tests : TestBaseWithLocalManager
     {
+        /// <summary>
+        /// 获取模块以及附加组件程序集
+        /// </summary>
         [Fact]
         public void Should_Get_Module_And_Additional_Assemblies()
         {
@@ -25,8 +31,15 @@ namespace Abp.Test.Modules
             assemblies.Any(a => a == typeof(FactAttribute).Assembly).ShouldBeTrue();
         }
 
+        /// <summary>
+        /// 自定义启动模块
+        /// </summary>
         public class MyStartupModule : AbpModule
         {
+            /// <summary>
+            /// 获取附加程序集
+            /// </summary>
+            /// <returns></returns>
             public override Assembly[] GetAdditionalAssemblies()
             {
                 return new[] { typeof(FactAttribute).Assembly };
