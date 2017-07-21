@@ -145,6 +145,7 @@
     <Compile Include="Localization\Json\JsonEmbeddedFileLocalizationDictionaryProvider.cs" />
     <Compile Include="Modules\AbpAssemblyFinder_Tests.cs" />
     <Compile Include="Modules\PlugInModuleLoading_Tests.cs" />
+    <Compile Include="Modules\StartupModuleToBeLast_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBaseWithLocalManager.cs" />
     <Compile Include="UnitTest1.cs" />
