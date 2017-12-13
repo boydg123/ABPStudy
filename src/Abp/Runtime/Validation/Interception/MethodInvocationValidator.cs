@@ -278,6 +278,7 @@ namespace Abp.Runtime.Validation.Interception
                 }
             }
 
+            //如果用户自己实现了IValidatableObject 则也自动拦截它
             if (validatingObject is IValidatableObject)
             {
                 var results = (validatingObject as IValidatableObject).Validate(new ValidationContext(validatingObject));

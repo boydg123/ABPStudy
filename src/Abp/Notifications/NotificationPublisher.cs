@@ -71,7 +71,6 @@ namespace Abp.Notifications
             AbpSession = NullAbpSession.Instance;
         }
 
-        //Create EntityIdentifier includes entityType and entityId.
         /// <summary>
         /// 发布一个新通知
         /// </summary>

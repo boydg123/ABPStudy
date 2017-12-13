@@ -26,5 +26,24 @@ namespace Abp.Test.Notifications
             _publisher.UnitOfWorkManager = Substitute.For<IUnitOfWorkManager>();
             _publisher.UnitOfWorkManager.Current.Returns(Substitute.For<IActiveUnitOfWork>());
         }
+
+        [TestMethod]
+        public async Task Should_Publish_General_Notification()
+        {
+            var notificationData = CreateNotificationData();
+
+            await _publisher.PublishAsync("TestNotification", notificationData, severity: NotificationSeverity.Success);
+        }
+
+        /// <summary>
+        /// 创建通知数据
+        /// </summary>
+        /// <returns>通知数据对象</returns>
+        private static NotificationData CreateNotificationData()
+        {
+            var notificationData = new NotificationData();
+            notificationData["TestValue"] = 42;
+            return notificationData;
+        }
     }
 }
